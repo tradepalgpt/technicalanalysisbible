@@ -184,6 +184,36 @@
   },
   "credit": "Bitcoin (BTC/USD), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "bearish-engulfing": {
+  "slug": "bearish-engulfing",
+  "file": "bearish-engulfing.svg",
+  "title": "Bearish engulfing after a rise",
+  "caption": "A falling bar whose body covers the previous rising body, after an advance. Found by our detector on S&P 500 ETF (SPY), 3 April 2024 to 4 April 2024.",
+  "alt": "Bearish engulfing after a rise. A falling bar whose body covers the previous rising body, after an advance. Found by our detector on S&P 500 ETF (SPY), 3 April 2024 to 4 April 2024.",
+  "symbol": "spy",
+  "start": "2024-04-03",
+  "end": "2024-04-04",
+  "indicator": null,
+  "pattern": "bearish-engulfing",
+  "params": {},
+  "credit": "S&P 500 ETF (SPY), daily, Feb 2024 to Apr 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 20
+ },
+ "belt-hold": {
+  "slug": "belt-hold",
+  "file": "belt-hold.svg",
+  "title": "Belt hold",
+  "caption": "A long candle that opens at its extreme and has almost no wick on the opening side. Found by our detector on S&P 500 ETF (SPY), 4 April 2024.",
+  "alt": "Belt hold. A long candle that opens at its extreme and has almost no wick on the opening side. Found by our detector on S&P 500 ETF (SPY), 4 April 2024.",
+  "symbol": "spy",
+  "start": "2024-04-04",
+  "end": "2024-04-04",
+  "indicator": null,
+  "pattern": "belt-hold",
+  "params": {},
+  "credit": "S&P 500 ETF (SPY), daily, Feb 2024 to Apr 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 12
+ },
  "bollinger-band-width": {
   "slug": "bollinger-band-width",
   "file": "bollinger-band-width.svg",
@@ -263,6 +293,21 @@
    "mult": 1.1
   },
   "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "candlestick-chart": {
+  "slug": "candlestick-chart",
+  "file": "candlestick-chart.svg",
+  "title": "Anatomy of a candle",
+  "caption": "One candle: the body runs from open to close, and the wicks reach the high and the low. Found by our detector on Bitcoin (BTC/USD), 5 December 2024.",
+  "alt": "Anatomy of a candle. One candle: the body runs from open to close, and the wicks reach the high and the low. Found by our detector on Bitcoin (BTC/USD), 5 December 2024.",
+  "symbol": "btcusd",
+  "start": "2024-12-05",
+  "end": "2024-12-05",
+  "indicator": null,
+  "pattern": "candlestick-chart",
+  "params": {},
+  "credit": "Bitcoin (BTC/USD), daily, Nov 2024 to Dec 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 163
  },
  "cci": {
   "slug": "cci",
@@ -558,6 +603,21 @@
   "credit": "S&P 500 ETF (SPY), daily, Oct 2024 to Apr 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 3
  },
+ "dragonfly-doji": {
+  "slug": "dragonfly-doji",
+  "file": "dragonfly-doji.svg",
+  "title": "Dragonfly doji",
+  "caption": "Open, high and close at nearly the same price with a long lower wick. Found by our detector on EUR/USD, 6 November 2024.",
+  "alt": "Dragonfly doji. Open, high and close at nearly the same price with a long lower wick. Found by our detector on EUR/USD, 6 November 2024.",
+  "symbol": "eurusd",
+  "start": "2024-11-06",
+  "end": "2024-11-06",
+  "indicator": null,
+  "pattern": "dragonfly-doji",
+  "params": {},
+  "credit": "EUR/USD, daily, Sep 2024 to Nov 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 153
+ },
  "ease-of-movement": {
   "slug": "ease-of-movement",
   "file": "ease-of-movement.svg",
@@ -754,6 +814,21 @@
   },
   "credit": "S&P 500 ETF (SPY), daily, Jan 2024 to Aug 2025. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "gravestone-doji": {
+  "slug": "gravestone-doji",
+  "file": "gravestone-doji.svg",
+  "title": "Gravestone doji",
+  "caption": "Open, low and close at nearly the same price with a long upper wick. Found by our detector on EUR/USD, 2 August 2024.",
+  "alt": "Gravestone doji. Open, low and close at nearly the same price with a long upper wick. Found by our detector on EUR/USD, 2 August 2024.",
+  "symbol": "eurusd",
+  "start": "2024-08-02",
+  "end": "2024-08-02",
+  "indicator": null,
+  "pattern": "gravestone-doji",
+  "params": {},
+  "credit": "EUR/USD, daily, Jun 2024 to Aug 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 153
+ },
  "hammer": {
   "slug": "hammer",
   "file": "hammer.svg",
@@ -768,6 +843,21 @@
   "params": {},
   "credit": "S&P 500 ETF (SPY), daily, Jul 2024 to Oct 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 6
+ },
+ "hanging-man": {
+  "slug": "hanging-man",
+  "file": "hanging-man.svg",
+  "title": "Hanging man after a rise",
+  "caption": "A small body near the high with a long lower wick, after an advance. Found by our detector on S&P 500 ETF (SPY), 25 January 2021.",
+  "alt": "Hanging man after a rise. A small body near the high with a long lower wick, after an advance. Found by our detector on S&P 500 ETF (SPY), 25 January 2021.",
+  "symbol": "spy",
+  "start": "2021-01-25",
+  "end": "2021-01-25",
+  "indicator": null,
+  "pattern": "hanging-man",
+  "params": {},
+  "credit": "S&P 500 ETF (SPY), daily, Jan 2021 to Feb 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 25
  },
  "head-and-shoulders": {
   "slug": "head-and-shoulders",
@@ -861,6 +951,21 @@
    "wma_period": 9
   },
   "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "inverted-hammer": {
+  "slug": "inverted-hammer",
+  "file": "inverted-hammer.svg",
+  "title": "Inverted hammer after a decline",
+  "caption": "A small body near the low with a long upper wick, after a decline. Found by our detector on EUR/USD, 26 November 2021.",
+  "alt": "Inverted hammer after a decline. A small body near the low with a long upper wick, after a decline. Found by our detector on EUR/USD, 26 November 2021.",
+  "symbol": "eurusd",
+  "start": "2021-11-26",
+  "end": "2021-11-26",
+  "indicator": null,
+  "pattern": "inverted-hammer",
+  "params": {},
+  "credit": "EUR/USD, daily, Oct 2021 to Dec 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 19
  },
  "kama": {
   "slug": "kama",
@@ -997,6 +1102,21 @@
   },
   "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "long-legged-doji": {
+  "slug": "long-legged-doji",
+  "file": "long-legged-doji.svg",
+  "title": "Long-legged doji",
+  "caption": "A tiny body with long wicks on both sides and a wide range. Found by our detector on EUR/USD, 27 July 2023.",
+  "alt": "Long-legged doji. A tiny body with long wicks on both sides and a wide range. Found by our detector on EUR/USD, 27 July 2023.",
+  "symbol": "eurusd",
+  "start": "2023-07-27",
+  "end": "2023-07-27",
+  "indicator": null,
+  "pattern": "long-legged-doji",
+  "params": {},
+  "credit": "EUR/USD, daily, Jun 2023 to Aug 2023. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 63
+ },
  "lsma": {
   "slug": "lsma",
   "file": "lsma.svg",
@@ -1045,6 +1165,21 @@
    "signal": 9
   },
   "credit": "EUR/USD, daily, Apr 2024 to Jan 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "marubozu": {
+  "slug": "marubozu",
+  "file": "marubozu.svg",
+  "title": "Marubozu",
+  "caption": "A long body with almost no wicks at either end. Found by our detector on Apple (AAPL), 11 June 2024.",
+  "alt": "Marubozu. A long body with almost no wicks at either end. Found by our detector on Apple (AAPL), 11 June 2024.",
+  "symbol": "aapl",
+  "start": "2024-06-11",
+  "end": "2024-06-11",
+  "indicator": null,
+  "pattern": "marubozu",
+  "params": {},
+  "credit": "Apple (AAPL), daily, Apr 2024 to Jul 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 2
  },
  "mass-index": {
   "slug": "mass-index",
@@ -1464,6 +1599,21 @@
   },
   "credit": "EUR/USD, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "shooting-star": {
+  "slug": "shooting-star",
+  "file": "shooting-star.svg",
+  "title": "Shooting star after a rise",
+  "caption": "A small body near the low with a long upper wick, after an advance. Found by our detector on Bitcoin (BTC/USD), 14 March 2023.",
+  "alt": "Shooting star after a rise. A small body near the low with a long upper wick, after an advance. Found by our detector on Bitcoin (BTC/USD), 14 March 2023.",
+  "symbol": "btcusd",
+  "start": "2023-03-14",
+  "end": "2023-03-14",
+  "indicator": null,
+  "pattern": "shooting-star",
+  "params": {},
+  "credit": "Bitcoin (BTC/USD), daily, Feb 2023 to Mar 2023. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 13
+ },
  "simple-moving-average": {
   "slug": "simple-moving-average",
   "file": "simple-moving-average.svg",
@@ -1493,6 +1643,21 @@
    "period": 14
   },
   "credit": "EUR/USD, daily, Jan 2024 to Oct 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "spinning-top": {
+  "slug": "spinning-top",
+  "file": "spinning-top.svg",
+  "title": "Spinning top",
+  "caption": "A small body with upper and lower wicks both longer than the body. Found by our detector on Bitcoin (BTC/USD), 5 December 2024.",
+  "alt": "Spinning top. A small body with upper and lower wicks both longer than the body. Found by our detector on Bitcoin (BTC/USD), 5 December 2024.",
+  "symbol": "btcusd",
+  "start": "2024-12-05",
+  "end": "2024-12-05",
+  "indicator": null,
+  "pattern": "spinning-top",
+  "params": {},
+  "credit": "Bitcoin (BTC/USD), daily, Nov 2024 to Dec 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 163
  },
  "standard-deviation": {
   "slug": "standard-deviation",
