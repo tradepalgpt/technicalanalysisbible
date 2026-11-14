@@ -153,6 +153,21 @@
   },
   "credit": "Bitcoin (BTC/USD), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "ascending-triangle": {
+  "slug": "ascending-triangle",
+  "file": "ascending-triangle.svg",
+  "title": "Ascending triangle with flat top",
+  "caption": "A flat upper line and a rising lower line squeeze price, then a close above the flat line. Found by our detector on Russell 2000 ETF (IWM), 19 August 2021 to 1 November 2021.",
+  "alt": "Ascending triangle with flat top. A flat upper line and a rising lower line squeeze price, then a close above the flat line. Found by our detector on Russell 2000 ETF (IWM), 19 August 2021 to 1 November 2021.",
+  "symbol": "iwm",
+  "start": "2021-08-19",
+  "end": "2021-11-01",
+  "indicator": null,
+  "pattern": "ascending-triangle",
+  "params": {},
+  "credit": "Russell 2000 ETF (IWM), daily, Jul 2021 to Nov 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 4
+ },
  "atr": {
   "slug": "atr",
   "file": "atr.svg",
@@ -213,6 +228,21 @@
    "period": 14
   },
   "credit": "Bitcoin (BTC/USD), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "bear-flag": {
+  "slug": "bear-flag",
+  "file": "bear-flag.svg",
+  "title": "Bear flag with measured target",
+  "caption": "A sharp fall (the pole), a short pause drifting up between two parallel lines, then a close below the lower line. Found by our detector on Tesla (TSLA), 10 October 2023 to 9 November 2023.",
+  "alt": "Bear flag with measured target. A sharp fall (the pole), a short pause drifting up between two parallel lines, then a close below the lower line. Found by our detector on Tesla (TSLA), 10 October 2023 to 9 November 2023.",
+  "symbol": "tsla",
+  "start": "2023-10-10",
+  "end": "2023-11-09",
+  "indicator": null,
+  "pattern": "bear-flag",
+  "params": {},
+  "credit": "Tesla (TSLA), daily, Sep 2023 to Dec 2023. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 2
  },
  "bearish-engulfing": {
   "slug": "bearish-engulfing",
@@ -307,6 +337,36 @@
    "lookback": 125
   },
   "credit": "Bitcoin (BTC/USD), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "broadening-formation": {
+  "slug": "broadening-formation",
+  "file": "broadening-formation.svg",
+  "title": "Broadening formation",
+  "caption": "Higher highs and lower lows spread the two lines apart, then a close beyond one of them. Found by our detector on S&P 500 ETF (SPY), 11 May 2022 to 16 June 2022.",
+  "alt": "Broadening formation. Higher highs and lower lows spread the two lines apart, then a close beyond one of them. Found by our detector on S&P 500 ETF (SPY), 11 May 2022 to 16 June 2022.",
+  "symbol": "spy",
+  "start": "2022-05-11",
+  "end": "2022-06-16",
+  "indicator": null,
+  "pattern": "broadening-formation",
+  "params": {},
+  "credit": "S&P 500 ETF (SPY), daily, Apr 2022 to Jul 2022. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 1
+ },
+ "bull-flag": {
+  "slug": "bull-flag",
+  "file": "bull-flag.svg",
+  "title": "Bull flag with measured target",
+  "caption": "A sharp rise (the pole), a short pause drifting down between two parallel lines, then a close above the upper line. Found by our detector on Nvidia (NVDA), 20 October 2021 to 18 November 2021.",
+  "alt": "Bull flag with measured target. A sharp rise (the pole), a short pause drifting down between two parallel lines, then a close above the upper line. Found by our detector on Nvidia (NVDA), 20 October 2021 to 18 November 2021.",
+  "symbol": "nvda",
+  "start": "2021-10-20",
+  "end": "2021-11-18",
+  "indicator": null,
+  "pattern": "bull-flag",
+  "params": {},
+  "credit": "Nvidia (NVDA), daily, Sep 2021 to Dec 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 5
  },
  "bullish-engulfing": {
   "slug": "bullish-engulfing",
@@ -632,6 +692,21 @@
   },
   "credit": "S&P 500 ETF (SPY), daily, Aug 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "descending-triangle": {
+  "slug": "descending-triangle",
+  "file": "descending-triangle.svg",
+  "title": "Descending triangle with flat base",
+  "caption": "A flat lower line and a falling upper line squeeze price, then a close below the flat line. Found by our detector on Bitcoin (BTC/USD), 11 July 2025 to 1 August 2025.",
+  "alt": "Descending triangle with flat base. A flat lower line and a falling upper line squeeze price, then a close below the flat line. Found by our detector on Bitcoin (BTC/USD), 11 July 2025 to 1 August 2025.",
+  "symbol": "btcusd",
+  "start": "2025-07-11",
+  "end": "2025-08-01",
+  "indicator": null,
+  "pattern": "descending-triangle",
+  "params": {},
+  "credit": "Bitcoin (BTC/USD), daily, Jun 2025 to Aug 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 1
+ },
  "detrended-price-oscillator": {
   "slug": "detrended-price-oscillator",
   "file": "detrended-price-oscillator.svg",
@@ -891,6 +966,21 @@
   "pattern": "falling-three-methods",
   "params": {},
   "credit": "Exxon Mobil (XOM), daily, Oct 2023 to Dec 2023. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 1
+ },
+ "falling-wedge": {
+  "slug": "falling-wedge",
+  "file": "falling-wedge.svg",
+  "title": "Falling wedge",
+  "caption": "Both lines slope down and converge, the upper one more steeply, then a close above the upper line. Found by our detector on Gold futures, 21 July 2022 to 8 November 2022.",
+  "alt": "Falling wedge. Both lines slope down and converge, the upper one more steeply, then a close above the upper line. Found by our detector on Gold futures, 21 July 2022 to 8 November 2022.",
+  "symbol": "gold",
+  "start": "2022-07-21",
+  "end": "2022-11-08",
+  "indicator": null,
+  "pattern": "falling-wedge",
+  "params": {},
+  "credit": "Gold futures, daily, May 2022 to Dec 2022. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 1
  },
  "fibonacci-extension": {
@@ -1705,6 +1795,21 @@
   },
   "credit": "Apple (AAPL), daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "pennant": {
+  "slug": "pennant",
+  "file": "pennant.svg",
+  "title": "Pennant with measured target",
+  "caption": "A sharp move (the pole), a short squeeze between two converging lines, then a close beyond a line in the pole's direction. Found by our detector on Bitcoin (BTC/USD), 12 October 2023 to 1 November 2023.",
+  "alt": "Pennant with measured target. A sharp move (the pole), a short squeeze between two converging lines, then a close beyond a line in the pole's direction. Found by our detector on Bitcoin (BTC/USD), 12 October 2023 to 1 November 2023.",
+  "symbol": "btcusd",
+  "start": "2023-10-12",
+  "end": "2023-11-01",
+  "indicator": null,
+  "pattern": "pennant",
+  "params": {},
+  "credit": "Bitcoin (BTC/USD), daily, Sep 2023 to Nov 2023. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 1
+ },
  "percent-b": {
   "slug": "percent-b",
   "file": "percent-b.svg",
@@ -1862,6 +1967,21 @@
   },
   "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "rectangle-pattern": {
+  "slug": "rectangle-pattern",
+  "file": "rectangle-pattern.svg",
+  "title": "Rectangle with support and resistance",
+  "caption": "Price bounces between a flat support line and a flat resistance line, then closes beyond one of them. Found by our detector on Exxon Mobil (XOM), 18 July 2024 to 6 September 2024.",
+  "alt": "Rectangle with support and resistance. Price bounces between a flat support line and a flat resistance line, then closes beyond one of them. Found by our detector on Exxon Mobil (XOM), 18 July 2024 to 6 September 2024.",
+  "symbol": "xom",
+  "start": "2024-07-18",
+  "end": "2024-09-06",
+  "indicator": null,
+  "pattern": "rectangle-pattern",
+  "params": {},
+  "credit": "Exxon Mobil (XOM), daily, Jun 2024 to Oct 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 2
+ },
  "relative-vigor-index": {
   "slug": "relative-vigor-index",
   "file": "relative-vigor-index.svg",
@@ -1923,6 +2043,21 @@
   "params": {},
   "credit": "Bitcoin (BTC/USD), daily, Sep 2021 to Oct 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 2
+ },
+ "rising-wedge": {
+  "slug": "rising-wedge",
+  "file": "rising-wedge.svg",
+  "title": "Rising wedge",
+  "caption": "Both lines slope up and converge, the lower one more steeply, then a close below the lower line. Found by our detector on Nasdaq 100 ETF (QQQ), 12 October 2023 to 20 February 2024.",
+  "alt": "Rising wedge. Both lines slope up and converge, the lower one more steeply, then a close below the lower line. Found by our detector on Nasdaq 100 ETF (QQQ), 12 October 2023 to 20 February 2024.",
+  "symbol": "qqq",
+  "start": "2023-10-12",
+  "end": "2024-02-20",
+  "indicator": null,
+  "pattern": "rising-wedge",
+  "params": {},
+  "credit": "Nasdaq 100 ETF (QQQ), daily, Aug 2023 to Apr 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 3
  },
  "rounding-bottom": {
   "slug": "rounding-bottom",
@@ -2180,6 +2315,21 @@
    "multiplier": 3.0
   },
   "credit": "Gold futures, daily, Jan 2025 to Oct 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "symmetrical-triangle": {
+  "slug": "symmetrical-triangle",
+  "file": "symmetrical-triangle.svg",
+  "title": "Symmetrical triangle",
+  "caption": "Lower highs and higher lows squeeze price between two converging lines, then a close beyond one of them. Found by our detector on Gold futures, 13 November 2023 to 13 February 2024.",
+  "alt": "Symmetrical triangle. Lower highs and higher lows squeeze price between two converging lines, then a close beyond one of them. Found by our detector on Gold futures, 13 November 2023 to 13 February 2024.",
+  "symbol": "gold",
+  "start": "2023-11-13",
+  "end": "2024-02-13",
+  "indicator": null,
+  "pattern": "symmetrical-triangle",
+  "params": {},
+  "credit": "Gold futures, daily, Sep 2023 to Mar 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 7
  },
  "t3-moving-average": {
   "slug": "t3-moving-average",
