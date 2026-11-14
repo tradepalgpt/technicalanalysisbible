@@ -1,0 +1,5245 @@
+{
+ "types": [
+  {
+   "slug": "moving-average",
+   "name": "Moving averages"
+  },
+  {
+   "slug": "trend",
+   "name": "Trend indicators"
+  },
+  {
+   "slug": "momentum-oscillator",
+   "name": "Momentum oscillators"
+  },
+  {
+   "slug": "volatility",
+   "name": "Volatility"
+  },
+  {
+   "slug": "volume",
+   "name": "Volume and order flow"
+  },
+  {
+   "slug": "breadth-sentiment",
+   "name": "Breadth and sentiment"
+  },
+  {
+   "slug": "levels",
+   "name": "Support, resistance and levels"
+  },
+  {
+   "slug": "fibonacci",
+   "name": "Fibonacci and ratio tools"
+  },
+  {
+   "slug": "chart-pattern",
+   "name": "Chart patterns"
+  },
+  {
+   "slug": "candlestick",
+   "name": "Candlestick patterns"
+  },
+  {
+   "slug": "price-action",
+   "name": "Price action and market structure"
+  },
+  {
+   "slug": "theory",
+   "name": "Theories and schools"
+  },
+  {
+   "slug": "stop-exit",
+   "name": "Stop and exit methods"
+  },
+  {
+   "slug": "chart-type",
+   "name": "Chart types"
+  }
+ ],
+ "items": [
+  {
+   "slug": "percent-b",
+   "name": "%B (Bollinger)",
+   "types": [
+    "volatility"
+   ],
+   "states": [
+    "range",
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "abcd-pattern",
+   "name": "AB=CD Pattern",
+   "types": [
+    "fibonacci"
+   ],
+   "states": [
+    "reversal",
+    "trend"
+   ],
+   "purposes": [
+    "entry",
+    "exit"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "abandoned-baby",
+   "name": "Abandoned Baby",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "apo",
+   "name": "Absolute Price Oscillator (APO)",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "absorption",
+   "name": "Absorption (order flow)",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "accelerator-oscillator",
+   "name": "Accelerator Oscillator",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "accumulation-distribution",
+   "name": "Accumulation/Distribution Line",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "trend",
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "adam-and-eve",
+   "name": "Adam and Eve (double bottom variant)",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "advance-block",
+   "name": "Advance Block",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "advance-decline-line",
+   "name": "Advance-Decline Line",
+   "types": [
+    "breadth-sentiment"
+   ],
+   "states": [
+    "trend",
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "williams-alligator",
+   "name": "Alligator (Williams)",
+   "types": [
+    "trend"
+   ],
+   "states": [
+    "trend",
+    "range"
+   ],
+   "purposes": [
+    "filter",
+    "entry"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "anchored-vwap",
+   "name": "Anchored VWAP",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "trend",
+    "range"
+   ],
+   "purposes": [
+    "entry",
+    "stop"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "andrews-pitchfork",
+   "name": "Andrews' Pitchfork",
+   "types": [
+    "levels"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "entry",
+    "exit"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "trin",
+   "name": "Arms Index (TRIN)",
+   "types": [
+    "breadth-sentiment"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "alma",
+   "name": "Arnaud Legoux Moving Average (ALMA)",
+   "types": [
+    "moving-average"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "entry",
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "aroon",
+   "name": "Aroon Indicator",
+   "types": [
+    "trend"
+   ],
+   "states": [
+    "trend",
+    "range"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "aroon-oscillator",
+   "name": "Aroon Oscillator",
+   "types": [
+    "trend"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "ascending-triangle",
+   "name": "Ascending Triangle",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "breakout",
+    "trend"
+   ],
+   "purposes": [
+    "entry",
+    "stop",
+    "exit"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "atr-stop",
+   "name": "ATR Stop",
+   "types": [
+    "stop-exit"
+   ],
+   "states": [
+    "volatility",
+    "trend"
+   ],
+   "purposes": [
+    "stop"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "auction-market-theory",
+   "name": "Auction Market Theory",
+   "types": [
+    "theory"
+   ],
+   "states": [
+    "range",
+    "breakout"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "average-daily-range",
+   "name": "Average Daily Range (ADR)",
+   "types": [
+    "volatility"
+   ],
+   "states": [
+    "volatility"
+   ],
+   "purposes": [
+    "stop",
+    "exit"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "adx",
+   "name": "Average Directional Index (ADX)",
+   "types": [
+    "trend"
+   ],
+   "states": [
+    "trend",
+    "range"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "atr",
+   "name": "Average True Range (ATR)",
+   "types": [
+    "volatility"
+   ],
+   "states": [
+    "volatility"
+   ],
+   "purposes": [
+    "stop",
+    "filter"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "awesome-oscillator",
+   "name": "Awesome Oscillator",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "trend",
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "balance-of-power",
+   "name": "Balance of Power",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "ohlc-bar-chart",
+   "name": "Bar Chart (OHLC)",
+   "types": [
+    "chart-type"
+   ],
+   "states": [
+    "trend",
+    "range"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "bat-pattern",
+   "name": "Bat Pattern",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "bear-flag",
+   "name": "Bear Flag",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "trend",
+    "breakout"
+   ],
+   "purposes": [
+    "entry",
+    "stop",
+    "exit"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "bearish-engulfing",
+   "name": "Bearish Engulfing",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "bearish-harami",
+   "name": "Bearish Harami",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "belt-hold",
+   "name": "Belt Hold",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "beta",
+   "name": "Beta",
+   "types": [
+    "breadth-sentiment"
+   ],
+   "states": [
+    "volatility"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "bollinger-band-width",
+   "name": "Bollinger Band Width",
+   "types": [
+    "volatility"
+   ],
+   "states": [
+    "volatility",
+    "breakout"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "bollinger-bands",
+   "name": "Bollinger Bands",
+   "types": [
+    "volatility"
+   ],
+   "states": [
+    "range",
+    "volatility",
+    "breakout"
+   ],
+   "purposes": [
+    "entry",
+    "exit",
+    "filter"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "bollinger-squeeze",
+   "name": "Bollinger Squeeze",
+   "types": [
+    "volatility"
+   ],
+   "states": [
+    "volatility",
+    "breakout"
+   ],
+   "purposes": [
+    "entry",
+    "filter"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "break-of-structure",
+   "name": "Break of Structure (BOS)",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "trend",
+    "breakout"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "break-even-stop",
+   "name": "Break-Even Stop",
+   "types": [
+    "stop-exit"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "stop"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "breakaway-gap",
+   "name": "Breakaway Gap",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "breakout"
+   ],
+   "purposes": [
+    "entry",
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "breaker-block",
+   "name": "Breaker Block",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "breakout-retest",
+   "name": "Breakout and Retest",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "breakout"
+   ],
+   "purposes": [
+    "entry",
+    "stop"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "breakout-trading",
+   "name": "Breakout Trading",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "breakout"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "bull-flag",
+   "name": "Bull Flag",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "trend",
+    "breakout"
+   ],
+   "purposes": [
+    "entry",
+    "stop",
+    "exit"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "bullish-engulfing",
+   "name": "Bullish Engulfing",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "bullish-harami",
+   "name": "Bullish Harami",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "bullish-percent-index",
+   "name": "Bullish Percent Index",
+   "types": [
+    "breadth-sentiment"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "bump-and-run",
+   "name": "Bump and Run Reversal",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "butterfly-pattern",
+   "name": "Butterfly Pattern",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "camarilla-pivots",
+   "name": "Camarilla Pivot Points",
+   "types": [
+    "levels"
+   ],
+   "states": [
+    "range",
+    "breakout"
+   ],
+   "purposes": [
+    "entry",
+    "exit"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "candlestick-chart",
+   "name": "Candlestick charts (how to read)",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "trend",
+    "range"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "center-of-gravity",
+   "name": "Center of Gravity (Ehlers)",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "chaikin-money-flow",
+   "name": "Chaikin Money Flow (CMF)",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "trend",
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "chaikin-oscillator",
+   "name": "Chaikin Oscillator",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "chaikin-volatility",
+   "name": "Chaikin Volatility",
+   "types": [
+    "volatility"
+   ],
+   "states": [
+    "volatility"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "chande-momentum-oscillator",
+   "name": "Chande Momentum Oscillator (CMO)",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "range",
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "chandelier-exit",
+   "name": "Chandelier Exit",
+   "types": [
+    "stop-exit"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "stop",
+    "exit"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "change-of-character",
+   "name": "Change of Character (CHoCH)",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "choppiness-index",
+   "name": "Choppiness Index",
+   "types": [
+    "trend"
+   ],
+   "states": [
+    "trend",
+    "range"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "commitments-of-traders",
+   "name": "Commitments of Traders (COT)",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "trend",
+    "reversal"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "cci",
+   "name": "Commodity Channel Index (CCI)",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "range",
+    "reversal",
+    "trend"
+   ],
+   "purposes": [
+    "entry",
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "common-gap",
+   "name": "Common Gap",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "range"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "confluence",
+   "name": "Confluence",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "trend",
+    "range",
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "connors-rsi",
+   "name": "Connors RSI",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "range",
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "coppock-curve",
+   "name": "Coppock Curve",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "corrective-waves",
+   "name": "Corrective Waves (zigzag, flat, triangle)",
+   "types": [
+    "theory"
+   ],
+   "states": [
+    "range",
+    "trend"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "correlation-coefficient",
+   "name": "Correlation Coefficient",
+   "types": [
+    "breadth-sentiment"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "counterattack-lines",
+   "name": "Counterattack Lines",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "crab-pattern",
+   "name": "Crab Pattern",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "cumulative-volume-delta",
+   "name": "Cumulative Volume Delta (CVD)",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "reversal",
+    "trend"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "cup-and-handle",
+   "name": "Cup and Handle",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "breakout",
+    "trend"
+   ],
+   "purposes": [
+    "entry",
+    "stop"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "currency-strength-meter",
+   "name": "Currency Strength Meter",
+   "types": [
+    "breadth-sentiment"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "cyber-cycle",
+   "name": "Cyber Cycle (Ehlers)",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "range"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "cypher-pattern",
+   "name": "Cypher Pattern",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "session-open",
+   "name": "Daily Open / Session Open",
+   "types": [
+    "levels"
+   ],
+   "states": [
+    "range"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "dark-cloud-cover",
+   "name": "Dark Cloud Cover",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "death-cross",
+   "name": "Death Cross",
+   "types": [
+    "moving-average"
+   ],
+   "states": [
+    "trend",
+    "reversal"
+   ],
+   "purposes": [
+    "exit",
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "deliberation-pattern",
+   "name": "Deliberation (Stalled) Pattern",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "volume-delta",
+   "name": "Delta (order flow)",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "demark-pivots",
+   "name": "DeMark Pivot Points",
+   "types": [
+    "levels"
+   ],
+   "states": [
+    "range"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "descending-triangle",
+   "name": "Descending Triangle",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "breakout",
+    "trend"
+   ],
+   "purposes": [
+    "entry",
+    "stop",
+    "exit"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "detrended-price-oscillator",
+   "name": "Detrended Price Oscillator (DPO)",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "range"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "diamond-pattern",
+   "name": "Diamond Top / Bottom",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "dmi",
+   "name": "Directional Movement Index (DMI, +DI/-DI)",
+   "types": [
+    "trend"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "entry",
+    "filter"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "disparity-index",
+   "name": "Disparity Index",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "displacement",
+   "name": "Displacement",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "breakout",
+    "trend"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "divergence",
+   "name": "Divergence (bullish/bearish, regular)",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "doji",
+   "name": "Doji",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal",
+    "range"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "donchian-channels",
+   "name": "Donchian Channels",
+   "types": [
+    "volatility"
+   ],
+   "states": [
+    "breakout",
+    "trend"
+   ],
+   "purposes": [
+    "entry",
+    "stop",
+    "exit"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "double-bottom",
+   "name": "Double Bottom",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "stop"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "dema",
+   "name": "Double EMA (DEMA)",
+   "types": [
+    "moving-average"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "entry",
+    "filter"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "double-top",
+   "name": "Double Top",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "stop"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "dow-theory",
+   "name": "Dow Theory",
+   "types": [
+    "theory"
+   ],
+   "states": [
+    "trend",
+    "reversal"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "dragonfly-doji",
+   "name": "Dragonfly Doji",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "ease-of-movement",
+   "name": "Ease of Movement",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "elder-impulse-system",
+   "name": "Elder Impulse System",
+   "types": [
+    "trend"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "elder-ray-index",
+   "name": "Elder-Ray Index (Bull/Bear Power)",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "entry",
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "elders-force-index",
+   "name": "Elder's Force Index",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "elliott-wave",
+   "name": "Elliott Wave Theory",
+   "types": [
+    "theory"
+   ],
+   "states": [
+    "trend",
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "exit",
+    "filter"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "equal-highs-lows",
+   "name": "Equal Highs / Equal Lows (liquidity pools)",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "range",
+    "reversal"
+   ],
+   "purposes": [
+    "exit"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "evening-doji-star",
+   "name": "Evening Doji Star",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "evening-star",
+   "name": "Evening Star",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "exhaustion-gap",
+   "name": "Exhaustion Gap",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "exit"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "broadening-formation",
+   "name": "Expanding Triangle (Broadening)",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "volatility",
+    "reversal"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "exponential-moving-average",
+   "name": "Exponential Moving Average (EMA)",
+   "types": [
+    "moving-average"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter",
+    "entry",
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "fair-value-gap",
+   "name": "Fair Value Gap (FVG / imbalance)",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "entry",
+    "exit"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "fakey-pattern",
+   "name": "Fakey (false inside-bar break)",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "falling-three-methods",
+   "name": "Falling Three Methods",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "falling-wedge",
+   "name": "Falling Wedge",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "reversal",
+    "trend"
+   ],
+   "purposes": [
+    "entry",
+    "stop"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "false-breakout",
+   "name": "False Breakout (fakeout)",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "reversal",
+    "range"
+   ],
+   "purposes": [
+    "entry",
+    "stop"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "fear-and-greed-index",
+   "name": "Fear and Greed Index",
+   "types": [
+    "breadth-sentiment"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "fibonacci-arcs",
+   "name": "Fibonacci Arcs",
+   "types": [
+    "fibonacci"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "fibonacci-channel",
+   "name": "Fibonacci Channel",
+   "types": [
+    "fibonacci"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "entry",
+    "exit"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "fibonacci-confluence",
+   "name": "Fibonacci Confluence",
+   "types": [
+    "fibonacci"
+   ],
+   "states": [
+    "trend",
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "fibonacci-extension",
+   "name": "Fibonacci Extension",
+   "types": [
+    "fibonacci"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "exit"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "fibonacci-fan",
+   "name": "Fibonacci Fan",
+   "types": [
+    "fibonacci"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "fibonacci-pivot-points",
+   "name": "Fibonacci Pivot Points",
+   "types": [
+    "levels"
+   ],
+   "states": [
+    "range"
+   ],
+   "purposes": [
+    "entry",
+    "exit"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "fibonacci-projection",
+   "name": "Fibonacci Projection (expansion)",
+   "types": [
+    "fibonacci"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "exit"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "fibonacci-retracement",
+   "name": "Fibonacci Retracement",
+   "types": [
+    "fibonacci"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "entry",
+    "stop"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "fibonacci-time-zones",
+   "name": "Fibonacci Time Zones",
+   "types": [
+    "fibonacci"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "fisher-transform",
+   "name": "Fisher Transform",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "footprint-chart",
+   "name": "Footprint Chart",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "reversal",
+    "breakout"
+   ],
+   "purposes": [
+    "entry",
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "force-index",
+   "name": "Force Index",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "trend",
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "frama",
+   "name": "Fractal Adaptive Moving Average (FRAMA)",
+   "types": [
+    "moving-average"
+   ],
+   "states": [
+    "trend",
+    "range"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "williams-fractals",
+   "name": "Fractals (Williams)",
+   "types": [
+    "trend"
+   ],
+   "states": [
+    "trend",
+    "breakout"
+   ],
+   "purposes": [
+    "stop",
+    "entry"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "gann-fan",
+   "name": "Gann Angles / Fan",
+   "types": [
+    "theory"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "gann-square-of-nine",
+   "name": "Gann Levels / Square of Nine",
+   "types": [
+    "levels"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "gann-theory",
+   "name": "Gann Theory (overview)",
+   "types": [
+    "theory"
+   ],
+   "states": [
+    "trend",
+    "reversal"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "price-gaps",
+   "name": "Gap (as a level)",
+   "types": [
+    "levels"
+   ],
+   "states": [
+    "breakout",
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "gap-fill",
+   "name": "Gap Fill",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "range",
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "exit"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "gartley-pattern",
+   "name": "Gartley Pattern",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "stop"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "gator-oscillator",
+   "name": "Gator Oscillator",
+   "types": [
+    "trend"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "golden-cross",
+   "name": "Golden Cross",
+   "types": [
+    "moving-average"
+   ],
+   "states": [
+    "trend",
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "golden-ratio",
+   "name": "Golden Ratio (0.618 / 1.618)",
+   "types": [
+    "fibonacci"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "gravestone-doji",
+   "name": "Gravestone Doji",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "guppy-multiple-moving-average",
+   "name": "Guppy Multiple Moving Average (GMMA)",
+   "types": [
+    "moving-average"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter",
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "hammer",
+   "name": "Hammer",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "hanging-man",
+   "name": "Hanging Man",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "harami-cross",
+   "name": "Harami Cross",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "harmonic-patterns",
+   "name": "Harmonic Patterns (overview)",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "stop",
+    "exit"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "head-and-shoulders",
+   "name": "Head and Shoulders",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "stop",
+    "exit"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "heikin-ashi",
+   "name": "Heikin-Ashi trend reading",
+   "types": [
+    "trend",
+    "chart-type"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter",
+    "exit"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "hidden-divergence",
+   "name": "Hidden Divergence",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "entry",
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "hindenburg-omen",
+   "name": "Hindenburg Omen",
+   "types": [
+    "breadth-sentiment"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "historical-volatility",
+   "name": "Historical Volatility",
+   "types": [
+    "volatility"
+   ],
+   "states": [
+    "volatility"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "homing-pigeon",
+   "name": "Homing Pigeon",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "key-levels",
+   "name": "Horizontal Ray / Key Level",
+   "types": [
+    "levels"
+   ],
+   "states": [
+    "range",
+    "breakout"
+   ],
+   "purposes": [
+    "entry",
+    "stop"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "hull-moving-average",
+   "name": "Hull Moving Average",
+   "types": [
+    "moving-average"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "entry",
+    "filter"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "ichimoku-cloud",
+   "name": "Ichimoku Cloud",
+   "types": [
+    "trend"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "entry",
+    "filter",
+    "stop",
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "implied-volatility",
+   "name": "Implied Volatility",
+   "types": [
+    "volatility"
+   ],
+   "states": [
+    "volatility"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "impulse-wave",
+   "name": "Impulse Wave",
+   "types": [
+    "theory"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "initial-balance",
+   "name": "Initial Balance",
+   "types": [
+    "levels"
+   ],
+   "states": [
+    "range",
+    "breakout"
+   ],
+   "purposes": [
+    "entry",
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "inside-bar",
+   "name": "Inside Bar",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "volatility",
+    "breakout"
+   ],
+   "purposes": [
+    "entry",
+    "stop"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "nr7",
+   "name": "Inside Range / NR4 and NR7",
+   "types": [
+    "volatility"
+   ],
+   "states": [
+    "volatility",
+    "breakout"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "intermarket-analysis",
+   "name": "Intermarket Analysis",
+   "types": [
+    "breadth-sentiment"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "inverse-cup-and-handle",
+   "name": "Inverse Cup and Handle",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "breakout"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "inverse-fisher-transform",
+   "name": "Inverse Fisher Transform",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "inverse-head-and-shoulders",
+   "name": "Inverse Head and Shoulders",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "stop",
+    "exit"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "inverted-hammer",
+   "name": "Inverted Hammer",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "island-reversal",
+   "name": "Island Reversal",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "kagi-chart",
+   "name": "Kagi Chart",
+   "types": [
+    "chart-type"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "kase-devstop",
+   "name": "Kase DevStop",
+   "types": [
+    "stop-exit"
+   ],
+   "states": [
+    "volatility"
+   ],
+   "purposes": [
+    "stop"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "kama",
+   "name": "Kaufman Adaptive Moving Average (KAMA)",
+   "types": [
+    "moving-average"
+   ],
+   "states": [
+    "trend",
+    "range"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "keltner-channels",
+   "name": "Keltner Channels",
+   "types": [
+    "volatility"
+   ],
+   "states": [
+    "trend",
+    "volatility",
+    "breakout"
+   ],
+   "purposes": [
+    "entry",
+    "stop",
+    "filter"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "kicker-pattern",
+   "name": "Kicker Pattern",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal",
+    "breakout"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "kill-zones",
+   "name": "Kill Zones (session timing)",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "volatility"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "klinger-oscillator",
+   "name": "Klinger Oscillator",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "trend",
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "know-sure-thing",
+   "name": "Know Sure Thing (KST)",
+   "types": [
+    "trend"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "ladder-bottom",
+   "name": "Ladder Bottom",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "laguerre-rsi",
+   "name": "Laguerre RSI",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "range",
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "lsma",
+   "name": "Least Squares Moving Average (LSMA)",
+   "types": [
+    "moving-average"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "line-chart",
+   "name": "Line Chart",
+   "types": [
+    "chart-type"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "linear-regression-channel",
+   "name": "Linear Regression Channel",
+   "types": [
+    "trend"
+   ],
+   "states": [
+    "trend",
+    "range"
+   ],
+   "purposes": [
+    "entry",
+    "exit"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "linear-regression",
+   "name": "Linear Regression Line",
+   "types": [
+    "trend"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "linear-regression-slope",
+   "name": "Linear Regression Slope",
+   "types": [
+    "trend"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "liquidity-sweep",
+   "name": "Liquidity Sweep (stop hunt)",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "log-scale",
+   "name": "Logarithmic vs Linear Scale",
+   "types": [
+    "chart-type"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "long-legged-doji",
+   "name": "Long-Legged Doji",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "volatility",
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "macd",
+   "name": "MACD",
+   "types": [
+    "trend"
+   ],
+   "states": [
+    "trend",
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "macd-histogram",
+   "name": "MACD Histogram",
+   "types": [
+    "trend"
+   ],
+   "states": [
+    "trend",
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "market-cycles",
+   "name": "Market Cycles",
+   "types": [
+    "theory"
+   ],
+   "states": [
+    "reversal",
+    "trend"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "market-profile",
+   "name": "Market Profile (TPO)",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "range",
+    "breakout"
+   ],
+   "purposes": [
+    "entry",
+    "filter"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "market-structure",
+   "name": "Market Structure (higher highs, higher lows)",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "trend",
+    "reversal"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "market-structure-shift",
+   "name": "Market Structure Shift (MSS)",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "marubozu",
+   "name": "Marubozu",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "trend",
+    "breakout"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "mass-index",
+   "name": "Mass Index",
+   "types": [
+    "trend"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "mat-hold",
+   "name": "Mat Hold",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "mcclellan-oscillator",
+   "name": "McClellan Oscillator",
+   "types": [
+    "breadth-sentiment"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "mcclellan-summation-index",
+   "name": "McClellan Summation Index",
+   "types": [
+    "breadth-sentiment"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "mcginley-dynamic",
+   "name": "McGinley Dynamic",
+   "types": [
+    "moving-average"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter",
+    "stop"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "mean-reversion",
+   "name": "Mean Reversion",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "range",
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "measured-move",
+   "name": "Measured Move",
+   "types": [
+    "fibonacci"
+   ],
+   "states": [
+    "breakout",
+    "trend"
+   ],
+   "purposes": [
+    "exit"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "mama",
+   "name": "MESA Adaptive Moving Average (MAMA)",
+   "types": [
+    "moving-average"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "entry",
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "mitigation-block",
+   "name": "Mitigation Block",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "momentum-indicator",
+   "name": "Momentum Indicator",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "trend",
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "money-flow-index",
+   "name": "Money Flow Index (MFI)",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "range",
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "morning-doji-star",
+   "name": "Morning Doji Star",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "morning-star",
+   "name": "Morning Star",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "moving-average-crossover",
+   "name": "Moving Average Crossover",
+   "types": [
+    "moving-average"
+   ],
+   "states": [
+    "trend",
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "exit"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "moving-average-envelope",
+   "name": "Moving Average Envelope",
+   "types": [
+    "moving-average"
+   ],
+   "states": [
+    "range",
+    "trend"
+   ],
+   "purposes": [
+    "entry",
+    "exit"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "moving-average-exit",
+   "name": "Moving Average Exit",
+   "types": [
+    "stop-exit"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "exit"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "moving-average-ribbon",
+   "name": "Moving Average Ribbon",
+   "types": [
+    "moving-average"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter",
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "multiple-time-frame-analysis",
+   "name": "Multiple Time Frame Analysis",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "trend",
+    "range"
+   ],
+   "purposes": [
+    "filter",
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "murrey-math-lines",
+   "name": "Murrey Math Lines",
+   "types": [
+    "levels"
+   ],
+   "states": [
+    "range"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "negative-volume-index",
+   "name": "Negative Volume Index",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "new-highs-new-lows",
+   "name": "New Highs - New Lows",
+   "types": [
+    "breadth-sentiment"
+   ],
+   "states": [
+    "trend",
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "normalized-atr",
+   "name": "Normalized ATR (NATR)",
+   "types": [
+    "volatility"
+   ],
+   "states": [
+    "volatility"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "nyse-tick",
+   "name": "NYSE TICK",
+   "types": [
+    "breadth-sentiment"
+   ],
+   "states": [
+    "range",
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "on-balance-volume",
+   "name": "On-Balance Volume (OBV)",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "trend",
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "on-neck-in-neck",
+   "name": "On-Neck / In-Neck",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "open-interest",
+   "name": "Open Interest",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "trend",
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "opening-range-breakout",
+   "name": "Opening Range Breakout",
+   "types": [
+    "volatility"
+   ],
+   "states": [
+    "breakout",
+    "volatility"
+   ],
+   "purposes": [
+    "entry",
+    "stop"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "optimal-trade-entry",
+   "name": "Optimal Trade Entry (OTE)",
+   "types": [
+    "fibonacci"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "order-block",
+   "name": "Order Block",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "reversal",
+    "trend"
+   ],
+   "purposes": [
+    "entry",
+    "stop"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "depth-of-market",
+   "name": "Order Book / Depth of Market",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "range"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "outside-bar",
+   "name": "Outside Bar",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "reversal",
+    "volatility"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "overbought-oversold",
+   "name": "Overbought and Oversold",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "range",
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "exit"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "parabolic-sar",
+   "name": "Parabolic SAR",
+   "types": [
+    "trend"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "stop",
+    "exit"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "pennant",
+   "name": "Pennant",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "trend",
+    "breakout"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "percent-above-moving-average",
+   "name": "Percent Above Moving Average",
+   "types": [
+    "breadth-sentiment"
+   ],
+   "states": [
+    "trend",
+    "reversal"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "ppo",
+   "name": "Percentage Price Oscillator (PPO)",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "piercing-line",
+   "name": "Piercing Line",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "pin-bar",
+   "name": "Pin Bar",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "stop"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "pivot-points",
+   "name": "Pivot Points (standard)",
+   "types": [
+    "levels"
+   ],
+   "states": [
+    "range"
+   ],
+   "purposes": [
+    "entry",
+    "exit",
+    "stop"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "point-and-figure",
+   "name": "Point and Figure Chart",
+   "types": [
+    "chart-type"
+   ],
+   "states": [
+    "trend",
+    "breakout"
+   ],
+   "purposes": [
+    "entry",
+    "filter"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "point-of-control",
+   "name": "Point of Control (POC)",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "range"
+   ],
+   "purposes": [
+    "entry",
+    "exit"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "position-sizing",
+   "name": "Position Sizing",
+   "types": [
+    "stop-exit"
+   ],
+   "states": [
+    "volatility"
+   ],
+   "purposes": [
+    "stop"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "positive-volume-index",
+   "name": "Positive Volume Index",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "power-of-three",
+   "name": "Power of Three (AMD)",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "premium-discount",
+   "name": "Premium and Discount Zones",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "trend",
+    "range"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "previous-day-high-low",
+   "name": "Previous Day High/Low",
+   "types": [
+    "levels"
+   ],
+   "states": [
+    "range",
+    "breakout"
+   ],
+   "purposes": [
+    "entry",
+    "stop"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "price-action",
+   "name": "Price Action Trading (overview)",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "trend",
+    "range",
+    "breakout",
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "stop",
+    "exit"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "price-volume-trend",
+   "name": "Price Volume Trend",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "profit-target",
+   "name": "Profit Target (R-multiple targets)",
+   "types": [
+    "stop-exit"
+   ],
+   "states": [
+    "trend",
+    "range"
+   ],
+   "purposes": [
+    "exit"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "pullback-trading",
+   "name": "Pullback (retracement entry)",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "put-call-ratio",
+   "name": "Put/Call Ratio",
+   "types": [
+    "breadth-sentiment"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "quasimodo-pattern",
+   "name": "Quasimodo (Over-and-Under)",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "stop"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "rainbow-oscillator",
+   "name": "Rainbow Oscillator",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "random-walk-index",
+   "name": "Random Walk Index",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "range-bars",
+   "name": "Range Bars",
+   "types": [
+    "chart-type"
+   ],
+   "states": [
+    "volatility"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "range-trading",
+   "name": "Range Trading",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "range"
+   ],
+   "purposes": [
+    "entry",
+    "exit"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "rate-of-change",
+   "name": "Rate of Change (ROC)",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "trend",
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation",
+    "filter"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "rectangle-pattern",
+   "name": "Rectangle (trading range)",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "range",
+    "breakout"
+   ],
+   "purposes": [
+    "entry",
+    "exit"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "relative-rotation-graph",
+   "name": "Relative Rotation Graph (RRG)",
+   "types": [
+    "breadth-sentiment"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "relative-strength-comparative",
+   "name": "Relative Strength (comparative)",
+   "types": [
+    "breadth-sentiment"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "rsi",
+   "name": "Relative Strength Index (RSI)",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "range",
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "confirmation",
+    "filter"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "relative-vigor-index",
+   "name": "Relative Vigor Index (RVI)",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "trend",
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "relative-volatility-index",
+   "name": "Relative Volatility Index",
+   "types": [
+    "volatility"
+   ],
+   "states": [
+    "volatility"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "relative-volume",
+   "name": "Relative Volume (RVOL)",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "breakout"
+   ],
+   "purposes": [
+    "filter",
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "renko-chart",
+   "name": "Renko Chart",
+   "types": [
+    "chart-type"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "retail-sentiment",
+   "name": "Retail Sentiment (positioning)",
+   "types": [
+    "breadth-sentiment"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "rising-three-methods",
+   "name": "Rising Three Methods",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "rising-wedge",
+   "name": "Rising Wedge",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "reversal",
+    "trend"
+   ],
+   "purposes": [
+    "entry",
+    "stop"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "risk-reward-ratio",
+   "name": "Risk-Reward Ratio",
+   "types": [
+    "stop-exit"
+   ],
+   "states": [
+    "trend",
+    "range",
+    "breakout",
+    "reversal"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "role-reversal",
+   "name": "Role Reversal (support becomes resistance)",
+   "types": [
+    "levels"
+   ],
+   "states": [
+    "breakout",
+    "trend"
+   ],
+   "purposes": [
+    "entry",
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "round-numbers",
+   "name": "Round Numbers (psychological levels)",
+   "types": [
+    "levels"
+   ],
+   "states": [
+    "range",
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "stop"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "rounding-bottom",
+   "name": "Rounding Bottom (Saucer)",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "rounding-top",
+   "name": "Rounding Top",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "rsi-failure-swing",
+   "name": "RSI Failure Swing",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "runaway-gap",
+   "name": "Runaway (Measuring) Gap",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "confirmation",
+    "exit"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "scaling-out",
+   "name": "Scaling Out (partial exits)",
+   "types": [
+    "stop-exit"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "exit"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "schaff-trend-cycle",
+   "name": "Schaff Trend Cycle",
+   "types": [
+    "trend"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "schiff-pitchfork",
+   "name": "Schiff Pitchfork",
+   "types": [
+    "levels"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "seasonality",
+   "name": "Seasonality",
+   "types": [
+    "breadth-sentiment"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "separating-lines",
+   "name": "Separating Lines",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "shark-pattern",
+   "name": "Shark Pattern",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "shooting-star",
+   "name": "Shooting Star",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "bar-stop",
+   "name": "Signal-Bar Stop (stop beyond the signal candle)",
+   "types": [
+    "stop-exit"
+   ],
+   "states": [
+    "reversal",
+    "breakout"
+   ],
+   "purposes": [
+    "stop"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "simple-moving-average",
+   "name": "Simple Moving Average (SMA)",
+   "types": [
+    "moving-average"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter",
+    "entry",
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "smart-money-concepts",
+   "name": "Smart Money Concepts (ICT / SMC overview)",
+   "types": [
+    "theory"
+   ],
+   "states": [
+    "trend",
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "filter"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "smoothed-moving-average",
+   "name": "Smoothed Moving Average (SMMA / RMA)",
+   "types": [
+    "moving-average"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "speed-resistance-lines",
+   "name": "Speed Resistance Lines",
+   "types": [
+    "levels"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "spinning-top",
+   "name": "Spinning Top",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "range"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "wyckoff-spring-upthrust",
+   "name": "Spring and Upthrust (Wyckoff)",
+   "types": [
+    "theory"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "stop"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "ttm-squeeze",
+   "name": "Squeeze Momentum (TTM Squeeze)",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "volatility",
+    "breakout"
+   ],
+   "purposes": [
+    "entry",
+    "filter"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "standard-deviation",
+   "name": "Standard Deviation",
+   "types": [
+    "volatility"
+   ],
+   "states": [
+    "volatility"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "starc-bands",
+   "name": "Starc Bands",
+   "types": [
+    "volatility"
+   ],
+   "states": [
+    "range",
+    "volatility"
+   ],
+   "purposes": [
+    "entry",
+    "exit"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "stick-sandwich",
+   "name": "Stick Sandwich",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "stochastic-momentum-index",
+   "name": "Stochastic Momentum Index (SMI)",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "range",
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "stochastic-oscillator",
+   "name": "Stochastic Oscillator",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "range",
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "stochastic-rsi",
+   "name": "Stochastic RSI",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "range",
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "stop-loss",
+   "name": "Stop Loss (placement basics)",
+   "types": [
+    "stop-exit"
+   ],
+   "states": [
+    "trend",
+    "range",
+    "breakout",
+    "reversal"
+   ],
+   "purposes": [
+    "stop"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "supertrend",
+   "name": "Supertrend",
+   "types": [
+    "trend"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "stop",
+    "exit",
+    "filter"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "supply-and-demand-zones",
+   "name": "Supply and Demand Zones",
+   "types": [
+    "levels"
+   ],
+   "states": [
+    "range",
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "stop"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "support-and-resistance",
+   "name": "Support and Resistance",
+   "types": [
+    "levels"
+   ],
+   "states": [
+    "range",
+    "breakout",
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "stop",
+    "exit"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "structure-stop",
+   "name": "Swing High/Low Stop (structure stop)",
+   "types": [
+    "stop-exit"
+   ],
+   "states": [
+    "trend",
+    "range"
+   ],
+   "purposes": [
+    "stop"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "swing-highs-lows",
+   "name": "Swing Highs and Swing Lows",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "stop",
+    "filter"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "symmetrical-triangle",
+   "name": "Symmetrical Triangle",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "breakout",
+    "volatility"
+   ],
+   "purposes": [
+    "entry",
+    "stop"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "t3-moving-average",
+   "name": "T3 Moving Average (Tillson)",
+   "types": [
+    "moving-average"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "tasuki-gap",
+   "name": "Tasuki Gap",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "three-black-crows",
+   "name": "Three Black Crows",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal",
+    "trend"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "three-drives",
+   "name": "Three Drives Pattern",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "three-inside-up-down",
+   "name": "Three Inside Up / Down",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "three-line-break",
+   "name": "Three Line Break",
+   "types": [
+    "chart-type"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "three-line-strike",
+   "name": "Three Line Strike",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "three-outside-up-down",
+   "name": "Three Outside Up / Down",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "three-white-soldiers",
+   "name": "Three White Soldiers",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal",
+    "trend"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "tick-charts",
+   "name": "Tick Charts",
+   "types": [
+    "chart-type"
+   ],
+   "states": [
+    "volatility"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "tick-volume",
+   "name": "Tick Volume (forex)",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "trend",
+    "breakout"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "time-frames",
+   "name": "Time Frames (choosing one)",
+   "types": [
+    "chart-type"
+   ],
+   "states": [
+    "trend",
+    "range"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "time-stop",
+   "name": "Time Stop",
+   "types": [
+    "stop-exit"
+   ],
+   "states": [
+    "range"
+   ],
+   "purposes": [
+    "exit"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "td-sequential",
+   "name": "Tom DeMark Sequential (TD Sequential)",
+   "types": [
+    "theory"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "exit"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "trailing-stop",
+   "name": "Trailing Stop",
+   "types": [
+    "stop-exit"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "stop",
+    "exit"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "trend-channel",
+   "name": "Trend Channel",
+   "types": [
+    "trend"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "entry",
+    "exit"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "trend-exhaustion",
+   "name": "Trend Exhaustion",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "exit"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "trend-following",
+   "name": "Trend Following",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "entry",
+    "filter"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "trend-intensity-index",
+   "name": "Trend Intensity Index",
+   "types": [
+    "trend"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "trendline",
+   "name": "Trendline",
+   "types": [
+    "trend"
+   ],
+   "states": [
+    "trend",
+    "reversal",
+    "breakout"
+   ],
+   "purposes": [
+    "entry",
+    "stop",
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "triple-bottom",
+   "name": "Triple Bottom",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "tema",
+   "name": "Triple EMA (TEMA)",
+   "types": [
+    "moving-average"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "entry",
+    "filter"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "triple-top",
+   "name": "Triple Top",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "trix",
+   "name": "TRIX",
+   "types": [
+    "trend"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter",
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "true-strength-index",
+   "name": "True Strength Index (TSI)",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "trend",
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "turtle-trading",
+   "name": "Turtle Trading Rules",
+   "types": [
+    "theory"
+   ],
+   "states": [
+    "breakout",
+    "trend"
+   ],
+   "purposes": [
+    "entry",
+    "stop",
+    "exit"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "tweezer-bottoms",
+   "name": "Tweezer Bottoms",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "tweezer-tops",
+   "name": "Tweezer Tops",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "twiggs-money-flow",
+   "name": "Twiggs Money Flow",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "two-legged-pullback",
+   "name": "Two-Legged Pullback (ABC)",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "ulcer-index",
+   "name": "Ulcer Index",
+   "types": [
+    "volatility"
+   ],
+   "states": [
+    "volatility"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "ultimate-oscillator",
+   "name": "Ultimate Oscillator",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "gap-three-methods",
+   "name": "Upside / Downside Gap Three Methods",
+   "types": [
+    "candlestick"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "v-reversal",
+   "name": "V-Top / V-Bottom (spike)",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "value-area",
+   "name": "Value Area (VAH/VAL)",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "range",
+    "breakout"
+   ],
+   "purposes": [
+    "entry",
+    "exit"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "vertical-horizontal-filter",
+   "name": "Vertical Horizontal Filter (VHF)",
+   "types": [
+    "trend"
+   ],
+   "states": [
+    "trend",
+    "range"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "vix",
+   "name": "VIX (volatility index)",
+   "types": [
+    "volatility"
+   ],
+   "states": [
+    "volatility",
+    "reversal"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "volatility-contraction-pattern",
+   "name": "Volatility Contraction Pattern (VCP)",
+   "types": [
+    "volatility"
+   ],
+   "states": [
+    "breakout",
+    "volatility"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "volatility-stop",
+   "name": "Volatility Stop",
+   "types": [
+    "stop-exit"
+   ],
+   "states": [
+    "volatility"
+   ],
+   "purposes": [
+    "stop"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "volume",
+   "name": "Volume (reading volume)",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "trend",
+    "breakout",
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "equivolume",
+   "name": "Volume Bars / Equivolume",
+   "types": [
+    "chart-type"
+   ],
+   "states": [
+    "breakout"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "volume-climax",
+   "name": "Volume Climax",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "exit",
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "volume-oscillator",
+   "name": "Volume Oscillator",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "breakout"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "volume-profile",
+   "name": "Volume Profile",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "range",
+    "breakout"
+   ],
+   "purposes": [
+    "entry",
+    "stop",
+    "exit"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "volume-spread-analysis",
+   "name": "Volume Spread Analysis (VSA)",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "reversal",
+    "breakout"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "volume-weighted-macd",
+   "name": "Volume-Weighted MACD",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "vwma",
+   "name": "Volume-Weighted Moving Average (VWMA)",
+   "types": [
+    "moving-average"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter",
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "vortex-indicator",
+   "name": "Vortex Indicator",
+   "types": [
+    "trend"
+   ],
+   "states": [
+    "trend",
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "filter"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "vwap",
+   "name": "VWAP",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "trend",
+    "range"
+   ],
+   "purposes": [
+    "entry",
+    "filter",
+    "stop"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "vwap-bands",
+   "name": "VWAP Bands",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "range",
+    "volatility"
+   ],
+   "purposes": [
+    "entry",
+    "exit"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "wavetrend-oscillator",
+   "name": "WaveTrend Oscillator",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "range",
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "three-pushes",
+   "name": "Wedge Pullback / Three Pushes",
+   "types": [
+    "price-action"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "weekly-monthly-open",
+   "name": "Weekly and Monthly Open",
+   "types": [
+    "levels"
+   ],
+   "states": [
+    "range",
+    "trend"
+   ],
+   "purposes": [
+    "filter"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "weighted-moving-average",
+   "name": "Weighted Moving Average (WMA)",
+   "types": [
+    "moving-average"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "filter",
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "williams-r",
+   "name": "Williams %R",
+   "types": [
+    "momentum-oscillator"
+   ],
+   "states": [
+    "range",
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "confirmation"
+   ],
+   "wave": 2
+  },
+  {
+   "slug": "williams-accumulation-distribution",
+   "name": "Williams Accumulation/Distribution",
+   "types": [
+    "volume"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "wolfe-waves",
+   "name": "Wolfe Waves",
+   "types": [
+    "chart-pattern"
+   ],
+   "states": [
+    "reversal"
+   ],
+   "purposes": [
+    "entry",
+    "exit"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "woodie-pivots",
+   "name": "Woodie Pivot Points",
+   "types": [
+    "levels"
+   ],
+   "states": [
+    "range"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "wyckoff-accumulation",
+   "name": "Wyckoff Accumulation",
+   "types": [
+    "theory"
+   ],
+   "states": [
+    "range",
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "wyckoff-distribution",
+   "name": "Wyckoff Distribution",
+   "types": [
+    "theory"
+   ],
+   "states": [
+    "range",
+    "reversal"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "wyckoff-method",
+   "name": "Wyckoff Method",
+   "types": [
+    "theory"
+   ],
+   "states": [
+    "range",
+    "reversal",
+    "breakout"
+   ],
+   "purposes": [
+    "entry",
+    "filter"
+   ],
+   "wave": 1
+  },
+  {
+   "slug": "zlema",
+   "name": "Zero-Lag EMA (ZLEMA)",
+   "types": [
+    "moving-average"
+   ],
+   "states": [
+    "trend"
+   ],
+   "purposes": [
+    "entry"
+   ],
+   "wave": 3
+  },
+  {
+   "slug": "zweig-breadth-thrust",
+   "name": "Zweig Breadth Thrust",
+   "types": [
+    "breadth-sentiment"
+   ],
+   "states": [
+    "breakout"
+   ],
+   "purposes": [
+    "confirmation"
+   ],
+   "wave": 3
+  }
+ ]
+}

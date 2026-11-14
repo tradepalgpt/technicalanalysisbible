@@ -1,0 +1,20 @@
+{
+  "_note": "Single source for the IC Markets partner ad across projects. Same campaign tag TFT uses (web/static/js/ads.js). Dean approved reuse 14 November 2026.",
+  "partner": "IC Markets",
+  "link": "https://icmarkets.com/?camp=17740",
+  "banners": {
+    "300x250": "https://promo.icmarkets.com/Banners/2021/English/EN_300x250_Cellphon_FSA.jpg",
+    "300x600": "https://promo.icmarkets.com/Banners/2021/English/EN_300x600_Cellphon_FSA.jpg",
+    "728x90": "https://promo.icmarkets.com/Banners/2021/English/EN_728x90_Cellphon_FSA.jpg"
+  },
+  "text_ad": {
+    "title": "Practise on a free demo account",
+    "body": "Try what you have learned on a demo account with IC Markets before risking real money.",
+    "cta": "Open a demo account"
+  },
+  "risk_warning": "CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage. You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.",
+  "risk_loss_pct": null,
+  "_risk_loss_pct_note": "Fill with the % of retail accounts that lose money, copied exactly from IC Markets' current published figure. Left null on purpose: never guess it.",
+  "hide_in_countries": ["GB"],
+  "_hide_note": "UK visitors see no broker ad (UK financial promotion rules) until IC Markets confirms in writing that its approved creatives may be shown there."
+}

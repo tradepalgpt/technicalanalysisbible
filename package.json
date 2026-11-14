@@ -1,0 +1,15 @@
+{
+  "name": "technicalanalysisbible",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync-shared": "node scripts/sync-shared.mjs",
+    "catalogue": "node scripts/import-master.mjs",
+    "check": "node scripts/check.mjs",
+    "build": "node scripts/import-master.mjs && node scripts/check.mjs && node scripts/build.mjs",
+    "serve": "node scripts/serve.mjs"
+  },
+  "dependencies": {
+    "marked": "12.0.2"
+  }
+}

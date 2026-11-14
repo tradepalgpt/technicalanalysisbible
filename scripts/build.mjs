@@ -1,0 +1,214 @@
+// Static site generator: content + catalogue -> dist/
+import fs from 'node:fs';
+import path from 'node:path';
+import { marked } from 'marked';
+import { ROOT, SITE, STATES, PURPOSES, STATE_BY_SLUG, PURPOSE_BY_SLUG, loadCatalogue, loadItems, parseFrontMatter, readJSON, esc } from './lib.mjs';
+
+const DIST = path.join(ROOT, 'dist');
+fs.rmSync(DIST, { recursive: true, force: true });
+const cat = loadCatalogue();
+const bySlug = Object.fromEntries(cat.items.map((i) => [i.slug, i]));
+const typeName = Object.fromEntries(cat.types.map((t) => [t.slug, t.name]));
+const items = loadItems();
+const pub = Object.fromEntries(items.map((i) => [i.data.slug, i]));
+const adCfg = readJSON(path.join(ROOT, 'shared', 'ads', 'ic-markets.json'));
+const adJs = fs.readFileSync(path.join(ROOT, 'shared', 'ads', 'partner-ad.js'), 'utf8');
+const BUILD_DATE = new Date().toISOString().slice(0, 10);
+const sitemap = [];
+
+const RISK_NOTE = 'Educational only, not advice. Indicators describe past prices and do not predict the future. Trading leveraged products such as CFDs carries a high risk of losing money rapidly; most retail CFD accounts lose money.';
+
+function write(rel, html) {
+  const p = path.join(DIST, rel);
+  fs.mkdirSync(path.dirname(p), { recursive: true });
+  fs.writeFileSync(p, html);
+}
+function page(urlPath, html, { index = true } = {}) {
+  write(urlPath === '/' ? 'index.html' : path.join(urlPath, 'index.html'), html);
+  if (index) sitemap.push(urlPath);
+}
+const abs = (p) => SITE.url + p;
+const link = (slug, text) => pub[slug] ? `<a href="/${slug}/">${esc(text ?? bySlug[slug]?.name ?? slug)}</a>` : `<span class="soon" title="Coming soon">${esc(text ?? bySlug[slug]?.name ?? slug)}</span>`;
+const adSlot = (size, cls = '') => `<div class="partner-ad ${cls}" data-ad-size="${size}" data-ad-config="${esc(JSON.stringify(adCfg))}"></div>`;
+const ld = (o) => `<script type="application/ld+json">${JSON.stringify(o).replace(/</g, '\\u003c')}</script>`;
+const crumbsLd = (list) => ({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: list.map(([n, u], i) => ({ '@type': 'ListItem', position: i + 1, name: n, item: abs(u) })) });
+const crumbsHtml = (list) => `<nav class="crumbs" aria-label="Breadcrumb">${list.map(([n, u], i) => i === list.length - 1 ? `<span>${esc(n)}</span>` : `<a href="${u}">${esc(n)}</a>`).join(' <span aria-hidden="true">›</span> ')}</nav>`;
+
+function layout({ title, desc, path: p, body, jsonld = [], noindex = false, sidebar = false }) {
+  return `<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${esc(title)}</title>
+<meta name="description" content="${esc(desc)}">
+<link rel="canonical" href="${abs(p)}">
+${noindex ? '<meta name="robots" content="noindex, follow">' : ''}
+<meta property="og:type" content="article"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(desc)}"><meta property="og:url" content="${abs(p)}"><meta property="og:site_name" content="${SITE.brand}">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+${jsonld.map(ld).join('\n')}
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="brand" href="/">Technical Analysis <b>Bible</b></a>
+<nav class="mainnav"><a href="/a-z/">A–Z</a><a href="/market/">By market</a><a href="/use/">By use</a><a href="/type/">By type</a></nav></div></header>
+<div class="wrap ${sidebar ? 'withside' : ''}">
+<main id="main">${body}</main>
+${sidebar ? `<aside class="side">${adSlot('300x600', 'sticky')}</aside>` : ''}
+</div>
+<footer class="foot"><div class="wrap">
+<p class="risk"><strong>Risk warning:</strong> ${RISK_NOTE} <a href="/risk-warning/">Read the full risk warning</a>.</p>
+<p>${SITE.brand} is free and supported by advertising. Some links are affiliate links: we may earn a commission at no cost to you. <a href="/advertising-disclosure/">How we make money</a>.</p>
+<nav><a href="/about/">About</a> · <a href="/how-we-write/">How we write</a> · <a href="/risk-warning/">Risk warning</a> · <a href="/advertising-disclosure/">Advertising</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></nav>
+<p class="small">© ${new Date().getFullYear()} ${SITE.brand}</p>
+</div></footer>
+<script>${adJs}</script>
+</body></html>`;
+}
+
+function rewriteLinks(html) {
+  return html
+    .replace(/<a href="\/([a-z0-9-]+)\/">([\s\S]*?)<\/a>/g, (m, slug, text) => (bySlug[slug] && !pub[slug]) ? `<span class="soon" title="Coming soon">${text}</span>` : m)
+    // Comparison and glossary pages are not built yet: show as plain text until they exist.
+    .replace(/<a href="\/(compare|glossary)\/[^"]*">([\s\S]*?)<\/a>/g, '<span class="soon" title="Coming soon">$2</span>');
+}
+
+function parseFaq(body) {
+  const sec = (body.split(/^## FAQ\s*$/m)[1] || '').split(/^## /m)[0];
+  const out = [];
+  const parts = sec.split(/^\*\*(.+\?)\*\*\s*$/m);
+  for (let i = 1; i < parts.length; i += 2) out.push({ q: parts[i].trim(), a: parts[i + 1].trim().replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/[*_]/g, '') });
+  return out;
+}
+
+// ---------- item pages ----------
+for (const { data: d, body } of items) {
+  const c = bySlug[d.slug];
+  const primaryType = c.types[0];
+  const p = `/${d.slug}/`;
+  const quick = body.split(/\n## /)[0].trim().replace(/\s+/g, ' ');
+  let html = rewriteLinks(marked.parse(body));
+  // Ads: one text unit before the formula/drawing section, one before "Pairs well with".
+  let n = 0;
+  html = html.replace(/<h2[^>]*>(Formula|How it is|How it works)/, (m) => (n++ ? m : adSlot('text') + m));
+  html = html.replace(/<h2[^>]*>Pairs well with/, (m) => adSlot('text') + m);
+  html = html.replace(/<table>/g, '<div class="tablewrap"><table>').replace(/<\/table>/g, '</table></div>');
+
+  const related = [...new Set([].concat(d.related || []))];
+  const tags = `<p class="tags"><span>Best in:</span> ${[].concat(d.states).map((s) => `<a class="chip" href="/market/${s}/">${esc(STATE_BY_SLUG[s])}</a>`).join(' ')} <span>Used for:</span> ${[].concat(d.purposes).map((s) => `<a class="chip" href="/use/${s}/">${esc(PURPOSE_BY_SLUG[s])}</a>`).join(' ')}</p>`;
+  const relatedHtml = `<section class="related"><h2>Related</h2><ul>${related.map((s) => `<li>${link(s)}</li>`).join('')}</ul></section>`;
+  const faq = parseFaq(body);
+  const crumbs = [['Home', '/'], [typeName[primaryType], `/type/${primaryType}/`], [d.name, p]];
+  const title = `${d.name}: what it is, formula, how to use it | ${SITE.brand}`;
+  const jsonld = [
+    { '@context': 'https://schema.org', '@type': 'TechArticle', headline: d.name, description: quick, url: abs(p), dateModified: BUILD_DATE, inLanguage: 'en-GB',
+      author: { '@type': 'Organization', name: SITE.brand, url: SITE.url }, publisher: { '@type': 'Organization', name: SITE.brand, url: SITE.url },
+      about: { '@type': 'DefinedTerm', name: d.name, alternateName: d.aka, description: quick, inDefinedTermSet: abs('/a-z/') } },
+    { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+    crumbsLd(crumbs),
+  ];
+  const bodyHtml = `${crumbsHtml(crumbs)}<article class="item"><h1>${esc(d.name)}</h1>${tags}${html}${relatedHtml}
+<p class="reviewed">Last reviewed: ${esc(d.reviewed)}</p></article>`;
+  page(p, layout({ title, desc: quick.slice(0, 155).replace(/\s\S*$/, '') + '…', path: p, body: bodyHtml, jsonld, sidebar: true }));
+}
+
+// ---------- hubs ----------
+function itemList(list) {
+  const sorted = [...list].sort((a, b) => (pub[b.slug] ? 1 : 0) - (pub[a.slug] ? 1 : 0) || a.wave - b.wave || a.name.localeCompare(b.name));
+  return `<ul class="list">${sorted.map((i) => `<li>${link(i.slug, i.name)} <small>${i.states.map((s) => STATE_BY_SLUG[s]).join(', ')}</small></li>`).join('')}</ul>`;
+}
+function hub({ p, title, h1, intro, list, crumbs }) {
+  const live = list.filter((i) => pub[i.slug]).length;
+  const jsonld = [
+    { '@context': 'https://schema.org', '@type': 'CollectionPage', name: h1, url: abs(p), description: intro,
+      mainEntity: { '@type': 'ItemList', itemListElement: list.filter((i) => pub[i.slug]).map((i, k) => ({ '@type': 'ListItem', position: k + 1, url: abs(`/${i.slug}/`), name: i.name })) } },
+    crumbsLd(crumbs),
+  ];
+  const body = `${crumbsHtml(crumbs)}<h1>${esc(h1)}</h1><p class="lead">${esc(intro)}</p><p class="count">${live} of ${list.length} guides written so far.</p>${itemList(list)}`;
+  page(p, layout({ title, desc: intro, path: p, body, jsonld, noindex: live < 3 }), { index: live >= 3 });
+}
+
+const HUB_INTROS = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'hub-intros.json'), 'utf8'));
+for (const t of cat.types) {
+  const list = cat.items.filter((i) => i.types.includes(t.slug));
+  hub({ p: `/type/${t.slug}/`, title: `${t.name}: every one explained | ${SITE.brand}`, h1: t.name, intro: HUB_INTROS.type?.[t.slug] || `Every ${t.name.toLowerCase()} explained in plain English: what each one is, how it is calculated, how to read it and when it works best.`, list, crumbs: [['Home', '/'], ['By type', '/type/'], [t.name, `/type/${t.slug}/`]] });
+}
+for (const [, [s, nm]] of Object.entries(STATES)) {
+  const list = cat.items.filter((i) => i.states.includes(s));
+  hub({ p: `/market/${s}/`, title: `Best indicators and methods for ${nm.toLowerCase()} | ${SITE.brand}`, h1: `Best for ${nm.toLowerCase()}`, intro: HUB_INTROS.market?.[s] || `Indicators, patterns and methods that work best in ${nm.toLowerCase()}.`, list, crumbs: [['Home', '/'], ['By market', '/market/'], [nm, `/market/${s}/`]] });
+  for (const [, [u, un]] of Object.entries(PURPOSES)) {
+    const cross = list.filter((i) => i.purposes.includes(u));
+    if (cross.filter((i) => pub[i.slug]).length < 3) continue;
+    hub({ p: `/market/${s}/${u}/`, title: `${un} in ${nm.toLowerCase()}: best methods | ${SITE.brand}`, h1: `${un} in ${nm.toLowerCase()}`, intro: HUB_INTROS.cross?.[`${s}-${u}`] || `Methods traders use for ${un.toLowerCase()} in ${nm.toLowerCase()}.`, list: cross, crumbs: [['Home', '/'], ['By market', '/market/'], [nm, `/market/${s}/`], [un, `/market/${s}/${u}/`]] });
+  }
+}
+for (const [, [u, un]] of Object.entries(PURPOSES)) {
+  const list = cat.items.filter((i) => i.purposes.includes(u));
+  hub({ p: `/use/${u}/`, title: `Indicators and methods for ${un.toLowerCase()} | ${SITE.brand}`, h1: `For ${un.toLowerCase()}`, intro: HUB_INTROS.use?.[u] || `Tools traders use for ${un.toLowerCase()}.`, list, crumbs: [['Home', '/'], ['By use', '/use/'], [un, `/use/${u}/`]] });
+}
+
+// Index-of-hubs pages
+const simpleIndex = (p, h1, intro, links, crumbs) => page(p, layout({ title: `${h1} | ${SITE.brand}`, desc: intro, path: p,
+  body: `${crumbsHtml(crumbs)}<h1>${esc(h1)}</h1><p class="lead">${esc(intro)}</p><ul class="cards">${links.map(([u, n, k]) => `<li><a href="${u}"><b>${esc(n)}</b><small>${k} guides</small></a></li>`).join('')}</ul>`, jsonld: [crumbsLd(crumbs)] }));
+simpleIndex('/market/', 'Browse by market state', 'Pick the kind of market you are trading and see which tools suit it.', Object.values(STATES).map(([s, n]) => [`/market/${s}/`, n, cat.items.filter((i) => i.states.includes(s)).length]), [['Home', '/'], ['By market', '/market/']]);
+simpleIndex('/use/', 'Browse by use', 'Pick the job you need done (entry, exit, stop, filter or confirmation) and see which tools do it.', Object.values(PURPOSES).map(([s, n]) => [`/use/${s}/`, n, cat.items.filter((i) => i.purposes.includes(s)).length]), [['Home', '/'], ['By use', '/use/']]);
+simpleIndex('/type/', 'Browse by type', 'Indicators, chart patterns, candlesticks, price action and trading schools, grouped by type.', cat.types.map((t) => [`/type/${t.slug}/`, t.name, cat.items.filter((i) => i.types.includes(t.slug)).length]), [['Home', '/'], ['By type', '/type/']]);
+
+// A–Z
+const letterOf = (i) => (i.name.match(/[A-Za-z]/)?.[0] || 'A').toUpperCase();
+const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+const azNav = `<nav class="az">${letters.map((L) => cat.items.some((i) => letterOf(i) === L) ? `<a href="/a-z/${L.toLowerCase()}/">${L}</a>` : `<span>${L}</span>`).join('')}</nav>`;
+page('/a-z/', layout({ title: `Technical indicators A to Z | ${SITE.brand}`, desc: `Every technical indicator, chart pattern, candlestick and trading method from A to Z: ${cat.items.length} entries in plain English.`, path: '/a-z/',
+  body: `${crumbsHtml([['Home', '/'], ['A–Z', '/a-z/']])}<h1>Technical analysis A to Z</h1><p class="lead">All ${cat.items.length} indicators, patterns and methods, in alphabetical order.</p>${azNav}${letters.map((L) => { const l = cat.items.filter((i) => letterOf(i) === L); return l.length ? `<h2 id="${L}">${L}</h2>${itemList(l)}` : ''; }).join('')}`,
+  jsonld: [crumbsLd([['Home', '/'], ['A–Z', '/a-z/']])] }));
+for (const L of letters) {
+  const l = cat.items.filter((i) => letterOf(i) === L);
+  if (!l.length) continue;
+  const p = `/a-z/${L.toLowerCase()}/`;
+  const live = l.filter((i) => pub[i.slug]).length;
+  page(p, layout({ title: `Indicators and patterns starting with ${L} | ${SITE.brand}`, desc: `Technical indicators, chart patterns and methods beginning with ${L}.`, path: p, noindex: live < 3,
+    body: `${crumbsHtml([['Home', '/'], ['A–Z', '/a-z/'], [L, p]])}<h1>Starting with ${L}</h1>${azNav}${itemList(l)}`, jsonld: [crumbsLd([['Home', '/'], ['A–Z', '/a-z/'], [L, p]])] }), { index: live >= 3 });
+}
+
+// Static pages (shared legal + own pages)
+const fill = (s) => s.replaceAll('{{BRAND}}', SITE.brand).replaceAll('{{DOMAIN}}', SITE.domain).replaceAll('{{CONTACT}}', SITE.contact);
+const staticPages = [
+  ['risk-warning', path.join(ROOT, 'shared', 'legal', 'risk-warning.md')],
+  ['advertising-disclosure', path.join(ROOT, 'shared', 'legal', 'advertising-disclosure.md')],
+  ['privacy', path.join(ROOT, 'shared', 'legal', 'privacy.md')],
+  ['terms', path.join(ROOT, 'shared', 'legal', 'terms.md')],
+  ...fs.readdirSync(path.join(ROOT, 'content', 'pages')).filter((f) => f.endsWith('.md')).map((f) => [f.replace(/\.md$/, ''), path.join(ROOT, 'content', 'pages', f)]),
+];
+for (const [slug, file] of staticPages) {
+  const { data, body } = parseFrontMatter(fill(fs.readFileSync(file, 'utf8')));
+  const p = `/${slug}/`;
+  page(p, layout({ title: `${data.title} | ${SITE.brand}`, desc: data.description || `${data.title} for ${SITE.brand}.`, path: p,
+    body: `${crumbsHtml([['Home', '/'], [data.title, p]])}<article class="prose"><h1>${esc(data.title)}</h1>${marked.parse(body)}<p class="reviewed">Last updated: ${esc(data.reviewed || '')}</p></article>`, jsonld: [crumbsLd([['Home', '/'], [data.title, p]])] }));
+}
+
+// Home
+const homeLd = [
+  { '@context': 'https://schema.org', '@type': 'WebSite', name: SITE.brand, url: SITE.url, inLanguage: 'en-GB' },
+  { '@context': 'https://schema.org', '@type': 'Organization', name: SITE.brand, url: SITE.url, logo: abs('/favicon.svg') },
+];
+const latest = items.map((i) => i.data);
+page('/', layout({ title: `${SITE.brand}: every technical indicator and trading method explained`, desc: 'A free, plain-English reference to every technical indicator, chart pattern, candlestick and trading method: what it is, the formula, how to read it and when it works.', path: '/', jsonld: homeLd,
+  body: `<section class="hero"><h1>Every technical indicator and trading method, explained</h1><p class="lead">A free reference to ${cat.items.length} indicators, chart patterns, candlesticks and methods. Every guide answers the same questions in the same place: what it is, the formula, how to read it, when it works and the mistakes to avoid.</p></section>
+<h2>Browse by market</h2><ul class="cards">${Object.values(STATES).map(([s, n]) => `<li><a href="/market/${s}/"><b>${n}</b></a></li>`).join('')}</ul>
+<h2>Browse by use</h2><ul class="cards">${Object.values(PURPOSES).map(([s, n]) => `<li><a href="/use/${s}/"><b>${n}</b></a></li>`).join('')}</ul>
+<h2>Browse by type</h2><ul class="cards">${cat.types.map((t) => `<li><a href="/type/${t.slug}/"><b>${esc(t.name)}</b></a></li>`).join('')}</ul>
+<h2>A to Z</h2>${azNav}
+<h2>Guides so far</h2><ul class="list">${latest.map((d) => `<li>${link(d.slug, d.name)}</li>`).join('')}</ul>` }));
+
+// 404
+write('404.html', layout({ title: `Page not found | ${SITE.brand}`, desc: 'Page not found.', path: '/404/', noindex: true, body: `<h1>Page not found</h1><p>Try the <a href="/a-z/">A to Z index</a>.</p>` }));
+
+// Assets, robots, sitemap, llms.txt, headers
+fs.mkdirSync(path.join(DIST, 'assets'), { recursive: true });
+fs.writeFileSync(path.join(DIST, 'assets', 'site.css'), fs.readFileSync(path.join(ROOT, 'shared', 'styles', 'tokens.css'), 'utf8') + '\n' + fs.readFileSync(path.join(ROOT, 'src', 'site.css'), 'utf8'));
+fs.copyFileSync(path.join(ROOT, 'src', 'favicon.svg'), path.join(DIST, 'favicon.svg'));
+fs.copyFileSync(path.join(ROOT, 'src', '_headers'), path.join(DIST, '_headers'));
+write('robots.txt', `User-agent: *\nAllow: /\nDisallow: /search/\nDisallow: /*?*\n\n# AI search tools are welcome to read and quote this site.\nUser-agent: GPTBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: Google-Extended\nAllow: /\n\nSitemap: ${abs('/sitemap.xml')}\n`);
+write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemap.map((u) => `<url><loc>${abs(u)}</loc><lastmod>${BUILD_DATE}</lastmod></url>`).join('\n')}\n</urlset>\n`);
+write('llms.txt', `# ${SITE.brand}\n\n> A free, plain-English reference to technical indicators, chart patterns, candlesticks and trading methods. Every guide uses the same sections: quick answer, at a glance, what it is, formula, how to read it, best market states, settings, common mistakes, pairs well with, related, sources, FAQ.\n\n## Browse\n- [A to Z](${abs('/a-z/')})\n- [By market state](${abs('/market/')})\n- [By use](${abs('/use/')})\n- [By type](${abs('/type/')})\n\n## Guides\n${latest.map((d) => `- [${d.name}](${abs(`/${d.slug}/`)})`).join('\n')}\n\n## Notes\n- Educational only, not financial advice. See ${abs('/risk-warning/')}\n`);
+console.log(`build: ${sitemap.length} indexable pages, ${items.length} guides -> dist/`);

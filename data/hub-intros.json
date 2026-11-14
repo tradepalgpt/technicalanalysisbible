@@ -1,0 +1,17 @@
+{
+  "_note": "Hub intro text. Each needs expanding to 150-250 words before launch (thin-page risk). Missing keys fall back to a one-line default.",
+  "market": {
+    "trend": "In a trending market price keeps making higher highs and higher lows (or the reverse). The tools here help you spot a trend, join it on pullbacks, and stay in until it ends. Oscillators that call overbought and oversold tend to mislead in strong trends, so they appear here only where they have a trend-friendly use.",
+    "range": "In a ranging market price moves sideways between support and resistance. The tools here help you find the edges of the range, time entries near them and avoid being caught when the range finally breaks.",
+    "breakout": "A breakout is when price leaves a range or pattern with force. The tools here help you spot the build-up before a breakout, tell real breaks from false ones, and place stops and targets once it happens.",
+    "reversal": "A reversal is when a trend ends and turns. The tools here help you spot fading momentum, reversal patterns and the levels where turns often happen. Reversal signals fail often, so most are best used as confirmation.",
+    "volatility": "Volatility is how far and how fast price moves. The tools here measure it, so you can size positions, set stops that fit the market and spot quiet periods that often come before big moves."
+  },
+  "use": {
+    "entry": "Tools for timing when to open a trade. No entry signal works on its own; each guide explains what to combine it with.",
+    "exit": "Tools for deciding when to close a trade, whether to take profit or because the reason for the trade has gone.",
+    "stop": "Methods for placing and moving a stop loss so it sits where the trade idea is proven wrong, not just a random distance away.",
+    "filter": "Filters decide which trades to ignore. They answer questions like 'is this market trending?' or 'is volatility high enough?' before you look for an entry.",
+    "confirmation": "Confirmation tools add weight to a signal you already have. They rarely make good signals on their own."
+  }
+}
