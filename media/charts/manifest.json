@@ -31,6 +31,23 @@
   },
   "credit": "S&P 500 ETF (SPY), daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "apo": {
+  "slug": "apo",
+  "file": "apo.svg",
+  "title": "Absolute Price Oscillator (12, 26) on EUR/USD",
+  "caption": "The APO is the 12-bar EMA of the close minus the 26-bar EMA, in price units. It crosses zero when the two averages cross.",
+  "alt": "Absolute Price Oscillator (12, 26) on EUR/USD. The APO is the 12-bar EMA of the close minus the 26-bar EMA, in price units. It crosses zero when the two averages cross.",
+  "symbol": "eurusd",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "apo",
+  "params": {
+   "fast": 12,
+   "slow": 26,
+   "ma": "ema"
+  },
+  "credit": "EUR/USD, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "aroon": {
   "slug": "aroon",
   "file": "aroon.svg",
@@ -76,6 +93,22 @@
   },
   "credit": "S&P 500 ETF (SPY), daily, Jan 2025 to Aug 2025. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "awesome-oscillator": {
+  "slug": "awesome-oscillator",
+  "file": "awesome-oscillator.svg",
+  "title": "Awesome Oscillator (5, 34) on gold",
+  "caption": "The AO is a 5-bar simple average of the median price (high plus low, divided by two) minus a 34-bar simple average. It is drawn as bars around a zero line.",
+  "alt": "Awesome Oscillator (5, 34) on gold. The AO is a 5-bar simple average of the median price (high plus low, divided by two) minus a 34-bar simple average. It is drawn as bars around a zero line.",
+  "symbol": "gold",
+  "start": "2024-04-01",
+  "end": "2024-12-31",
+  "indicator": "awesome-oscillator",
+  "params": {
+   "fast": 5,
+   "slow": 34
+  },
+  "credit": "Gold futures, daily, Apr 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "bollinger-bands": {
   "slug": "bollinger-bands",
   "file": "bollinger-bands.svg",
@@ -91,6 +124,21 @@
    "stdev": 2.0
   },
   "credit": "EUR/USD, daily, Jan 2025 to Aug 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "cci": {
+  "slug": "cci",
+  "file": "cci.svg",
+  "title": "Commodity Channel Index (20) on the S&P 500 ETF",
+  "caption": "The CCI compares the typical price (high, low and close averaged) with its 20-bar average, scaled by the mean deviation and the constant 0.015. It has no fixed limits, and +100 and -100 are the usual reference lines.",
+  "alt": "Commodity Channel Index (20) on the S&P 500 ETF. The CCI compares the typical price (high, low and close averaged) with its 20-bar average, scaled by the mean deviation and the constant 0.015. It has no fixed limits, and +100 and -100 are the usual reference lines.",
+  "symbol": "spy",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "cci",
+  "params": {
+   "period": 20
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "choppiness-index": {
   "slug": "choppiness-index",
@@ -469,6 +517,21 @@
   },
   "credit": "Gold futures, daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "momentum-indicator": {
+  "slug": "momentum-indicator",
+  "file": "momentum-indicator.svg",
+  "title": "Momentum (10) on Apple",
+  "caption": "Momentum is the latest close minus the close 10 bars earlier, in price units. It oscillates around a zero line, and its scale depends on the price of the market.",
+  "alt": "Momentum (10) on Apple. Momentum is the latest close minus the close 10 bars earlier, in price units. It oscillates around a zero line, and its scale depends on the price of the market.",
+  "symbol": "aapl",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "momentum-indicator",
+  "params": {
+   "period": 10
+  },
+  "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "moving-average-crossover": {
   "slug": "moving-average-crossover",
   "file": "moving-average-crossover.svg",
@@ -537,6 +600,38 @@
    "maximum": 0.2
   },
   "credit": "Apple (AAPL), daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "ppo": {
+  "slug": "ppo",
+  "file": "ppo.svg",
+  "title": "Percentage Price Oscillator (12, 26, 9) on the S&P 500 ETF",
+  "caption": "The PPO is the gap between the 12 and 26 bar EMAs, expressed as a percentage of the 26-bar EMA. The signal line is a 9-bar EMA of the PPO, and the histogram is the difference between the two.",
+  "alt": "Percentage Price Oscillator (12, 26, 9) on the S&P 500 ETF. The PPO is the gap between the 12 and 26 bar EMAs, expressed as a percentage of the 26-bar EMA. The signal line is a 9-bar EMA of the PPO, and the histogram is the difference between the two.",
+  "symbol": "spy",
+  "start": "2024-04-01",
+  "end": "2025-01-31",
+  "indicator": "ppo",
+  "params": {
+   "fast": 12,
+   "slow": 26,
+   "signal": 9
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Apr 2024 to Jan 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "rate-of-change": {
+  "slug": "rate-of-change",
+  "file": "rate-of-change.svg",
+  "title": "Rate of Change (12) on gold",
+  "caption": "ROC is the percentage change between the latest close and the close 12 bars earlier. It oscillates around a zero line, and positive readings mean price is higher than 12 bars ago.",
+  "alt": "Rate of Change (12) on gold. ROC is the percentage change between the latest close and the close 12 bars earlier. It oscillates around a zero line, and positive readings mean price is higher than 12 bars ago.",
+  "symbol": "gold",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "rate-of-change",
+  "params": {
+   "period": 12
+  },
+  "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "rsi": {
   "slug": "rsi",
@@ -619,6 +714,25 @@
    "d": 3
   },
   "credit": "EUR/USD, daily, Apr 2025 to Oct 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "stochastic-rsi": {
+  "slug": "stochastic-rsi",
+  "file": "stochastic-rsi.svg",
+  "title": "Stochastic RSI (14, 14, 3, 3) on Bitcoin",
+  "caption": "The 14-bar RSI is run through the stochastic formula over 14 bars, then smoothed with a 3-bar average (%K) and a further 3-bar average of that (%D). The scale is 0 to 100, with 80 and 20 as reference lines.",
+  "alt": "Stochastic RSI (14, 14, 3, 3) on Bitcoin. The 14-bar RSI is run through the stochastic formula over 14 bars, then smoothed with a 3-bar average (%K) and a further 3-bar average of that (%D). The scale is 0 to 100, with 80 and 20 as reference lines.",
+  "symbol": "btcusd",
+  "start": "2024-04-01",
+  "end": "2024-12-31",
+  "indicator": "stochastic-rsi",
+  "params": {
+   "rsi_period": 14,
+   "stoch_period": 14,
+   "smooth_k": 3,
+   "smooth_d": 3,
+   "scale": 100
+  },
+  "credit": "Bitcoin (BTC/USD), daily, Apr 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "supertrend": {
   "slug": "supertrend",
@@ -778,6 +892,21 @@
    "side": 2
   },
   "credit": "Bitcoin (BTC/USD), daily, Apr 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "williams-r": {
+  "slug": "williams-r",
+  "file": "williams-r.svg",
+  "title": "Williams %R (14) on EUR/USD",
+  "caption": "%R places the close within the 14-bar high-low range on a scale from 0 (at the high) to -100 (at the low). The reference lines are at -20 and -80, and there is no smoothing.",
+  "alt": "Williams %R (14) on EUR/USD. %R places the close within the 14-bar high-low range on a scale from 0 (at the high) to -100 (at the low). The reference lines are at -20 and -80, and there is no smoothing.",
+  "symbol": "eurusd",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "williams-r",
+  "params": {
+   "period": 14
+  },
+  "credit": "EUR/USD, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "zlema": {
   "slug": "zlema",
