@@ -182,8 +182,10 @@ function hub({ p, title, h1, intro, list, crumbs }) {
       mainEntity: { '@type': 'ItemList', itemListElement: list.filter((i) => pub[i.slug]).map((i, k) => ({ '@type': 'ListItem', position: k + 1, url: abs(`/${i.slug}/`), name: i.name })) } },
     crumbsLd(crumbs),
   ];
-  const body = `${crumbsHtml(crumbs)}<h1>${esc(h1)}</h1><p class="lead">${esc(intro)}</p><p class="count">${live} of ${list.length} guides written so far.</p>${itemList(list)}`;
-  page(p, layout({ title, desc: intro, path: p, body, jsonld, noindex: live < 3 }), { index: live >= 3 });
+  const paras = intro.split(/\n\n+/).map((t, i) => `<p${i ? '' : ' class="lead"'}>${esc(t)}</p>`).join('');
+  const desc = intro.split(/\n\n+/)[0].length > 158 ? intro.split(/\n\n+/)[0].slice(0, 155).replace(/\s\S*$/, '') + '…' : intro.split(/\n\n+/)[0];
+  const body = `${crumbsHtml(crumbs)}<h1>${esc(h1)}</h1>${paras}<p class="count">${list.length} guides.</p>${itemList(list)}`;
+  page(p, layout({ title, desc, path: p, body, jsonld, noindex: live < 3 }), { index: live >= 3 });
 }
 
 const HUB_INTROS = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'hub-intros.json'), 'utf8'));
