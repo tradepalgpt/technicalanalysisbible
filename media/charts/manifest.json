@@ -61,6 +61,21 @@
   },
   "credit": "S&P 500 ETF (SPY), daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "anchored-vwap": {
+  "slug": "anchored-vwap",
+  "file": "anchored-vwap.svg",
+  "title": "Anchored VWAP from 1 April 2024 on Apple",
+  "caption": "The same volume-weighted average as VWAP, but accumulated from a chosen anchor bar (here 1 April 2024) with no reset, so it flattens as volume piles up. The anchor is a choice, not a default. Marks show closes crossing the line.",
+  "alt": "Anchored VWAP from 1 April 2024 on Apple. The same volume-weighted average as VWAP, but accumulated from a chosen anchor bar (here 1 April 2024) with no reset, so it flattens as volume piles up. The anchor is a choice, not a default. Marks show closes crossing the line.",
+  "symbol": "aapl",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "anchored-vwap",
+  "params": {
+   "anchor": "2024-04-01"
+  },
+  "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "apo": {
   "slug": "apo",
   "file": "apo.svg",
@@ -217,6 +232,22 @@
    "lookback": 125
   },
   "credit": "Bitcoin (BTC/USD), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "camarilla-pivots": {
+  "slug": "camarilla-pivots",
+  "file": "camarilla-pivots.svg",
+  "title": "Camarilla Pivots (weekly, 1.1) on the S&P 500 ETF",
+  "caption": "Levels come from the prior week's high, low and close and stay flat for the whole week, so they draw as step lines. Eight levels sit around the prior close, H1 to H4 above and L1 to L4 below, spaced by the prior range times 1.1 divided by 12, 6, 4 and 2.",
+  "alt": "Camarilla Pivots (weekly, 1.1) on the S&P 500 ETF. Levels come from the prior week's high, low and close and stay flat for the whole week, so they draw as step lines. Eight levels sit around the prior close, H1 to H4 above and L1 to L4 below, spaced by the prior range times 1.1 divided by 12, 6, 4 and 2.",
+  "symbol": "spy",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "camarilla-pivots",
+  "params": {
+   "period": "W",
+   "mult": 1.1
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "cci": {
   "slug": "cci",
@@ -546,6 +577,21 @@
    "period": 20
   },
   "credit": "Bitcoin (BTC/USD), daily, Mar 2025 to Sep 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "fibonacci-pivot-points": {
+  "slug": "fibonacci-pivot-points",
+  "file": "fibonacci-pivot-points.svg",
+  "title": "Fibonacci Pivot Points (weekly) on Apple",
+  "caption": "Levels come from the prior week's high, low and close and stay flat for the whole week, so they draw as step lines. The central pivot is the average of the prior high, low and close; resistance and support sit at 38.2%, 61.8% and 100% of the prior range from it. Marks show closes crossing the pivot.",
+  "alt": "Fibonacci Pivot Points (weekly) on Apple. Levels come from the prior week's high, low and close and stay flat for the whole week, so they draw as step lines. The central pivot is the average of the prior high, low and close; resistance and support sit at 38.2%, 61.8% and 100% of the prior range from it. Marks show closes crossing the pivot.",
+  "symbol": "aapl",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "fibonacci-pivot-points",
+  "params": {
+   "period": "W"
+  },
+  "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "fisher-transform": {
   "slug": "fisher-transform",
@@ -1071,6 +1117,21 @@
   },
   "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "pivot-points": {
+  "slug": "pivot-points",
+  "file": "pivot-points.svg",
+  "title": "Pivot Points (standard, weekly) on gold",
+  "caption": "Levels come from the prior week's high, low and close and stay flat for the whole week, so they draw as step lines. The pivot P is the average of the prior high, low and close, with three resistance and three support levels worked out from it. Marks show closes crossing the pivot.",
+  "alt": "Pivot Points (standard, weekly) on gold. Levels come from the prior week's high, low and close and stay flat for the whole week, so they draw as step lines. The pivot P is the average of the prior high, low and close, with three resistance and three support levels worked out from it. Marks show closes crossing the pivot.",
+  "symbol": "gold",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "pivot-points",
+  "params": {
+   "period": "W"
+  },
+  "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "positive-volume-index": {
   "slug": "positive-volume-index",
   "file": "positive-volume-index.svg",
@@ -1195,6 +1256,22 @@
   "params": {
    "stdev_period": 10,
    "smooth": 14
+  },
+  "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "relative-volume": {
+  "slug": "relative-volume",
+  "file": "relative-volume.svg",
+  "title": "Relative Volume (20) on Apple",
+  "caption": "Each bar's volume divided by the simple average of the last 20 bars, including the current bar. A reading of 1 is normal activity; 2 means twice the usual volume. Marks show the two highest readings in the window.",
+  "alt": "Relative Volume (20) on Apple. Each bar's volume divided by the simple average of the last 20 bars, including the current bar. A reading of 1 is normal activity; 2 means twice the usual volume. Marks show the two highest readings in the window.",
+  "symbol": "aapl",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "relative-volume",
+  "params": {
+   "period": 20,
+   "exclude_current": 0
   },
   "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
@@ -1524,6 +1601,21 @@
   },
   "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "volume": {
+  "slug": "volume",
+  "file": "volume.svg",
+  "title": "Volume with 20-bar average on the S&P 500 ETF",
+  "caption": "Raw volume bars with a 20-bar simple average of volume drawn over them as a reference for normal activity. Bars above the line are above average. Marks show the highest-volume bar in the window.",
+  "alt": "Volume with 20-bar average on the S&P 500 ETF. Raw volume bars with a 20-bar simple average of volume drawn over them as a reference for normal activity. Bars above the line are above average. Marks show the highest-volume bar in the window.",
+  "symbol": "spy",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "volume",
+  "params": {
+   "period": 20
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "volume-oscillator": {
   "slug": "volume-oscillator",
   "file": "volume-oscillator.svg",
@@ -1569,6 +1661,21 @@
   "indicator": "vortex-indicator",
   "params": {
    "period": 14
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "vwap": {
+  "slug": "vwap",
+  "file": "vwap.svg",
+  "title": "VWAP (weekly reset) on the S&P 500 ETF",
+  "caption": "The volume-weighted average of the typical price, (high + low + close) / 3, restarting each week. The usual per-session reset gives nothing on daily bars, so this chart resets weekly. Marks show closes crossing the line.",
+  "alt": "VWAP (weekly reset) on the S&P 500 ETF. The volume-weighted average of the typical price, (high + low + close) / 3, restarting each week. The usual per-session reset gives nothing on daily bars, so this chart resets weekly. Marks show closes crossing the line.",
+  "symbol": "spy",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "vwap",
+  "params": {
+   "reset": "W"
   },
   "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
@@ -1666,6 +1773,21 @@
    "period": 14
   },
   "credit": "EUR/USD, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "woodie-pivots": {
+  "slug": "woodie-pivots",
+  "file": "woodie-pivots.svg",
+  "title": "Woodie Pivots (weekly) on gold",
+  "caption": "Levels come from the prior week's high, low and close and stay flat for the whole week, so they draw as step lines. The pivot PP = (high + low + 2 x close) / 4 counts the close twice, with two resistance and two support levels worked out from it. Marks show closes crossing PP.",
+  "alt": "Woodie Pivots (weekly) on gold. Levels come from the prior week's high, low and close and stay flat for the whole week, so they draw as step lines. The pivot PP = (high + low + 2 x close) / 4 counts the close twice, with two resistance and two support levels worked out from it. Marks show closes crossing PP.",
+  "symbol": "gold",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "woodie-pivots",
+  "params": {
+   "period": "W"
+  },
+  "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "zlema": {
   "slug": "zlema",
