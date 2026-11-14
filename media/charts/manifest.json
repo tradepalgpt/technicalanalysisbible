@@ -726,6 +726,23 @@
   },
   "credit": "Apple (AAPL), daily, Jan 2025 to Oct 2025. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "klinger-oscillator": {
+  "slug": "klinger-oscillator",
+  "file": "klinger-oscillator.svg",
+  "title": "Klinger Oscillator (34, 55, 13) on the S&P 500 ETF",
+  "caption": "Each bar's volume is scaled by its range and signed by whether the high-low-close sum rose or fell, giving a volume force. The oscillator is the 34-bar EMA of that force minus its 55-bar EMA, with a 13-bar EMA signal line. The scale depends on the instrument's volume. Marks show crosses of the oscillator and its signal line.",
+  "alt": "Klinger Oscillator (34, 55, 13) on the S&P 500 ETF. Each bar's volume is scaled by its range and signed by whether the high-low-close sum rose or fell, giving a volume force. The oscillator is the 34-bar EMA of that force minus its 55-bar EMA, with a 13-bar EMA signal line. The scale depends on the instrument's volume. Marks show crosses of the oscillator and its signal line.",
+  "symbol": "spy",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "klinger-oscillator",
+  "params": {
+   "fast": 34,
+   "slow": 55,
+   "signal": 13
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "know-sure-thing": {
   "slug": "know-sure-thing",
   "file": "know-sure-thing.svg",
@@ -975,6 +992,22 @@
   },
   "credit": "Apple (AAPL), daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "negative-volume-index": {
+  "slug": "negative-volume-index",
+  "file": "negative-volume-index.svg",
+  "title": "Negative Volume Index with 255-bar EMA on the S&P 500 ETF",
+  "caption": "An index starting at 1,000 that changes by the day's percentage price change only when volume is lower than the previous bar's, and stays flat otherwise. The 255-bar EMA is the usual trend line on daily charts. Marks show crosses of the index and its average.",
+  "alt": "Negative Volume Index with 255-bar EMA on the S&P 500 ETF. An index starting at 1,000 that changes by the day's percentage price change only when volume is lower than the previous bar's, and stays flat otherwise. The 255-bar EMA is the usual trend line on daily charts. Marks show crosses of the index and its average.",
+  "symbol": "spy",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "negative-volume-index",
+  "params": {
+   "base": 1000.0,
+   "ema_period": 255
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "normalized-atr": {
   "slug": "normalized-atr",
   "file": "normalized-atr.svg",
@@ -1038,6 +1071,22 @@
   },
   "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "positive-volume-index": {
+  "slug": "positive-volume-index",
+  "file": "positive-volume-index.svg",
+  "title": "Positive Volume Index with 255-bar EMA on Apple",
+  "caption": "An index starting at 1,000 that changes by the day's percentage price change only when volume is higher than the previous bar's, and stays flat otherwise. The 255-bar EMA is the usual trend line on daily charts. Marks show crosses of the index and its average.",
+  "alt": "Positive Volume Index with 255-bar EMA on Apple. An index starting at 1,000 that changes by the day's percentage price change only when volume is higher than the previous bar's, and stays flat otherwise. The 255-bar EMA is the usual trend line on daily charts. Marks show crosses of the index and its average.",
+  "symbol": "aapl",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "positive-volume-index",
+  "params": {
+   "base": 1000.0,
+   "ema_period": 255
+  },
+  "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "ppo": {
   "slug": "ppo",
   "file": "ppo.svg",
@@ -1054,6 +1103,21 @@
    "signal": 9
   },
   "credit": "S&P 500 ETF (SPY), daily, Apr 2024 to Jan 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "price-volume-trend": {
+  "slug": "price-volume-trend",
+  "file": "price-volume-trend.svg",
+  "title": "Price Volume Trend with 20-bar average on Apple",
+  "caption": "A running total that adds each bar's volume multiplied by the percentage change in close, so big moves on big volume count most. There is no lookback period; a 20-bar simple average is drawn for reference. The level depends on the start date, so read the slope. Marks show the highest and lowest readings in the window.",
+  "alt": "Price Volume Trend with 20-bar average on Apple. A running total that adds each bar's volume multiplied by the percentage change in close, so big moves on big volume count most. There is no lookback period; a 20-bar simple average is drawn for reference. The level depends on the start date, so read the slope. Marks show the highest and lowest readings in the window.",
+  "symbol": "aapl",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "price-volume-trend",
+  "params": {
+   "ma_period": 20
+  },
+  "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "rainbow-oscillator": {
   "slug": "rainbow-oscillator",
@@ -1398,6 +1462,21 @@
   },
   "credit": "EUR/USD, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "twiggs-money-flow": {
+  "slug": "twiggs-money-flow",
+  "file": "twiggs-money-flow.svg",
+  "title": "Twiggs Money Flow (21) on Bitcoin",
+  "caption": "Money flow volume, using the prior close in the true high and true low so gaps are counted, smoothed with a 21-bar Wilder average and divided by the same average of volume. The value stays between -1 and +1 around a zero line. Marks show zero-line crosses.",
+  "alt": "Twiggs Money Flow (21) on Bitcoin. Money flow volume, using the prior close in the true high and true low so gaps are counted, smoothed with a 21-bar Wilder average and divided by the same average of volume. The value stays between -1 and +1 around a zero line. Marks show zero-line crosses.",
+  "symbol": "btcusd",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "twiggs-money-flow",
+  "params": {
+   "period": 21
+  },
+  "credit": "Bitcoin (BTC/USD), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "ulcer-index": {
   "slug": "ulcer-index",
   "file": "ulcer-index.svg",
@@ -1442,6 +1521,39 @@
   "indicator": "vertical-horizontal-filter",
   "params": {
    "period": 28
+  },
+  "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "volume-oscillator": {
+  "slug": "volume-oscillator",
+  "file": "volume-oscillator.svg",
+  "title": "Volume Oscillator (5, 10) on gold",
+  "caption": "The 5-bar average of volume minus the 10-bar average, as a percentage of the 10-bar average. Above zero, recent volume is higher than its longer-term norm; below zero, lower. Marks show zero-line crosses.",
+  "alt": "Volume Oscillator (5, 10) on gold. The 5-bar average of volume minus the 10-bar average, as a percentage of the 10-bar average. Above zero, recent volume is higher than its longer-term norm; below zero, lower. Marks show zero-line crosses.",
+  "symbol": "gold",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "volume-oscillator",
+  "params": {
+   "short": 5,
+   "long": 10
+  },
+  "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "volume-weighted-macd": {
+  "slug": "volume-weighted-macd",
+  "file": "volume-weighted-macd.svg",
+  "title": "Volume-Weighted MACD (12, 26, 9) on Apple",
+  "caption": "The MACD idea built from 12-bar and 26-bar volume-weighted moving averages of the close instead of EMAs, with a 9-bar EMA signal line and a histogram of the gap between the two lines. Marks show crosses of the line and its signal.",
+  "alt": "Volume-Weighted MACD (12, 26, 9) on Apple. The MACD idea built from 12-bar and 26-bar volume-weighted moving averages of the close instead of EMAs, with a 9-bar EMA signal line and a histogram of the gap between the two lines. Marks show crosses of the line and its signal.",
+  "symbol": "aapl",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "volume-weighted-macd",
+  "params": {
+   "fast": 12,
+   "slow": 26,
+   "signal": 9
   },
   "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
@@ -1491,6 +1603,19 @@
    "signal": 4
   },
   "credit": "Bitcoin (BTC/USD), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "williams-accumulation-distribution": {
+  "slug": "williams-accumulation-distribution",
+  "file": "williams-accumulation-distribution.svg",
+  "title": "Williams Accumulation/Distribution on the S&P 500 ETF",
+  "caption": "A running total with no settings and no volume: on a higher close it adds the close minus the true low, on a lower close it adds the close minus the true high, and on an unchanged close it adds nothing. The level depends on the start date, so read the slope. Marks show the highest and lowest readings in the window.",
+  "alt": "Williams Accumulation/Distribution on the S&P 500 ETF. A running total with no settings and no volume: on a higher close it adds the close minus the true low, on a lower close it adds the close minus the true high, and on an unchanged close it adds nothing. The level depends on the start date, so read the slope. Marks show the highest and lowest readings in the window.",
+  "symbol": "spy",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "williams-accumulation-distribution",
+  "params": {},
+  "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "williams-alligator": {
   "slug": "williams-alligator",
