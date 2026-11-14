@@ -110,6 +110,21 @@
   },
   "credit": "S&P 500 ETF (SPY), daily, Jan 2025 to Aug 2025. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "average-daily-range": {
+  "slug": "average-daily-range",
+  "file": "average-daily-range.svg",
+  "title": "Average Daily Range (14) on EUR/USD",
+  "caption": "The simple average of each day's high minus low over 14 days, in price units. Unlike ATR it ignores gaps from the previous close. A rising line means daily ranges are getting wider.",
+  "alt": "Average Daily Range (14) on EUR/USD. The simple average of each day's high minus low over 14 days, in price units. Unlike ATR it ignores gaps from the previous close. A rising line means daily ranges are getting wider.",
+  "symbol": "eurusd",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "average-daily-range",
+  "params": {
+   "period": 14
+  },
+  "credit": "EUR/USD, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "awesome-oscillator": {
   "slug": "awesome-oscillator",
   "file": "awesome-oscillator.svg",
@@ -217,6 +232,22 @@
   "indicator": "center-of-gravity",
   "params": {
    "period": 10
+  },
+  "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "chaikin-volatility": {
+  "slug": "chaikin-volatility",
+  "file": "chaikin-volatility.svg",
+  "title": "Chaikin Volatility (10, 10) on gold",
+  "caption": "A 10-bar EMA of the high-low range, then its percentage change over 10 bars. Above zero the average range is wider than 10 bars earlier; below zero it is narrower. It measures how fast volatility is changing, not its level.",
+  "alt": "Chaikin Volatility (10, 10) on gold. A 10-bar EMA of the high-low range, then its percentage change over 10 bars. Above zero the average range is wider than 10 bars earlier; below zero it is narrower. It measures how fast volatility is changing, not its level.",
+  "symbol": "gold",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "chaikin-volatility",
+  "params": {
+   "ema_period": 10,
+   "roc_period": 10
   },
   "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
@@ -504,6 +535,22 @@
   "indicator": "heikin-ashi",
   "params": {},
   "credit": "Bitcoin (BTC/USD), daily, Jan 2025 to Aug 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "historical-volatility": {
+  "slug": "historical-volatility",
+  "file": "historical-volatility.svg",
+  "title": "Historical Volatility (20, annualised) on Bitcoin",
+  "caption": "The sample standard deviation of 20 daily log returns, scaled by the square root of 365 (the market trades every day) and shown as an annual percentage. The marks show the highest and lowest readings in the window.",
+  "alt": "Historical Volatility (20, annualised) on Bitcoin. The sample standard deviation of 20 daily log returns, scaled by the square root of 365 (the market trades every day) and shown as an annual percentage. The marks show the highest and lowest readings in the window.",
+  "symbol": "btcusd",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "historical-volatility",
+  "params": {
+   "period": 20,
+   "trading_days": 365
+  },
+  "credit": "Bitcoin (BTC/USD), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "hull-moving-average": {
   "slug": "hull-moving-average",
@@ -820,6 +867,21 @@
   },
   "credit": "Apple (AAPL), daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "normalized-atr": {
+  "slug": "normalized-atr",
+  "file": "normalized-atr.svg",
+  "title": "Normalized ATR (14) on Apple",
+  "caption": "The 14-bar Wilder ATR divided by the close and multiplied by 100, so volatility is shown as a percentage of price. It lets quiet and lively periods, or different markets, be compared on one scale.",
+  "alt": "Normalized ATR (14) on Apple. The 14-bar Wilder ATR divided by the close and multiplied by 100, so volatility is shown as a percentage of price. It lets quiet and lively periods, or different markets, be compared on one scale.",
+  "symbol": "aapl",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "normalized-atr",
+  "params": {
+   "period": 14
+  },
+  "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "parabolic-sar": {
   "slug": "parabolic-sar",
   "file": "parabolic-sar.svg",
@@ -933,6 +995,22 @@
   },
   "credit": "EUR/USD, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "relative-volatility-index": {
+  "slug": "relative-volatility-index",
+  "file": "relative-volatility-index.svg",
+  "title": "Relative Volatility Index (10, 14) on Apple",
+  "caption": "Built like the RSI but from the 10-bar standard deviation of the close. That value counts as up volatility on up-closes and down volatility on down-closes, each smoothed over 14 bars. Dashed lines mark 30, 50 and 70.",
+  "alt": "Relative Volatility Index (10, 14) on Apple. Built like the RSI but from the 10-bar standard deviation of the close. That value counts as up volatility on up-closes and down volatility on down-closes, each smoothed over 14 bars. Dashed lines mark 30, 50 and 70.",
+  "symbol": "aapl",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "relative-volatility-index",
+  "params": {
+   "stdev_period": 10,
+   "smooth": 14
+  },
+  "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "rsi": {
   "slug": "rsi",
   "file": "rsi.svg",
@@ -997,6 +1075,38 @@
    "period": 14
   },
   "credit": "EUR/USD, daily, Jan 2024 to Oct 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "standard-deviation": {
+  "slug": "standard-deviation",
+  "file": "standard-deviation.svg",
+  "title": "Standard Deviation (20) on the S&P 500 ETF",
+  "caption": "Standard deviation of the last 20 closes, in price units and using the population formula. It rises when closes spread out around their 20-bar average and falls when they bunch together. The marks show the highest and lowest readings in the window.",
+  "alt": "Standard Deviation (20) on the S&P 500 ETF. Standard deviation of the last 20 closes, in price units and using the population formula. It rises when closes spread out around their 20-bar average and falls when they bunch together. The marks show the highest and lowest readings in the window.",
+  "symbol": "spy",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "standard-deviation",
+  "params": {
+   "period": 20
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "starc-bands": {
+  "slug": "starc-bands",
+  "file": "starc-bands.svg",
+  "title": "STARC Bands (6, 15, 2) on EUR/USD",
+  "caption": "A 6-bar simple moving average of the close with bands set 2 x the 15-bar ATR above and below. The bands widen when ranges grow and narrow when they shrink. Marks show the first touches of the outer bands.",
+  "alt": "STARC Bands (6, 15, 2) on EUR/USD. A 6-bar simple moving average of the close with bands set 2 x the 15-bar ATR above and below. The bands widen when ranges grow and narrow when they shrink. Marks show the first touches of the outer bands.",
+  "symbol": "eurusd",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "starc-bands",
+  "params": {
+   "sma_period": 6,
+   "atr_period": 15,
+   "mult": 2.0
+  },
+  "credit": "EUR/USD, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "stochastic-momentum-index": {
   "slug": "stochastic-momentum-index",
@@ -1164,6 +1274,21 @@
    "kc_mult": 1.5
   },
   "credit": "EUR/USD, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "ulcer-index": {
+  "slug": "ulcer-index",
+  "file": "ulcer-index.svg",
+  "title": "Ulcer Index (14) on the S&P 500 ETF",
+  "caption": "The root mean square of the percentage drawdown of the close from its 14-bar high, averaged over 14 bars. It stays at zero while price holds near its highs and rises as pullbacks get deeper or last longer. Rises are ignored.",
+  "alt": "Ulcer Index (14) on the S&P 500 ETF. The root mean square of the percentage drawdown of the close from its 14-bar high, averaged over 14 bars. It stays at zero while price holds near its highs and rises as pullbacks get deeper or last longer. Rises are ignored.",
+  "symbol": "spy",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "ulcer-index",
+  "params": {
+   "period": 14
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "ultimate-oscillator": {
   "slug": "ultimate-oscillator",
