@@ -87,5 +87,5 @@ export const BANNED_PHRASES = [
   'ever-evolving', 'in the world of trading', 'in today\'s fast-paced', 'delve', 'unlock the', 'game-changer',
   'game changer', 'holy grail', 'guaranteed', 'risk-free', 'can\'t lose', 'secret weapon', 'navigate the complex',
   'it is important to note', 'in conclusion', 'tapestry', 'embark on', 'look no further', 'supercharge',
-  'skyrocket', '100% accurate', 'never fails', 'TODO-VERIFY',
+  'skyrocket', '100% accurate', 'never fails', 'TODO-VERIFY', 'should be checked', 'magazine archive', 'check the book', 'needs verifying',
 ];
