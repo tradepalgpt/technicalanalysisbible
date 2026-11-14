@@ -29,6 +29,21 @@
   "params": {},
   "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "advance-block": {
+  "slug": "advance-block",
+  "file": "advance-block.svg",
+  "title": "Advance block",
+  "caption": "Three rising bullish candles that each open inside the last body, with shrinking bodies or growing upper shadows. Found by our detector on S&P 500 ETF (SPY), 12 August 2022 to 16 August 2022.",
+  "alt": "Advance block. Three rising bullish candles that each open inside the last body, with shrinking bodies or growing upper shadows. Found by our detector on S&P 500 ETF (SPY), 12 August 2022 to 16 August 2022.",
+  "symbol": "spy",
+  "start": "2022-08-12",
+  "end": "2022-08-16",
+  "indicator": null,
+  "pattern": "advance-block",
+  "params": {},
+  "credit": "S&P 500 ETF (SPY), daily, Jun 2022 to Sep 2022. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 1
+ },
  "adx": {
   "slug": "adx",
   "file": "adx.svg",
@@ -542,6 +557,21 @@
   },
   "credit": "S&P 500 ETF (SPY), daily, Jan 2024 to Aug 2025. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "deliberation-pattern": {
+  "slug": "deliberation-pattern",
+  "file": "deliberation-pattern.svg",
+  "title": "Deliberation pattern",
+  "caption": "Two long bullish candles followed by a small bullish candle that opens near the last close and barely moves higher. Found by our detector on Bitcoin (BTC/USD), 23 October 2023 to 25 October 2023.",
+  "alt": "Deliberation pattern. Two long bullish candles followed by a small bullish candle that opens near the last close and barely moves higher. Found by our detector on Bitcoin (BTC/USD), 23 October 2023 to 25 October 2023.",
+  "symbol": "btcusd",
+  "start": "2023-10-23",
+  "end": "2023-10-25",
+  "indicator": null,
+  "pattern": "deliberation-pattern",
+  "params": {},
+  "credit": "Bitcoin (BTC/USD), daily, Sep 2023 to Nov 2023. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 2
+ },
  "dema": {
   "slug": "dema",
   "file": "dema.svg",
@@ -788,6 +818,21 @@
   },
   "credit": "Bitcoin (BTC/USD), daily, Mar 2025 to Sep 2025. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "falling-three-methods": {
+  "slug": "falling-three-methods",
+  "file": "falling-three-methods.svg",
+  "title": "Falling three methods",
+  "caption": "A long bearish candle, three small candles inside its range, then a long bearish candle closing below the first close. Found by our detector on Exxon Mobil (XOM), 29 November 2023 to 5 December 2023.",
+  "alt": "Falling three methods. A long bearish candle, three small candles inside its range, then a long bearish candle closing below the first close. Found by our detector on Exxon Mobil (XOM), 29 November 2023 to 5 December 2023.",
+  "symbol": "xom",
+  "start": "2023-11-29",
+  "end": "2023-12-05",
+  "indicator": null,
+  "pattern": "falling-three-methods",
+  "params": {},
+  "credit": "Exxon Mobil (XOM), daily, Oct 2023 to Dec 2023. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 1
+ },
  "fibonacci-extension": {
   "slug": "fibonacci-extension",
   "file": "fibonacci-extension.svg",
@@ -866,6 +911,21 @@
    "period": 13
   },
   "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "gap-three-methods": {
+  "slug": "gap-three-methods",
+  "file": "gap-three-methods.svg",
+  "title": "Gap three methods",
+  "caption": "Two candles in the trend with a gap, then a candle against the trend that opens inside the second body and closes inside the first, filling the gap. Found by our detector on Nvidia (NVDA), 20 July 2022 to 22 July 2022.",
+  "alt": "Gap three methods. Two candles in the trend with a gap, then a candle against the trend that opens inside the second body and closes inside the first, filling the gap. Found by our detector on Nvidia (NVDA), 20 July 2022 to 22 July 2022.",
+  "symbol": "nvda",
+  "start": "2022-07-20",
+  "end": "2022-07-22",
+  "indicator": null,
+  "pattern": "gap-three-methods",
+  "params": {},
+  "credit": "Nvidia (NVDA), daily, Jun 2022 to Aug 2022. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 1
  },
  "gator-oscillator": {
   "slug": "gator-oscillator",
@@ -1538,6 +1598,21 @@
   },
   "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "on-neck-in-neck": {
+  "slug": "on-neck-in-neck",
+  "file": "on-neck-in-neck.svg",
+  "title": "On-neck and in-neck",
+  "caption": "A long bearish candle, then a bullish candle that opens below its low and closes at or just inside its close. Found by our detector on Nasdaq 100 ETF (QQQ), 4 April 2025 to 7 April 2025.",
+  "alt": "On-neck and in-neck. A long bearish candle, then a bullish candle that opens below its low and closes at or just inside its close. Found by our detector on Nasdaq 100 ETF (QQQ), 4 April 2025 to 7 April 2025.",
+  "symbol": "qqq",
+  "start": "2025-04-04",
+  "end": "2025-04-07",
+  "indicator": null,
+  "pattern": "on-neck-in-neck",
+  "params": {},
+  "credit": "Nasdaq 100 ETF (QQQ), daily, Feb 2025 to Apr 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 3
+ },
  "parabolic-sar": {
   "slug": "parabolic-sar",
   "file": "parabolic-sar.svg",
@@ -1759,6 +1834,21 @@
   },
   "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "rising-three-methods": {
+  "slug": "rising-three-methods",
+  "file": "rising-three-methods.svg",
+  "title": "Rising three methods",
+  "caption": "A long bullish candle, three small candles inside its range, then a long bullish candle closing above the first close. Found by our detector on Bitcoin (BTC/USD), 11 October 2021 to 15 October 2021.",
+  "alt": "Rising three methods. A long bullish candle, three small candles inside its range, then a long bullish candle closing above the first close. Found by our detector on Bitcoin (BTC/USD), 11 October 2021 to 15 October 2021.",
+  "symbol": "btcusd",
+  "start": "2021-10-11",
+  "end": "2021-10-15",
+  "indicator": null,
+  "pattern": "rising-three-methods",
+  "params": {},
+  "credit": "Bitcoin (BTC/USD), daily, Sep 2021 to Oct 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 2
+ },
  "rsi": {
   "slug": "rsi",
   "file": "rsi.svg",
@@ -1793,6 +1883,21 @@
    "factor": 0.5
   },
   "credit": "EUR/USD, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "separating-lines": {
+  "slug": "separating-lines",
+  "file": "separating-lines.svg",
+  "title": "Separating lines",
+  "caption": "A candle against the trend, then a candle with the trend opening at the same price as the first. Found by our detector on Apple (AAPL), 27 October 2022 to 28 October 2022.",
+  "alt": "Separating lines. A candle against the trend, then a candle with the trend opening at the same price as the first. Found by our detector on Apple (AAPL), 27 October 2022 to 28 October 2022.",
+  "symbol": "aapl",
+  "start": "2022-10-27",
+  "end": "2022-10-28",
+  "indicator": null,
+  "pattern": "separating-lines",
+  "params": {},
+  "credit": "Apple (AAPL), daily, Sep 2022 to Nov 2022. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 3
  },
  "shooting-star": {
   "slug": "shooting-star",
@@ -1987,6 +2092,21 @@
   },
   "credit": "Bitcoin (BTC/USD), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "tasuki-gap": {
+  "slug": "tasuki-gap",
+  "file": "tasuki-gap.svg",
+  "title": "Tasuki gap",
+  "caption": "Two candles in the trend with a gap between them, then a candle against the trend that closes inside the gap without filling it. Found by our detector on JPMorgan (JPM), 17 June 2021 to 21 June 2021.",
+  "alt": "Tasuki gap. Two candles in the trend with a gap between them, then a candle against the trend that closes inside the gap without filling it. Found by our detector on JPMorgan (JPM), 17 June 2021 to 21 June 2021.",
+  "symbol": "jpm",
+  "start": "2021-06-17",
+  "end": "2021-06-21",
+  "indicator": null,
+  "pattern": "tasuki-gap",
+  "params": {},
+  "credit": "JPMorgan (JPM), daily, May 2021 to Jul 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 2
+ },
  "tema": {
   "slug": "tema",
   "file": "tema.svg",
@@ -2031,6 +2151,21 @@
   "params": {},
   "credit": "Microsoft (MSFT), daily, Dec 2024 to Feb 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 4
+ },
+ "three-line-strike": {
+  "slug": "three-line-strike",
+  "file": "three-line-strike.svg",
+  "title": "Three line strike",
+  "caption": "Three candles in one direction, then one opposite candle that opens beyond the third close and closes beyond the first open. Found by our detector on Tesla (TSLA), 27 April 2022 to 2 May 2022.",
+  "alt": "Three line strike. Three candles in one direction, then one opposite candle that opens beyond the third close and closes beyond the first open. Found by our detector on Tesla (TSLA), 27 April 2022 to 2 May 2022.",
+  "symbol": "tsla",
+  "start": "2022-04-27",
+  "end": "2022-05-02",
+  "indicator": null,
+  "pattern": "three-line-strike",
+  "params": {},
+  "credit": "Tesla (TSLA), daily, Mar 2022 to May 2022. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 1
  },
  "three-outside-up-down": {
   "slug": "three-outside-up-down",
