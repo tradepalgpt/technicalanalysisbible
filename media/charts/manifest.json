@@ -30,6 +30,21 @@
   },
   "credit": "EUR/USD, daily, Jan 2025 to Aug 2025. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "dema": {
+  "slug": "dema",
+  "file": "dema.svg",
+  "title": "20-day Double EMA on the S&P 500 ETF",
+  "caption": "DEMA (20) built as 2 x EMA minus the EMA of the EMA. It hugs price more closely than a plain EMA, at the cost of extra noise.",
+  "alt": "20-day Double EMA on the S&P 500 ETF. DEMA (20) built as 2 x EMA minus the EMA of the EMA. It hugs price more closely than a plain EMA, at the cost of extra noise.",
+  "symbol": "spy",
+  "start": "2024-01-02",
+  "end": "2024-10-31",
+  "indicator": "dema",
+  "params": {
+   "period": 20
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Jan 2024 to Oct 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "donchian-channels": {
   "slug": "donchian-channels",
   "file": "donchian-channels.svg",
@@ -60,6 +75,38 @@
   },
   "credit": "Bitcoin (BTC/USD), daily, Mar 2025 to Sep 2025. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "hull-moving-average": {
+  "slug": "hull-moving-average",
+  "file": "hull-moving-average.svg",
+  "title": "21-day Hull Moving Average on gold",
+  "caption": "HMA (21) uses weighted averages to stay smooth while reacting quickly. It can overshoot at turns.",
+  "alt": "21-day Hull Moving Average on gold. HMA (21) uses weighted averages to stay smooth while reacting quickly. It can overshoot at turns.",
+  "symbol": "gold",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "hull-moving-average",
+  "params": {
+   "period": 21
+  },
+  "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "kama": {
+  "slug": "kama",
+  "file": "kama.svg",
+  "title": "Kaufman Adaptive Moving Average (10, 2, 30) on the S&P 500 ETF",
+  "caption": "KAMA speeds up when price moves in one direction and flattens in noisy sideways stretches, using an efficiency ratio over 10 bars.",
+  "alt": "Kaufman Adaptive Moving Average (10, 2, 30) on the S&P 500 ETF. KAMA speeds up when price moves in one direction and flattens in noisy sideways stretches, using an efficiency ratio over 10 bars.",
+  "symbol": "spy",
+  "start": "2024-04-01",
+  "end": "2025-01-31",
+  "indicator": "kama",
+  "params": {
+   "er_period": 10,
+   "fast": 2,
+   "slow": 30
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Apr 2024 to Jan 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "keltner-channels": {
   "slug": "keltner-channels",
   "file": "keltner-channels.svg",
@@ -76,6 +123,21 @@
    "mult": 2.0
   },
   "credit": "Apple (AAPL), daily, Jan 2025 to Oct 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "lsma": {
+  "slug": "lsma",
+  "file": "lsma.svg",
+  "title": "25-day Least Squares Moving Average on gold",
+  "caption": "LSMA (25) plots the end point of a straight line fitted to the last 25 closes, so it leans with the recent slope.",
+  "alt": "25-day Least Squares Moving Average on gold. LSMA (25) plots the end point of a straight line fitted to the last 25 closes, so it leans with the recent slope.",
+  "symbol": "gold",
+  "start": "2024-06-03",
+  "end": "2025-03-31",
+  "indicator": "lsma",
+  "params": {
+   "period": 25
+  },
+  "credit": "Gold futures, daily, Jun 2024 to Mar 2025. Calculated with Technical Analysis Bible's own indicator code."
  },
  "macd": {
   "slug": "macd",
@@ -126,6 +188,21 @@
   },
   "credit": "Apple (AAPL), daily, Jan 2025 to Oct 2025. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "smoothed-moving-average": {
+  "slug": "smoothed-moving-average",
+  "file": "smoothed-moving-average.svg",
+  "title": "14-day Smoothed Moving Average on EUR/USD",
+  "caption": "SMMA (14) is Wilder's smoothing, the same averaging used inside RSI and ATR. It is smooth and slow, similar to a much longer EMA.",
+  "alt": "14-day Smoothed Moving Average on EUR/USD. SMMA (14) is Wilder's smoothing, the same averaging used inside RSI and ATR. It is smooth and slow, similar to a much longer EMA.",
+  "symbol": "eurusd",
+  "start": "2024-01-02",
+  "end": "2024-10-31",
+  "indicator": "smoothed-moving-average",
+  "params": {
+   "period": 14
+  },
+  "credit": "EUR/USD, daily, Jan 2024 to Oct 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "stochastic-oscillator": {
   "slug": "stochastic-oscillator",
   "file": "stochastic-oscillator.svg",
@@ -142,5 +219,50 @@
    "d": 3
   },
   "credit": "EUR/USD, daily, Apr 2025 to Oct 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "tema": {
+  "slug": "tema",
+  "file": "tema.svg",
+  "title": "20-day Triple EMA on Apple",
+  "caption": "TEMA (20) combines three chained EMAs to cut lag further. It tracks price tightly and flips more often in choppy spells.",
+  "alt": "20-day Triple EMA on Apple. TEMA (20) combines three chained EMAs to cut lag further. It tracks price tightly and flips more often in choppy spells.",
+  "symbol": "aapl",
+  "start": "2024-02-01",
+  "end": "2024-11-29",
+  "indicator": "tema",
+  "params": {
+   "period": 20
+  },
+  "credit": "Apple (AAPL), daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "vwma": {
+  "slug": "vwma",
+  "file": "vwma.svg",
+  "title": "20-day Volume Weighted Moving Average on Bitcoin",
+  "caption": "VWMA (20) weights each close by its volume, so heavy-volume days pull the line harder than quiet ones.",
+  "alt": "20-day Volume Weighted Moving Average on Bitcoin. VWMA (20) weights each close by its volume, so heavy-volume days pull the line harder than quiet ones.",
+  "symbol": "btcusd",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "vwma",
+  "params": {
+   "period": 20
+  },
+  "credit": "Bitcoin (BTC/USD), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "zlema": {
+  "slug": "zlema",
+  "file": "zlema.svg",
+  "title": "20-day Zero-Lag EMA on Apple",
+  "caption": "ZLEMA (20) smooths close adjusted by recent change, so the line sits closer to price than a standard EMA.",
+  "alt": "20-day Zero-Lag EMA on Apple. ZLEMA (20) smooths close adjusted by recent change, so the line sits closer to price than a standard EMA.",
+  "symbol": "aapl",
+  "start": "2024-05-01",
+  "end": "2025-01-31",
+  "indicator": "zlema",
+  "params": {
+   "period": 20
+  },
+  "credit": "Apple (AAPL), daily, May 2024 to Jan 2025. Calculated with Technical Analysis Bible's own indicator code."
  }
 }
