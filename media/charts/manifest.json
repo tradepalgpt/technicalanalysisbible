@@ -92,6 +92,21 @@
   },
   "credit": "EUR/USD, daily, Jan 2025 to Aug 2025. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "choppiness-index": {
+  "slug": "choppiness-index",
+  "file": "choppiness-index.svg",
+  "title": "Choppiness Index (14) on Apple",
+  "caption": "The index runs from 0 to 100. Readings above 61.8 describe a choppy, sideways market and readings below 38.2 an efficient, trending one. It gives no direction.",
+  "alt": "Choppiness Index (14) on Apple. The index runs from 0 to 100. Readings above 61.8 describe a choppy, sideways market and readings below 38.2 an efficient, trending one. It gives no direction.",
+  "symbol": "aapl",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "choppiness-index",
+  "params": {
+   "period": 14
+  },
+  "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "death-cross": {
   "slug": "death-cross",
   "file": "death-cross.svg",
@@ -266,6 +281,75 @@
   },
   "credit": "Apple (AAPL), daily, Jan 2025 to Oct 2025. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "know-sure-thing": {
+  "slug": "know-sure-thing",
+  "file": "know-sure-thing.svg",
+  "title": "Know Sure Thing (daily set) on Apple",
+  "caption": "The KST adds four smoothed rates of change (10, 15, 20 and 30 bars), weighted 1 to 4, with a 9-bar signal line. It swings around zero and tracks larger cycles, so it lags and crosses often in flat markets.",
+  "alt": "Know Sure Thing (daily set) on Apple. The KST adds four smoothed rates of change (10, 15, 20 and 30 bars), weighted 1 to 4, with a 9-bar signal line. It swings around zero and tracks larger cycles, so it lags and crosses often in flat markets.",
+  "symbol": "aapl",
+  "start": "2024-02-01",
+  "end": "2024-11-29",
+  "indicator": "know-sure-thing",
+  "params": {
+   "roc1": 10,
+   "roc2": 15,
+   "roc3": 20,
+   "roc4": 30,
+   "sma1": 10,
+   "sma2": 10,
+   "sma3": 10,
+   "sma4": 15,
+   "signal_period": 9
+  },
+  "credit": "Apple (AAPL), daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "linear-regression": {
+  "slug": "linear-regression",
+  "file": "linear-regression.svg",
+  "title": "Linear Regression curve (14) on EUR/USD",
+  "caption": "At each bar the curve plots the end point of the least squares line through the last 14 closes. It follows price with less lag than a simple average but overshoots at turning points.",
+  "alt": "Linear Regression curve (14) on EUR/USD. At each bar the curve plots the end point of the least squares line through the last 14 closes. It follows price with less lag than a simple average but overshoots at turning points.",
+  "symbol": "eurusd",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "linear-regression",
+  "params": {
+   "period": 14
+  },
+  "credit": "EUR/USD, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "linear-regression-channel": {
+  "slug": "linear-regression-channel",
+  "file": "linear-regression-channel.svg",
+  "title": "Linear Regression Channel (100, 2 SD) on the S&P 500 ETF",
+  "caption": "The centre line is the regression end point of the last 100 closes, with bands 2 standard deviations of the closes around the line. This moving version is recalculated each bar, so it differs from a channel drawn once across a fixed window.",
+  "alt": "Linear Regression Channel (100, 2 SD) on the S&P 500 ETF. The centre line is the regression end point of the last 100 closes, with bands 2 standard deviations of the closes around the line. This moving version is recalculated each bar, so it differs from a channel drawn once across a fixed window.",
+  "symbol": "spy",
+  "start": "2024-02-01",
+  "end": "2024-11-29",
+  "indicator": "linear-regression-channel",
+  "params": {
+   "period": 100,
+   "width": 2.0
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "linear-regression-slope": {
+  "slug": "linear-regression-slope",
+  "file": "linear-regression-slope.svg",
+  "title": "Linear Regression Slope (14) on gold",
+  "caption": "The slope of the best-fit line through the last 14 closes, in price units per bar. Above zero the fitted line is rising and below zero it is falling. It depends on the price level, so compare readings on the same instrument.",
+  "alt": "Linear Regression Slope (14) on gold. The slope of the best-fit line through the last 14 closes, in price units per bar. Above zero the fitted line is rising and below zero it is falling. It depends on the price level, so compare readings on the same instrument.",
+  "symbol": "gold",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "linear-regression-slope",
+  "params": {
+   "period": 14
+  },
+  "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "lsma": {
   "slug": "lsma",
   "file": "lsma.svg",
@@ -297,6 +381,22 @@
    "signal": 9
   },
   "credit": "Gold futures, daily, Jan 2025 to Sep 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "mass-index": {
+  "slug": "mass-index",
+  "file": "mass-index.svg",
+  "title": "Mass Index (9, 25) on Bitcoin",
+  "caption": "The Mass Index sums the ratio of a 9-bar EMA of the high-low range to its own EMA over 25 bars. A reversal bulge is a rise above 27 followed by a fall below 26.5. It shows range behaviour and gives no direction.",
+  "alt": "Mass Index (9, 25) on Bitcoin. The Mass Index sums the ratio of a 9-bar EMA of the high-low range to its own EMA over 25 bars. A reversal bulge is a rise above 27 followed by a fall below 26.5. It shows range behaviour and gives no direction.",
+  "symbol": "btcusd",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "mass-index",
+  "params": {
+   "ema_period": 9,
+   "sum_period": 25
+  },
+  "credit": "Bitcoin (BTC/USD), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "mcginley-dynamic": {
   "slug": "mcginley-dynamic",
@@ -493,6 +593,37 @@
    "period": 20
   },
   "credit": "Apple (AAPL), daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "trix": {
+  "slug": "trix",
+  "file": "trix.svg",
+  "title": "TRIX (15, 9) on gold",
+  "caption": "TRIX is the one-bar percentage change of a triple-smoothed 15-bar EMA, shown with a 9-bar signal line. It oscillates around zero and turns well after price because of the heavy smoothing.",
+  "alt": "TRIX (15, 9) on gold. TRIX is the one-bar percentage change of a triple-smoothed 15-bar EMA, shown with a 9-bar signal line. It oscillates around zero and turns well after price because of the heavy smoothing.",
+  "symbol": "gold",
+  "start": "2024-02-01",
+  "end": "2024-11-29",
+  "indicator": "trix",
+  "params": {
+   "period": 15,
+   "signal_period": 9
+  },
+  "credit": "Gold futures, daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "vortex-indicator": {
+  "slug": "vortex-indicator",
+  "file": "vortex-indicator.svg",
+  "title": "Vortex Indicator (14) on the S&P 500 ETF",
+  "caption": "VI+ and VI- measure upward and downward movement over 14 bars relative to true range. A cross of the two lines is the basic signal, and both hover near 1 when direction is unclear. The dashed line marks 1.",
+  "alt": "Vortex Indicator (14) on the S&P 500 ETF. VI+ and VI- measure upward and downward movement over 14 bars relative to true range. A cross of the two lines is the basic signal, and both hover near 1 when direction is unclear. The dashed line marks 1.",
+  "symbol": "spy",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "vortex-indicator",
+  "params": {
+   "period": 14
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "vwma": {
   "slug": "vwma",
