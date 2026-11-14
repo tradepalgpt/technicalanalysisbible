@@ -1,4 +1,21 @@
 {
+ "alma": {
+  "slug": "alma",
+  "file": "alma.svg",
+  "title": "ALMA (9, offset 0.85, sigma 6) on the S&P 500 ETF",
+  "caption": "ALMA weights the last nine closes with a bell curve peaked near the newest bar. It follows price closely while staying smooth.",
+  "alt": "ALMA (9, offset 0.85, sigma 6) on the S&P 500 ETF. ALMA weights the last nine closes with a bell curve peaked near the newest bar. It follows price closely while staying smooth.",
+  "symbol": "spy",
+  "start": "2024-02-01",
+  "end": "2024-11-29",
+  "indicator": "alma",
+  "params": {
+   "period": 9,
+   "offset": 0.85,
+   "sigma": 6
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "atr": {
   "slug": "atr",
   "file": "atr.svg",
@@ -29,6 +46,23 @@
    "stdev": 2.0
   },
   "credit": "EUR/USD, daily, Jan 2025 to Aug 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "death-cross": {
+  "slug": "death-cross",
+  "file": "death-cross.svg",
+  "title": "Death cross: 50-day under 200-day SMA on the S&P 500 ETF",
+  "caption": "The 50-day SMA moving from above to below the 200-day SMA, on closing values, is called a death cross. It is a lagging signal.",
+  "alt": "Death cross: 50-day under 200-day SMA on the S&P 500 ETF. The 50-day SMA moving from above to below the 200-day SMA, on closing values, is called a death cross. It is a lagging signal.",
+  "symbol": "spy",
+  "start": "2024-01-02",
+  "end": "2025-08-29",
+  "indicator": "death-cross",
+  "params": {
+   "fast": 50,
+   "slow": 200,
+   "ma_type": "sma"
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Jan 2024 to Aug 2025. Calculated with Technical Analysis Bible's own indicator code."
  },
  "dema": {
   "slug": "dema",
@@ -74,6 +108,23 @@
    "period": 20
   },
   "credit": "Bitcoin (BTC/USD), daily, Mar 2025 to Sep 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "golden-cross": {
+  "slug": "golden-cross",
+  "file": "golden-cross.svg",
+  "title": "Golden cross: 50-day over 200-day SMA on the S&P 500 ETF",
+  "caption": "The 50-day SMA moving from below to above the 200-day SMA, on closing values, is called a golden cross. It shows up well after price has turned.",
+  "alt": "Golden cross: 50-day over 200-day SMA on the S&P 500 ETF. The 50-day SMA moving from below to above the 200-day SMA, on closing values, is called a golden cross. It shows up well after price has turned.",
+  "symbol": "spy",
+  "start": "2024-01-02",
+  "end": "2025-08-29",
+  "indicator": "golden-cross",
+  "params": {
+   "fast": 50,
+   "slow": 200,
+   "ma_type": "sma"
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Jan 2024 to Aug 2025. Calculated with Technical Analysis Bible's own indicator code."
  },
  "hull-moving-average": {
   "slug": "hull-moving-average",
@@ -156,6 +207,74 @@
   },
   "credit": "Gold futures, daily, Jan 2025 to Sep 2025. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "mcginley-dynamic": {
+  "slug": "mcginley-dynamic",
+  "file": "mcginley-dynamic.svg",
+  "title": "McGinley Dynamic (14) on gold",
+  "caption": "The McGinley Dynamic adjusts its own speed: it moves faster when price pulls away from it and slower when price returns.",
+  "alt": "McGinley Dynamic (14) on gold. The McGinley Dynamic adjusts its own speed: it moves faster when price pulls away from it and slower when price returns.",
+  "symbol": "gold",
+  "start": "2024-02-01",
+  "end": "2024-11-29",
+  "indicator": "mcginley-dynamic",
+  "params": {
+   "period": 14,
+   "k": 1.0
+  },
+  "credit": "Gold futures, daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "moving-average-crossover": {
+  "slug": "moving-average-crossover",
+  "file": "moving-average-crossover.svg",
+  "title": "20/50-day SMA crossover on gold",
+  "caption": "A fast SMA (20) crossing a slow SMA (50). Crosses up are bullish and crosses down bearish, with extra false signals in sideways spells.",
+  "alt": "20/50-day SMA crossover on gold. A fast SMA (20) crossing a slow SMA (50). Crosses up are bullish and crosses down bearish, with extra false signals in sideways spells.",
+  "symbol": "gold",
+  "start": "2024-01-02",
+  "end": "2024-12-31",
+  "indicator": "moving-average-crossover",
+  "params": {
+   "fast": 20,
+   "slow": 50,
+   "ma_type": "sma"
+  },
+  "credit": "Gold futures, daily, Jan 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "moving-average-envelope": {
+  "slug": "moving-average-envelope",
+  "file": "moving-average-envelope.svg",
+  "title": "20-day SMA envelope (2.5 percent) on EUR/USD",
+  "caption": "A 20-day SMA with lines a fixed 2.5 percent above and below. The band width is a constant share of the average, not of volatility.",
+  "alt": "20-day SMA envelope (2.5 percent) on EUR/USD. A 20-day SMA with lines a fixed 2.5 percent above and below. The band width is a constant share of the average, not of volatility.",
+  "symbol": "eurusd",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "moving-average-envelope",
+  "params": {
+   "period": 20,
+   "percent": 2.5,
+   "ma_type": "sma"
+  },
+  "credit": "EUR/USD, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "moving-average-ribbon": {
+  "slug": "moving-average-ribbon",
+  "file": "moving-average-ribbon.svg",
+  "title": "Ten-EMA ribbon (10 to 100) on Apple",
+  "caption": "Ten EMAs of 10, 20 up to 100 days. The lines fan out when a trend is strong and bunch together when it fades.",
+  "alt": "Ten-EMA ribbon (10 to 100) on Apple. Ten EMAs of 10, 20 up to 100 days. The lines fan out when a trend is strong and bunch together when it fades.",
+  "symbol": "aapl",
+  "start": "2024-02-01",
+  "end": "2024-11-29",
+  "indicator": "moving-average-ribbon",
+  "params": {
+   "start": 10,
+   "step": 10,
+   "count": 10,
+   "ma_type": "ema"
+  },
+  "credit": "Apple (AAPL), daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "rsi": {
   "slug": "rsi",
   "file": "rsi.svg",
@@ -219,6 +338,22 @@
    "d": 3
   },
   "credit": "EUR/USD, daily, Apr 2025 to Oct 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "t3-moving-average": {
+  "slug": "t3-moving-average",
+  "file": "t3-moving-average.svg",
+  "title": "T3 (5, volume factor 0.7) on Bitcoin",
+  "caption": "T3 runs a lag-cancelling EMA step three times. The line is very smooth, and the 0.7 volume factor can let it overshoot at turns.",
+  "alt": "T3 (5, volume factor 0.7) on Bitcoin. T3 runs a lag-cancelling EMA step three times. The line is very smooth, and the 0.7 volume factor can let it overshoot at turns.",
+  "symbol": "btcusd",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "t3-moving-average",
+  "params": {
+   "period": 5,
+   "vfactor": 0.7
+  },
+  "credit": "Bitcoin (BTC/USD), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "tema": {
   "slug": "tema",
