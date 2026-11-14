@@ -1,4 +1,21 @@
 {
+ "accelerator-oscillator": {
+  "slug": "accelerator-oscillator",
+  "file": "accelerator-oscillator.svg",
+  "title": "Accelerator Oscillator (5, 34, 5) on gold",
+  "caption": "The AC is the Awesome Oscillator (5 and 34 bar averages of the median price) minus its own 5-bar simple average. It is drawn as bars around a zero line, and it shows whether momentum is speeding up or slowing down.",
+  "alt": "Accelerator Oscillator (5, 34, 5) on gold. The AC is the Awesome Oscillator (5 and 34 bar averages of the median price) minus its own 5-bar simple average. It is drawn as bars around a zero line, and it shows whether momentum is speeding up or slowing down.",
+  "symbol": "gold",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "accelerator-oscillator",
+  "params": {
+   "fast": 5,
+   "slow": 34,
+   "signal": 5
+  },
+  "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "adx": {
   "slug": "adx",
   "file": "adx.svg",
@@ -140,6 +157,21 @@
   },
   "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "chande-momentum-oscillator": {
+  "slug": "chande-momentum-oscillator",
+  "file": "chande-momentum-oscillator.svg",
+  "title": "Chande Momentum Oscillator (14) on EUR/USD",
+  "caption": "The CMO compares the sum of up-moves with the sum of down-moves over 14 bars, scaled from -100 to +100. The reference lines are at +50 and -50, and there is no smoothing.",
+  "alt": "Chande Momentum Oscillator (14) on EUR/USD. The CMO compares the sum of up-moves with the sum of down-moves over 14 bars, scaled from -100 to +100. The reference lines are at +50 and -50, and there is no smoothing.",
+  "symbol": "eurusd",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "chande-momentum-oscillator",
+  "params": {
+   "period": 14
+  },
+  "credit": "EUR/USD, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "choppiness-index": {
   "slug": "choppiness-index",
   "file": "choppiness-index.svg",
@@ -154,6 +186,40 @@
    "period": 14
   },
   "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "connors-rsi": {
+  "slug": "connors-rsi",
+  "file": "connors-rsi.svg",
+  "title": "Connors RSI (3, 2, 100) on Bitcoin",
+  "caption": "Connors RSI averages three parts: a 3-bar RSI of the close, a 2-bar RSI of the up and down streak length, and the percent rank of the one-bar change over 100 bars. The scale is 0 to 100, with reference lines at 90 and 10.",
+  "alt": "Connors RSI (3, 2, 100) on Bitcoin. Connors RSI averages three parts: a 3-bar RSI of the close, a 2-bar RSI of the up and down streak length, and the percent rank of the one-bar change over 100 bars. The scale is 0 to 100, with reference lines at 90 and 10.",
+  "symbol": "btcusd",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "connors-rsi",
+  "params": {
+   "rsi_period": 3,
+   "streak_period": 2,
+   "rank_period": 100
+  },
+  "credit": "Bitcoin (BTC/USD), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "coppock-curve": {
+  "slug": "coppock-curve",
+  "file": "coppock-curve.svg",
+  "title": "Coppock Curve (14, 11, 10) on the S&P 500 ETF",
+  "caption": "The Coppock Curve is a 10-bar weighted average of the 14-bar and 11-bar rates of change added together. It was designed for monthly charts, so on daily bars it behaves as a faster, different indicator.",
+  "alt": "Coppock Curve (14, 11, 10) on the S&P 500 ETF. The Coppock Curve is a 10-bar weighted average of the 14-bar and 11-bar rates of change added together. It was designed for monthly charts, so on daily bars it behaves as a faster, different indicator.",
+  "symbol": "spy",
+  "start": "2024-01-01",
+  "end": "2024-12-31",
+  "indicator": "coppock-curve",
+  "params": {
+   "roc_long": 14,
+   "roc_short": 11,
+   "wma_period": 10
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Jan 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "death-cross": {
   "slug": "death-cross",
@@ -186,6 +252,21 @@
    "period": 20
   },
   "credit": "S&P 500 ETF (SPY), daily, Jan 2024 to Oct 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "detrended-price-oscillator": {
+  "slug": "detrended-price-oscillator",
+  "file": "detrended-price-oscillator.svg",
+  "title": "Detrended Price Oscillator (20) on gold",
+  "caption": "The DPO subtracts the 20-bar simple average from the close taken 11 bars earlier, which removes the longer trend so shorter cycles stand out around the zero line. Platforms differ on where the shift is drawn.",
+  "alt": "Detrended Price Oscillator (20) on gold. The DPO subtracts the 20-bar simple average from the close taken 11 bars earlier, which removes the longer trend so shorter cycles stand out around the zero line. Platforms differ on where the shift is drawn.",
+  "symbol": "gold",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "detrended-price-oscillator",
+  "params": {
+   "period": 20
+  },
+  "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "dmi": {
   "slug": "dmi",
@@ -234,6 +315,21 @@
    "signal": 9
   },
   "credit": "S&P 500 ETF (SPY), daily, Apr 2024 to Jan 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "elder-ray-index": {
+  "slug": "elder-ray-index",
+  "file": "elder-ray-index.svg",
+  "title": "Elder-Ray Index (13) on Apple",
+  "caption": "Bull Power is the bar high minus a 13-bar EMA of the close, and Bear Power is the bar low minus the same EMA. Both are plotted as bars around zero, in price units.",
+  "alt": "Elder-Ray Index (13) on Apple. Bull Power is the bar high minus a 13-bar EMA of the close, and Bear Power is the bar low minus the same EMA. Both are plotted as bars around zero, in price units.",
+  "symbol": "aapl",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "elder-ray-index",
+  "params": {
+   "period": 13
+  },
+  "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "exponential-moving-average": {
   "slug": "exponential-moving-average",
@@ -812,6 +908,40 @@
    "signal_period": 9
   },
   "credit": "Gold futures, daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "true-strength-index": {
+  "slug": "true-strength-index",
+  "file": "true-strength-index.svg",
+  "title": "True Strength Index (25, 13, 7) on Apple",
+  "caption": "The TSI double-smooths the one-bar price change and its absolute value with 25 and 13 bar EMAs, then divides one by the other. The signal line is a 7-bar EMA of the TSI, and the zero line separates positive from negative momentum.",
+  "alt": "True Strength Index (25, 13, 7) on Apple. The TSI double-smooths the one-bar price change and its absolute value with 25 and 13 bar EMAs, then divides one by the other. The signal line is a 7-bar EMA of the TSI, and the zero line separates positive from negative momentum.",
+  "symbol": "aapl",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "true-strength-index",
+  "params": {
+   "long": 25,
+   "short": 13,
+   "signal": 7
+  },
+  "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "ultimate-oscillator": {
+  "slug": "ultimate-oscillator",
+  "file": "ultimate-oscillator.svg",
+  "title": "Ultimate Oscillator (7, 14, 28) on the S&P 500 ETF",
+  "caption": "The UO measures buying pressure against true range over 7, 14 and 28 bars and blends the three with weights of 4, 2 and 1. It is scaled from 0 to 100, with reference lines at 70 and 30.",
+  "alt": "Ultimate Oscillator (7, 14, 28) on the S&P 500 ETF. The UO measures buying pressure against true range over 7, 14 and 28 bars and blends the three with weights of 4, 2 and 1. It is scaled from 0 to 100, with reference lines at 70 and 30.",
+  "symbol": "spy",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "ultimate-oscillator",
+  "params": {
+   "p1": 7,
+   "p2": 14,
+   "p3": 28
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "vertical-horizontal-filter": {
   "slug": "vertical-horizontal-filter",
