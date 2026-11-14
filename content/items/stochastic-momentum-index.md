@@ -128,4 +128,4 @@ Many platforms use a 10-period lookback with 3 and 3 smoothing. Blau's original 
 Not well for reversals. It can sit in an extreme zone for a long time during a strong trend. It is better suited to ranges and to entries at known levels.
 
 **Who created the SMI?**
-William Blau introduced it in 1993 and wrote about it in his 1995 book *Momentum, Direction, and Divergence*. The 1993 date comes from his article in the trading magazine press and should be checked if you need to cite it.
+William Blau introduced it in 1993 and wrote about it in his 1995 book *Momentum, Direction, and Divergence*.
