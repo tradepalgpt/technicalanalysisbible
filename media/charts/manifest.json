@@ -199,6 +199,21 @@
   "credit": "S&P 500 ETF (SPY), daily, Feb 2024 to Apr 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 20
  },
+ "bearish-harami": {
+  "slug": "bearish-harami",
+  "file": "bearish-harami.svg",
+  "title": "Bearish harami after an advance",
+  "caption": "A long rising candle followed by a small candle whose body sits inside the first body, after an advance. Found by our detector on JPMorgan (JPM), 13 January 2023 to 17 January 2023.",
+  "alt": "Bearish harami after an advance. A long rising candle followed by a small candle whose body sits inside the first body, after an advance. Found by our detector on JPMorgan (JPM), 13 January 2023 to 17 January 2023.",
+  "symbol": "jpm",
+  "start": "2023-01-13",
+  "end": "2023-01-17",
+  "indicator": null,
+  "pattern": "bearish-harami",
+  "params": {},
+  "credit": "JPMorgan (JPM), daily, Nov 2022 to Feb 2023. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 8
+ },
  "belt-hold": {
   "slug": "belt-hold",
   "file": "belt-hold.svg",
@@ -277,6 +292,21 @@
   "params": {},
   "credit": "Gold futures, daily, Jul 2025 to Sep 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 4
+ },
+ "bullish-harami": {
+  "slug": "bullish-harami",
+  "file": "bullish-harami.svg",
+  "title": "Bullish harami after a decline",
+  "caption": "A long falling candle followed by a small candle whose body sits inside the first body, after a decline. Found by our detector on Apple (AAPL), 10 October 2025 to 13 October 2025.",
+  "alt": "Bullish harami after a decline. A long falling candle followed by a small candle whose body sits inside the first body, after a decline. Found by our detector on Apple (AAPL), 10 October 2025 to 13 October 2025.",
+  "symbol": "aapl",
+  "start": "2025-10-10",
+  "end": "2025-10-13",
+  "indicator": null,
+  "pattern": "bullish-harami",
+  "params": {},
+  "credit": "Apple (AAPL), daily, Aug 2025 to Nov 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 8
  },
  "camarilla-pivots": {
   "slug": "camarilla-pivots",
@@ -449,6 +479,21 @@
    "wma_period": 10
   },
   "credit": "S&P 500 ETF (SPY), daily, Jan 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "counterattack-lines": {
+  "slug": "counterattack-lines",
+  "file": "counterattack-lines.svg",
+  "title": "Counterattack lines",
+  "caption": "A long candle, then a gap and a long opposite candle that closes at the previous close. Found by our detector on S&P 500 ETF (SPY), 4 April 2025 to 7 April 2025.",
+  "alt": "Counterattack lines. A long candle, then a gap and a long opposite candle that closes at the previous close. Found by our detector on S&P 500 ETF (SPY), 4 April 2025 to 7 April 2025.",
+  "symbol": "spy",
+  "start": "2025-04-04",
+  "end": "2025-04-07",
+  "indicator": null,
+  "pattern": "counterattack-lines",
+  "params": {},
+  "credit": "S&P 500 ETF (SPY), daily, Feb 2025 to Apr 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 1
  },
  "cyber-cycle": {
   "slug": "cyber-cycle",
@@ -904,6 +949,21 @@
   "credit": "S&P 500 ETF (SPY), daily, Jan 2021 to Feb 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 25
  },
+ "harami-cross": {
+  "slug": "harami-cross",
+  "file": "harami-cross.svg",
+  "title": "Harami cross",
+  "caption": "A long candle in the trend followed by a doji whose body sits inside the first body. Found by our detector on Tesla (TSLA), 25 October 2021 to 26 October 2021.",
+  "alt": "Harami cross. A long candle in the trend followed by a doji whose body sits inside the first body. Found by our detector on Tesla (TSLA), 25 October 2021 to 26 October 2021.",
+  "symbol": "tsla",
+  "start": "2021-10-25",
+  "end": "2021-10-26",
+  "indicator": null,
+  "pattern": "harami-cross",
+  "params": {},
+  "credit": "Tesla (TSLA), daily, Sep 2021 to Nov 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 5
+ },
  "head-and-shoulders": {
   "slug": "head-and-shoulders",
   "file": "head-and-shoulders.svg",
@@ -947,6 +1007,21 @@
    "trading_days": 365
   },
   "credit": "Bitcoin (BTC/USD), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "homing-pigeon": {
+  "slug": "homing-pigeon",
+  "file": "homing-pigeon.svg",
+  "title": "Homing pigeon",
+  "caption": "Two falling candles, the second small and with its body inside the first body. Found by our detector on Apple (AAPL), 1 August 2025 to 4 August 2025.",
+  "alt": "Homing pigeon. Two falling candles, the second small and with its body inside the first body. Found by our detector on Apple (AAPL), 1 August 2025 to 4 August 2025.",
+  "symbol": "aapl",
+  "start": "2025-08-01",
+  "end": "2025-08-04",
+  "indicator": null,
+  "pattern": "homing-pigeon",
+  "params": {},
+  "credit": "Apple (AAPL), daily, Jun 2025 to Aug 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 6
  },
  "hull-moving-average": {
   "slug": "hull-moving-average",
@@ -1046,6 +1121,21 @@
   },
   "credit": "Apple (AAPL), daily, Jan 2025 to Oct 2025. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "kicker-pattern": {
+  "slug": "kicker-pattern",
+  "file": "kicker-pattern.svg",
+  "title": "Kicker pattern",
+  "caption": "Two opposite-coloured candles with a clean gap between them, so the second never trades back into the first. Found by our detector on Tesla (TSLA), 23 October 2024 to 24 October 2024.",
+  "alt": "Kicker pattern. Two opposite-coloured candles with a clean gap between them, so the second never trades back into the first. Found by our detector on Tesla (TSLA), 23 October 2024 to 24 October 2024.",
+  "symbol": "tsla",
+  "start": "2024-10-23",
+  "end": "2024-10-24",
+  "indicator": null,
+  "pattern": "kicker-pattern",
+  "params": {},
+  "credit": "Tesla (TSLA), daily, Sep 2024 to Nov 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 1
+ },
  "klinger-oscillator": {
   "slug": "klinger-oscillator",
   "file": "klinger-oscillator.svg",
@@ -1085,6 +1175,21 @@
    "signal_period": 9
   },
   "credit": "Apple (AAPL), daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "ladder-bottom": {
+  "slug": "ladder-bottom",
+  "file": "ladder-bottom.svg",
+  "title": "Ladder bottom",
+  "caption": "Three falling candles, a fourth falling candle with an upper shadow, then a rising candle that gaps above the fourth body. Found by our detector on Tesla (TSLA), 3 March 2021 to 9 March 2021.",
+  "alt": "Ladder bottom. Three falling candles, a fourth falling candle with an upper shadow, then a rising candle that gaps above the fourth body. Found by our detector on Tesla (TSLA), 3 March 2021 to 9 March 2021.",
+  "symbol": "tsla",
+  "start": "2021-03-03",
+  "end": "2021-03-09",
+  "indicator": null,
+  "pattern": "ladder-bottom",
+  "params": {},
+  "credit": "Tesla (TSLA), daily, Jan 2021 to Mar 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 2
  },
  "laguerre-rsi": {
   "slug": "laguerre-rsi",
@@ -1781,6 +1886,21 @@
   },
   "credit": "EUR/USD, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "stick-sandwich": {
+  "slug": "stick-sandwich",
+  "file": "stick-sandwich.svg",
+  "title": "Stick sandwich",
+  "caption": "Two candles of one colour with matching closes, sandwiching a candle of the opposite colour. Found by our detector on Bitcoin (BTC/USD), 28 February 2024 to 1 March 2024.",
+  "alt": "Stick sandwich. Two candles of one colour with matching closes, sandwiching a candle of the opposite colour. Found by our detector on Bitcoin (BTC/USD), 28 February 2024 to 1 March 2024.",
+  "symbol": "btcusd",
+  "start": "2024-02-28",
+  "end": "2024-03-01",
+  "indicator": null,
+  "pattern": "stick-sandwich",
+  "params": {},
+  "credit": "Bitcoin (BTC/USD), daily, Jan 2024 to Mar 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 10
+ },
  "stochastic-momentum-index": {
   "slug": "stochastic-momentum-index",
   "file": "stochastic-momentum-index.svg",
@@ -1896,6 +2016,36 @@
   "params": {},
   "credit": "Bitcoin (BTC/USD), daily, Dec 2021 to Feb 2022. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 2
+ },
+ "three-inside-up-down": {
+  "slug": "three-inside-up-down",
+  "file": "three-inside-up-down.svg",
+  "title": "Three inside up or down",
+  "caption": "A harami followed by a third candle that closes beyond the first candle's open. Found by our detector on Microsoft (MSFT), 28 January 2025 to 30 January 2025.",
+  "alt": "Three inside up or down. A harami followed by a third candle that closes beyond the first candle's open. Found by our detector on Microsoft (MSFT), 28 January 2025 to 30 January 2025.",
+  "symbol": "msft",
+  "start": "2025-01-28",
+  "end": "2025-01-30",
+  "indicator": null,
+  "pattern": "three-inside-up-down",
+  "params": {},
+  "credit": "Microsoft (MSFT), daily, Dec 2024 to Feb 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 4
+ },
+ "three-outside-up-down": {
+  "slug": "three-outside-up-down",
+  "file": "three-outside-up-down.svg",
+  "title": "Three outside up or down",
+  "caption": "An engulfing candle followed by a third candle that closes beyond the engulfing candle's close. Found by our detector on Bitcoin (BTC/USD), 6 September 2021 to 8 September 2021.",
+  "alt": "Three outside up or down. An engulfing candle followed by a third candle that closes beyond the engulfing candle's close. Found by our detector on Bitcoin (BTC/USD), 6 September 2021 to 8 September 2021.",
+  "symbol": "btcusd",
+  "start": "2021-09-06",
+  "end": "2021-09-08",
+  "indicator": null,
+  "pattern": "three-outside-up-down",
+  "params": {},
+  "credit": "Bitcoin (BTC/USD), daily, Aug 2021 to Sep 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 54
  },
  "three-white-soldiers": {
   "slug": "three-white-soldiers",
