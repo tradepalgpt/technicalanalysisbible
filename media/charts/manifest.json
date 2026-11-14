@@ -29,6 +29,21 @@
   "params": {},
   "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "adam-and-eve": {
+  "slug": "adam-and-eve",
+  "file": "adam-and-eve.svg",
+  "title": "Adam and Eve double bottom",
+  "caption": "A double bottom whose first low is a sharp V (Adam) and whose second low is a wider, rounder base (Eve). Found by our detector on Gold futures, 15 December 2021 to 14 February 2022.",
+  "alt": "Adam and Eve double bottom. A double bottom whose first low is a sharp V (Adam) and whose second low is a wider, rounder base (Eve). Found by our detector on Gold futures, 15 December 2021 to 14 February 2022.",
+  "symbol": "gold",
+  "start": "2021-12-15",
+  "end": "2022-02-14",
+  "indicator": null,
+  "pattern": "adam-and-eve",
+  "params": {},
+  "credit": "Gold futures, daily, Nov 2021 to Mar 2022. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 1
+ },
  "advance-block": {
   "slug": "advance-block",
   "file": "advance-block.svg",
@@ -322,6 +337,21 @@
   "params": {},
   "credit": "Apple (AAPL), daily, Aug 2025 to Nov 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 8
+ },
+ "bump-and-run": {
+  "slug": "bump-and-run",
+  "file": "bump-and-run.svg",
+  "title": "Bump and run reversal",
+  "caption": "A steady lead-in trend, a steep bump well above its trendline, then a close back through that trendline. Found by our detector on Tesla (TSLA), 18 August 2021 to 20 December 2021.",
+  "alt": "Bump and run reversal. A steady lead-in trend, a steep bump well above its trendline, then a close back through that trendline. Found by our detector on Tesla (TSLA), 18 August 2021 to 20 December 2021.",
+  "symbol": "tsla",
+  "start": "2021-08-18",
+  "end": "2021-12-20",
+  "indicator": null,
+  "pattern": "bump-and-run",
+  "params": {},
+  "credit": "Tesla (TSLA), daily, Jun 2021 to Jan 2022. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 2
  },
  "camarilla-pivots": {
   "slug": "camarilla-pivots",
@@ -617,6 +647,21 @@
   },
   "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "diamond-pattern": {
+  "slug": "diamond-pattern",
+  "file": "diamond-pattern.svg",
+  "title": "Diamond pattern",
+  "caption": "Swings that widen and then narrow into a diamond shape, followed by a close through the edge. Found by our detector on Microsoft (MSFT), 23 May 2024 to 7 October 2024.",
+  "alt": "Diamond pattern. Swings that widen and then narrow into a diamond shape, followed by a close through the edge. Found by our detector on Microsoft (MSFT), 23 May 2024 to 7 October 2024.",
+  "symbol": "msft",
+  "start": "2024-05-23",
+  "end": "2024-10-07",
+  "indicator": null,
+  "pattern": "diamond-pattern",
+  "params": {},
+  "credit": "Microsoft (MSFT), daily, Mar 2024 to Nov 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 1
+ },
  "disparity-index": {
   "slug": "disparity-index",
   "file": "disparity-index.svg",
@@ -677,6 +722,21 @@
    "period": 20
   },
   "credit": "Gold futures, daily, Jan 2025 to Oct 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "double-bottom": {
+  "slug": "double-bottom",
+  "file": "double-bottom.svg",
+  "title": "Double bottom with peak and target",
+  "caption": "Two similar lows with a peak between them, then a close above that peak. Found by our detector on Amazon (AMZN), 20 August 2021 to 9 November 2021.",
+  "alt": "Double bottom with peak and target. Two similar lows with a peak between them, then a close above that peak. Found by our detector on Amazon (AMZN), 20 August 2021 to 9 November 2021.",
+  "symbol": "amzn",
+  "start": "2021-08-20",
+  "end": "2021-11-09",
+  "indicator": null,
+  "pattern": "double-bottom",
+  "params": {},
+  "credit": "Amazon (AMZN), daily, Jul 2021 to Dec 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 2
  },
  "double-top": {
   "slug": "double-top",
@@ -1131,6 +1191,21 @@
    "wma_period": 9
   },
   "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "inverse-head-and-shoulders": {
+  "slug": "inverse-head-and-shoulders",
+  "file": "inverse-head-and-shoulders.svg",
+  "title": "Inverse head and shoulders with neckline",
+  "caption": "Three lows after a decline, the middle one lowest, with a close above the neckline through the two bounces. Found by our detector on Gold futures, 29 June 2021 to 10 November 2021.",
+  "alt": "Inverse head and shoulders with neckline. Three lows after a decline, the middle one lowest, with a close above the neckline through the two bounces. Found by our detector on Gold futures, 29 June 2021 to 10 November 2021.",
+  "symbol": "gold",
+  "start": "2021-06-29",
+  "end": "2021-11-10",
+  "indicator": null,
+  "pattern": "inverse-head-and-shoulders",
+  "params": {},
+  "credit": "Gold futures, daily, Apr 2021 to Dec 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 1
  },
  "inverted-hammer": {
   "slug": "inverted-hammer",
@@ -1849,6 +1924,36 @@
   "credit": "Bitcoin (BTC/USD), daily, Sep 2021 to Oct 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 2
  },
+ "rounding-bottom": {
+  "slug": "rounding-bottom",
+  "file": "rounding-bottom.svg",
+  "title": "Rounding bottom with rim",
+  "caption": "A gradual, bowl-shaped decline and recovery, with a close above the rim at the start of the decline. Found by our detector on Exxon Mobil (XOM), 28 September 2023 to 5 April 2024.",
+  "alt": "Rounding bottom with rim. A gradual, bowl-shaped decline and recovery, with a close above the rim at the start of the decline. Found by our detector on Exxon Mobil (XOM), 28 September 2023 to 5 April 2024.",
+  "symbol": "xom",
+  "start": "2023-09-28",
+  "end": "2024-04-05",
+  "indicator": null,
+  "pattern": "rounding-bottom",
+  "params": {},
+  "credit": "Exxon Mobil (XOM), daily, Jun 2023 to Jun 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 1
+ },
+ "rounding-top": {
+  "slug": "rounding-top",
+  "file": "rounding-top.svg",
+  "title": "Rounding top with base level",
+  "caption": "A gradual, dome-shaped rise and decline, with a close below the base level at the start of the rise. Found by our detector on Nvidia (NVDA), 13 July 2022 to 8 September 2022.",
+  "alt": "Rounding top with base level. A gradual, dome-shaped rise and decline, with a close below the base level at the start of the rise. Found by our detector on Nvidia (NVDA), 13 July 2022 to 8 September 2022.",
+  "symbol": "nvda",
+  "start": "2022-07-13",
+  "end": "2022-09-08",
+  "indicator": null,
+  "pattern": "rounding-top",
+  "params": {},
+  "credit": "Nvidia (NVDA), daily, Jun 2022 to Oct 2022. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 1
+ },
  "rsi": {
   "slug": "rsi",
   "file": "rsi.svg",
@@ -2213,6 +2318,36 @@
   },
   "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "triple-bottom": {
+  "slug": "triple-bottom",
+  "file": "triple-bottom.svg",
+  "title": "Triple bottom with resistance line",
+  "caption": "Three lows at about the same level, then a close above the resistance line through the peaks. Found by our detector on Russell 2000 ETF (IWM), 19 July 2021 to 1 November 2021.",
+  "alt": "Triple bottom with resistance line. Three lows at about the same level, then a close above the resistance line through the peaks. Found by our detector on Russell 2000 ETF (IWM), 19 July 2021 to 1 November 2021.",
+  "symbol": "iwm",
+  "start": "2021-07-19",
+  "end": "2021-11-01",
+  "indicator": null,
+  "pattern": "triple-bottom",
+  "params": {},
+  "credit": "Russell 2000 ETF (IWM), daily, May 2021 to Dec 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 2
+ },
+ "triple-top": {
+  "slug": "triple-top",
+  "file": "triple-top.svg",
+  "title": "Triple top with support line",
+  "caption": "Three peaks at about the same level, then a close below the support line through the troughs. Found by our detector on JPMorgan (JPM), 25 October 2021 to 18 January 2022.",
+  "alt": "Triple top with support line. Three peaks at about the same level, then a close below the support line through the troughs. Found by our detector on JPMorgan (JPM), 25 October 2021 to 18 January 2022.",
+  "symbol": "jpm",
+  "start": "2021-10-25",
+  "end": "2022-01-18",
+  "indicator": null,
+  "pattern": "triple-top",
+  "params": {},
+  "credit": "JPMorgan (JPM), daily, Sep 2021 to Feb 2022. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 3
+ },
  "trix": {
   "slug": "trix",
   "file": "trix.svg",
@@ -2339,6 +2474,23 @@
    "p3": 28
   },
   "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "v-reversal": {
+  "slug": "v-reversal",
+  "file": "v-reversal.svg",
+  "title": "V-reversal",
+  "caption": "A steep move into a sharp turn, then a quick move back that retakes most of the earlier distance. Found by our detector on Nvidia (NVDA), 1 August 2024 to 15 August 2024.",
+  "alt": "V-reversal. A steep move into a sharp turn, then a quick move back that retakes most of the earlier distance. Found by our detector on Nvidia (NVDA), 1 August 2024 to 15 August 2024.",
+  "symbol": "nvda",
+  "start": "2024-08-01",
+  "end": "2024-08-15",
+  "indicator": null,
+  "pattern": "v-reversal",
+  "params": {
+   "min_move": 0.15
+  },
+  "credit": "Nvidia (NVDA), daily, Jul 2024 to Sep 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 4
  },
  "vertical-horizontal-filter": {
   "slug": "vertical-horizontal-filter",
