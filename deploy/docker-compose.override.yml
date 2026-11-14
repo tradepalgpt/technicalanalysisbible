@@ -1,0 +1,7 @@
+# Copy to /opt/tft/deploy/hetzner/docker-compose.override.yml on the VM.
+# Docker Compose loads this automatically next to docker-compose.yml and ADDS this
+# read-only mount to the existing caddy service. Nothing else in the TFT stack changes.
+services:
+  caddy:
+    volumes:
+      - /home/tft/tabible-site:/srv/tabible:ro

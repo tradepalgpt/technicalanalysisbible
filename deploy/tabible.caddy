@@ -1,0 +1,26 @@
+# Technical Analysis Bible: static site block for the shared Caddy on the TFT Hetzner VM.
+# Append this to /opt/tft/deploy/hetzner/Caddyfile (it does not touch the TFT blocks).
+# Files are served from /srv/tabible, which is mounted read-only from /home/tft/tabible-site.
+
+technicalanalysisbible.com {
+	root * /srv/tabible
+	encode gzip
+	header {
+		X-Content-Type-Options nosniff
+		Referrer-Policy strict-origin-when-cross-origin
+		X-Frame-Options SAMEORIGIN
+		Permissions-Policy "camera=(), microphone=(), geolocation=()"
+		Strict-Transport-Security "max-age=31536000"
+	}
+	@assets path /assets/*
+	header @assets Cache-Control "public, max-age=604800"
+	file_server
+	handle_errors {
+		rewrite * /404.html
+		file_server
+	}
+}
+
+www.technicalanalysisbible.com {
+	redir https://technicalanalysisbible.com{uri} permanent
+}
