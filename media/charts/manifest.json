@@ -126,6 +126,21 @@
   },
   "credit": "Gold futures, daily, Apr 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "balance-of-power": {
+  "slug": "balance-of-power",
+  "file": "balance-of-power.svg",
+  "title": "Balance of Power (14) on Bitcoin",
+  "caption": "Each bar's close minus open is divided by its high-low range, giving -1 to +1, and the result is smoothed with a 14-bar simple average. The zero line separates buyer-led from seller-led stretches.",
+  "alt": "Balance of Power (14) on Bitcoin. Each bar's close minus open is divided by its high-low range, giving -1 to +1, and the result is smoothed with a 14-bar simple average. The zero line separates buyer-led from seller-led stretches.",
+  "symbol": "btcusd",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "balance-of-power",
+  "params": {
+   "period": 14
+  },
+  "credit": "Bitcoin (BTC/USD), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "bollinger-bands": {
   "slug": "bollinger-bands",
   "file": "bollinger-bands.svg",
@@ -268,6 +283,22 @@
   },
   "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "disparity-index": {
+  "slug": "disparity-index",
+  "file": "disparity-index.svg",
+  "title": "Disparity Index (14) on the S&P 500 ETF",
+  "caption": "The Disparity Index shows how far the close is above or below its 14-bar simple moving average, as a percent of that average. It has no fixed ceiling or floor, so stretched levels have to be judged from each market's own history.",
+  "alt": "Disparity Index (14) on the S&P 500 ETF. The Disparity Index shows how far the close is above or below its 14-bar simple moving average, as a percent of that average. It has no fixed ceiling or floor, so stretched levels have to be judged from each market's own history.",
+  "symbol": "spy",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "disparity-index",
+  "params": {
+   "period": 14,
+   "ma": "sma"
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "dmi": {
   "slug": "dmi",
   "file": "dmi.svg",
@@ -345,6 +376,21 @@
    "period": 20
   },
   "credit": "Bitcoin (BTC/USD), daily, Mar 2025 to Sep 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "fisher-transform": {
+  "slug": "fisher-transform",
+  "file": "fisher-transform.svg",
+  "title": "Fisher Transform (10) on the S&P 500 ETF",
+  "caption": "The Fisher Transform rescales the 10-bar median price range and stretches it with a log function so turns show as sharp peaks and troughs. The trigger line is the Fisher value one bar earlier, so a cross happens when the line turns.",
+  "alt": "Fisher Transform (10) on the S&P 500 ETF. The Fisher Transform rescales the 10-bar median price range and stretches it with a log function so turns show as sharp peaks and troughs. The trigger line is the Fisher value one bar earlier, so a cross happens when the line turns.",
+  "symbol": "spy",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "fisher-transform",
+  "params": {
+   "period": 10
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "gator-oscillator": {
   "slug": "gator-oscillator",
@@ -429,6 +475,22 @@
   },
   "credit": "Gold futures, daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "inverse-fisher-transform": {
+  "slug": "inverse-fisher-transform",
+  "file": "inverse-fisher-transform.svg",
+  "title": "Inverse Fisher Transform of RSI (5, 9) on Apple",
+  "caption": "A 5-bar RSI is rescaled around 50, smoothed with a 9-bar weighted average and squeezed into -1 to +1 with the inverse Fisher (tanh) function. Reference lines sit at +0.5 and -0.5, and readings spend most of their time near the extremes.",
+  "alt": "Inverse Fisher Transform of RSI (5, 9) on Apple. A 5-bar RSI is rescaled around 50, smoothed with a 9-bar weighted average and squeezed into -1 to +1 with the inverse Fisher (tanh) function. Reference lines sit at +0.5 and -0.5, and readings spend most of their time near the extremes.",
+  "symbol": "aapl",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "inverse-fisher-transform",
+  "params": {
+   "rsi_period": 5,
+   "wma_period": 9
+  },
+  "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "kama": {
   "slug": "kama",
   "file": "kama.svg",
@@ -485,6 +547,21 @@
    "signal_period": 9
   },
   "credit": "Apple (AAPL), daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "laguerre-rsi": {
+  "slug": "laguerre-rsi",
+  "file": "laguerre-rsi.svg",
+  "title": "Laguerre RSI (gamma 0.5) on gold",
+  "caption": "The Laguerre RSI runs price through a four-stage filter with gamma 0.5 and compares neighbouring stages, giving a fast, smooth 0 to 1 oscillator. Reference lines are at 0.8 and 0.2.",
+  "alt": "Laguerre RSI (gamma 0.5) on gold. The Laguerre RSI runs price through a four-stage filter with gamma 0.5 and compares neighbouring stages, giving a fast, smooth 0 to 1 oscillator. Reference lines are at 0.8 and 0.2.",
+  "symbol": "gold",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "laguerre-rsi",
+  "params": {
+   "gamma": 0.5
+  },
+  "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "linear-regression": {
   "slug": "linear-regression",
@@ -714,6 +791,22 @@
   },
   "credit": "S&P 500 ETF (SPY), daily, Apr 2024 to Jan 2025. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "random-walk-index": {
+  "slug": "random-walk-index",
+  "file": "random-walk-index.svg",
+  "title": "Random Walk Index (2 to 8 bars) on Apple",
+  "caption": "The RWI compares each move over 2 to 8 bars with the move a random walk of the same volatility would be expected to make. RWI High and RWI Low are plotted as separate lines, and readings above 1.0 suggest a trend rather than noise.",
+  "alt": "Random Walk Index (2 to 8 bars) on Apple. The RWI compares each move over 2 to 8 bars with the move a random walk of the same volatility would be expected to make. RWI High and RWI Low are plotted as separate lines, and readings above 1.0 suggest a trend rather than noise.",
+  "symbol": "aapl",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "random-walk-index",
+  "params": {
+   "min_n": 2,
+   "max_n": 8
+  },
+  "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "rate-of-change": {
   "slug": "rate-of-change",
   "file": "rate-of-change.svg",
@@ -728,6 +821,21 @@
    "period": 12
   },
   "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "relative-vigor-index": {
+  "slug": "relative-vigor-index",
+  "file": "relative-vigor-index.svg",
+  "title": "Relative Vigor Index (10) on EUR/USD",
+  "caption": "The RVI compares the close-minus-open body with the high-low range, each weighted 1-2-2-1 over four bars and averaged over 10 bars. The signal line is a 1-2-2-1 weighted average of the RVI, and the zero line separates rising from falling vigor.",
+  "alt": "Relative Vigor Index (10) on EUR/USD. The RVI compares the close-minus-open body with the high-low range, each weighted 1-2-2-1 over four bars and averaged over 10 bars. The signal line is a 1-2-2-1 weighted average of the RVI, and the zero line separates rising from falling vigor.",
+  "symbol": "eurusd",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "relative-vigor-index",
+  "params": {
+   "period": 10
+  },
+  "credit": "EUR/USD, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "rsi": {
   "slug": "rsi",
@@ -793,6 +901,24 @@
    "period": 14
   },
   "credit": "EUR/USD, daily, Jan 2024 to Oct 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "stochastic-momentum-index": {
+  "slug": "stochastic-momentum-index",
+  "file": "stochastic-momentum-index.svg",
+  "title": "Stochastic Momentum Index (10, 3, 3) on gold",
+  "caption": "The SMI measures where the close sits relative to the midpoint of the 10-bar high-low range, with both parts double-smoothed by 3-bar EMAs. It is scaled to roughly -100 to +100, with reference lines at +40 and -40 and a 3-bar EMA signal line.",
+  "alt": "Stochastic Momentum Index (10, 3, 3) on gold. The SMI measures where the close sits relative to the midpoint of the 10-bar high-low range, with both parts double-smoothed by 3-bar EMAs. It is scaled to roughly -100 to +100, with reference lines at +40 and -40 and a 3-bar EMA signal line.",
+  "symbol": "gold",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "stochastic-momentum-index",
+  "params": {
+   "period": 10,
+   "smooth1": 3,
+   "smooth2": 3,
+   "signal": 3
+  },
+  "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "stochastic-oscillator": {
   "slug": "stochastic-oscillator",
