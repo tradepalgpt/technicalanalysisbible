@@ -169,6 +169,24 @@
   },
   "credit": "Gold futures, daily, Jan 2025 to Oct 2025. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "elder-impulse-system": {
+  "slug": "elder-impulse-system",
+  "file": "elder-impulse-system.svg",
+  "title": "Elder Impulse System (13 EMA, MACD 12, 26, 9) on the S&P 500 ETF",
+  "caption": "Each bar compares the 13-bar EMA and the MACD histogram with the previous bar. Both rising marks the bar green, both falling marks it red, and any other mix is blue. The numeric output stores 1, -1 and 0 for these.",
+  "alt": "Elder Impulse System (13 EMA, MACD 12, 26, 9) on the S&P 500 ETF. Each bar compares the 13-bar EMA and the MACD histogram with the previous bar. Both rising marks the bar green, both falling marks it red, and any other mix is blue. The numeric output stores 1, -1 and 0 for these.",
+  "symbol": "spy",
+  "start": "2024-04-01",
+  "end": "2025-01-31",
+  "indicator": "elder-impulse-system",
+  "params": {
+   "ema_period": 13,
+   "fast": 12,
+   "slow": 26,
+   "signal": 9
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Apr 2024 to Jan 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "exponential-moving-average": {
   "slug": "exponential-moving-average",
   "file": "exponential-moving-average.svg",
@@ -183,6 +201,26 @@
    "period": 20
   },
   "credit": "Bitcoin (BTC/USD), daily, Mar 2025 to Sep 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "gator-oscillator": {
+  "slug": "gator-oscillator",
+  "file": "gator-oscillator.svg",
+  "title": "Gator Oscillator (13/8, 8/5, 5/3) on gold",
+  "caption": "The upper line shows the gap between the Alligator's jaw and teeth, and the lower line shows the gap between teeth and lips, drawn below zero. Wide gaps mean the lines are far apart, and values near zero mean they are tangled.",
+  "alt": "Gator Oscillator (13/8, 8/5, 5/3) on gold. The upper line shows the gap between the Alligator's jaw and teeth, and the lower line shows the gap between teeth and lips, drawn below zero. Wide gaps mean the lines are far apart, and values near zero mean they are tangled.",
+  "symbol": "gold",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "gator-oscillator",
+  "params": {
+   "jaw_period": 13,
+   "jaw_shift": 8,
+   "teeth_period": 8,
+   "teeth_shift": 5,
+   "lips_period": 5,
+   "lips_shift": 3
+  },
+  "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "golden-cross": {
   "slug": "golden-cross",
@@ -382,6 +420,23 @@
   },
   "credit": "Gold futures, daily, Jan 2025 to Sep 2025. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "macd-histogram": {
+  "slug": "macd-histogram",
+  "file": "macd-histogram.svg",
+  "title": "MACD Histogram (12, 26, 9) on EUR/USD",
+  "caption": "The histogram is the MACD line minus its 9-bar signal line. Bars above zero mean MACD is above its signal line, and shrinking bars show the gap narrowing.",
+  "alt": "MACD Histogram (12, 26, 9) on EUR/USD. The histogram is the MACD line minus its 9-bar signal line. Bars above zero mean MACD is above its signal line, and shrinking bars show the gap narrowing.",
+  "symbol": "eurusd",
+  "start": "2024-04-01",
+  "end": "2025-01-31",
+  "indicator": "macd-histogram",
+  "params": {
+   "fast": 12,
+   "slow": 26,
+   "signal": 9
+  },
+  "credit": "EUR/USD, daily, Apr 2024 to Jan 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "mass-index": {
   "slug": "mass-index",
   "file": "mass-index.svg",
@@ -500,6 +555,24 @@
   },
   "credit": "S&P 500 ETF (SPY), daily, Jan 2025 to Aug 2025. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "schaff-trend-cycle": {
+  "slug": "schaff-trend-cycle",
+  "file": "schaff-trend-cycle.svg",
+  "title": "Schaff Trend Cycle (23, 50, 10) on EUR/USD",
+  "caption": "A MACD of 23 and 50 bar averages is run through two smoothed stochastic steps over 10 bars. The result swings between 0 and 100, with 25 and 75 as the usual zone lines.",
+  "alt": "Schaff Trend Cycle (23, 50, 10) on EUR/USD. A MACD of 23 and 50 bar averages is run through two smoothed stochastic steps over 10 bars. The result swings between 0 and 100, with 25 and 75 as the usual zone lines.",
+  "symbol": "eurusd",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "schaff-trend-cycle",
+  "params": {
+   "fast": 23,
+   "slow": 50,
+   "cycle": 10,
+   "factor": 0.5
+  },
+  "credit": "EUR/USD, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "simple-moving-average": {
   "slug": "simple-moving-average",
   "file": "simple-moving-average.svg",
@@ -594,6 +667,22 @@
   },
   "credit": "Apple (AAPL), daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "trend-intensity-index": {
+  "slug": "trend-intensity-index",
+  "file": "trend-intensity-index.svg",
+  "title": "Trend Intensity Index (60 SMA, 30 bars) on gold",
+  "caption": "Over the last 30 bars the index takes the share of total distance from the 60-bar SMA that lies above it, from 0 to 100. Readings above 80 or below 20 mean price has stayed on one side of the average.",
+  "alt": "Trend Intensity Index (60 SMA, 30 bars) on gold. Over the last 30 bars the index takes the share of total distance from the 60-bar SMA that lies above it, from 0 to 100. Readings above 80 or below 20 mean price has stayed on one side of the average.",
+  "symbol": "gold",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "trend-intensity-index",
+  "params": {
+   "sma_period": 60,
+   "window": 30
+  },
+  "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "trix": {
   "slug": "trix",
   "file": "trix.svg",
@@ -609,6 +698,21 @@
    "signal_period": 9
   },
   "credit": "Gold futures, daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "vertical-horizontal-filter": {
+  "slug": "vertical-horizontal-filter",
+  "file": "vertical-horizontal-filter.svg",
+  "title": "Vertical Horizontal Filter (28) on Apple",
+  "caption": "The VHF divides the 28-bar range of closes by the sum of all the bar to bar moves. Higher readings mean price has travelled in one direction, and lower readings mean it has zig-zagged. It gives no direction.",
+  "alt": "Vertical Horizontal Filter (28) on Apple. The VHF divides the 28-bar range of closes by the sum of all the bar to bar moves. Higher readings mean price has travelled in one direction, and lower readings mean it has zig-zagged. It gives no direction.",
+  "symbol": "aapl",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "vertical-horizontal-filter",
+  "params": {
+   "period": 28
+  },
+  "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "vortex-indicator": {
   "slug": "vortex-indicator",
@@ -639,6 +743,41 @@
    "period": 20
   },
   "credit": "Bitcoin (BTC/USD), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "williams-alligator": {
+  "slug": "williams-alligator",
+  "file": "williams-alligator.svg",
+  "title": "Williams Alligator (13/8, 8/5, 5/3) on the S&P 500 ETF",
+  "caption": "Three smoothed averages of the median price: jaw (13 bars), teeth (8) and lips (5), plotted 8, 5 and 3 bars ahead. Tangled lines describe a range, and lines fanned out in order describe a trend.",
+  "alt": "Williams Alligator (13/8, 8/5, 5/3) on the S&P 500 ETF. Three smoothed averages of the median price: jaw (13 bars), teeth (8) and lips (5), plotted 8, 5 and 3 bars ahead. Tangled lines describe a range, and lines fanned out in order describe a trend.",
+  "symbol": "spy",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "williams-alligator",
+  "params": {
+   "jaw_period": 13,
+   "jaw_shift": 8,
+   "teeth_period": 8,
+   "teeth_shift": 5,
+   "lips_period": 5,
+   "lips_shift": 3
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "williams-fractals": {
+  "slug": "williams-fractals",
+  "file": "williams-fractals.svg",
+  "title": "Williams Fractals (2 bars each side) on Bitcoin",
+  "caption": "An up fractal is a bar whose high is above the two bars on each side, and a down fractal is a bar whose low is below them. A fractal is only confirmed two bars after it forms.",
+  "alt": "Williams Fractals (2 bars each side) on Bitcoin. An up fractal is a bar whose high is above the two bars on each side, and a down fractal is a bar whose low is below them. A fractal is only confirmed two bars after it forms.",
+  "symbol": "btcusd",
+  "start": "2024-04-01",
+  "end": "2024-12-31",
+  "indicator": "williams-fractals",
+  "params": {
+   "side": 2
+  },
+  "credit": "Bitcoin (BTC/USD), daily, Apr 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "zlema": {
   "slug": "zlema",
