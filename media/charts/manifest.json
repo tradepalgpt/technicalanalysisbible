@@ -437,6 +437,21 @@
   },
   "credit": "S&P 500 ETF (SPY), daily, Jan 2024 to Oct 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "demark-pivots": {
+  "slug": "demark-pivots",
+  "file": "demark-pivots.svg",
+  "title": "DeMark Pivot Points (daily) on the S&P 500 ETF",
+  "caption": "Each day's pivot PP, resistance R1 and support S1 are worked out from the previous day's open, high, low and close, with the formula leaning on whether that day closed below, above or at its open. The levels step each day. Marks show closes crossing PP.",
+  "alt": "DeMark Pivot Points (daily) on the S&P 500 ETF. Each day's pivot PP, resistance R1 and support S1 are worked out from the previous day's open, high, low and close, with the formula leaning on whether that day closed below, above or at its open. The levels step each day. Marks show closes crossing PP.",
+  "symbol": "spy",
+  "start": "2024-08-01",
+  "end": "2024-12-31",
+  "indicator": "demark-pivots",
+  "params": {
+   "period": "D"
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Aug 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "detrended-price-oscillator": {
   "slug": "detrended-price-oscillator",
   "file": "detrended-price-oscillator.svg",
@@ -578,6 +593,23 @@
   },
   "credit": "Bitcoin (BTC/USD), daily, Mar 2025 to Sep 2025. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "fibonacci-extension": {
+  "slug": "fibonacci-extension",
+  "file": "fibonacci-extension.svg",
+  "title": "Fibonacci Extension (three-point) on the S&P 500 ETF",
+  "caption": "The swing runs from the low on 19 April 2024 to the high on 16 July 2024, fixed with explicit dates. Levels at 61.8%, 100%, 127.2%, 161.8%, 200% and 261.8% of the move are projected up from the lowest low after the high (the pullback end). Until the pullback bottoms the base moves, so the lines shift. They are target areas, not forecasts.",
+  "alt": "Fibonacci Extension (three-point) on the S&P 500 ETF. The swing runs from the low on 19 April 2024 to the high on 16 July 2024, fixed with explicit dates. Levels at 61.8%, 100%, 127.2%, 161.8%, 200% and 261.8% of the move are projected up from the lowest low after the high (the pullback end). Until the pullback bottoms the base moves, so the lines shift. They are target areas, not forecasts.",
+  "symbol": "spy",
+  "start": "2024-04-01",
+  "end": "2024-10-15",
+  "indicator": "fibonacci-extension",
+  "params": {
+   "lookback": 60,
+   "high_date": "2024-07-16",
+   "low_date": "2024-04-19"
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Apr 2024 to Oct 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "fibonacci-pivot-points": {
   "slug": "fibonacci-pivot-points",
   "file": "fibonacci-pivot-points.svg",
@@ -592,6 +624,23 @@
    "period": "W"
   },
   "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "fibonacci-retracement": {
+  "slug": "fibonacci-retracement",
+  "file": "fibonacci-retracement.svg",
+  "title": "Fibonacci Retracement (swing low to swing high) on the S&P 500 ETF",
+  "caption": "The swing runs from the low on 19 April 2024 to the high on 16 July 2024, fixed with explicit dates. Horizontal levels sit at 23.6%, 38.2%, 50%, 61.8% and 78.6% of that move, measured back from the high, with the swing end (0%) and swing start (100%) also drawn. They mark areas of interest for a pullback, not exact turning points.",
+  "alt": "Fibonacci Retracement (swing low to swing high) on the S&P 500 ETF. The swing runs from the low on 19 April 2024 to the high on 16 July 2024, fixed with explicit dates. Horizontal levels sit at 23.6%, 38.2%, 50%, 61.8% and 78.6% of that move, measured back from the high, with the swing end (0%) and swing start (100%) also drawn. They mark areas of interest for a pullback, not exact turning points.",
+  "symbol": "spy",
+  "start": "2024-04-01",
+  "end": "2024-10-15",
+  "indicator": "fibonacci-retracement",
+  "params": {
+   "lookback": 60,
+   "high_date": "2024-07-16",
+   "low_date": "2024-04-19"
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Apr 2024 to Oct 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "fisher-transform": {
   "slug": "fisher-transform",
@@ -1069,6 +1118,21 @@
   },
   "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "nr7": {
+  "slug": "nr7",
+  "file": "nr7.svg",
+  "title": "NR7 Narrow Range bars on Apple",
+  "caption": "The lower pane shows each bar's high-to-low range. A bar is NR7 when its range is smaller than each of the previous six bars' ranges. Labels on the candles mark flagged bars.",
+  "alt": "NR7 Narrow Range bars on Apple. The lower pane shows each bar's high-to-low range. A bar is NR7 when its range is smaller than each of the previous six bars' ranges. Labels on the candles mark flagged bars.",
+  "symbol": "aapl",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "nr7",
+  "params": {
+   "n": 7
+  },
+  "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "on-balance-volume": {
   "slug": "on-balance-volume",
   "file": "on-balance-volume.svg",
@@ -1164,6 +1228,21 @@
    "signal": 9
   },
   "credit": "S&P 500 ETF (SPY), daily, Apr 2024 to Jan 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "previous-day-high-low": {
+  "slug": "previous-day-high-low",
+  "file": "previous-day-high-low.svg",
+  "title": "Previous Day High and Low on EUR/USD",
+  "caption": "The high and low of the previous daily bar drawn as two step lines, so each bar sees yesterday's range as its edges. Marks show closes crossing above the previous day's high or back below it.",
+  "alt": "Previous Day High and Low on EUR/USD. The high and low of the previous daily bar drawn as two step lines, so each bar sees yesterday's range as its edges. Marks show closes crossing above the previous day's high or back below it.",
+  "symbol": "eurusd",
+  "start": "2024-08-01",
+  "end": "2024-12-31",
+  "indicator": "previous-day-high-low",
+  "params": {
+   "weekly": 0
+  },
+  "credit": "EUR/USD, daily, Aug 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "price-volume-trend": {
   "slug": "price-volume-trend",
