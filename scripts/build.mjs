@@ -78,6 +78,18 @@ function rewriteLinks(html) {
     .replace(/<a href="\/compare\/([a-z0-9-]+)\/">([\s\S]*?)<\/a>/g, (m, s, t) => cmpPub[s] ? m : `<span class="soon" title="Coming soon">${t}</span>`)
     .replace(/<a href="\/glossary\/([a-z0-9-]+)\/">([\s\S]*?)<\/a>/g, (m, s, t) => glPub[s] ? m : `<span class="soon" title="Coming soon">${t}</span>`);
 }
+// ---------- charts (rendered by C:\indicator-lab, synced into media/charts) ----------
+const CHART_DIR = path.join(ROOT, 'media', 'charts');
+const CHARTS = fs.existsSync(path.join(CHART_DIR, 'manifest.json')) ? JSON.parse(fs.readFileSync(path.join(CHART_DIR, 'manifest.json'), 'utf8')) : {};
+for (const [slug, c] of Object.entries(CHARTS)) {
+  const head = fs.readFileSync(path.join(CHART_DIR, c.file), 'utf8').slice(0, 600);
+  const w = parseFloat(head.match(/width="([\d.]+)pt"/)?.[1] || 720), h = parseFloat(head.match(/height="([\d.]+)pt"/)?.[1] || 400);
+  c.w = 1000; c.h = Math.round(1000 * h / w);
+}
+function figureHtml(c) {
+  return `<figure class="chart"><img src="/charts/${esc(c.file)}" width="${c.w}" height="${c.h}" loading="lazy" decoding="async" alt="${esc(c.alt)}">`
+    + `<figcaption>${esc(c.caption)} <span class="credit">Chart drawn with our own indicator code on real ${esc(c.credit.split(',')[0])} prices.</span></figcaption></figure>`;
+}
 const cmpTitle = (s) => cmpPub[s]?.data.title || s;
 const glTerm = (s) => glPub[s]?.data.term || s;
 
@@ -101,6 +113,8 @@ for (const { data: d, body } of items) {
   html = html.replace(/<h2[^>]*>(Formula|How it is|How it works)/, (m) => (n++ ? m : adSlot('text') + m));
   html = html.replace(/<h2[^>]*>Pairs well with/, (m) => adSlot('text') + m);
   html = html.replace(/<table>/g, '<div class="tablewrap"><table>').replace(/<\/table>/g, '</table></div>');
+  const chart = CHARTS[d.slug];
+  if (chart) html = html.replace(/<h2[^>]*>What (is|are)/, (m) => figureHtml(chart) + m);
 
   const related = [...new Set([].concat(d.related || []))];
   const tags = `<p class="tags"><span>Best in:</span> ${[].concat(d.states).map((s) => `<a class="chip" href="/market/${s}/">${esc(STATE_BY_SLUG[s])}</a>`).join(' ')} <span>Used for:</span> ${[].concat(d.purposes).map((s) => `<a class="chip" href="/use/${s}/">${esc(PURPOSE_BY_SLUG[s])}</a>`).join(' ')}</p>`;
@@ -117,7 +131,8 @@ for (const { data: d, body } of items) {
   const jsonld = [
     { '@context': 'https://schema.org', '@type': 'TechArticle', headline: d.name, description: quick, url: abs(p), dateModified: BUILD_DATE, inLanguage: 'en-GB',
       author: { '@type': 'Organization', name: SITE.brand, url: SITE.url }, publisher: { '@type': 'Organization', name: SITE.brand, url: SITE.url },
-      about: { '@type': 'DefinedTerm', name: d.name, alternateName: d.aka, description: quick, inDefinedTermSet: abs('/a-z/') } },
+      about: { '@type': 'DefinedTerm', name: d.name, alternateName: d.aka, description: quick, inDefinedTermSet: abs('/a-z/') },
+      ...(chart ? { image: { '@type': 'ImageObject', url: abs(`/charts/${chart.file}`), caption: chart.caption, width: chart.w, height: chart.h } } : {}) },
     { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
     crumbsLd(crumbs),
   ];
@@ -267,6 +282,7 @@ write('404.html', layout({ title: `Page not found | ${SITE.brand}`, desc: 'Page 
 fs.mkdirSync(path.join(DIST, 'assets'), { recursive: true });
 fs.writeFileSync(path.join(DIST, 'assets', 'site.css'), fs.readFileSync(path.join(ROOT, 'shared', 'styles', 'tokens.css'), 'utf8') + '\n' + fs.readFileSync(path.join(ROOT, 'src', 'site.css'), 'utf8'));
 fs.copyFileSync(path.join(ROOT, 'src', 'favicon.svg'), path.join(DIST, 'favicon.svg'));
+if (fs.existsSync(CHART_DIR)) fs.cpSync(CHART_DIR, path.join(DIST, 'charts'), { recursive: true, filter: (f) => !f.endsWith('manifest.json') });
 fs.copyFileSync(path.join(ROOT, 'src', '_headers'), path.join(DIST, '_headers'));
 write('robots.txt', `User-agent: *\nAllow: /\nDisallow: /search/\nDisallow: /*?*\n\n# AI search tools are welcome to read and quote this site.\nUser-agent: GPTBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: Google-Extended\nAllow: /\n\nSitemap: ${abs('/sitemap.xml')}\n`);
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemap.map((u) => `<url><loc>${abs(u)}</loc><lastmod>${BUILD_DATE}</lastmod></url>`).join('\n')}\n</urlset>\n`);

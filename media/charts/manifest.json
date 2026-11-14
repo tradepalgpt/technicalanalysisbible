@@ -1,0 +1,146 @@
+{
+ "atr": {
+  "slug": "atr",
+  "file": "atr.svg",
+  "title": "Average True Range (14) on the S&P 500 ETF",
+  "caption": "ATR jumps when daily ranges widen in the April sell-off, then falls back as the market calms.",
+  "alt": "Average True Range (14) on the S&P 500 ETF. ATR jumps when daily ranges widen in the April sell-off, then falls back as the market calms.",
+  "symbol": "spy",
+  "start": "2025-01-01",
+  "end": "2025-08-31",
+  "indicator": "atr",
+  "params": {
+   "period": 14
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Jan 2025 to Aug 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "bollinger-bands": {
+  "slug": "bollinger-bands",
+  "file": "bollinger-bands.svg",
+  "title": "Bollinger Bands (20, 2) on EUR/USD",
+  "caption": "Price walks the upper band during a strong trend; touches alone are not reversal signals.",
+  "alt": "Bollinger Bands (20, 2) on EUR/USD. Price walks the upper band during a strong trend; touches alone are not reversal signals.",
+  "symbol": "eurusd",
+  "start": "2025-01-01",
+  "end": "2025-08-31",
+  "indicator": "bollinger-bands",
+  "params": {
+   "period": 20,
+   "stdev": 2.0
+  },
+  "credit": "EUR/USD, daily, Jan 2025 to Aug 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "donchian-channels": {
+  "slug": "donchian-channels",
+  "file": "donchian-channels.svg",
+  "title": "20-day Donchian Channel on gold",
+  "caption": "Closes beyond the prior 20-day high mark breakouts in a strong trend.",
+  "alt": "20-day Donchian Channel on gold. Closes beyond the prior 20-day high mark breakouts in a strong trend.",
+  "symbol": "gold",
+  "start": "2025-01-01",
+  "end": "2025-10-31",
+  "indicator": "donchian-channels",
+  "params": {
+   "period": 20
+  },
+  "credit": "Gold futures, daily, Jan 2025 to Oct 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "exponential-moving-average": {
+  "slug": "exponential-moving-average",
+  "file": "exponential-moving-average.svg",
+  "title": "20-day exponential moving average on Bitcoin",
+  "caption": "The 20-day EMA follows price closely; crosses come quickly but whipsaw in sideways spells.",
+  "alt": "20-day exponential moving average on Bitcoin. The 20-day EMA follows price closely; crosses come quickly but whipsaw in sideways spells.",
+  "symbol": "btcusd",
+  "start": "2025-03-01",
+  "end": "2025-09-30",
+  "indicator": "exponential-moving-average",
+  "params": {
+   "period": 20
+  },
+  "credit": "Bitcoin (BTC/USD), daily, Mar 2025 to Sep 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "keltner-channels": {
+  "slug": "keltner-channels",
+  "file": "keltner-channels.svg",
+  "title": "Keltner Channels (20 EMA, 2 x ATR 10) on Apple",
+  "caption": "An EMA centre line with ATR-based bands that widen when volatility rises.",
+  "alt": "Keltner Channels (20 EMA, 2 x ATR 10) on Apple. An EMA centre line with ATR-based bands that widen when volatility rises.",
+  "symbol": "aapl",
+  "start": "2025-01-01",
+  "end": "2025-10-31",
+  "indicator": "keltner-channels",
+  "params": {
+   "period": 20,
+   "atr_period": 10,
+   "mult": 2.0
+  },
+  "credit": "Apple (AAPL), daily, Jan 2025 to Oct 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "macd": {
+  "slug": "macd",
+  "file": "macd.svg",
+  "title": "MACD (12, 26, 9) on gold",
+  "caption": "MACD line crossing its signal line, with the histogram showing momentum building and fading.",
+  "alt": "MACD (12, 26, 9) on gold. MACD line crossing its signal line, with the histogram showing momentum building and fading.",
+  "symbol": "gold",
+  "start": "2025-01-01",
+  "end": "2025-09-30",
+  "indicator": "macd",
+  "params": {
+   "fast": 12,
+   "slow": 26,
+   "signal": 9
+  },
+  "credit": "Gold futures, daily, Jan 2025 to Sep 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "rsi": {
+  "slug": "rsi",
+  "file": "rsi.svg",
+  "title": "RSI (14) on the S&P 500 ETF",
+  "caption": "RSI dips below 30 during the spring sell-off, then climbs back above it as the market recovers.",
+  "alt": "RSI (14) on the S&P 500 ETF. RSI dips below 30 during the spring sell-off, then climbs back above it as the market recovers.",
+  "symbol": "spy",
+  "start": "2025-01-01",
+  "end": "2025-08-31",
+  "indicator": "rsi",
+  "params": {
+   "period": 14,
+   "upper": 70,
+   "lower": 30
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Jan 2025 to Aug 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "simple-moving-average": {
+  "slug": "simple-moving-average",
+  "file": "simple-moving-average.svg",
+  "title": "50-day simple moving average on Apple",
+  "caption": "Closes crossing the 50-day average mark changes in the short-term trend, with some false crosses.",
+  "alt": "50-day simple moving average on Apple. Closes crossing the 50-day average mark changes in the short-term trend, with some false crosses.",
+  "symbol": "aapl",
+  "start": "2025-01-01",
+  "end": "2025-10-31",
+  "indicator": "simple-moving-average",
+  "params": {
+   "period": 50
+  },
+  "credit": "Apple (AAPL), daily, Jan 2025 to Oct 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "stochastic-oscillator": {
+  "slug": "stochastic-oscillator",
+  "file": "stochastic-oscillator.svg",
+  "title": "Slow Stochastic (14, 3, 3) on EUR/USD",
+  "caption": "%K crossing %D near the 80 and 20 levels.",
+  "alt": "Slow Stochastic (14, 3, 3) on EUR/USD. %K crossing %D near the 80 and 20 levels.",
+  "symbol": "eurusd",
+  "start": "2025-04-01",
+  "end": "2025-10-31",
+  "indicator": "stochastic-oscillator",
+  "params": {
+   "k": 14,
+   "smooth_k": 3,
+   "d": 3
+  },
+  "credit": "EUR/USD, daily, Apr 2025 to Oct 2025. Calculated with Technical Analysis Bible's own indicator code."
+ }
+}
