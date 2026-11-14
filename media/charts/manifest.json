@@ -465,6 +465,21 @@
   },
   "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "dark-cloud-cover": {
+  "slug": "dark-cloud-cover",
+  "file": "dark-cloud-cover.svg",
+  "title": "Dark cloud cover after a rise",
+  "caption": "A long rising candle, then a falling candle that opens higher and closes below the first body's midpoint. Found by our detector on Bitcoin (BTC/USD), 4 March 2024 to 5 March 2024.",
+  "alt": "Dark cloud cover after a rise. A long rising candle, then a falling candle that opens higher and closes below the first body's midpoint. Found by our detector on Bitcoin (BTC/USD), 4 March 2024 to 5 March 2024.",
+  "symbol": "btcusd",
+  "start": "2024-03-04",
+  "end": "2024-03-05",
+  "indicator": null,
+  "pattern": "dark-cloud-cover",
+  "params": {},
+  "credit": "Bitcoin (BTC/USD), daily, Feb 2024 to Mar 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 3
+ },
  "death-cross": {
   "slug": "death-cross",
   "file": "death-cross.svg",
@@ -682,6 +697,36 @@
    "balance_period": 13
   },
   "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "evening-doji-star": {
+  "slug": "evening-doji-star",
+  "file": "evening-doji-star.svg",
+  "title": "Evening doji star after a rise",
+  "caption": "A long rising candle, a doji above it, then a falling candle closing below the first body's midpoint. Found by our detector on Gold futures, 21 April 2025 to 23 April 2025.",
+  "alt": "Evening doji star after a rise. A long rising candle, a doji above it, then a falling candle closing below the first body's midpoint. Found by our detector on Gold futures, 21 April 2025 to 23 April 2025.",
+  "symbol": "gold",
+  "start": "2025-04-21",
+  "end": "2025-04-23",
+  "indicator": null,
+  "pattern": "evening-doji-star",
+  "params": {},
+  "credit": "Gold futures, daily, Mar 2025 to May 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 1
+ },
+ "evening-star": {
+  "slug": "evening-star",
+  "file": "evening-star.svg",
+  "title": "Evening star after a rise",
+  "caption": "A long rising candle, a small candle above it, then a long falling candle closing below the first body's midpoint. Found by our detector on Gold futures, 21 April 2025 to 23 April 2025.",
+  "alt": "Evening star after a rise. A long rising candle, a small candle above it, then a long falling candle closing below the first body's midpoint. Found by our detector on Gold futures, 21 April 2025 to 23 April 2025.",
+  "symbol": "gold",
+  "start": "2025-04-21",
+  "end": "2025-04-23",
+  "indicator": null,
+  "pattern": "evening-star",
+  "params": {},
+  "credit": "Gold futures, daily, Mar 2025 to May 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 4
  },
  "exponential-moving-average": {
   "slug": "exponential-moving-average",
@@ -1245,6 +1290,36 @@
   },
   "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "morning-doji-star": {
+  "slug": "morning-doji-star",
+  "file": "morning-doji-star.svg",
+  "title": "Morning doji star after a decline",
+  "caption": "A long falling candle, a doji below it, then a rising candle closing past the first body's midpoint. Found by our detector on Apple (AAPL), 26 April 2022 to 28 April 2022.",
+  "alt": "Morning doji star after a decline. A long falling candle, a doji below it, then a rising candle closing past the first body's midpoint. Found by our detector on Apple (AAPL), 26 April 2022 to 28 April 2022.",
+  "symbol": "aapl",
+  "start": "2022-04-26",
+  "end": "2022-04-28",
+  "indicator": null,
+  "pattern": "morning-doji-star",
+  "params": {},
+  "credit": "Apple (AAPL), daily, Mar 2022 to May 2022. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 2
+ },
+ "morning-star": {
+  "slug": "morning-star",
+  "file": "morning-star.svg",
+  "title": "Morning star after a decline",
+  "caption": "A long falling candle, a small candle below it, then a long rising candle closing past the first body's midpoint. Found by our detector on Bitcoin (BTC/USD), 7 June 2021 to 9 June 2021.",
+  "alt": "Morning star after a decline. A long falling candle, a small candle below it, then a long rising candle closing past the first body's midpoint. Found by our detector on Bitcoin (BTC/USD), 7 June 2021 to 9 June 2021.",
+  "symbol": "btcusd",
+  "start": "2021-06-07",
+  "end": "2021-06-09",
+  "indicator": null,
+  "pattern": "morning-star",
+  "params": {},
+  "credit": "Bitcoin (BTC/USD), daily, May 2021 to Jun 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 2
+ },
  "moving-average-crossover": {
   "slug": "moving-average-crossover",
   "file": "moving-average-crossover.svg",
@@ -1390,6 +1465,21 @@
    "stdev": 2.0
   },
   "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "piercing-line": {
+  "slug": "piercing-line",
+  "file": "piercing-line.svg",
+  "title": "Piercing line after a decline",
+  "caption": "A long falling candle, then a rising candle that opens lower and closes above the first body's midpoint. Found by our detector on Bitcoin (BTC/USD), 5 June 2025 to 6 June 2025.",
+  "alt": "Piercing line after a decline. A long falling candle, then a rising candle that opens lower and closes above the first body's midpoint. Found by our detector on Bitcoin (BTC/USD), 5 June 2025 to 6 June 2025.",
+  "symbol": "btcusd",
+  "start": "2025-06-05",
+  "end": "2025-06-06",
+  "indicator": null,
+  "pattern": "piercing-line",
+  "params": {},
+  "credit": "Bitcoin (BTC/USD), daily, May 2025 to Jun 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 8
  },
  "pivot-points": {
   "slug": "pivot-points",
@@ -1792,6 +1882,36 @@
   },
   "credit": "Apple (AAPL), daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "three-black-crows": {
+  "slug": "three-black-crows",
+  "file": "three-black-crows.svg",
+  "title": "Three black crows",
+  "caption": "Three long falling candles, each closing lower and opening inside the previous body. Found by our detector on Bitcoin (BTC/USD), 20 January 2022 to 22 January 2022.",
+  "alt": "Three black crows. Three long falling candles, each closing lower and opening inside the previous body. Found by our detector on Bitcoin (BTC/USD), 20 January 2022 to 22 January 2022.",
+  "symbol": "btcusd",
+  "start": "2022-01-20",
+  "end": "2022-01-22",
+  "indicator": null,
+  "pattern": "three-black-crows",
+  "params": {},
+  "credit": "Bitcoin (BTC/USD), daily, Dec 2021 to Feb 2022. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 2
+ },
+ "three-white-soldiers": {
+  "slug": "three-white-soldiers",
+  "file": "three-white-soldiers.svg",
+  "title": "Three white soldiers",
+  "caption": "Three long rising candles, each closing higher and opening inside the previous body. Found by our detector on Bitcoin (BTC/USD), 26 February 2024 to 28 February 2024.",
+  "alt": "Three white soldiers. Three long rising candles, each closing higher and opening inside the previous body. Found by our detector on Bitcoin (BTC/USD), 26 February 2024 to 28 February 2024.",
+  "symbol": "btcusd",
+  "start": "2024-02-26",
+  "end": "2024-02-28",
+  "indicator": null,
+  "pattern": "three-white-soldiers",
+  "params": {},
+  "credit": "Bitcoin (BTC/USD), daily, Jan 2024 to Mar 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 3
+ },
  "trend-intensity-index": {
   "slug": "trend-intensity-index",
   "file": "trend-intensity-index.svg",
@@ -1857,6 +1977,36 @@
    "kc_mult": 1.5
   },
   "credit": "EUR/USD, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "tweezer-bottoms": {
+  "slug": "tweezer-bottoms",
+  "file": "tweezer-bottoms.svg",
+  "title": "Tweezer bottom after a decline",
+  "caption": "Two adjacent candles with the same low: a falling one, then a rising one. Found by our detector on Gold futures, 30 March 2021 to 31 March 2021.",
+  "alt": "Tweezer bottom after a decline. Two adjacent candles with the same low: a falling one, then a rising one. Found by our detector on Gold futures, 30 March 2021 to 31 March 2021.",
+  "symbol": "gold",
+  "start": "2021-03-30",
+  "end": "2021-03-31",
+  "indicator": null,
+  "pattern": "tweezer-bottoms",
+  "params": {},
+  "credit": "Gold futures, daily, Feb 2021 to Apr 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 2
+ },
+ "tweezer-tops": {
+  "slug": "tweezer-tops",
+  "file": "tweezer-tops.svg",
+  "title": "Tweezer top after a rise",
+  "caption": "Two adjacent candles with the same high: a rising one, then a falling one. Found by our detector on Gold futures, 20 October 2025 to 21 October 2025.",
+  "alt": "Tweezer top after a rise. Two adjacent candles with the same high: a rising one, then a falling one. Found by our detector on Gold futures, 20 October 2025 to 21 October 2025.",
+  "symbol": "gold",
+  "start": "2025-10-20",
+  "end": "2025-10-21",
+  "indicator": null,
+  "pattern": "tweezer-tops",
+  "params": {},
+  "credit": "Gold futures, daily, Sep 2025 to Nov 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 10
  },
  "twiggs-money-flow": {
   "slug": "twiggs-money-flow",
