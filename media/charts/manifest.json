@@ -1,4 +1,19 @@
 {
+ "adx": {
+  "slug": "adx",
+  "file": "adx.svg",
+  "title": "ADX (14) on the S&P 500 ETF",
+  "caption": "ADX plots trend strength from 0 to 100 with no direction. Readings above the 25 line are commonly read as trending and readings below it as a range. It is smoothed twice, so it lags.",
+  "alt": "ADX (14) on the S&P 500 ETF. ADX plots trend strength from 0 to 100 with no direction. Readings above the 25 line are commonly read as trending and readings below it as a range. It is smoothed twice, so it lags.",
+  "symbol": "spy",
+  "start": "2024-02-01",
+  "end": "2024-11-29",
+  "indicator": "adx",
+  "params": {
+   "period": 14
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "alma": {
   "slug": "alma",
   "file": "alma.svg",
@@ -15,6 +30,36 @@
    "sigma": 6
   },
   "credit": "S&P 500 ETF (SPY), daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "aroon": {
+  "slug": "aroon",
+  "file": "aroon.svg",
+  "title": "Aroon (25) on gold",
+  "caption": "Aroon Up and Aroon Down show how recently the highest high and lowest low of the last 25 bars occurred, from 0 to 100. The dashed lines mark the 70 and 30 conventions, and crossings of the two lines can whip back and forth in ranges.",
+  "alt": "Aroon (25) on gold. Aroon Up and Aroon Down show how recently the highest high and lowest low of the last 25 bars occurred, from 0 to 100. The dashed lines mark the 70 and 30 conventions, and crossings of the two lines can whip back and forth in ranges.",
+  "symbol": "gold",
+  "start": "2024-01-02",
+  "end": "2024-10-31",
+  "indicator": "aroon",
+  "params": {
+   "period": 25
+  },
+  "credit": "Gold futures, daily, Jan 2024 to Oct 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "aroon-oscillator": {
+  "slug": "aroon-oscillator",
+  "file": "aroon-oscillator.svg",
+  "title": "Aroon Oscillator (25) on Bitcoin",
+  "caption": "Aroon Up minus Aroon Down, from -100 to +100. Above zero the latest high is more recent than the latest low, below zero the reverse. It lags, because it reports extremes after they form.",
+  "alt": "Aroon Oscillator (25) on Bitcoin. Aroon Up minus Aroon Down, from -100 to +100. Above zero the latest high is more recent than the latest low, below zero the reverse. It lags, because it reports extremes after they form.",
+  "symbol": "btcusd",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "aroon-oscillator",
+  "params": {
+   "period": 25
+  },
+  "credit": "Bitcoin (BTC/USD), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "atr": {
   "slug": "atr",
@@ -79,6 +124,21 @@
   },
   "credit": "S&P 500 ETF (SPY), daily, Jan 2024 to Oct 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "dmi": {
+  "slug": "dmi",
+  "file": "dmi.svg",
+  "title": "DMI (14): +DI and -DI on EUR/USD",
+  "caption": "+DI measures upward pressure and -DI downward pressure over 14 bars. A cross of the two lines is Wilder's basic signal, and crosses are frequent when the market is sideways. The ADX line is shown with them.",
+  "alt": "DMI (14): +DI and -DI on EUR/USD. +DI measures upward pressure and -DI downward pressure over 14 bars. A cross of the two lines is Wilder's basic signal, and crosses are frequent when the market is sideways. The ADX line is shown with them.",
+  "symbol": "eurusd",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "dmi",
+  "params": {
+   "period": 14
+  },
+  "credit": "EUR/USD, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "donchian-channels": {
   "slug": "donchian-channels",
   "file": "donchian-channels.svg",
@@ -126,6 +186,19 @@
   },
   "credit": "S&P 500 ETF (SPY), daily, Jan 2024 to Aug 2025. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "heikin-ashi": {
+  "slug": "heikin-ashi",
+  "file": "heikin-ashi.svg",
+  "title": "Heikin-Ashi on Bitcoin",
+  "caption": "The lines show the four Heikin-Ashi values (open, high, low, close) over normal candles. Each is averaged with the previous bar, so runs of one colour mark smoother trends. The values are averages, not tradable prices.",
+  "alt": "Heikin-Ashi on Bitcoin. The lines show the four Heikin-Ashi values (open, high, low, close) over normal candles. Each is averaged with the previous bar, so runs of one colour mark smoother trends. The values are averages, not tradable prices.",
+  "symbol": "btcusd",
+  "start": "2025-01-02",
+  "end": "2025-08-29",
+  "indicator": "heikin-ashi",
+  "params": {},
+  "credit": "Bitcoin (BTC/USD), daily, Jan 2025 to Aug 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "hull-moving-average": {
   "slug": "hull-moving-average",
   "file": "hull-moving-average.svg",
@@ -140,6 +213,24 @@
    "period": 21
   },
   "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "ichimoku-cloud": {
+  "slug": "ichimoku-cloud",
+  "file": "ichimoku-cloud.svg",
+  "title": "Ichimoku Cloud (9, 26, 52) on gold",
+  "caption": "Tenkan-sen and Kijun-sen are 9 and 26 bar high-low midpoints. Senkou Span A and B, which form the cloud, are plotted 26 bars ahead, and the Chikou Span is the close drawn 26 bars back. The cloud under a candle was calculated 26 bars earlier.",
+  "alt": "Ichimoku Cloud (9, 26, 52) on gold. Tenkan-sen and Kijun-sen are 9 and 26 bar high-low midpoints. Senkou Span A and B, which form the cloud, are plotted 26 bars ahead, and the Chikou Span is the close drawn 26 bars back. The cloud under a candle was calculated 26 bars earlier.",
+  "symbol": "gold",
+  "start": "2024-02-01",
+  "end": "2024-11-29",
+  "indicator": "ichimoku-cloud",
+  "params": {
+   "tenkan": 9,
+   "kijun": 26,
+   "senkou_b": 52,
+   "shift": 26
+  },
+  "credit": "Gold futures, daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "kama": {
   "slug": "kama",
@@ -275,6 +366,23 @@
   },
   "credit": "Apple (AAPL), daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "parabolic-sar": {
+  "slug": "parabolic-sar",
+  "file": "parabolic-sar.svg",
+  "title": "Parabolic SAR (0.02, 0.02, 0.2) on Apple",
+  "caption": "Parabolic SAR trails price and accelerates toward it as a trend runs, then flips when price trades through it. It is drawn here as a line rather than the usual dots. Flips are frequent in sideways markets.",
+  "alt": "Parabolic SAR (0.02, 0.02, 0.2) on Apple. Parabolic SAR trails price and accelerates toward it as a trend runs, then flips when price trades through it. It is drawn here as a line rather than the usual dots. Flips are frequent in sideways markets.",
+  "symbol": "aapl",
+  "start": "2024-02-01",
+  "end": "2024-11-29",
+  "indicator": "parabolic-sar",
+  "params": {
+   "start": 0.02,
+   "step": 0.02,
+   "maximum": 0.2
+  },
+  "credit": "Apple (AAPL), daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "rsi": {
   "slug": "rsi",
   "file": "rsi.svg",
@@ -338,6 +446,22 @@
    "d": 3
   },
   "credit": "EUR/USD, daily, Apr 2025 to Oct 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "supertrend": {
+  "slug": "supertrend",
+  "file": "supertrend.svg",
+  "title": "Supertrend (10, 3) on gold",
+  "caption": "Supertrend sits 3 times the 10-bar ATR from the bar midpoint and only moves in the trend's favour. A close beyond the line flips it to the other side. It adapts to volatility but still lags.",
+  "alt": "Supertrend (10, 3) on gold. Supertrend sits 3 times the 10-bar ATR from the bar midpoint and only moves in the trend's favour. A close beyond the line flips it to the other side. It adapts to volatility but still lags.",
+  "symbol": "gold",
+  "start": "2025-01-02",
+  "end": "2025-10-31",
+  "indicator": "supertrend",
+  "params": {
+   "period": 10,
+   "multiplier": 3.0
+  },
+  "credit": "Gold futures, daily, Jan 2025 to Oct 2025. Calculated with Technical Analysis Bible's own indicator code."
  },
  "t3-moving-average": {
   "slug": "t3-moving-average",
