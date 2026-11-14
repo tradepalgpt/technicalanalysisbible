@@ -16,6 +16,19 @@
   },
   "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "accumulation-distribution": {
+  "slug": "accumulation-distribution",
+  "file": "accumulation-distribution.svg",
+  "title": "Accumulation/Distribution Line on Apple",
+  "caption": "A running total of money flow volume: each bar's volume is multiplied by where the close sits in its high-low range (+1 at the high, -1 at the low). The level depends on the start date, so read the slope. The marks show the highest and lowest readings in the window.",
+  "alt": "Accumulation/Distribution Line on Apple. A running total of money flow volume: each bar's volume is multiplied by where the close sits in its high-low range (+1 at the high, -1 at the low). The level depends on the start date, so read the slope. The marks show the highest and lowest readings in the window.",
+  "symbol": "aapl",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "accumulation-distribution",
+  "params": {},
+  "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "adx": {
   "slug": "adx",
   "file": "adx.svg",
@@ -235,6 +248,37 @@
   },
   "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "chaikin-money-flow": {
+  "slug": "chaikin-money-flow",
+  "file": "chaikin-money-flow.svg",
+  "title": "Chaikin Money Flow (20) on gold",
+  "caption": "Money flow volume summed over 20 bars and divided by total volume over the same bars, giving a value between -1 and +1 around a zero line. Above zero suggests buying pressure over the window, below zero selling pressure. Marks show zero-line crosses.",
+  "alt": "Chaikin Money Flow (20) on gold. Money flow volume summed over 20 bars and divided by total volume over the same bars, giving a value between -1 and +1 around a zero line. Above zero suggests buying pressure over the window, below zero selling pressure. Marks show zero-line crosses.",
+  "symbol": "gold",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "chaikin-money-flow",
+  "params": {
+   "period": 20
+  },
+  "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "chaikin-oscillator": {
+  "slug": "chaikin-oscillator",
+  "file": "chaikin-oscillator.svg",
+  "title": "Chaikin Oscillator (3, 10) on Bitcoin",
+  "caption": "The 3-bar EMA of the Accumulation/Distribution Line minus its 10-bar EMA, the MACD idea applied to money flow. Above zero, recent money flow is stronger than its longer average. Marks show zero-line crosses.",
+  "alt": "Chaikin Oscillator (3, 10) on Bitcoin. The 3-bar EMA of the Accumulation/Distribution Line minus its 10-bar EMA, the MACD idea applied to money flow. Above zero, recent money flow is stronger than its longer average. Marks show zero-line crosses.",
+  "symbol": "btcusd",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "chaikin-oscillator",
+  "params": {
+   "fast": 3,
+   "slow": 10
+  },
+  "credit": "Bitcoin (BTC/USD), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "chaikin-volatility": {
   "slug": "chaikin-volatility",
   "file": "chaikin-volatility.svg",
@@ -423,6 +467,22 @@
   },
   "credit": "Gold futures, daily, Jan 2025 to Oct 2025. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "ease-of-movement": {
+  "slug": "ease-of-movement",
+  "file": "ease-of-movement.svg",
+  "title": "Ease of Movement (14) on Bitcoin",
+  "caption": "Compares how far the high-low midpoint moved with how much volume it took, averaged over 14 bars (volume scaled by 100,000,000). Above zero, price is rising with little resistance; below, falling easily. Marks show zero-line crosses.",
+  "alt": "Ease of Movement (14) on Bitcoin. Compares how far the high-low midpoint moved with how much volume it took, averaged over 14 bars (volume scaled by 100,000,000). Above zero, price is rising with little resistance; below, falling easily. Marks show zero-line crosses.",
+  "symbol": "btcusd",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "ease-of-movement",
+  "params": {
+   "period": 14,
+   "scale": 100000000
+  },
+  "credit": "Bitcoin (BTC/USD), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "elder-impulse-system": {
   "slug": "elder-impulse-system",
   "file": "elder-impulse-system.svg",
@@ -456,6 +516,22 @@
   },
   "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "elders-force-index": {
+  "slug": "elders-force-index",
+  "file": "elders-force-index.svg",
+  "title": "Elder's Force Index (2-bar) on gold",
+  "caption": "The short 2-bar EMA of the change in close times volume, used by Elder to time pullbacks within a trend; the 13-bar balance line is also calculated. The line reacts almost bar by bar and crosses zero often. Marks show zero-line crosses of the 2-bar line.",
+  "alt": "Elder's Force Index (2-bar) on gold. The short 2-bar EMA of the change in close times volume, used by Elder to time pullbacks within a trend; the 13-bar balance line is also calculated. The line reacts almost bar by bar and crosses zero often. Marks show zero-line crosses of the 2-bar line.",
+  "symbol": "gold",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "elders-force-index",
+  "params": {
+   "period": 2,
+   "balance_period": 13
+  },
+  "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "exponential-moving-average": {
   "slug": "exponential-moving-average",
   "file": "exponential-moving-average.svg",
@@ -485,6 +561,21 @@
    "period": 10
   },
   "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "force-index": {
+  "slug": "force-index",
+  "file": "force-index.svg",
+  "title": "Force Index (13) on Apple",
+  "caption": "The change in close multiplied by volume, smoothed with a 13-bar EMA. Positive readings mean price rose on volume, negative readings that it fell. Values scale with the instrument's price and volume, so there are no fixed levels. Marks show zero-line crosses.",
+  "alt": "Force Index (13) on Apple. The change in close multiplied by volume, smoothed with a 13-bar EMA. Positive readings mean price rose on volume, negative readings that it fell. Values scale with the instrument's price and volume, so there are no fixed levels. Marks show zero-line crosses.",
+  "symbol": "aapl",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "force-index",
+  "params": {
+   "period": 13
+  },
+  "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "gator-oscillator": {
   "slug": "gator-oscillator",
@@ -815,6 +906,23 @@
   },
   "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "money-flow-index": {
+  "slug": "money-flow-index",
+  "file": "money-flow-index.svg",
+  "title": "Money Flow Index (14) on the S&P 500 ETF",
+  "caption": "A volume-weighted cousin of the RSI: typical price times volume is split into positive and negative flow over 14 bars and compared. Dashed lines mark 80 and 20. Marks show where the line re-enters the range from an extreme.",
+  "alt": "Money Flow Index (14) on the S&P 500 ETF. A volume-weighted cousin of the RSI: typical price times volume is split into positive and negative flow over 14 bars and compared. Dashed lines mark 80 and 20. Marks show where the line re-enters the range from an extreme.",
+  "symbol": "spy",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "money-flow-index",
+  "params": {
+   "period": 14,
+   "upper": 80,
+   "lower": 20
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "moving-average-crossover": {
   "slug": "moving-average-crossover",
   "file": "moving-average-crossover.svg",
@@ -881,6 +989,21 @@
    "period": 14
   },
   "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "on-balance-volume": {
+  "slug": "on-balance-volume",
+  "file": "on-balance-volume.svg",
+  "title": "On-Balance Volume with 20-bar average on the S&P 500 ETF",
+  "caption": "A running total that adds the day's volume on a higher close and subtracts it on a lower close, with a 20-bar simple average of the line. Only its direction and shape matter, not its level. The marks show the highest and lowest readings in the window.",
+  "alt": "On-Balance Volume with 20-bar average on the S&P 500 ETF. A running total that adds the day's volume on a higher close and subtracts it on a lower close, with a 20-bar simple average of the line. Only its direction and shape matter, not its level. The marks show the highest and lowest readings in the window.",
+  "symbol": "spy",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "on-balance-volume",
+  "params": {
+   "ma_period": 20
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "parabolic-sar": {
   "slug": "parabolic-sar",
