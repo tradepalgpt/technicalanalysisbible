@@ -111,7 +111,7 @@ Because the level depends on where the chart starts, never compare OBV values be
 
 - Granville, Joseph E. (1963). *Granville's New Key to Stock Market Profits*. Prentice-Hall.
 - Murphy, John J. (1999). *Technical Analysis of the Financial Markets*. New York Institute of Finance.
-- Colby, Robert W. (2002). *The Encyclopedia of Technical Market Indicators*, 2nd edition. McGraw-Hill.
+- Colby, Robert W. (2003). *The Encyclopedia of Technical Market Indicators*, 2nd edition. McGraw-Hill.
 
 ## FAQ
 

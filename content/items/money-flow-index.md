@@ -112,7 +112,7 @@ The levels differ from RSI's 70 / 30 because volume weighting tends to produce m
 
 ## Sources
 
-- Colby, Robert W. (2002). *The Encyclopedia of Technical Market Indicators*, 2nd edition. McGraw-Hill.
+- Colby, Robert W. (2003). *The Encyclopedia of Technical Market Indicators*, 2nd edition. McGraw-Hill.
 - Murphy, John J. (1999). *Technical Analysis of the Financial Markets*. New York Institute of Finance.
 
 ## FAQ
