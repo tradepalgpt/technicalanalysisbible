@@ -233,6 +233,21 @@
   },
   "credit": "Bitcoin (BTC/USD), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "bullish-engulfing": {
+  "slug": "bullish-engulfing",
+  "file": "bullish-engulfing.svg",
+  "title": "Bullish engulfing after a decline",
+  "caption": "A bullish bar whose body covers the previous bearish body after a fall. Found by our detector on Gold futures, 25 August 2025 to 26 August 2025.",
+  "alt": "Bullish engulfing after a decline. A bullish bar whose body covers the previous bearish body after a fall. Found by our detector on Gold futures, 25 August 2025 to 26 August 2025.",
+  "symbol": "gold",
+  "start": "2025-08-25",
+  "end": "2025-08-26",
+  "indicator": null,
+  "pattern": "bullish-engulfing",
+  "params": {},
+  "credit": "Gold futures, daily, Jul 2025 to Sep 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 4
+ },
  "camarilla-pivots": {
   "slug": "camarilla-pivots",
   "file": "camarilla-pivots.svg",
@@ -498,6 +513,21 @@
   },
   "credit": "EUR/USD, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "doji": {
+  "slug": "doji",
+  "file": "doji.svg",
+  "title": "Doji after a run",
+  "caption": "A doji: open and close almost equal after a clear move, showing indecision. Found by our detector on Apple (AAPL), 2 August 2024.",
+  "alt": "Doji after a run. A doji: open and close almost equal after a clear move, showing indecision. Found by our detector on Apple (AAPL), 2 August 2024.",
+  "symbol": "aapl",
+  "start": "2024-08-02",
+  "end": "2024-08-02",
+  "indicator": null,
+  "pattern": "doji",
+  "params": {},
+  "credit": "Apple (AAPL), daily, Jun 2024 to Aug 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 71
+ },
  "donchian-channels": {
   "slug": "donchian-channels",
   "file": "donchian-channels.svg",
@@ -512,6 +542,21 @@
    "period": 20
   },
   "credit": "Gold futures, daily, Jan 2025 to Oct 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "double-top": {
+  "slug": "double-top",
+  "file": "double-top.svg",
+  "title": "Double top with neckline and target",
+  "caption": "Two similar highs, a trough between them (the neckline) and a close below it. Found by our detector on S&P 500 ETF (SPY), 6 December 2024 to 6 March 2025.",
+  "alt": "Double top with neckline and target. Two similar highs, a trough between them (the neckline) and a close below it. Found by our detector on S&P 500 ETF (SPY), 6 December 2024 to 6 March 2025.",
+  "symbol": "spy",
+  "start": "2024-12-06",
+  "end": "2025-03-06",
+  "indicator": null,
+  "pattern": "double-top",
+  "params": {},
+  "credit": "S&P 500 ETF (SPY), daily, Oct 2024 to Apr 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 3
  },
  "ease-of-movement": {
   "slug": "ease-of-movement",
@@ -708,6 +753,36 @@
    "ma_type": "sma"
   },
   "credit": "S&P 500 ETF (SPY), daily, Jan 2024 to Aug 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "hammer": {
+  "slug": "hammer",
+  "file": "hammer.svg",
+  "title": "Hammer after a decline",
+  "caption": "A hammer: long lower wick and small body near the top of the range after a fall. Found by our detector on S&P 500 ETF (SPY), 10 September 2024.",
+  "alt": "Hammer after a decline. A hammer: long lower wick and small body near the top of the range after a fall. Found by our detector on S&P 500 ETF (SPY), 10 September 2024.",
+  "symbol": "spy",
+  "start": "2024-09-10",
+  "end": "2024-09-10",
+  "indicator": null,
+  "pattern": "hammer",
+  "params": {},
+  "credit": "S&P 500 ETF (SPY), daily, Jul 2024 to Oct 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 6
+ },
+ "head-and-shoulders": {
+  "slug": "head-and-shoulders",
+  "file": "head-and-shoulders.svg",
+  "title": "Head and shoulders with neckline",
+  "caption": "Left shoulder, higher head, lower right shoulder and a close below the neckline. Found by our detector on Bitcoin (BTC/USD), 28 August 2025 to 16 October 2025.",
+  "alt": "Head and shoulders with neckline. Left shoulder, higher head, lower right shoulder and a close below the neckline. Found by our detector on Bitcoin (BTC/USD), 28 August 2025 to 16 October 2025.",
+  "symbol": "btcusd",
+  "start": "2025-08-28",
+  "end": "2025-10-16",
+  "indicator": null,
+  "pattern": "head-and-shoulders",
+  "params": {},
+  "credit": "Bitcoin (BTC/USD), daily, Aug 2025 to Nov 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 1
  },
  "heikin-ashi": {
   "slug": "heikin-ashi",
