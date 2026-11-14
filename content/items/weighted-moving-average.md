@@ -110,7 +110,7 @@ There is no standard "best" period. Pick the length that suits the time frame yo
 
 - Murphy, John J. (1999). *Technical Analysis of the Financial Markets*. New York Institute of Finance.
 - Kirkpatrick, Charles D. and Dahlquist, Julie R. (2006). *Technical Analysis: The Complete Resource for Financial Market Technicians*. FT Press.
-- Achelis, Steven B. (2001). *Technical Analysis from A to Z*, 2nd edition. McGraw-Hill.
+- Achelis, Steven B. (2000). *Technical Analysis from A to Z*, 2nd edition. McGraw-Hill.
 
 ## FAQ
 
