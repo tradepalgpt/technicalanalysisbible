@@ -141,6 +141,22 @@
   },
   "credit": "Bitcoin (BTC/USD), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "bollinger-band-width": {
+  "slug": "bollinger-band-width",
+  "file": "bollinger-band-width.svg",
+  "title": "Bollinger BandWidth (20, 2) on the S&P 500 ETF",
+  "caption": "BandWidth is the gap between the upper and lower Bollinger Bands divided by the middle band, so it tracks volatility as a share of price. Low readings mean narrow bands, high readings mean wide bands.",
+  "alt": "Bollinger BandWidth (20, 2) on the S&P 500 ETF. BandWidth is the gap between the upper and lower Bollinger Bands divided by the middle band, so it tracks volatility as a share of price. Low readings mean narrow bands, high readings mean wide bands.",
+  "symbol": "spy",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "bollinger-band-width",
+  "params": {
+   "period": 20,
+   "stdev": 2.0
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "bollinger-bands": {
   "slug": "bollinger-bands",
   "file": "bollinger-bands.svg",
@@ -157,6 +173,23 @@
   },
   "credit": "EUR/USD, daily, Jan 2025 to Aug 2025. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "bollinger-squeeze": {
+  "slug": "bollinger-squeeze",
+  "file": "bollinger-squeeze.svg",
+  "title": "Bollinger Squeeze (20, 2, six-month low) on Bitcoin",
+  "caption": "BandWidth is plotted with its lowest value over the last 125 bars. The highlighted stretches are bars where BandWidth sits at that six-month low, Bollinger's definition of a squeeze; the definition depends on the lookback chosen.",
+  "alt": "Bollinger Squeeze (20, 2, six-month low) on Bitcoin. BandWidth is plotted with its lowest value over the last 125 bars. The highlighted stretches are bars where BandWidth sits at that six-month low, Bollinger's definition of a squeeze; the definition depends on the lookback chosen.",
+  "symbol": "btcusd",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "bollinger-squeeze",
+  "params": {
+   "period": 20,
+   "stdev": 2.0,
+   "lookback": 125
+  },
+  "credit": "Bitcoin (BTC/USD), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "cci": {
   "slug": "cci",
   "file": "cci.svg",
@@ -171,6 +204,21 @@
    "period": 20
   },
   "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "center-of-gravity": {
+  "slug": "center-of-gravity",
+  "file": "center-of-gravity.svg",
+  "title": "Center of Gravity Oscillator (10) on gold",
+  "caption": "Ehlers' Center of Gravity weights the last 10 high-low midpoints by position, so the line turns slightly ahead of price swings. The signal line is the same value one bar later, and crossings of the two mark turns.",
+  "alt": "Center of Gravity Oscillator (10) on gold. Ehlers' Center of Gravity weights the last 10 high-low midpoints by position, so the line turns slightly ahead of price swings. The signal line is the same value one bar later, and crossings of the two mark turns.",
+  "symbol": "gold",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "center-of-gravity",
+  "params": {
+   "period": 10
+  },
+  "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "chande-momentum-oscillator": {
   "slug": "chande-momentum-oscillator",
@@ -235,6 +283,21 @@
    "wma_period": 10
   },
   "credit": "S&P 500 ETF (SPY), daily, Jan 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "cyber-cycle": {
+  "slug": "cyber-cycle",
+  "file": "cyber-cycle.svg",
+  "title": "Cyber Cycle (alpha 0.07) on the S&P 500 ETF",
+  "caption": "The Cyber Cycle smooths the high-low midpoint and passes it through a recursive filter that keeps the cyclic part of price and removes the trend. With alpha 0.07 it oscillates around zero, and the signal line is the cycle delayed by one bar.",
+  "alt": "Cyber Cycle (alpha 0.07) on the S&P 500 ETF. The Cyber Cycle smooths the high-low midpoint and passes it through a recursive filter that keeps the cyclic part of price and removes the trend. With alpha 0.07 it oscillates around zero, and the signal line is the cycle delayed by one bar.",
+  "symbol": "spy",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "cyber-cycle",
+  "params": {
+   "alpha": 0.07
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "death-cross": {
   "slug": "death-cross",
@@ -774,6 +837,22 @@
   },
   "credit": "Apple (AAPL), daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "percent-b": {
+  "slug": "percent-b",
+  "file": "percent-b.svg",
+  "title": "Bollinger %B (20, 2) on gold",
+  "caption": "%B shows where the close sits within Bollinger Bands (20, 2): 1 is the upper band, 0 is the lower band and 0.5 is the middle. Readings above 1 or below 0 mean the close is outside the bands.",
+  "alt": "Bollinger %B (20, 2) on gold. %B shows where the close sits within Bollinger Bands (20, 2): 1 is the upper band, 0 is the lower band and 0.5 is the middle. Readings above 1 or below 0 mean the close is outside the bands.",
+  "symbol": "gold",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "percent-b",
+  "params": {
+   "period": 20,
+   "stdev": 2.0
+  },
+  "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "ppo": {
   "slug": "ppo",
   "file": "ppo.svg",
@@ -790,6 +869,23 @@
    "signal": 9
   },
   "credit": "S&P 500 ETF (SPY), daily, Apr 2024 to Jan 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "rainbow-oscillator": {
+  "slug": "rainbow-oscillator",
+  "file": "rainbow-oscillator.svg",
+  "title": "Rainbow Oscillator (10 levels, 2-bar averages) on Apple",
+  "caption": "Ten recursive 2-bar simple averages form the rainbow. The oscillator is the close minus their mean, scaled by the 10-bar high-low range, and the outer lines show the width of the rainbow on the same scale.",
+  "alt": "Rainbow Oscillator (10 levels, 2-bar averages) on Apple. Ten recursive 2-bar simple averages form the rainbow. The oscillator is the close minus their mean, scaled by the 10-bar high-low range, and the outer lines show the width of the rainbow on the same scale.",
+  "symbol": "aapl",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "rainbow-oscillator",
+  "params": {
+   "period": 2,
+   "levels": 10,
+   "lookback": 10
+  },
+  "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
  "random-walk-index": {
   "slug": "random-walk-index",
@@ -1052,6 +1148,23 @@
   },
   "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "ttm-squeeze": {
+  "slug": "ttm-squeeze",
+  "file": "ttm-squeeze.svg",
+  "title": "TTM Squeeze (20, 2.0 and 1.5 ATR) on EUR/USD",
+  "caption": "The squeeze is on while the 20-bar Bollinger Bands (2.0 standard deviations) sit inside the Keltner Channels (1.5 x ATR); those bars are marked along the zero line. The bars show a 20-bar linear-regression momentum reading, green above zero and red below.",
+  "alt": "TTM Squeeze (20, 2.0 and 1.5 ATR) on EUR/USD. The squeeze is on while the 20-bar Bollinger Bands (2.0 standard deviations) sit inside the Keltner Channels (1.5 x ATR); those bars are marked along the zero line. The bars show a 20-bar linear-regression momentum reading, green above zero and red below.",
+  "symbol": "eurusd",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "ttm-squeeze",
+  "params": {
+   "length": 20,
+   "bb_mult": 2.0,
+   "kc_mult": 1.5
+  },
+  "credit": "EUR/USD, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
  "ultimate-oscillator": {
   "slug": "ultimate-oscillator",
   "file": "ultimate-oscillator.svg",
@@ -1111,6 +1224,23 @@
   "indicator": "vwma",
   "params": {
    "period": 20
+  },
+  "credit": "Bitcoin (BTC/USD), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "wavetrend-oscillator": {
+  "slug": "wavetrend-oscillator",
+  "file": "wavetrend-oscillator.svg",
+  "title": "WaveTrend Oscillator (10, 21, 4) on Bitcoin",
+  "caption": "WaveTrend measures how far the typical price sits from its 10-bar EMA in units of typical deviation, then smooths it over 21 bars. The second line is a 4-bar average of the first, and the dashed lines mark the +/-60 and +/-53 zones.",
+  "alt": "WaveTrend Oscillator (10, 21, 4) on Bitcoin. WaveTrend measures how far the typical price sits from its 10-bar EMA in units of typical deviation, then smooths it over 21 bars. The second line is a 4-bar average of the first, and the dashed lines mark the +/-60 and +/-53 zones.",
+  "symbol": "btcusd",
+  "start": "2024-03-01",
+  "end": "2024-12-31",
+  "indicator": "wavetrend-oscillator",
+  "params": {
+   "n1": 10,
+   "n2": 21,
+   "signal": 4
   },
   "credit": "Bitcoin (BTC/USD), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
