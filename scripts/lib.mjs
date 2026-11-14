@@ -68,7 +68,19 @@ export function loadItems() {
   });
 }
 
-export const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+export function loadDir(sub) {
+  const dir = path.join(ROOT, 'content', sub);
+  if (!fs.existsSync(dir)) return [];
+  return fs.readdirSync(dir).filter((f) => f.endsWith('.md')).sort().map((f) => {
+    const { data, body } = parseFrontMatter(fs.readFileSync(path.join(dir, f), 'utf8'));
+    return { file: f, data, body };
+  });
+}
+
+export const COMPARE_SECTIONS = [['At a glance'], ['When to use'], ['When to use'], ['Using both'], ['Common mix-ups'], ['FAQ']];
+export const GLOSSARY_SECTIONS = [['Explained'], ['Example']];
+
+export const esc =(s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
 export const REQUIRED_SECTIONS = [
   ['At a glance'],

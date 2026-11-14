@@ -1,7 +1,7 @@
 // Pre-build quality gate. Errors stop the build; warnings are printed.
 import { execFileSync } from 'node:child_process';
 import path from 'node:path';
-import { ROOT, loadCatalogue, loadItems, REQUIRED_SECTIONS, BANNED_PHRASES, STATE_BY_SLUG, PURPOSE_BY_SLUG } from './lib.mjs';
+import { ROOT, loadCatalogue, loadItems, loadDir, COMPARE_SECTIONS, GLOSSARY_SECTIONS, REQUIRED_SECTIONS, BANNED_PHRASES, STATE_BY_SLUG, PURPOSE_BY_SLUG } from './lib.mjs';
 
 const cat = loadCatalogue();
 const bySlug = Object.fromEntries(cat.items.map((i) => [i.slug, i]));
@@ -67,6 +67,46 @@ for (const { file, data: d, body } of items) {
     if (!bySlug[m[1]]) E(f, `link to /${m[1]}/ is not a master-list item`);
     else if (!published.has(m[1])) W(f, `link to /${m[1]}/ not written yet (shown unlinked)`);
   }
+}
+
+
+// ---------- comparison and glossary pages ----------
+const cmpSlugs = new Set(loadDir('compare').map((c) => c.data.slug));
+const glSlugs = new Set(loadDir('glossary').map((g) => g.data.slug));
+function common(f, d, body, sections, minW, maxW) {
+  if (!/^\d{1,2} [A-Z][a-z]+ \d{4}$/.test(String(d.reviewed || ''))) E(f, 'reviewed must be like "14 November 2026"');
+  const heads = [...body.matchAll(/^## (.+)$/gm)].map((m) => m[1].trim());
+  let pos = -1;
+  for (const alts of sections) {
+    const i = heads.findIndex((h, k) => k > pos && alts.some((a) => h.startsWith(a)));
+    if (i === -1) E(f, `missing section "${alts[0]}"`); else pos = i;
+  }
+  const words = body.split(/\s+/).filter(Boolean).length;
+  if (words < minW) E(f, `${words} words (min ${minW})`);
+  if (words > maxW) W(f, `${words} words, long`);
+  const low = body.toLowerCase();
+  for (const b of BANNED_PHRASES) if (low.includes(b.toLowerCase())) E(f, `banned phrase "${b}"`);
+  for (const m of body.matchAll(/\]\(\/([a-z0-9-]+)\/\)/g)) if (!bySlug[m[1]]) E(f, `link to /${m[1]}/ is not a guide`);
+  for (const m of body.matchAll(/\]\(\/glossary\/([a-z0-9-]+)\/\)/g)) if (!glSlugs.has(m[1])) W(f, `glossary link ${m[1]} not written`);
+  for (const m of body.matchAll(/\]\(\/compare\/([a-z0-9-]+)\/\)/g)) if (!cmpSlugs.has(m[1])) W(f, `compare link ${m[1]} not written`);
+}
+for (const { file: f, data: d, body } of loadDir('compare')) {
+  for (const k of ['slug', 'title', 'a', 'b', 'reviewed']) if (!d[k]) E(f, `missing front matter "${k}"`);
+  if (d.slug && f !== `${d.slug}.md`) E(f, `file name must be ${d.slug}.md`);
+  for (const k of ['a', 'b']) if (d[k] && !published.has(d[k])) E(f, `${k} "${d[k]}" is not a written guide`);
+  const qw = body.split(/\n## /)[0].trim().split(/\s+/).filter(Boolean).length;
+  if (qw < 25 || qw > 90) E(f, `verdict is ${qw} words (want 25-90)`);
+  const qs = ((body.split(/^## FAQ\s*$/m)[1] || '').match(/^\*\*.+\?\*\*\s*$/gm) || []).length;
+  if (qs < 3) E(f, `FAQ has ${qs} questions (min 3)`);
+  common(f, d, body, COMPARE_SECTIONS, 450, 1400);
+}
+for (const { file: f, data: d, body } of loadDir('glossary')) {
+  for (const k of ['slug', 'term', 'reviewed']) if (!d[k]) E(f, `missing front matter "${k}"`);
+  if (d.slug && f !== `${d.slug}.md`) E(f, `file name must be ${d.slug}.md`);
+  for (const s of [].concat(d.related || [])) if (!published.has(s)) E(f, `related "${s}" is not a written guide`);
+  const qw = body.split(/\n## /)[0].trim().split(/\s+/).filter(Boolean).length;
+  if (qw < 10 || qw > 45) E(f, `definition is ${qw} words (want 10-45)`);
+  common(f, d, body, GLOSSARY_SECTIONS, 120, 450);
 }
 
 for (const w of warns) console.warn('warn  ' + w);

@@ -2,7 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { marked } from 'marked';
-import { ROOT, SITE, STATES, PURPOSES, STATE_BY_SLUG, PURPOSE_BY_SLUG, loadCatalogue, loadItems, parseFrontMatter, readJSON, esc } from './lib.mjs';
+import { ROOT, SITE, STATES, PURPOSES, STATE_BY_SLUG, PURPOSE_BY_SLUG, loadCatalogue, loadItems, loadDir, parseFrontMatter, readJSON, esc } from './lib.mjs';
 
 const DIST = path.join(ROOT, 'dist');
 fs.rmSync(DIST, { recursive: true, force: true });
@@ -51,7 +51,7 @@ ${jsonld.map(ld).join('\n')}
 </head>
 <body>
 <header class="top"><div class="wrap"><a class="brand" href="/">Technical Analysis <b>Bible</b></a>
-<nav class="mainnav"><a href="/a-z/">A–Z</a><a href="/market/">By market</a><a href="/use/">By use</a><a href="/type/">By type</a></nav></div></header>
+<nav class="mainnav"><a href="/a-z/">A–Z</a><a href="/market/">By market</a><a href="/use/">By use</a><a href="/type/">By type</a><a href="/compare/">Compare</a><a href="/glossary/">Glossary</a></nav></div></header>
 <div class="wrap ${sidebar ? 'withside' : ''}">
 <main id="main">${body}</main>
 ${sidebar ? `<aside class="side">${adSlot('300x600', 'sticky')}</aside>` : ''}
@@ -66,12 +66,20 @@ ${sidebar ? `<aside class="side">${adSlot('300x600', 'sticky')}</aside>` : ''}
 </body></html>`;
 }
 
+const compares = loadDir('compare');
+const glossary = loadDir('glossary');
+const cmpPub = Object.fromEntries(compares.map((c) => [c.data.slug, c]));
+const glPub = Object.fromEntries(glossary.map((g) => [g.data.slug, g]));
+
 function rewriteLinks(html) {
   return html
     .replace(/<a href="\/([a-z0-9-]+)\/">([\s\S]*?)<\/a>/g, (m, slug, text) => (bySlug[slug] && !pub[slug]) ? `<span class="soon" title="Coming soon">${text}</span>` : m)
-    // Comparison and glossary pages are not built yet: show as plain text until they exist.
-    .replace(/<a href="\/(compare|glossary)\/[^"]*">([\s\S]*?)<\/a>/g, '<span class="soon" title="Coming soon">$2</span>');
+    // Comparison and glossary links stay plain text until that page exists.
+    .replace(/<a href="\/compare\/([a-z0-9-]+)\/">([\s\S]*?)<\/a>/g, (m, s, t) => cmpPub[s] ? m : `<span class="soon" title="Coming soon">${t}</span>`)
+    .replace(/<a href="\/glossary\/([a-z0-9-]+)\/">([\s\S]*?)<\/a>/g, (m, s, t) => glPub[s] ? m : `<span class="soon" title="Coming soon">${t}</span>`);
 }
+const cmpTitle = (s) => cmpPub[s]?.data.title || s;
+const glTerm = (s) => glPub[s]?.data.term || s;
 
 function parseFaq(body) {
   const sec = (body.split(/^## FAQ\s*$/m)[1] || '').split(/^## /m)[0];
@@ -96,7 +104,13 @@ for (const { data: d, body } of items) {
 
   const related = [...new Set([].concat(d.related || []))];
   const tags = `<p class="tags"><span>Best in:</span> ${[].concat(d.states).map((s) => `<a class="chip" href="/market/${s}/">${esc(STATE_BY_SLUG[s])}</a>`).join(' ')} <span>Used for:</span> ${[].concat(d.purposes).map((s) => `<a class="chip" href="/use/${s}/">${esc(PURPOSE_BY_SLUG[s])}</a>`).join(' ')}</p>`;
-  const relatedHtml = `<section class="related"><h2>Related</h2><ul>${related.map((s) => `<li>${link(s)}</li>`).join('')}</ul></section>`;
+  const cmpLinks = [].concat(d.compare || []).filter((s) => cmpPub[s]);
+  for (const c of compares) if ((c.data.a === d.slug || c.data.b === d.slug) && !cmpLinks.includes(c.data.slug)) cmpLinks.push(c.data.slug);
+  const glLinks = [].concat(d.glossary || []).filter((s) => glPub[s]);
+  const relatedHtml = `<section class="related"><h2>Related</h2><ul>${related.map((s) => `<li>${link(s)}</li>`).join('')}</ul>`
+    + (cmpLinks.length ? `<h3>Compare</h3><ul>${cmpLinks.map((s) => `<li><a href="/compare/${s}/">${esc(cmpTitle(s))}</a></li>`).join('')}</ul>` : '')
+    + (glLinks.length ? `<h3>Key terms</h3><p>${glLinks.map((s) => `<a class="chip" href="/glossary/${s}/">${esc(glTerm(s))}</a>`).join(' ')}</p>` : '')
+    + `</section>`;
   const faq = parseFaq(body);
   const crumbs = [['Home', '/'], [typeName[primaryType], `/type/${primaryType}/`], [d.name, p]];
   const title = `${d.name}: what it is, formula, how to use it | ${SITE.brand}`;
@@ -110,6 +124,50 @@ for (const { data: d, body } of items) {
   const bodyHtml = `${crumbsHtml(crumbs)}<article class="item"><h1>${esc(d.name)}</h1>${tags}${html}${relatedHtml}
 <p class="reviewed">Last reviewed: ${esc(d.reviewed)}</p></article>`;
   page(p, layout({ title, desc: quick.slice(0, 155).replace(/\s\S*$/, '') + '…', path: p, body: bodyHtml, jsonld, sidebar: true }));
+}
+
+// ---------- comparison pages ----------
+for (const { data: d, body } of compares) {
+  const p = `/compare/${d.slug}/`;
+  const quick = body.split(/\n## /)[0].trim().replace(/\s+/g, ' ');
+  let html = rewriteLinks(marked.parse(body)).replace(/<table>/g, '<div class="tablewrap"><table>').replace(/<\/table>/g, '</table></div>');
+  html = html.replace(/<h2[^>]*>Using both/, (m) => adSlot('text') + m);
+  const faq = parseFaq(body);
+  const crumbs = [['Home', '/'], ['Compare', '/compare/'], [d.title, p]];
+  const guides = `<section class="related"><h2>Full guides</h2><ul><li>${link(d.a)}</li><li>${link(d.b)}</li></ul></section>`;
+  const jsonld = [
+    { '@context': 'https://schema.org', '@type': 'TechArticle', headline: d.title, description: quick, url: abs(p), dateModified: BUILD_DATE, inLanguage: 'en-GB',
+      author: { '@type': 'Organization', name: SITE.brand, url: SITE.url }, publisher: { '@type': 'Organization', name: SITE.brand, url: SITE.url },
+      about: [d.a, d.b].map((s) => ({ '@type': 'DefinedTerm', name: bySlug[s]?.name || s, url: abs(`/${s}/`) })) },
+    { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+    crumbsLd(crumbs),
+  ];
+  page(p, layout({ title: `${d.title}: differences and when to use each | ${SITE.brand}`, desc: quick.slice(0, 155).replace(/\s\S*$/, '') + '…', path: p, jsonld, sidebar: true,
+    body: `${crumbsHtml(crumbs)}<article class="item"><h1>${esc(d.title)}</h1>${html}${guides}<p class="reviewed">Last reviewed: ${esc(d.reviewed)}</p></article>` }));
+}
+if (compares.length) page('/compare/', layout({ title: `Indicator comparisons | ${SITE.brand}`, desc: 'Side-by-side comparisons of popular technical indicators and patterns: how they differ and when to use each.', path: '/compare/',
+  jsonld: [crumbsLd([['Home', '/'], ['Compare', '/compare/']])],
+  body: `${crumbsHtml([['Home', '/'], ['Compare', '/compare/']])}<h1>Comparisons</h1><p class="lead">Side-by-side guides for tools people often mix up or choose between.</p><ul class="list">${[...compares].sort((a, b) => a.data.title.localeCompare(b.data.title)).map((c) => `<li><a href="/compare/${c.data.slug}/">${esc(c.data.title)}</a></li>`).join('')}</ul>` }));
+
+// ---------- glossary ----------
+for (const { data: d, body } of glossary) {
+  const p = `/glossary/${d.slug}/`;
+  const def = body.split(/\n## /)[0].trim().replace(/\s+/g, ' ');
+  const html = rewriteLinks(marked.parse(body));
+  const rel = [].concat(d.related || []);
+  const crumbs = [['Home', '/'], ['Glossary', '/glossary/'], [d.term, p]];
+  const jsonld = [
+    { '@context': 'https://schema.org', '@type': 'DefinedTerm', name: d.term, description: def, url: abs(p), inDefinedTermSet: { '@type': 'DefinedTermSet', name: `${SITE.brand} glossary`, url: abs('/glossary/') } },
+    crumbsLd(crumbs),
+  ];
+  page(p, layout({ title: `${d.term}: meaning in trading | ${SITE.brand}`, desc: def.slice(0, 155).replace(/\s\S*$/, '') + '…', path: p, jsonld,
+    body: `${crumbsHtml(crumbs)}<article class="item"><h1>${esc(d.term)}</h1>${html}${rel.length ? `<section class="related"><h2>Guides that use this term</h2><ul>${rel.map((s) => `<li>${link(s)}</li>`).join('')}</ul></section>` : ''}<p class="reviewed">Last reviewed: ${esc(d.reviewed)}</p></article>` }));
+}
+if (glossary.length) {
+  const sorted = [...glossary].sort((a, b) => a.data.term.localeCompare(b.data.term));
+  page('/glossary/', layout({ title: `Trading glossary | ${SITE.brand}`, desc: 'Plain-English definitions of technical analysis and trading terms.', path: '/glossary/',
+    jsonld: [{ '@context': 'https://schema.org', '@type': 'DefinedTermSet', name: `${SITE.brand} glossary`, url: abs('/glossary/'), hasDefinedTerm: sorted.map((g) => ({ '@type': 'DefinedTerm', name: g.data.term, url: abs(`/glossary/${g.data.slug}/`) })) }, crumbsLd([['Home', '/'], ['Glossary', '/glossary/']])],
+    body: `${crumbsHtml([['Home', '/'], ['Glossary', '/glossary/']])}<h1>Glossary</h1><p class="lead">Plain-English definitions of the terms used across our guides.</p><ul class="list">${sorted.map((g) => `<li><a href="/glossary/${g.data.slug}/">${esc(g.data.term)}</a></li>`).join('')}</ul>` }));
 }
 
 // ---------- hubs ----------
