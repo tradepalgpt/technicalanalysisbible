@@ -4536,18 +4536,6 @@ L 648 256.614782
     </g>
    </g>
    <g id="line2d_45">
-    <path d="M 265.808219 296.929729 
-L 276 296.929729 
-M 467.09589 296.929729 
-L 469.643836 296.929729 
-M 482.383562 296.929729 
-L 484.931507 296.929729 
-M 607.232877 296.929729 
-L 625.068493 296.929729 
-M 630.164384 296.929729 
-" clip-path="url(#p9dea96dbe1)" style="fill: none; stroke: #2b5fab; stroke-width: 1.3; stroke-linecap: square"/>
-   </g>
-   <g id="line2d_46">
     <path d="M 90 296.929729 
 L 648 296.929729 
 " clip-path="url(#p9dea96dbe1)" style="fill: none; stroke-dasharray: 2.96,1.28; stroke-dashoffset: 0; stroke: #6b675f; stroke-width: 0.8"/>

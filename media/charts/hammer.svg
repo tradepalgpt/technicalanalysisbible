@@ -781,30 +781,30 @@ L 648 291.901375
 " style="fill: none; stroke: #ece8e0; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
    <g id="patch_51">
-    <path d="M 458.042553 52.598101 
-Q 458.042553 97.786581 458.042553 142.080633 
+    <path d="M 458.042553 171.638427 
+Q 458.042553 167.900908 458.042553 165.057815 
 " style="fill: none; stroke: #1c1b19; stroke-width: 0.8; stroke-linecap: round"/>
-    <path d="M 459.842553 138.480633 
-L 458.042553 142.080633 
-L 456.242553 138.480633 
+    <path d="M 456.242553 168.657815 
+L 458.042553 165.057815 
+L 459.842553 168.657815 
 z
 " style="fill: #1c1b19; stroke: #1c1b19; stroke-width: 0.8; stroke-linecap: round"/>
    </g>
    <g id="text_15">
     <g id="patch_52">
-     <path d="M 440.792788 50.298279 
-L 475.292319 50.298279 
-Q 477.542319 50.298279 477.542319 48.048279 
-L 477.542319 39.817498 
-Q 477.542319 37.567498 475.292319 37.567498 
-L 440.792788 37.567498 
-Q 438.542788 37.567498 438.542788 39.817498 
-L 438.542788 48.048279 
-Q 438.542788 50.298279 440.792788 50.298279 
+     <path d="M 440.792788 186.668148 
+L 475.292319 186.668148 
+Q 477.542319 186.668148 477.542319 184.418148 
+L 477.542319 176.187367 
+Q 477.542319 173.937367 475.292319 173.937367 
+L 440.792788 173.937367 
+Q 438.542788 173.937367 438.542788 176.187367 
+L 438.542788 184.418148 
+Q 438.542788 186.668148 440.792788 186.668148 
 z
 " style="fill: #ffffff; stroke: #ece8e0; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
-    <text style="font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #1c1b19" x="458.042553" y="46.259529" transform="rotate(-0 458.042553 46.259529)">Hammer</text>
+    <text style="font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #1c1b19" x="458.042553" y="182.629398" transform="rotate(-0 458.042553 182.629398)">Hammer</text>
    </g>
    <g id="text_16">
     <text style="font-size: 12px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #1c1b19" x="90" y="15.789375" transform="rotate(-0 90 15.789375)">Hammer after a decline</text>

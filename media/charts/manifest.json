@@ -372,6 +372,21 @@
   },
   "credit": "Bitcoin (BTC/USD), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "break-of-structure": {
+  "slug": "break-of-structure",
+  "file": "break-of-structure.svg",
+  "title": "Break of structure",
+  "caption": "In an uptrend of higher highs and higher lows, a close above the last swing high. Found by our detector on Microsoft (MSFT), 9 April 2025 to 10 July 2025.",
+  "alt": "Break of structure. In an uptrend of higher highs and higher lows, a close above the last swing high. Found by our detector on Microsoft (MSFT), 9 April 2025 to 10 July 2025.",
+  "symbol": "msft",
+  "start": "2025-04-09",
+  "end": "2025-07-10",
+  "indicator": null,
+  "pattern": "break-of-structure",
+  "params": {},
+  "credit": "Microsoft (MSFT), daily, Feb 2025 to Aug 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 5
+ },
  "breakaway-gap": {
   "slug": "breakaway-gap",
   "file": "breakaway-gap.svg",
@@ -391,15 +406,15 @@
   "slug": "broadening-formation",
   "file": "broadening-formation.svg",
   "title": "Broadening formation",
-  "caption": "Higher highs and lower lows spread the two lines apart, then a close beyond one of them. Found by our detector on S&P 500 ETF (SPY), 11 May 2022 to 16 June 2022.",
-  "alt": "Broadening formation. Higher highs and lower lows spread the two lines apart, then a close beyond one of them. Found by our detector on S&P 500 ETF (SPY), 11 May 2022 to 16 June 2022.",
-  "symbol": "spy",
-  "start": "2022-05-11",
-  "end": "2022-06-16",
+  "caption": "Higher highs and lower lows spread the two lines apart, then a close beyond one of them. Found by our detector on Gold futures, 16 March 2022 to 10 May 2022.",
+  "alt": "Broadening formation. Higher highs and lower lows spread the two lines apart, then a close beyond one of them. Found by our detector on Gold futures, 16 March 2022 to 10 May 2022.",
+  "symbol": "gold",
+  "start": "2022-03-16",
+  "end": "2022-05-10",
   "indicator": null,
   "pattern": "broadening-formation",
   "params": {},
-  "credit": "S&P 500 ETF (SPY), daily, Apr 2022 to Jul 2022. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "credit": "Gold futures, daily, Feb 2022 to Jun 2022. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 1
  },
  "bull-flag": {
@@ -499,16 +514,16 @@
   "slug": "candlestick-chart",
   "file": "candlestick-chart.svg",
   "title": "Anatomy of a candle",
-  "caption": "One candle: the body runs from open to close, and the wicks reach the high and the low. Found by our detector on Bitcoin (BTC/USD), 5 December 2024.",
-  "alt": "Anatomy of a candle. One candle: the body runs from open to close, and the wicks reach the high and the low. Found by our detector on Bitcoin (BTC/USD), 5 December 2024.",
-  "symbol": "btcusd",
-  "start": "2024-12-05",
-  "end": "2024-12-05",
+  "caption": "One candle: the body runs from open to close, and the wicks reach the high and the low. Found by our detector on Nvidia (NVDA), 19 August 2021.",
+  "alt": "Anatomy of a candle. One candle: the body runs from open to close, and the wicks reach the high and the low. Found by our detector on Nvidia (NVDA), 19 August 2021.",
+  "symbol": "nvda",
+  "start": "2021-08-19",
+  "end": "2021-08-19",
   "indicator": null,
   "pattern": "candlestick-chart",
   "params": {},
-  "credit": "Bitcoin (BTC/USD), daily, Nov 2024 to Dec 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
-  "occurrences": 163
+  "credit": "Nvidia (NVDA), daily, Jul 2021 to Sep 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 91
  },
  "cci": {
   "slug": "cci",
@@ -601,6 +616,21 @@
    "period": 14
   },
   "credit": "EUR/USD, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "change-of-character": {
+  "slug": "change-of-character",
+  "file": "change-of-character.svg",
+  "title": "Change of character",
+  "caption": "In an uptrend of higher highs and higher lows, a close below the last higher low, the first break against the trend. Found by our detector on JPMorgan (JPM), 16 January 2024 to 12 April 2024.",
+  "alt": "Change of character. In an uptrend of higher highs and higher lows, a close below the last higher low, the first break against the trend. Found by our detector on JPMorgan (JPM), 16 January 2024 to 12 April 2024.",
+  "symbol": "jpm",
+  "start": "2024-01-16",
+  "end": "2024-04-12",
+  "indicator": null,
+  "pattern": "change-of-character",
+  "params": {},
+  "credit": "JPMorgan (JPM), daily, Nov 2023 to May 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 4
  },
  "choppiness-index": {
   "slug": "choppiness-index",
@@ -809,15 +839,15 @@
   "slug": "descending-triangle",
   "file": "descending-triangle.svg",
   "title": "Descending triangle with flat base",
-  "caption": "A flat lower line and a falling upper line squeeze price, then a close below the flat line. Found by our detector on Bitcoin (BTC/USD), 11 July 2025 to 1 August 2025.",
-  "alt": "Descending triangle with flat base. A flat lower line and a falling upper line squeeze price, then a close below the flat line. Found by our detector on Bitcoin (BTC/USD), 11 July 2025 to 1 August 2025.",
-  "symbol": "btcusd",
-  "start": "2025-07-11",
-  "end": "2025-08-01",
+  "caption": "A flat lower line and a falling upper line squeeze price, then a close below the flat line. Found by our detector on Amazon (AMZN), 3 December 2021 to 5 January 2022.",
+  "alt": "Descending triangle with flat base. A flat lower line and a falling upper line squeeze price, then a close below the flat line. Found by our detector on Amazon (AMZN), 3 December 2021 to 5 January 2022.",
+  "symbol": "amzn",
+  "start": "2021-12-03",
+  "end": "2022-01-05",
   "indicator": null,
   "pattern": "descending-triangle",
   "params": {},
-  "credit": "Bitcoin (BTC/USD), daily, Jun 2025 to Aug 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "credit": "Amazon (AMZN), daily, Nov 2021 to Feb 2022. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 1
  },
  "detrended-price-oscillator": {
@@ -930,16 +960,16 @@
   "slug": "double-top",
   "file": "double-top.svg",
   "title": "Double top with neckline and target",
-  "caption": "Two similar highs, a trough between them (the neckline) and a close below it. Found by our detector on S&P 500 ETF (SPY), 6 December 2024 to 6 March 2025.",
-  "alt": "Double top with neckline and target. Two similar highs, a trough between them (the neckline) and a close below it. Found by our detector on S&P 500 ETF (SPY), 6 December 2024 to 6 March 2025.",
-  "symbol": "spy",
-  "start": "2024-12-06",
-  "end": "2025-03-06",
+  "caption": "Two similar highs, a trough between them (the neckline) and a close below it. Found by our detector on JPMorgan (JPM), 24 November 2021 to 18 January 2022.",
+  "alt": "Double top with neckline and target. Two similar highs, a trough between them (the neckline) and a close below it. Found by our detector on JPMorgan (JPM), 24 November 2021 to 18 January 2022.",
+  "symbol": "jpm",
+  "start": "2021-11-24",
+  "end": "2022-01-18",
   "indicator": null,
   "pattern": "double-top",
   "params": {},
-  "credit": "S&P 500 ETF (SPY), daily, Oct 2024 to Apr 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
-  "occurrences": 3
+  "credit": "JPMorgan (JPM), daily, Oct 2021 to Feb 2022. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 4
  },
  "dragonfly-doji": {
   "slug": "dragonfly-doji",
@@ -1021,6 +1051,21 @@
   },
   "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "equal-highs-lows": {
+  "slug": "equal-highs-lows",
+  "file": "equal-highs-lows.svg",
+  "title": "Equal highs",
+  "caption": "Swing highs that sit within a small fraction of the average bar range of each other, marking a pool of stops above them. Found by our detector on Nvidia (NVDA), 12 August 2025 to 25 September 2025.",
+  "alt": "Equal highs. Swing highs that sit within a small fraction of the average bar range of each other, marking a pool of stops above them. Found by our detector on Nvidia (NVDA), 12 August 2025 to 25 September 2025.",
+  "symbol": "nvda",
+  "start": "2025-08-12",
+  "end": "2025-09-25",
+  "indicator": null,
+  "pattern": "equal-highs-lows",
+  "params": {},
+  "credit": "Nvidia (NVDA), daily, Jul 2025 to Oct 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 33
+ },
  "evening-doji-star": {
   "slug": "evening-doji-star",
   "file": "evening-doji-star.svg",
@@ -1040,16 +1085,16 @@
   "slug": "evening-star",
   "file": "evening-star.svg",
   "title": "Evening star after a rise",
-  "caption": "A long rising candle, a small candle above it, then a long falling candle closing below the first body's midpoint. Found by our detector on Gold futures, 21 April 2025 to 23 April 2025.",
-  "alt": "Evening star after a rise. A long rising candle, a small candle above it, then a long falling candle closing below the first body's midpoint. Found by our detector on Gold futures, 21 April 2025 to 23 April 2025.",
-  "symbol": "gold",
-  "start": "2025-04-21",
-  "end": "2025-04-23",
+  "caption": "A long rising candle, a small candle above it, then a long falling candle closing below the first body's midpoint. Found by our detector on Tesla (TSLA), 9 July 2024 to 11 July 2024.",
+  "alt": "Evening star after a rise. A long rising candle, a small candle above it, then a long falling candle closing below the first body's midpoint. Found by our detector on Tesla (TSLA), 9 July 2024 to 11 July 2024.",
+  "symbol": "tsla",
+  "start": "2024-07-09",
+  "end": "2024-07-11",
   "indicator": null,
   "pattern": "evening-star",
   "params": {},
-  "credit": "Gold futures, daily, Mar 2025 to May 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
-  "occurrences": 4
+  "credit": "Tesla (TSLA), daily, May 2024 to Aug 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 2
  },
  "exponential-moving-average": {
   "slug": "exponential-moving-average",
@@ -1065,6 +1110,21 @@
    "period": 20
   },
   "credit": "Bitcoin (BTC/USD), daily, Mar 2025 to Sep 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "fakey-pattern": {
+  "slug": "fakey-pattern",
+  "file": "fakey-pattern.svg",
+  "title": "Fakey (false inside-bar break)",
+  "caption": "A mother bar, an inside bar, then a bar that breaks the mother's range and closes back inside it. Found by our detector on Bitcoin (BTC/USD), 26 February 2025 to 28 February 2025.",
+  "alt": "Fakey (false inside-bar break). A mother bar, an inside bar, then a bar that breaks the mother's range and closes back inside it. Found by our detector on Bitcoin (BTC/USD), 26 February 2025 to 28 February 2025.",
+  "symbol": "btcusd",
+  "start": "2025-02-26",
+  "end": "2025-02-28",
+  "indicator": null,
+  "pattern": "fakey-pattern",
+  "params": {},
+  "credit": "Bitcoin (BTC/USD), daily, Feb 2025 to Mar 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 37
  },
  "falling-three-methods": {
   "slug": "falling-three-methods",
@@ -1293,16 +1353,16 @@
   "slug": "hanging-man",
   "file": "hanging-man.svg",
   "title": "Hanging man after a rise",
-  "caption": "A small body near the high with a long lower wick, after an advance. Found by our detector on S&P 500 ETF (SPY), 25 January 2021.",
-  "alt": "Hanging man after a rise. A small body near the high with a long lower wick, after an advance. Found by our detector on S&P 500 ETF (SPY), 25 January 2021.",
-  "symbol": "spy",
-  "start": "2021-01-25",
-  "end": "2021-01-25",
+  "caption": "A small body near the high with a long lower wick, after an advance. Found by our detector on Tesla (TSLA), 13 September 2021.",
+  "alt": "Hanging man after a rise. A small body near the high with a long lower wick, after an advance. Found by our detector on Tesla (TSLA), 13 September 2021.",
+  "symbol": "tsla",
+  "start": "2021-09-13",
+  "end": "2021-09-13",
   "indicator": null,
   "pattern": "hanging-man",
   "params": {},
-  "credit": "S&P 500 ETF (SPY), daily, Jan 2021 to Feb 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
-  "occurrences": 25
+  "credit": "Tesla (TSLA), daily, Jul 2021 to Oct 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 19
  },
  "harami-cross": {
   "slug": "harami-cross",
@@ -1340,15 +1400,15 @@
   "slug": "head-and-shoulders",
   "file": "head-and-shoulders.svg",
   "title": "Head and shoulders with neckline",
-  "caption": "Left shoulder, higher head, lower right shoulder and a close below the neckline. Found by our detector on Bitcoin (BTC/USD), 28 August 2025 to 16 October 2025.",
-  "alt": "Head and shoulders with neckline. Left shoulder, higher head, lower right shoulder and a close below the neckline. Found by our detector on Bitcoin (BTC/USD), 28 August 2025 to 16 October 2025.",
-  "symbol": "btcusd",
-  "start": "2025-08-28",
-  "end": "2025-10-16",
+  "caption": "Left shoulder, higher head, lower right shoulder and a close below the neckline. Found by our detector on Apple (AAPL), 12 October 2023 to 31 January 2024.",
+  "alt": "Head and shoulders with neckline. Left shoulder, higher head, lower right shoulder and a close below the neckline. Found by our detector on Apple (AAPL), 12 October 2023 to 31 January 2024.",
+  "symbol": "aapl",
+  "start": "2023-10-12",
+  "end": "2024-01-31",
   "indicator": null,
   "pattern": "head-and-shoulders",
   "params": {},
-  "credit": "Bitcoin (BTC/USD), daily, Aug 2025 to Nov 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "credit": "Apple (AAPL), daily, Aug 2023 to Mar 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 1
  },
  "heikin-ashi": {
@@ -1428,6 +1488,21 @@
   },
   "credit": "Gold futures, daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "inside-bar": {
+  "slug": "inside-bar",
+  "file": "inside-bar.svg",
+  "title": "Inside bar",
+  "caption": "A bar whose high and low both sit inside the range of the bar before it (the mother bar). Found by our detector on Bitcoin (BTC/USD), 23 February 2021 to 24 February 2021.",
+  "alt": "Inside bar. A bar whose high and low both sit inside the range of the bar before it (the mother bar). Found by our detector on Bitcoin (BTC/USD), 23 February 2021 to 24 February 2021.",
+  "symbol": "btcusd",
+  "start": "2021-02-23",
+  "end": "2021-02-24",
+  "indicator": null,
+  "pattern": "inside-bar",
+  "params": {},
+  "credit": "Bitcoin (BTC/USD), daily, Feb 2021 to Mar 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 182
+ },
  "inverse-cup-and-handle": {
   "slug": "inverse-cup-and-handle",
   "file": "inverse-cup-and-handle.svg",
@@ -1478,16 +1553,16 @@
   "slug": "inverted-hammer",
   "file": "inverted-hammer.svg",
   "title": "Inverted hammer after a decline",
-  "caption": "A small body near the low with a long upper wick, after a decline. Found by our detector on EUR/USD, 26 November 2021.",
-  "alt": "Inverted hammer after a decline. A small body near the low with a long upper wick, after a decline. Found by our detector on EUR/USD, 26 November 2021.",
-  "symbol": "eurusd",
-  "start": "2021-11-26",
-  "end": "2021-11-26",
+  "caption": "A small body near the low with a long upper wick, after a decline. Found by our detector on JPMorgan (JPM), 13 October 2023.",
+  "alt": "Inverted hammer after a decline. A small body near the low with a long upper wick, after a decline. Found by our detector on JPMorgan (JPM), 13 October 2023.",
+  "symbol": "jpm",
+  "start": "2023-10-13",
+  "end": "2023-10-13",
   "indicator": null,
   "pattern": "inverted-hammer",
   "params": {},
-  "credit": "EUR/USD, daily, Oct 2021 to Dec 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
-  "occurrences": 19
+  "credit": "JPMorgan (JPM), daily, Aug 2023 to Nov 2023. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 14
  },
  "island-reversal": {
   "slug": "island-reversal",
@@ -1733,6 +1808,36 @@
   },
   "credit": "EUR/USD, daily, Apr 2024 to Jan 2025. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "market-structure": {
+  "slug": "market-structure",
+  "file": "market-structure.svg",
+  "title": "Market structure: higher highs and higher lows",
+  "caption": "Swings labelled against the previous swing of the same type, here a run of higher highs and higher lows. Found by our detector on Apple (AAPL), 28 March 2023 to 4 May 2023.",
+  "alt": "Market structure: higher highs and higher lows. Swings labelled against the previous swing of the same type, here a run of higher highs and higher lows. Found by our detector on Apple (AAPL), 28 March 2023 to 4 May 2023.",
+  "symbol": "aapl",
+  "start": "2023-03-28",
+  "end": "2023-05-04",
+  "indicator": null,
+  "pattern": "market-structure",
+  "params": {},
+  "credit": "Apple (AAPL), daily, Mar 2023 to May 2023. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 43
+ },
+ "market-structure-shift": {
+  "slug": "market-structure-shift",
+  "file": "market-structure-shift.svg",
+  "title": "Market structure shift",
+  "caption": "A new swing high, then one strong bar that closes below the swing low formed just before it. Found by our detector on JPMorgan (JPM), 16 January 2024 to 12 April 2024.",
+  "alt": "Market structure shift. A new swing high, then one strong bar that closes below the swing low formed just before it. Found by our detector on JPMorgan (JPM), 16 January 2024 to 12 April 2024.",
+  "symbol": "jpm",
+  "start": "2024-01-16",
+  "end": "2024-04-12",
+  "indicator": null,
+  "pattern": "market-structure-shift",
+  "params": {},
+  "credit": "JPMorgan (JPM), daily, Nov 2023 to May 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 2
+ },
  "marubozu": {
   "slug": "marubozu",
   "file": "marubozu.svg",
@@ -1970,6 +2075,21 @@
   "credit": "Nasdaq 100 ETF (QQQ), daily, Feb 2025 to Apr 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 3
  },
+ "outside-bar": {
+  "slug": "outside-bar",
+  "file": "outside-bar.svg",
+  "title": "Outside bar",
+  "caption": "A bar that trades above the previous high and below the previous low, and closes in one end of its range. Found by our detector on S&P 500 ETF (SPY), 3 April 2024 to 4 April 2024.",
+  "alt": "Outside bar. A bar that trades above the previous high and below the previous low, and closes in one end of its range. Found by our detector on S&P 500 ETF (SPY), 3 April 2024 to 4 April 2024.",
+  "symbol": "spy",
+  "start": "2024-04-03",
+  "end": "2024-04-04",
+  "indicator": null,
+  "pattern": "outside-bar",
+  "params": {},
+  "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Apr 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 56
+ },
  "parabolic-sar": {
   "slug": "parabolic-sar",
   "file": "parabolic-sar.svg",
@@ -2022,16 +2142,33 @@
   "slug": "piercing-line",
   "file": "piercing-line.svg",
   "title": "Piercing line after a decline",
-  "caption": "A long falling candle, then a rising candle that opens lower and closes above the first body's midpoint. Found by our detector on Bitcoin (BTC/USD), 5 June 2025 to 6 June 2025.",
-  "alt": "Piercing line after a decline. A long falling candle, then a rising candle that opens lower and closes above the first body's midpoint. Found by our detector on Bitcoin (BTC/USD), 5 June 2025 to 6 June 2025.",
-  "symbol": "btcusd",
-  "start": "2025-06-05",
-  "end": "2025-06-06",
+  "caption": "A long falling candle, then a rising candle that opens lower and closes above the first body's midpoint. Found by our detector on Amazon (AMZN), 23 February 2022 to 24 February 2022.",
+  "alt": "Piercing line after a decline. A long falling candle, then a rising candle that opens lower and closes above the first body's midpoint. Found by our detector on Amazon (AMZN), 23 February 2022 to 24 February 2022.",
+  "symbol": "amzn",
+  "start": "2022-02-23",
+  "end": "2022-02-24",
   "indicator": null,
   "pattern": "piercing-line",
   "params": {},
-  "credit": "Bitcoin (BTC/USD), daily, May 2025 to Jun 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
-  "occurrences": 8
+  "credit": "Amazon (AMZN), daily, Jan 2022 to Mar 2022. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 2
+ },
+ "pin-bar": {
+  "slug": "pin-bar",
+  "file": "pin-bar.svg",
+  "title": "Pin bar",
+  "caption": "A bar with a long tail, a small body at the opposite end and a tail that pokes beyond the recent extreme before closing back inside. Found by our detector on Microsoft (MSFT), 24 January 2022 to 26 January 2022.",
+  "alt": "Pin bar. A bar with a long tail, a small body at the opposite end and a tail that pokes beyond the recent extreme before closing back inside. Found by our detector on Microsoft (MSFT), 24 January 2022 to 26 January 2022.",
+  "symbol": "msft",
+  "start": "2022-01-24",
+  "end": "2022-01-26",
+  "indicator": null,
+  "pattern": "pin-bar",
+  "params": {
+   "trigger_bars": 3
+  },
+  "credit": "Microsoft (MSFT), daily, Dec 2021 to Feb 2022. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 3
  },
  "pivot-points": {
   "slug": "pivot-points",
@@ -2130,16 +2267,16 @@
   "slug": "quasimodo-pattern",
   "file": "quasimodo-pattern.svg",
   "title": "Quasimodo pattern",
-  "caption": "A higher low, a head above the left shoulder, then a close below that higher low (the break of structure) with the left-shoulder level marked as the entry zone. Found by our detector on Tesla (TSLA), 9 August 2023 to 29 August 2023.",
-  "alt": "Quasimodo pattern. A higher low, a head above the left shoulder, then a close below that higher low (the break of structure) with the left-shoulder level marked as the entry zone. Found by our detector on Tesla (TSLA), 9 August 2023 to 29 August 2023.",
+  "caption": "A higher low, a head above the left shoulder, then a close below that higher low (the break of structure) with the left-shoulder level marked as the entry zone. Found by our detector on Tesla (TSLA), 11 April 2024 to 29 April 2024.",
+  "alt": "Quasimodo pattern. A higher low, a head above the left shoulder, then a close below that higher low (the break of structure) with the left-shoulder level marked as the entry zone. Found by our detector on Tesla (TSLA), 11 April 2024 to 29 April 2024.",
   "symbol": "tsla",
-  "start": "2023-08-09",
-  "end": "2023-08-29",
+  "start": "2024-04-11",
+  "end": "2024-04-29",
   "indicator": null,
   "pattern": "quasimodo-pattern",
   "params": {},
-  "credit": "Tesla (TSLA), daily, Jul 2023 to Oct 2023. Example found automatically by Technical Analysis Bible's own pattern detector.",
-  "occurrences": 6
+  "credit": "Tesla (TSLA), daily, Mar 2024 to Jun 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 17
  },
  "rainbow-oscillator": {
   "slug": "rainbow-oscillator",
@@ -2193,15 +2330,15 @@
   "slug": "rectangle-pattern",
   "file": "rectangle-pattern.svg",
   "title": "Rectangle with support and resistance",
-  "caption": "Price bounces between a flat support line and a flat resistance line, then closes beyond one of them. Found by our detector on Exxon Mobil (XOM), 18 July 2024 to 6 September 2024.",
-  "alt": "Rectangle with support and resistance. Price bounces between a flat support line and a flat resistance line, then closes beyond one of them. Found by our detector on Exxon Mobil (XOM), 18 July 2024 to 6 September 2024.",
+  "caption": "Price bounces between a flat support line and a flat resistance line, then closes beyond one of them. Found by our detector on Exxon Mobil (XOM), 15 June 2023 to 9 August 2023.",
+  "alt": "Rectangle with support and resistance. Price bounces between a flat support line and a flat resistance line, then closes beyond one of them. Found by our detector on Exxon Mobil (XOM), 15 June 2023 to 9 August 2023.",
   "symbol": "xom",
-  "start": "2024-07-18",
-  "end": "2024-09-06",
+  "start": "2023-06-15",
+  "end": "2023-08-09",
   "indicator": null,
   "pattern": "rectangle-pattern",
   "params": {},
-  "credit": "Exxon Mobil (XOM), daily, Jun 2024 to Oct 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "credit": "Exxon Mobil (XOM), daily, May 2023 to Sep 2023. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 2
  },
  "relative-vigor-index": {
@@ -2442,16 +2579,16 @@
   "slug": "spinning-top",
   "file": "spinning-top.svg",
   "title": "Spinning top",
-  "caption": "A small body with upper and lower wicks both longer than the body. Found by our detector on Bitcoin (BTC/USD), 5 December 2024.",
-  "alt": "Spinning top. A small body with upper and lower wicks both longer than the body. Found by our detector on Bitcoin (BTC/USD), 5 December 2024.",
-  "symbol": "btcusd",
-  "start": "2024-12-05",
-  "end": "2024-12-05",
+  "caption": "A small body with upper and lower wicks both longer than the body. Found by our detector on Nvidia (NVDA), 19 August 2021.",
+  "alt": "Spinning top. A small body with upper and lower wicks both longer than the body. Found by our detector on Nvidia (NVDA), 19 August 2021.",
+  "symbol": "nvda",
+  "start": "2021-08-19",
+  "end": "2021-08-19",
   "indicator": null,
   "pattern": "spinning-top",
   "params": {},
-  "credit": "Bitcoin (BTC/USD), daily, Nov 2024 to Dec 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
-  "occurrences": 163
+  "credit": "Nvidia (NVDA), daily, Jul 2021 to Sep 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 91
  },
  "standard-deviation": {
   "slug": "standard-deviation",
@@ -2570,6 +2707,23 @@
   },
   "credit": "Gold futures, daily, Jan 2025 to Oct 2025. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "swing-highs-lows": {
+  "slug": "swing-highs-lows",
+  "file": "swing-highs-lows.svg",
+  "title": "Swing highs and swing lows",
+  "caption": "Alternating swing highs and lows, each a bar whose high (low) beats the 3 bars on either side. Found by our detector on Apple (AAPL), 31 March 2025 to 6 May 2025.",
+  "alt": "Swing highs and swing lows. Alternating swing highs and lows, each a bar whose high (low) beats the 3 bars on either side. Found by our detector on Apple (AAPL), 31 March 2025 to 6 May 2025.",
+  "symbol": "aapl",
+  "start": "2025-03-31",
+  "end": "2025-05-06",
+  "indicator": null,
+  "pattern": "swing-highs-lows",
+  "params": {
+   "chain": 5
+  },
+  "credit": "Apple (AAPL), daily, Mar 2025 to May 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 124
+ },
  "symmetrical-triangle": {
   "slug": "symmetrical-triangle",
   "file": "symmetrical-triangle.svg",
@@ -2583,7 +2737,7 @@
   "pattern": "symmetrical-triangle",
   "params": {},
   "credit": "Gold futures, daily, Sep 2023 to Mar 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
-  "occurrences": 7
+  "occurrences": 6
  },
  "t3-moving-average": {
   "slug": "t3-moving-average",
@@ -2754,7 +2908,7 @@
   "pattern": "triple-bottom",
   "params": {},
   "credit": "Russell 2000 ETF (IWM), daily, May 2021 to Dec 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
-  "occurrences": 2
+  "occurrences": 3
  },
  "triple-top": {
   "slug": "triple-top",
@@ -2840,16 +2994,16 @@
   "slug": "tweezer-tops",
   "file": "tweezer-tops.svg",
   "title": "Tweezer top after a rise",
-  "caption": "Two adjacent candles with the same high: a rising one, then a falling one. Found by our detector on Gold futures, 20 October 2025 to 21 October 2025.",
-  "alt": "Tweezer top after a rise. Two adjacent candles with the same high: a rising one, then a falling one. Found by our detector on Gold futures, 20 October 2025 to 21 October 2025.",
-  "symbol": "gold",
-  "start": "2025-10-20",
-  "end": "2025-10-21",
+  "caption": "Two adjacent candles with the same high: a rising one, then a falling one. Found by our detector on Amazon (AMZN), 9 October 2025 to 10 October 2025.",
+  "alt": "Tweezer top after a rise. Two adjacent candles with the same high: a rising one, then a falling one. Found by our detector on Amazon (AMZN), 9 October 2025 to 10 October 2025.",
+  "symbol": "amzn",
+  "start": "2025-10-09",
+  "end": "2025-10-10",
   "indicator": null,
   "pattern": "tweezer-tops",
   "params": {},
-  "credit": "Gold futures, daily, Sep 2025 to Nov 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
-  "occurrences": 10
+  "credit": "Amazon (AMZN), daily, Aug 2025 to Oct 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 4
  },
  "twiggs-money-flow": {
   "slug": "twiggs-money-flow",
@@ -3107,18 +3261,18 @@
   "slug": "wolfe-waves",
   "file": "wolfe-waves.svg",
   "title": "Wolfe wave with 1-3, 2-4 and 1-4 lines",
-  "caption": "A Wolfe wave: five swings in a converging wedge, point 5 overshooting the 1-3 line, then a close back inside it. Chosen as a clear illustration of the shape, not as evidence the pattern works: many completions fail. Found by our detector on Apple (AAPL), 13 March 2025 to 9 April 2025.",
-  "alt": "Wolfe wave with 1-3, 2-4 and 1-4 lines. A Wolfe wave: five swings in a converging wedge, point 5 overshooting the 1-3 line, then a close back inside it. Chosen as a clear illustration of the shape, not as evidence the pattern works: many completions fail. Found by our detector on Apple (AAPL), 13 March 2025 to 9 April 2025.",
+  "caption": "A Wolfe wave: five swings in a converging wedge, point 5 overshooting the 1-3 line, then a close back inside it. Chosen as a clear illustration of the shape, not as evidence the pattern works: many completions fail. Found by our detector on Apple (AAPL), 12 April 2024 to 18 July 2024.",
+  "alt": "Wolfe wave with 1-3, 2-4 and 1-4 lines. A Wolfe wave: five swings in a converging wedge, point 5 overshooting the 1-3 line, then a close back inside it. Chosen as a clear illustration of the shape, not as evidence the pattern works: many completions fail. Found by our detector on Apple (AAPL), 12 April 2024 to 18 July 2024.",
   "symbol": "aapl",
-  "start": "2025-03-13",
-  "end": "2025-04-09",
+  "start": "2024-04-12",
+  "end": "2024-07-18",
   "indicator": null,
   "pattern": "wolfe-waves",
   "params": {
    "hold_bars": 60
   },
-  "credit": "Apple (AAPL), daily, Feb 2025 to May 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
-  "occurrences": 7
+  "credit": "Apple (AAPL), daily, Feb 2024 to Aug 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 9
  },
  "woodie-pivots": {
   "slug": "woodie-pivots",

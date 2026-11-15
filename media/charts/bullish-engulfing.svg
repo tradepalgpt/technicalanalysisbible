@@ -762,30 +762,30 @@ L 648 292.047625
 " style="fill: none; stroke: #ece8e0; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
    <g id="patch_52">
-    <path d="M 462 52.849014 
-Q 462 123.118118 462 192.492795 
+    <path d="M 462 220.484976 
+Q 462 216.80041 462 214.010273 
 " style="fill: none; stroke: #1c1b19; stroke-width: 0.8; stroke-linecap: round"/>
-    <path d="M 463.8 188.892795 
-L 462 192.492795 
-L 460.2 188.892795 
+    <path d="M 460.2 217.610273 
+L 462 214.010273 
+L 463.8 217.610273 
 z
 " style="fill: #1c1b19; stroke: #1c1b19; stroke-width: 0.8; stroke-linecap: round"/>
    </g>
    <g id="text_13">
     <g id="patch_53">
-     <path d="M 429.229453 50.549998 
-L 494.770547 50.549998 
-Q 497.020547 50.549998 497.020547 48.299998 
-L 497.020547 39.85406 
-Q 497.020547 37.60406 494.770547 37.60406 
-L 429.229453 37.60406 
-Q 426.979453 37.60406 426.979453 39.85406 
-L 426.979453 48.299998 
-Q 426.979453 50.549998 429.229453 50.549998 
+     <path d="M 429.229453 235.731267 
+L 494.770547 235.731267 
+Q 497.020547 235.731267 497.020547 233.481267 
+L 497.020547 225.03533 
+Q 497.020547 222.78533 494.770547 222.78533 
+L 429.229453 222.78533 
+Q 426.979453 222.78533 426.979453 225.03533 
+L 426.979453 233.481267 
+Q 426.979453 235.731267 429.229453 235.731267 
 z
 " style="fill: #ffffff; stroke: #ece8e0; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
-    <text style="font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #1c1b19" x="462" y="46.405779" transform="rotate(-0 462 46.405779)">Bullish engulfing</text>
+    <text style="font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #1c1b19" x="462" y="231.587048" transform="rotate(-0 462 231.587048)">Bullish engulfing</text>
    </g>
    <g id="text_14">
     <text style="font-size: 12px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #1c1b19" x="90" y="15.935625" transform="rotate(-0 90 15.935625)">Bullish engulfing after a decline</text>

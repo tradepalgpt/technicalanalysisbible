@@ -736,30 +736,30 @@ L 648 292.047625
 " style="fill: none; stroke: #ece8e0; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
    <g id="patch_51">
-    <path d="M 458.042553 52.849027 
-Q 458.042553 99.935997 458.042553 146.12854 
+    <path d="M 458.042553 169.173471 
+Q 458.042553 165.436662 458.042553 162.59428 
 " style="fill: none; stroke: #1c1b19; stroke-width: 0.8; stroke-linecap: round"/>
-    <path d="M 459.842553 142.52854 
-L 458.042553 146.12854 
-L 456.242553 142.52854 
+    <path d="M 456.242553 166.19428 
+L 458.042553 162.59428 
+L 459.842553 166.19428 
 z
 " style="fill: #1c1b19; stroke: #1c1b19; stroke-width: 0.8; stroke-linecap: round"/>
    </g>
    <g id="text_12">
     <g id="patch_52">
-     <path d="M 450.2906 50.549998 
-L 465.794506 50.549998 
-Q 468.044506 50.549998 468.044506 48.299998 
-L 468.044506 39.963748 
-Q 468.044506 37.713748 465.794506 37.713748 
-L 450.2906 37.713748 
-Q 448.0406 37.713748 448.0406 39.963748 
-L 448.0406 48.299998 
-Q 448.0406 50.549998 450.2906 50.549998 
+     <path d="M 450.2906 184.310463 
+L 465.794506 184.310463 
+Q 468.044506 184.310463 468.044506 182.060463 
+L 468.044506 173.724213 
+Q 468.044506 171.474213 465.794506 171.474213 
+L 450.2906 171.474213 
+Q 448.0406 171.474213 448.0406 173.724213 
+L 448.0406 182.060463 
+Q 448.0406 184.310463 450.2906 184.310463 
 z
 " style="fill: #ffffff; stroke: #ece8e0; stroke-width: 0.6; stroke-linejoin: miter"/>
     </g>
-    <text style="font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #1c1b19" x="458.042553" y="46.405779" transform="rotate(-0 458.042553 46.405779)">Doji</text>
+    <text style="font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #1c1b19" x="458.042553" y="180.166244" transform="rotate(-0 458.042553 180.166244)">Doji</text>
    </g>
    <g id="text_13">
     <text style="font-size: 12px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #1c1b19" x="90" y="15.935625" transform="rotate(-0 90 15.935625)">Doji after a run</text>
