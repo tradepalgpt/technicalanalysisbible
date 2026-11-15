@@ -941,6 +941,21 @@
   "credit": "Bitcoin (BTC/USD), daily, Jul 2023 to Aug 2023. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 20
  },
+ "divergence": {
+  "slug": "divergence",
+  "file": "divergence.svg",
+  "title": "RSI divergence",
+  "caption": "Price makes a higher high (or lower low) while the RSI at that swing is lower (or higher) than at the previous swing. Found by our detector on Apple (AAPL), 7 March 2024 to 11 April 2024.",
+  "alt": "RSI divergence. Price makes a higher high (or lower low) while the RSI at that swing is lower (or higher) than at the previous swing. Found by our detector on Apple (AAPL), 7 March 2024 to 11 April 2024.",
+  "symbol": "aapl",
+  "start": "2024-03-07",
+  "end": "2024-04-11",
+  "indicator": null,
+  "pattern": "divergence",
+  "params": {},
+  "credit": "Apple (AAPL), daily, Feb 2024 to May 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 8
+ },
  "dmi": {
   "slug": "dmi",
   "file": "dmi.svg",
@@ -1484,6 +1499,21 @@
   "params": {},
   "credit": "Bitcoin (BTC/USD), daily, Jan 2025 to Aug 2025. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "hidden-divergence": {
+  "slug": "hidden-divergence",
+  "file": "hidden-divergence.svg",
+  "title": "Hidden divergence in a trend",
+  "caption": "In a trend, a pullback low that is higher than the last in price but lower on the RSI. Found by our detector on Gold futures, 23 November 2022 to 10 March 2023.",
+  "alt": "Hidden divergence in a trend. In a trend, a pullback low that is higher than the last in price but lower on the RSI. Found by our detector on Gold futures, 23 November 2022 to 10 March 2023.",
+  "symbol": "gold",
+  "start": "2022-11-23",
+  "end": "2023-03-10",
+  "indicator": null,
+  "pattern": "hidden-divergence",
+  "params": {},
+  "credit": "Gold futures, daily, Oct 2022 to Apr 2023. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 7
+ },
  "historical-volatility": {
   "slug": "historical-volatility",
   "file": "historical-volatility.svg",
@@ -1672,6 +1702,21 @@
    "mult": 2.0
   },
   "credit": "Apple (AAPL), daily, Jan 2025 to Oct 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "key-levels": {
+  "slug": "key-levels",
+  "file": "key-levels.svg",
+  "title": "Key level (horizontal ray)",
+  "caption": "A horizontal ray at the average price of two large, well-separated turning points. Found by our detector on Russell 2000 ETF (IWM), 26 February 2021 to 7 December 2021.",
+  "alt": "Key level (horizontal ray). A horizontal ray at the average price of two large, well-separated turning points. Found by our detector on Russell 2000 ETF (IWM), 26 February 2021 to 7 December 2021.",
+  "symbol": "iwm",
+  "start": "2021-02-26",
+  "end": "2021-12-07",
+  "indicator": null,
+  "pattern": "key-levels",
+  "params": {},
+  "credit": "Russell 2000 ETF (IWM), daily, Jan 2021 to Mar 2022. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 11
  },
  "kicker-pattern": {
   "slug": "kicker-pattern",
@@ -2525,6 +2570,21 @@
   "credit": "Nasdaq 100 ETF (QQQ), daily, Aug 2023 to Apr 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 3
  },
+ "role-reversal": {
+  "slug": "role-reversal",
+  "file": "role-reversal.svg",
+  "title": "Role reversal",
+  "caption": "A level that turned price at least twice is broken by a close, then retested from the other side where the close finishes back on the new side. Found by our detector on Russell 2000 ETF (IWM), 17 July 2024 to 19 November 2024.",
+  "alt": "Role reversal. A level that turned price at least twice is broken by a close, then retested from the other side where the close finishes back on the new side. Found by our detector on Russell 2000 ETF (IWM), 17 July 2024 to 19 November 2024.",
+  "symbol": "iwm",
+  "start": "2024-07-17",
+  "end": "2024-11-19",
+  "indicator": null,
+  "pattern": "role-reversal",
+  "params": {},
+  "credit": "Russell 2000 ETF (IWM), daily, May 2024 to Jan 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 8
+ },
  "rounding-bottom": {
   "slug": "rounding-bottom",
   "file": "rounding-bottom.svg",
@@ -2571,6 +2631,21 @@
    "lower": 30
   },
   "credit": "S&P 500 ETF (SPY), daily, Jan 2025 to Aug 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "rsi-failure-swing": {
+  "slug": "rsi-failure-swing",
+  "file": "rsi-failure-swing.svg",
+  "title": "RSI failure swing",
+  "caption": "The RSI peaks above 70, falls, rebounds to a lower peak, then drops below its earlier low (mirror for a bottom). Found by our detector on JPMorgan (JPM), 20 July 2023 to 7 September 2023.",
+  "alt": "RSI failure swing. The RSI peaks above 70, falls, rebounds to a lower peak, then drops below its earlier low (mirror for a bottom). Found by our detector on JPMorgan (JPM), 20 July 2023 to 7 September 2023.",
+  "symbol": "jpm",
+  "start": "2023-07-20",
+  "end": "2023-09-07",
+  "indicator": null,
+  "pattern": "rsi-failure-swing",
+  "params": {},
+  "credit": "JPMorgan (JPM), daily, Jun 2023 to Sep 2023. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 22
  },
  "runaway-gap": {
   "slug": "runaway-gap",
@@ -2814,6 +2889,36 @@
   },
   "credit": "Gold futures, daily, Jan 2025 to Oct 2025. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "supply-and-demand-zones": {
+  "slug": "supply-and-demand-zones",
+  "file": "supply-and-demand-zones.svg",
+  "title": "Demand or supply zone",
+  "caption": "A tight base, a sharp move away from it, and the zone drawn around the base, shown at price's first return to it. Found by our detector on Russell 2000 ETF (IWM), 31 October 2024 to 18 December 2024.",
+  "alt": "Demand or supply zone. A tight base, a sharp move away from it, and the zone drawn around the base, shown at price's first return to it. Found by our detector on Russell 2000 ETF (IWM), 31 October 2024 to 18 December 2024.",
+  "symbol": "iwm",
+  "start": "2024-10-31",
+  "end": "2024-12-18",
+  "indicator": null,
+  "pattern": "supply-and-demand-zones",
+  "params": {},
+  "credit": "Russell 2000 ETF (IWM), daily, Oct 2024 to Jan 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 5
+ },
+ "support-and-resistance": {
+  "slug": "support-and-resistance",
+  "file": "support-and-resistance.svg",
+  "title": "Support and resistance zone",
+  "caption": "A zone where several swing highs (or lows) turned within a small fraction of price of each other. Found by our detector on Exxon Mobil (XOM), 30 April 2024 to 3 September 2024.",
+  "alt": "Support and resistance zone. A zone where several swing highs (or lows) turned within a small fraction of price of each other. Found by our detector on Exxon Mobil (XOM), 30 April 2024 to 3 September 2024.",
+  "symbol": "xom",
+  "start": "2024-04-30",
+  "end": "2024-09-03",
+  "indicator": null,
+  "pattern": "support-and-resistance",
+  "params": {},
+  "credit": "Exxon Mobil (XOM), daily, Feb 2024 to Oct 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 23
+ },
  "swing-highs-lows": {
   "slug": "swing-highs-lows",
   "file": "swing-highs-lows.svg",
@@ -3001,6 +3106,21 @@
   "credit": "Bitcoin (BTC/USD), daily, Jan 2024 to Mar 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 3
  },
+ "trend-channel": {
+  "slug": "trend-channel",
+  "file": "trend-channel.svg",
+  "title": "Trend channel",
+  "caption": "A trendline through swing points and a parallel line through the swing highs (or lows) on the other side. Found by our detector on Microsoft (MSFT), 19 May 2021 to 5 October 2021.",
+  "alt": "Trend channel. A trendline through swing points and a parallel line through the swing highs (or lows) on the other side. Found by our detector on Microsoft (MSFT), 19 May 2021 to 5 October 2021.",
+  "symbol": "msft",
+  "start": "2021-05-19",
+  "end": "2021-10-05",
+  "indicator": null,
+  "pattern": "trend-channel",
+  "params": {},
+  "credit": "Microsoft (MSFT), daily, Mar 2021 to Nov 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 16
+ },
  "trend-intensity-index": {
   "slug": "trend-intensity-index",
   "file": "trend-intensity-index.svg",
@@ -3016,6 +3136,21 @@
    "window": 30
   },
   "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "trendline": {
+  "slug": "trendline",
+  "file": "trendline.svg",
+  "title": "Trendline with a third touch",
+  "caption": "A line through two swing points, with a third swing point that lands close to it. Found by our detector on JPMorgan (JPM), 27 July 2021 to 23 September 2021.",
+  "alt": "Trendline with a third touch. A line through two swing points, with a third swing point that lands close to it. Found by our detector on JPMorgan (JPM), 27 July 2021 to 23 September 2021.",
+  "symbol": "jpm",
+  "start": "2021-07-27",
+  "end": "2021-09-23",
+  "indicator": null,
+  "pattern": "trendline",
+  "params": {},
+  "credit": "JPMorgan (JPM), daily, Jun 2021 to Oct 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 18
  },
  "triple-bottom": {
   "slug": "triple-bottom",
