@@ -1,4 +1,21 @@
 {
+ "abcd-pattern": {
+  "slug": "abcd-pattern",
+  "file": "abcd-pattern.svg",
+  "title": "AB=CD with projected D and stop",
+  "caption": "An AB=CD: a pullback BC of about 0.618 of AB, then a CD leg about equal in length to AB. Chosen as a clear illustration of the shape, not as evidence the pattern works: many completions fail. Found by our detector on Amazon (AMZN), 5 March 2021 to 13 July 2021.",
+  "alt": "AB=CD with projected D and stop. An AB=CD: a pullback BC of about 0.618 of AB, then a CD leg about equal in length to AB. Chosen as a clear illustration of the shape, not as evidence the pattern works: many completions fail. Found by our detector on Amazon (AMZN), 5 March 2021 to 13 July 2021.",
+  "symbol": "amzn",
+  "start": "2021-03-05",
+  "end": "2021-07-13",
+  "indicator": null,
+  "pattern": "abcd-pattern",
+  "params": {
+   "hold_bars": 60
+  },
+  "credit": "Amazon (AMZN), daily, Jan 2021 to Aug 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 4
+ },
  "accelerator-oscillator": {
   "slug": "accelerator-oscillator",
   "file": "accelerator-oscillator.svg",
@@ -229,6 +246,23 @@
   },
   "credit": "Bitcoin (BTC/USD), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "bat-pattern": {
+  "slug": "bat-pattern",
+  "file": "bat-pattern.svg",
+  "title": "Bat with D zone and stop",
+  "caption": "A Bat: B retraces 0.382 to 0.5 of XA and D completes at 0.886 of XA, with the stop just beyond X. Chosen as a clear illustration of the shape, not as evidence the pattern works: many completions fail. Found by our detector on Amazon (AMZN), 11 May 2021 to 20 August 2021.",
+  "alt": "Bat with D zone and stop. A Bat: B retraces 0.382 to 0.5 of XA and D completes at 0.886 of XA, with the stop just beyond X. Chosen as a clear illustration of the shape, not as evidence the pattern works: many completions fail. Found by our detector on Amazon (AMZN), 11 May 2021 to 20 August 2021.",
+  "symbol": "amzn",
+  "start": "2021-05-11",
+  "end": "2021-08-20",
+  "indicator": null,
+  "pattern": "bat-pattern",
+  "params": {
+   "hold_bars": 60
+  },
+  "credit": "Amazon (AMZN), daily, Mar 2021 to Sep 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 2
+ },
  "bear-flag": {
   "slug": "bear-flag",
   "file": "bear-flag.svg",
@@ -426,6 +460,23 @@
   "pattern": "bump-and-run",
   "params": {},
   "credit": "Tesla (TSLA), daily, Jun 2021 to Jan 2022. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 2
+ },
+ "butterfly-pattern": {
+  "slug": "butterfly-pattern",
+  "file": "butterfly-pattern.svg",
+  "title": "Butterfly with D zone and stop",
+  "caption": "A Butterfly: B about 0.786 of XA and D at 1.272 to 1.618 of XA, beyond X, with the stop just beyond D. Chosen as a clear illustration of the shape, not as evidence the pattern works: many completions fail. Found by our detector on Nasdaq 100 ETF (QQQ), 10 July 2024 to 16 December 2024.",
+  "alt": "Butterfly with D zone and stop. A Butterfly: B about 0.786 of XA and D at 1.272 to 1.618 of XA, beyond X, with the stop just beyond D. Chosen as a clear illustration of the shape, not as evidence the pattern works: many completions fail. Found by our detector on Nasdaq 100 ETF (QQQ), 10 July 2024 to 16 December 2024.",
+  "symbol": "qqq",
+  "start": "2024-07-10",
+  "end": "2024-12-16",
+  "indicator": null,
+  "pattern": "butterfly-pattern",
+  "params": {
+   "hold_bars": 60
+  },
+  "credit": "Nasdaq 100 ETF (QQQ), daily, Apr 2024 to Feb 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 2
  },
  "camarilla-pivots": {
@@ -630,6 +681,23 @@
   "credit": "S&P 500 ETF (SPY), daily, Feb 2025 to Apr 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 1
  },
+ "crab-pattern": {
+  "slug": "crab-pattern",
+  "file": "crab-pattern.svg",
+  "title": "Crab with D zone and stop",
+  "caption": "A Crab: D completes near 1.618 of XA, well beyond X, with the stop just beyond D. Found by our detector on Nasdaq 100 ETF (QQQ), 28 January 2022 to 24 February 2022.",
+  "alt": "Crab with D zone and stop. A Crab: D completes near 1.618 of XA, well beyond X, with the stop just beyond D. Found by our detector on Nasdaq 100 ETF (QQQ), 28 January 2022 to 24 February 2022.",
+  "symbol": "qqq",
+  "start": "2022-01-28",
+  "end": "2022-02-24",
+  "indicator": null,
+  "pattern": "crab-pattern",
+  "params": {
+   "swing_pct": 0.02
+  },
+  "credit": "Nasdaq 100 ETF (QQQ), daily, Jan 2022 to Mar 2022. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 1
+ },
  "cup-and-handle": {
   "slug": "cup-and-handle",
   "file": "cup-and-handle.svg",
@@ -659,6 +727,23 @@
    "alpha": 0.07
   },
   "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "cypher-pattern": {
+  "slug": "cypher-pattern",
+  "file": "cypher-pattern.svg",
+  "title": "Cypher with D zone and stop",
+  "caption": "A Cypher: C extends 1.272 to 1.414 of XA past A, then D retraces 0.786 of XC, with the stop just beyond X. Chosen as a clear illustration of the shape, not as evidence the pattern works: many completions fail. Found by our detector on Exxon Mobil (XOM), 8 September 2025 to 2 October 2025.",
+  "alt": "Cypher with D zone and stop. A Cypher: C extends 1.272 to 1.414 of XA past A, then D retraces 0.786 of XC, with the stop just beyond X. Chosen as a clear illustration of the shape, not as evidence the pattern works: many completions fail. Found by our detector on Exxon Mobil (XOM), 8 September 2025 to 2 October 2025.",
+  "symbol": "xom",
+  "start": "2025-09-08",
+  "end": "2025-10-02",
+  "indicator": null,
+  "pattern": "cypher-pattern",
+  "params": {
+   "hold_bars": 60
+  },
+  "credit": "Exxon Mobil (XOM), daily, Aug 2025 to Oct 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 2
  },
  "dark-cloud-cover": {
   "slug": "dark-cloud-cover",
@@ -1137,6 +1222,23 @@
   "credit": "Nvidia (NVDA), daily, Jun 2022 to Aug 2022. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 1
  },
+ "gartley-pattern": {
+  "slug": "gartley-pattern",
+  "file": "gartley-pattern.svg",
+  "title": "Gartley with D zone and stop",
+  "caption": "A Gartley: B about 0.618 of XA, D about 0.786 of XA, with the stop just beyond X. Chosen as a clear illustration of the shape, not as evidence the pattern works: many completions fail. Found by our detector on JPMorgan (JPM), 31 May 2023 to 5 October 2023.",
+  "alt": "Gartley with D zone and stop. A Gartley: B about 0.618 of XA, D about 0.786 of XA, with the stop just beyond X. Chosen as a clear illustration of the shape, not as evidence the pattern works: many completions fail. Found by our detector on JPMorgan (JPM), 31 May 2023 to 5 October 2023.",
+  "symbol": "jpm",
+  "start": "2023-05-31",
+  "end": "2023-10-05",
+  "indicator": null,
+  "pattern": "gartley-pattern",
+  "params": {
+   "hold_bars": 60
+  },
+  "credit": "JPMorgan (JPM), daily, Mar 2023 to Nov 2023. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 1
+ },
  "gator-oscillator": {
   "slug": "gator-oscillator",
   "file": "gator-oscillator.svg",
@@ -1232,6 +1334,23 @@
   "pattern": "harami-cross",
   "params": {},
   "credit": "Tesla (TSLA), daily, Sep 2021 to Nov 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 5
+ },
+ "harmonic-patterns": {
+  "slug": "harmonic-patterns",
+  "file": "harmonic-patterns.svg",
+  "title": "Harmonic pattern with its completion zone and stop",
+  "caption": "Five swings X, A, B, C and D whose leg ratios fit a harmonic shape; D marks the zone where traders watch for a turn. Chosen as a clear illustration of the shape, not as evidence the pattern works: many completions fail. Found by our detector on Nasdaq 100 ETF (QQQ), 10 July 2024 to 16 December 2024.",
+  "alt": "Harmonic pattern with its completion zone and stop. Five swings X, A, B, C and D whose leg ratios fit a harmonic shape; D marks the zone where traders watch for a turn. Chosen as a clear illustration of the shape, not as evidence the pattern works: many completions fail. Found by our detector on Nasdaq 100 ETF (QQQ), 10 July 2024 to 16 December 2024.",
+  "symbol": "qqq",
+  "start": "2024-07-10",
+  "end": "2024-12-16",
+  "indicator": null,
+  "pattern": "harmonic-patterns",
+  "params": {
+   "hold_bars": 60
+  },
+  "credit": "Nasdaq 100 ETF (QQQ), daily, Apr 2024 to Feb 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 5
  },
  "head-and-shoulders": {
@@ -2274,6 +2393,23 @@
   "credit": "Apple (AAPL), daily, Sep 2022 to Nov 2022. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 3
  },
+ "shark-pattern": {
+  "slug": "shark-pattern",
+  "file": "shark-pattern.svg",
+  "title": "Shark with completion area and stop",
+  "caption": "A Shark in the guide's O-X-A-B-C scheme: B pushes beyond X and C completes within 0.886 to 1.13 of the first leg. Chosen as a clear illustration of the shape, not as evidence the pattern works: many completions fail. Found by our detector on Nvidia (NVDA), 21 November 2024 to 7 January 2025.",
+  "alt": "Shark with completion area and stop. A Shark in the guide's O-X-A-B-C scheme: B pushes beyond X and C completes within 0.886 to 1.13 of the first leg. Chosen as a clear illustration of the shape, not as evidence the pattern works: many completions fail. Found by our detector on Nvidia (NVDA), 21 November 2024 to 7 January 2025.",
+  "symbol": "nvda",
+  "start": "2024-11-21",
+  "end": "2025-01-07",
+  "indicator": null,
+  "pattern": "shark-pattern",
+  "params": {
+   "hold_bars": 60
+  },
+  "credit": "Nvidia (NVDA), daily, Oct 2024 to Feb 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 3
+ },
  "shooting-star": {
   "slug": "shooting-star",
   "file": "shooting-star.svg",
@@ -2526,6 +2662,25 @@
   "params": {},
   "credit": "Bitcoin (BTC/USD), daily, Dec 2021 to Feb 2022. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 2
+ },
+ "three-drives": {
+  "slug": "three-drives",
+  "file": "three-drives.svg",
+  "title": "Three drives with reversal zone and stop",
+  "caption": "Three pushes in one direction, each pullback 0.618 or 0.786 of the push before it and each push 1.272 or 1.618 of the pullback. Chosen as a clear illustration of the shape, not as evidence the pattern works: many completions fail. Found by our detector on S&P 500 ETF (SPY), 27 July 2023 to 27 October 2023.",
+  "alt": "Three drives with reversal zone and stop. Three pushes in one direction, each pullback 0.618 or 0.786 of the push before it and each push 1.272 or 1.618 of the pullback. Chosen as a clear illustration of the shape, not as evidence the pattern works: many completions fail. Found by our detector on S&P 500 ETF (SPY), 27 July 2023 to 27 October 2023.",
+  "symbol": "spy",
+  "start": "2023-07-27",
+  "end": "2023-10-27",
+  "indicator": null,
+  "pattern": "three-drives",
+  "params": {
+   "swing_pct": 0.015,
+   "tol": 0.1,
+   "hold_bars": 60
+  },
+  "credit": "S&P 500 ETF (SPY), daily, Jun 2023 to Nov 2023. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 1
  },
  "three-inside-up-down": {
   "slug": "three-inside-up-down",
@@ -2964,6 +3119,23 @@
    "period": 14
   },
   "credit": "EUR/USD, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "wolfe-waves": {
+  "slug": "wolfe-waves",
+  "file": "wolfe-waves.svg",
+  "title": "Wolfe wave with 1-3, 2-4 and 1-4 lines",
+  "caption": "A Wolfe wave: five swings in a converging wedge, point 5 overshooting the 1-3 line, then a close back inside it. Chosen as a clear illustration of the shape, not as evidence the pattern works: many completions fail. Found by our detector on Apple (AAPL), 13 March 2025 to 9 April 2025.",
+  "alt": "Wolfe wave with 1-3, 2-4 and 1-4 lines. A Wolfe wave: five swings in a converging wedge, point 5 overshooting the 1-3 line, then a close back inside it. Chosen as a clear illustration of the shape, not as evidence the pattern works: many completions fail. Found by our detector on Apple (AAPL), 13 March 2025 to 9 April 2025.",
+  "symbol": "aapl",
+  "start": "2025-03-13",
+  "end": "2025-04-09",
+  "indicator": null,
+  "pattern": "wolfe-waves",
+  "params": {
+   "hold_bars": 60
+  },
+  "credit": "Apple (AAPL), daily, Feb 2025 to May 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 7
  },
  "woodie-pivots": {
   "slug": "woodie-pivots",
