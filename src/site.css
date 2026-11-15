@@ -53,3 +53,4 @@ code{font-family:var(--font-mono);font-size:.9em}
 .chart img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:var(--radius);background:#fff}
 .chart figcaption{font-size:.9rem;color:var(--muted);margin-top:6px}
 .chart .credit{display:block;font-size:.8rem}
+.amz-note{font-size:.8rem;color:var(--muted)}

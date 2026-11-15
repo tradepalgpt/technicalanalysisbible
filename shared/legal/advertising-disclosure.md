@@ -8,6 +8,7 @@ reviewed: 14 November 2026
 ## How we make money
 
 - **Affiliate partner ads.** Some ads link to a broker, currently IC Markets. If you open an account through one of those links, we may earn a commission. This costs you nothing extra.
+- **Amazon book links.** As an Amazon Associate we earn from qualifying purchases. Book titles in our Sources sections may link to Amazon; buying through them costs you nothing extra. We only cite books for their content, never because they earn a commission.
 - Partner ads are always marked **"Advertisement"**, sit apart from the article text and carry the provider's own risk warning.
 - Partner links are marked to search engines as sponsored (`rel="sponsored"`).
 

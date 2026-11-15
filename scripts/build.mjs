@@ -58,7 +58,7 @@ ${sidebar ? `<aside class="side">${adSlot('300x600', 'sticky')}</aside>` : ''}
 </div>
 <footer class="foot"><div class="wrap">
 <p class="risk"><strong>Risk warning:</strong> ${RISK_NOTE} <a href="/risk-warning/">Read the full risk warning</a>.</p>
-<p>${SITE.brand} is free and supported by advertising. Some links are affiliate links: we may earn a commission at no cost to you. <a href="/advertising-disclosure/">How we make money</a>.</p>
+<p>${SITE.brand} is free and supported by advertising. Some links are affiliate links: we may earn a commission at no cost to you. As an Amazon Associate we earn from qualifying purchases. <a href="/advertising-disclosure/">How we make money</a>.</p>
 <nav><a href="/about/">About</a> · <a href="/how-we-write/">How we write</a> · <a href="/risk-warning/">Risk warning</a> · <a href="/advertising-disclosure/">Advertising</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></nav>
 <p class="small">© ${new Date().getFullYear()} ${SITE.brand}</p>
 </div></footer>
@@ -91,6 +91,24 @@ function figureHtml(c) {
   return `<figure class="chart"><img src="/charts/${esc(c.file)}" width="${c.w}" height="${c.h}" loading="lazy" decoding="async" alt="${esc(c.alt)}">`
     + `<figcaption>${esc(c.caption)} <span class="credit">Chart drawn with our own indicator code on real ${esc(c.credit.split(',')[0])} prices.</span></figcaption></figure>`;
 }
+// ---------- Amazon Associates links (only books a person has checked on Amazon) ----------
+const AMZ = fs.existsSync(path.join(ROOT, 'data', 'amazon-books.json')) ? JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'amazon-books.json'), 'utf8')) : { books: [] };
+const AMZ_TAG = AMZ._tag || 'tabib05-20';
+const AMZ_BOOKS = AMZ.books.filter((b) => b.verified && /^[0-9A-Z]{10}$/.test(b.asin)).sort((a, b) => b.title.length - a.title.length);
+const AMZ_NOTE = '<p class="amz-note">As an Amazon Associate we earn from qualifying purchases. Book links go to Amazon.</p>';
+function amazonLinks(html) {
+  let used = false;
+  for (const b of AMZ_BOOKS) {
+    const t = esc(b.title);
+    const url = `https://www.amazon.com/dp/${b.asin}?tag=${AMZ_TAG}`;
+    const plain = `<em>${t}</em>`;
+    if (html.includes(plain)) {
+      used = true;
+      html = html.split(plain).join(`<a href="${url}" rel="sponsored nofollow noopener" target="_blank">${plain}</a>`);
+    }
+  }
+  return { html, used };
+}
 const cmpTitle = (s) => cmpPub[s]?.data.title || s;
 const glTerm = (s) => glPub[s]?.data.term || s;
 
@@ -114,6 +132,9 @@ for (const { data: d, body } of items) {
   html = html.replace(/<h2[^>]*>(Formula|How it is|How it works)/, (m) => (n++ ? m : adSlot('text') + m));
   html = html.replace(/<h2[^>]*>Pairs well with/, (m) => adSlot('text') + m);
   html = html.replace(/<table>/g, '<div class="tablewrap"><table>').replace(/<\/table>/g, '</table></div>');
+  const amz = amazonLinks(html);
+  html = amz.html;
+  if (amz.used) html = html.replace(/(<h2[^>]*>FAQ)/, AMZ_NOTE + '$1');
   const chart = CHARTS[d.slug];
   if (chart) html = html.replace(/<h2[^>]*>What (is|are)/, (m) => figureHtml(chart) + m);
 

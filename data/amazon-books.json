@@ -1,0 +1,1121 @@
+{
+ "_tag": "tabib05-20",
+ "_store": "amazon.com",
+ "books": [
+  {
+   "key": "Technical Analysis of the Financial Markets",
+   "title": "Technical Analysis of the Financial Markets",
+   "cite": "Murphy, John J. (1999). *Technical Analysis of the Financial Markets*. New York Institute of Finance. (Background on volume and price interaction.)",
+   "guides": 194,
+   "asin": "059333244X",
+   "asin_candidates": [
+    "059333244X",
+    "0735200661",
+    "0735200653"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Technical Analysis of Stock Trends",
+   "title": "Technical Analysis of Stock Trends",
+   "cite": "Edwards, Robert D. and Magee, John (1948, later editions). *Technical Analysis of Stock Trends*.",
+   "guides": 56,
+   "asin": "0910944008",
+   "asin_candidates": [
+    "0910944008",
+    "0139043438",
+    "0910944040",
+    "0849337720",
+    "1420013149",
+    "1880408007"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Japanese Candlestick Charting Techniques",
+   "title": "Japanese Candlestick Charting Techniques",
+   "cite": "Nison, Steve (1991). *Japanese Candlestick Charting Techniques*. New York Institute of Finance.",
+   "guides": 50,
+   "asin": "957845712X",
+   "asin_candidates": [
+    "957845712X",
+    "0735201811",
+    "0139316507"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Candlestick Charting Explained",
+   "title": "Candlestick Charting Explained",
+   "cite": "Morris, Gregory L. (2006). *Candlestick Charting Explained*, 3rd edition. McGraw-Hill.",
+   "guides": 44,
+   "asin": "1557388911",
+   "asin_candidates": [
+    "1557388911",
+    "007146154X"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Technical Analysis",
+   "title": "Technical Analysis: The Complete Resource for Financial Market Technicians",
+   "cite": "Kirkpatrick, Charles D. and Dahlquist, Julie R. (2006). *Technical Analysis: The Complete Resource for Financial Market Technicians*. FT Press.",
+   "guides": 43,
+   "asin": "0137059442",
+   "asin_candidates": [
+    "0137059442",
+    "0134137043"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Encyclopedia of Candlestick Charts",
+   "title": "Encyclopedia of Candlestick Charts",
+   "cite": "Bulkowski, Thomas N. (2008). *Encyclopedia of Candlestick Charts*. Wiley.",
+   "guides": 42,
+   "asin": "0470255846",
+   "asin_candidates": [
+    "0470255846",
+    "1281237469",
+    "1118428692",
+    "1119202280",
+    "0470490160",
+    "0470182016"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Encyclopedia of Chart Patterns",
+   "title": "Encyclopedia of Chart Patterns",
+   "cite": "Bulkowski, Thomas N. (2005). *Encyclopedia of Chart Patterns*, 2nd edition. Wiley.",
+   "guides": 36,
+   "asin": "0470239050",
+   "asin_candidates": [
+    "0470239050",
+    "1119739691",
+    "1119739683",
+    "128027588X",
+    "1118045858",
+    "0471722251"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "New Concepts in Technical Trading Systems",
+   "title": "New Concepts in Technical Trading Systems",
+   "cite": "Wilder, J. Welles Jr. (1978). *New Concepts in Technical Trading Systems*. Trend Research.",
+   "guides": 22,
+   "asin": "0894590278",
+   "asin_candidates": [
+    "0894590278"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Technical Analysis from A to Z",
+   "title": "Technical Analysis from A to Z",
+   "cite": "Achelis, Steven B. (2000). *Technical Analysis from A to Z*, 2nd edition. McGraw-Hill. (Aroon entry; the indicator was introduced by Tushar Chande in 1995.)",
+   "guides": 15,
+   "asin": "0071363483",
+   "asin_candidates": [
+    "0071363483",
+    "0071363483"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "The Encyclopedia of Technical Market Indicators",
+   "title": "The Encyclopedia of Technical Market Indicators",
+   "cite": "Colby, Robert W. (2003). *The Encyclopedia of Technical Market Indicators*, 2nd edition. McGraw-Hill.",
+   "guides": 14,
+   "asin": "0070120579",
+   "asin_candidates": [
+    "0070120579",
+    "0070120579"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Trading for a Living",
+   "title": "Trading for a Living",
+   "cite": "Elder, Alexander (1993). *Trading for a Living*. Wiley.",
+   "guides": 14,
+   "asin": "1560159553",
+   "asin_candidates": [
+    "1560159553",
+    "0471592242",
+    "1560150432",
+    "1118963687",
+    "1118443926",
+    "1322199159"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Trading Price Action Trends",
+   "title": "Trading Price Action Trends: Technical Analysis of Price Charts Bar by Bar for the Serious Trader",
+   "cite": "Brooks, Al (2012). *Trading Price Action Trends: Technical Analysis of Price Charts Bar by Bar for the Serious Trader*. Wiley.",
+   "guides": 13,
+   "asin": "1118166248",
+   "asin_candidates": [
+    "1118166248",
+    "111816623X",
+    "1118166256",
+    "1283337509",
+    "1119202590",
+    "1394378106"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Technical Analysis Explained",
+   "title": "Technical Analysis Explained",
+   "cite": "Pring, Martin J. (2002). *Technical Analysis Explained*, 4th edition. McGraw-Hill. (Pring did much to popularise the Coppock Curve.)",
+   "guides": 12,
+   "asin": "0070508852",
+   "asin_candidates": [
+    "0070508852",
+    "0071396128",
+    "0070508712",
+    "0070510423",
+    "0071381937",
+    "9339205103"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Trading Systems and Methods",
+   "title": "Trading Systems and Methods",
+   "cite": "Kaufman, Perry J. *Trading Systems and Methods*. Wiley.",
+   "guides": 10,
+   "asin": "047126847X",
+   "asin_candidates": [
+    "047126847X",
+    "1118222245",
+    "0471148792",
+    "1118043561",
+    "1118260929",
+    "1119605385"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Trade Your Way to Financial Freedom",
+   "title": "Trade Your Way to Financial Freedom",
+   "cite": "Tharp, Van K. (1998). *Trade Your Way to Financial Freedom*. McGraw-Hill.",
+   "guides": 9,
+   "asin": "0071658130",
+   "asin_candidates": [
+    "0071658130",
+    "8387014435",
+    "0070647623",
+    "007147871X",
+    "1592802362"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Mind Over Markets",
+   "title": "Mind Over Markets: Power Trading with Market Generated Information",
+   "cite": "Dalton, James F., Jones, Eric T. and Dalton, Robert B. (2013). *Mind Over Markets: Power Trading with Market Generated Information*, updated edition. Wiley.",
+   "guides": 7,
+   "asin": "0934380538",
+   "asin_candidates": [
+    "0934380538",
+    "1118531736",
+    "1118659767",
+    "1118659724",
+    "1118659783"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Bollinger on Bollinger Bands",
+   "title": "Bollinger on Bollinger Bands",
+   "cite": "Bollinger, John (2001). *Bollinger on Bollinger Bands*. McGraw-Hill.",
+   "guides": 7,
+   "asin": "0071386734",
+   "asin_candidates": [
+    "0071386734",
+    "0071373683",
+    "097261110X"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Harmonic Trading, Volume One",
+   "title": "Harmonic Trading, Volume One",
+   "cite": "Carney, Scott M. (2010). *Harmonic Trading, Volume One*. Pearson FT Press. (Covers AB=CD within harmonic patterns.)",
+   "guides": 6,
+   "asin": "0137051506",
+   "asin_candidates": [
+    "0137051506",
+    "0137051514",
+    "013138497X",
+    "0131384953"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Trading Chaos",
+   "title": "Trading Chaos",
+   "cite": "Williams, Bill (1995). *Trading Chaos*. Wiley.",
+   "guides": 5,
+   "asin": "0471119296",
+   "asin_candidates": [
+    "0471119296",
+    "0470586273",
+    "0470357568",
+    "1283916495",
+    "0471463086"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Profits in the Stock Market",
+   "title": "Profits in the Stock Market",
+   "cite": "Gartley, H. M. (1935). *Profits in the Stock Market*. Self-published; later reprinted by Lambert-Gann Publishing.",
+   "guides": 5,
+   "asin": "0939093073",
+   "asin_candidates": [
+    "0939093073"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Cybernetic Analysis for Stocks and Futures",
+   "title": "Cybernetic Analysis for Stocks and Futures",
+   "cite": "Ehlers, John F. (2004). *Cybernetic Analysis for Stocks and Futures*. Wiley.",
+   "guides": 5,
+   "asin": "0471463078",
+   "asin_candidates": [
+    "0471463078",
+    "0471654213",
+    "1118045726",
+    "0470308826",
+    "1280345667"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "New Trading Dimensions",
+   "title": "New Trading Dimensions",
+   "cite": "Williams, Bill and Williams, Justine (1998). *New Trading Dimensions*. Wiley.",
+   "guides": 4,
+   "asin": "0471295418",
+   "asin_candidates": [
+    "0471295418",
+    "0470254866"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Elliott Wave Principle",
+   "title": "Elliott Wave Principle: Key to Market Behavior",
+   "cite": "Frost, A. J. and Prechter, Robert R. (1978). *Elliott Wave Principle: Key to Market Behavior*. New Classics Library.",
+   "guides": 4,
+   "asin": "1616041366",
+   "asin_candidates": [
+    "1616041366",
+    "0932750435",
+    "0932750028",
+    "1616041374",
+    "0932750001",
+    "0932750052"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Trades About to Happen",
+   "title": "Trades About to Happen",
+   "cite": "Weis, David H. (2013). *Trades About to Happen*. Wiley. (The Wyckoff tradition that VSA grew from.)",
+   "guides": 4,
+   "asin": "0470487801",
+   "asin_candidates": [
+    "0470487801",
+    "1299533868",
+    "1118220315",
+    "1118656385",
+    "1118258703",
+    "111823362X"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "The Three Skills of Top Trading",
+   "title": "The Three Skills of Top Trading",
+   "cite": "Pruden, Hank (2007). *The Three Skills of Top Trading*. Wiley.",
+   "guides": 4,
+   "asin": "1119196825",
+   "asin_candidates": [
+    "1119196825",
+    "1118044762",
+    "1280826959",
+    "1118046714",
+    "0470139293",
+    "0470050632"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "The New Technical Trader",
+   "title": "The New Technical Trader",
+   "cite": "Chande, Tushar S., and Kroll, Stanley (1994). *The New Technical Trader*. John Wiley & Sons.",
+   "guides": 3,
+   "asin": "0471597805",
+   "asin_candidates": [
+    "0471597805",
+    "0471597805"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "The Wave Principle",
+   "title": "The Wave Principle",
+   "cite": "Elliott, Ralph Nelson (1938). *The Wave Principle*.",
+   "guides": 3,
+   "asin": "9993933805",
+   "asin_candidates": [
+    "9993933805"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Fibonacci Trading",
+   "title": "Fibonacci Trading",
+   "cite": "Boroden, Carolyn (2008). *Fibonacci Trading*. McGraw-Hill. (Discusses clusters of Fibonacci levels.)",
+   "guides": 3,
+   "asin": "0071596739",
+   "asin_candidates": [
+    "0071596739",
+    "1281240575",
+    "007149815X",
+    "007171622X"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Technical Analysis for the Trading Professional",
+   "title": "Technical Analysis for the Trading Professional",
+   "cite": "Brown, Constance (1999). *Technical Analysis for the Trading Professional*. McGraw-Hill. (RSI range rules and trend-continuation readings; the idea is also linked to Andrew Cardwell's RSI \"reversals\".)",
+   "guides": 3,
+   "asin": "0070120625",
+   "asin_candidates": [
+    "0070120625",
+    "007175914X"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Beyond Candlesticks",
+   "title": "Beyond Candlesticks: New Japanese Charting Techniques Revealed",
+   "cite": "Nison, Steve (1994). *Beyond Candlesticks: New Japanese Charting Techniques Revealed*. John Wiley & Sons.",
+   "guides": 3,
+   "asin": "0470490608",
+   "asin_candidates": [
+    "0470490608",
+    "047100720X",
+    "3820303855"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Trading and Exchanges",
+   "title": "Trading and Exchanges: Market Microstructure for Practitioners",
+   "cite": "Harris, Larry (2003). *Trading and Exchanges: Market Microstructure for Practitioners*. Oxford University Press. (Background on limit orders, market orders and how liquidity is supplied.)",
+   "guides": 2,
+   "asin": "0198090544",
+   "asin_candidates": [
+    "0198090544",
+    "0195144708"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Trend Following",
+   "title": "Trend Following",
+   "cite": "Covel, Michael W. (2004). *Trend Following*. Financial Times Prentice Hall. (Describes Donchian-style breakout systems.)",
+   "guides": 2,
+   "asin": "0136137180",
+   "asin_candidates": [
+    "0136137180",
+    "0131345508",
+    "013702018X",
+    "1119371902",
+    "0768670438",
+    "1119371910"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Point and Figure Charting",
+   "title": "Point and Figure Charting",
+   "cite": "Dorsey, Thomas J. (1995). *Point and Figure Charting*. Wiley. (Covers point-and-figure methods and the Bullish Percent Index; several editions.)",
+   "guides": 2,
+   "asin": "1118044673",
+   "asin_candidates": [
+    "1118044673",
+    "1118047648",
+    "1118799364",
+    "1118662342",
+    "1281002186",
+    "1299966020"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Come Into My Trading Room",
+   "title": "Come Into My Trading Room",
+   "cite": "Elder, Alexander (2002). *Come Into My Trading Room*. Wiley. (Describes the Chandelier Exit and credits LeBeau.)",
+   "guides": 2,
+   "asin": "0471225347",
+   "asin_candidates": [
+    "0471225347",
+    "0471273821",
+    "0471225401",
+    "0470306327",
+    "1280340584"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "How to Make Money in Stocks",
+   "title": "How to Make Money in Stocks",
+   "cite": "O'Neil, William J. (1988). *How to Make Money in Stocks*. McGraw-Hill.",
+   "guides": 2,
+   "asin": "0070480176",
+   "asin_candidates": [
+    "0070480176",
+    "9579453373",
+    "0972446249",
+    "7500567537",
+    "007139480X",
+    "0471680532"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "The New Science of Technical Analysis",
+   "title": "The New Science of Technical Analysis",
+   "cite": "DeMark, Thomas R. (1994). *The New Science of Technical Analysis*. Wiley.",
+   "guides": 2,
+   "asin": "0471035483",
+   "asin_candidates": [
+    "0471035483"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "The Complete TurtleTrader",
+   "title": "The Complete TurtleTrader",
+   "cite": "Covel, Michael W. (2007). *The Complete TurtleTrader*. HarperBusiness. (Turtle rules.)",
+   "guides": 2,
+   "asin": "0061539805",
+   "asin_candidates": [
+    "0061539805",
+    "0061539783",
+    "0062657453",
+    "0062657445",
+    "0061539791",
+    "0061740616"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Way of the Turtle",
+   "title": "Way of the Turtle",
+   "cite": "Faith, Curtis (2007). *Way of the Turtle*. McGraw-Hill.",
+   "guides": 2,
+   "asin": "1933309687",
+   "asin_candidates": [
+    "1933309687",
+    "0071509461",
+    "007148664X"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Volume Cycles in the Stock Market",
+   "title": "Volume Cycles in the Stock Market",
+   "cite": "Arms, Richard W. Jr. (1994). *Volume Cycles in the Stock Market*. Equis International.",
+   "guides": 2,
+   "asin": "0870944053",
+   "asin_candidates": [
+    "0870944053",
+    "1885439008"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Fibonacci Analysis",
+   "title": "Fibonacci Analysis",
+   "cite": "Brown, Constance (2008). *Fibonacci Analysis*. Bloomberg Press.",
+   "guides": 2,
+   "asin": "0470883243",
+   "asin_candidates": [
+    "0470883243",
+    "0470885254",
+    "1118531582",
+    "1576602613",
+    "1282685279",
+    "0470883995"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Truth of the Stock Tape",
+   "title": "Truth of the Stock Tape",
+   "cite": "Gann, W. D. (1923). *Truth of the Stock Tape*. Financial Guardian Publishing.",
+   "guides": 2,
+   "asin": "093909312X",
+   "asin_candidates": [
+    "093909312X",
+    "1419185284",
+    "1774642255",
+    "0464999669",
+    "0359046452",
+    "1773230700"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Options, Futures, and Other Derivatives",
+   "title": "Options, Futures, and Other Derivatives",
+   "cite": "Hull, John C. *Options, Futures, and Other Derivatives*. Pearson. (Standard textbook treatment of volatility estimation; use the latest edition.)",
+   "guides": 2,
+   "asin": "0135009944",
+   "asin_candidates": [
+    "0135009944",
+    "1292410655",
+    "0132604604",
+    "8120322371",
+    "013447208X",
+    "0131977059"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Intermarket Analysis",
+   "title": "Intermarket Analysis: Profiting from Global Market Relationships",
+   "cite": "Murphy, John J. (2004). *Intermarket Analysis: Profiting from Global Market Relationships*. Wiley.",
+   "guides": 2,
+   "asin": "0471524336",
+   "asin_candidates": [
+    "0471524336",
+    "0470491302",
+    "1118045556",
+    "1118571606",
+    "0470242507",
+    "1118620364"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Rocket Science for Traders",
+   "title": "Rocket Science for Traders: Digital Signal Processing Applications",
+   "cite": "Ehlers, John F. (2001). *Rocket Science for Traders: Digital Signal Processing Applications*. Wiley. (Ehlers' main early book on applying signal processing to trading.)",
+   "guides": 2,
+   "asin": "0471405671",
+   "asin_candidates": [
+    "0471405671",
+    "0470314605"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Markets and Market Logic",
+   "title": "Markets and Market Logic",
+   "cite": "Steidlmayer, J. Peter and Koy, Kevin (1986). *Markets and Market Logic*. Porcupine Press.",
+   "guides": 2,
+   "asin": "0941275000",
+   "asin_candidates": [
+    "0941275000"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Stock Market Logic",
+   "title": "Stock Market Logic",
+   "cite": "Fosback, Norman G. (1976). *Stock Market Logic*. Institute for Econometric Research.",
+   "guides": 2,
+   "asin": "0917604490",
+   "asin_candidates": [
+    "0917604490",
+    "0917604482",
+    "0793111862",
+    "8170944406",
+    "0793101484",
+    "0793101484"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Day Trading with Short Term Price Patterns and Opening Range Breakout",
+   "title": "Day Trading with Short Term Price Patterns and Opening Range Breakout",
+   "cite": "Crabel, Toby (1990). *Day Trading with Short Term Price Patterns and Opening Range Breakout*. Traders Press.",
+   "guides": 2,
+   "asin": "0934380171",
+   "asin_candidates": [
+    "0934380171"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Granville's New Key to Stock Market Profits",
+   "title": "Granville's New Key to Stock Market Profits",
+   "cite": "Granville, Joseph E. (1963). *Granville's New Key to Stock Market Profits*. Prentice-Hall.",
+   "guides": 2,
+   "asin": "0133634086",
+   "asin_candidates": [
+    "0133634086"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "A Complete Guide to Technical Trading Tactics",
+   "title": "A Complete Guide to Technical Trading Tactics",
+   "cite": "Person, John L. (2004). *A Complete Guide to Technical Trading Tactics*. Wiley. (Covers floor-trader pivot points.)",
+   "guides": 2,
+   "asin": "0471659568",
+   "asin_candidates": [
+    "0471659568",
+    "1280345837",
+    "0470360593",
+    "047158455X",
+    "111842901X"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Momentum, Direction, and Divergence",
+   "title": "Momentum, Direction, and Divergence",
+   "cite": "Blau, William (1995). *Momentum, Direction, and Divergence*. John Wiley & Sons.",
+   "guides": 2,
+   "asin": "0471027294",
+   "asin_candidates": [
+    "0471027294",
+    "047030085X",
+    "0471027294"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Fibonacci Ratios with Pattern Recognition",
+   "title": "Fibonacci Ratios with Pattern Recognition",
+   "cite": "Pesavento, Larry (1997). *Fibonacci Ratios with Pattern Recognition*. Traders Press.",
+   "guides": 1,
+   "asin": "0934380368",
+   "asin_candidates": [
+    "0934380368"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Technical Analysis Using Multiple Timeframes",
+   "title": "Technical Analysis Using Multiple Timeframes",
+   "cite": "Shannon, Brian (2008). *Technical Analysis Using Multiple Timeframes*. LifeVest Publishing. Discusses volume-weighted levels anchored to chosen events.",
+   "guides": 1,
+   "asin": "1598795805",
+   "asin_candidates": [
+    "1598795805"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Markets in Profile",
+   "title": "Markets in Profile: Profiting from the Auction Process",
+   "cite": "Dalton, James F., Dalton, Robert B. and Jones, Eric T. (2007). *Markets in Profile: Profiting from the Auction Process*. Wiley.",
+   "guides": 1,
+   "asin": "1119196701",
+   "asin_candidates": [
+    "1119196701",
+    "0470039094",
+    "0470651164",
+    "1118044649",
+    "0470121556"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Investments",
+   "title": "Investments",
+   "cite": "Bodie, Zvi, Kane, Alex and Marcus, Alan J. *Investments*. McGraw-Hill. (Standard textbook treatment of beta and CAPM; several editions.)",
+   "guides": 1,
+   "asin": "0256135592",
+   "asin_candidates": [
+    "0256135592",
+    "0256164592",
+    "0072318597",
+    "0256271348",
+    "0256098158",
+    "0073405175"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "The Commitments of Traders Bible",
+   "title": "The Commitments of Traders Bible",
+   "cite": "Briese, Stephen (2008). *The Commitments of Traders Bible*. Wiley.",
+   "guides": 1,
+   "asin": "1119201861",
+   "asin_candidates": [
+    "1119201861",
+    "1281284920",
+    "0470178426",
+    "0470267917",
+    "0470178426"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "The Stock Market Barometer",
+   "title": "The Stock Market Barometer",
+   "cite": "Hamilton, William Peter (1922). *The Stock Market Barometer*. Harper and Brothers.",
+   "guides": 1,
+   "asin": "0471247383",
+   "asin_candidates": [
+    "0471247383",
+    "0471247642",
+    "1558888063",
+    "1596050705",
+    "1602060061"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "The Dow Theory",
+   "title": "The Dow Theory",
+   "cite": "Rhea, Robert (1932). *The Dow Theory*. Barron's.",
+   "guides": 1,
+   "asin": "1558888071",
+   "asin_candidates": [
+    "1558888071",
+    "1638231273",
+    "0870341103",
+    "1794855939"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Tunnel Thru the Air",
+   "title": "Tunnel Thru the Air",
+   "cite": "Gann, W. D. (1927). *Tunnel Thru the Air*. (A novel; the source of much of the later interpretation of Gann's ideas.)",
+   "guides": 1,
+   "asin": "9650060154",
+   "asin_candidates": [
+    "9650060154",
+    "0766160572",
+    "9561002299",
+    "0939093057"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "45 Years in Wall Street",
+   "title": "45 Years in Wall Street",
+   "cite": "Gann, W. D. (1949). *45 Years in Wall Street*.",
+   "guides": 1,
+   "asin": "9659124198",
+   "asin_candidates": [
+    "9659124198",
+    "1578987687"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Technical Analysis and Stock Market Profits",
+   "title": "Technical Analysis and Stock Market Profits",
+   "cite": "Schabacker, Richard W. (1932). *Technical Analysis and Stock Market Profits*.",
+   "guides": 1,
+   "asin": "1897597568",
+   "asin_candidates": [
+    "1897597568",
+    "0273630954",
+    "1281893536"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Ichimoku Charts",
+   "title": "Ichimoku Charts: An Introduction to Ichimoku Kinko Clouds",
+   "cite": "Elliott, Nicole (2007). *Ichimoku Charts: An Introduction to Ichimoku Kinko Clouds*. Harriman House.",
+   "guides": 1,
+   "asin": "1281893382",
+   "asin_candidates": [
+    "1281893382",
+    "085719108X",
+    "1897597843",
+    "0857196111"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Trading with Ichimoku Clouds",
+   "title": "Trading with Ichimoku Clouds",
+   "cite": "Patel, Manesh (2010). *Trading with Ichimoku Clouds*. Wiley.",
+   "guides": 1,
+   "asin": "0470609931",
+   "asin_candidates": [
+    "0470609931",
+    "0470634782",
+    "0470634774",
+    "1119200202",
+    "1282690914",
+    "0470634790"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Intermarket Technical Analysis",
+   "title": "Intermarket Technical Analysis: Trading Strategies for the Global Stock, Bond, Commodity, and Currency Markets",
+   "cite": "Murphy, John J. (1991). *Intermarket Technical Analysis: Trading Strategies for the Global Stock, Bond, Commodity, and Currency Markets*. Wiley.",
+   "guides": 1,
+   "asin": "0471524336",
+   "asin_candidates": [
+    "0471524336",
+    "0470491302"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Smarter Trading",
+   "title": "Smarter Trading: Improving Performance in Changing Markets",
+   "cite": "Kaufman, Perry J. (1995). *Smarter Trading: Improving Performance in Changing Markets*. McGraw-Hill.",
+   "guides": 1,
+   "asin": "0070340021",
+   "asin_candidates": [
+    "0070340021"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Trading with the Odds",
+   "title": "Trading with the Odds: Using the Power of Statistics to Beat the Market",
+   "cite": "Kase, Cynthia A. (1996). *Trading with the Odds: Using the Power of Statistics to Beat the Market*. Irwin Professional Publishing.",
+   "guides": 1,
+   "asin": "155738911X",
+   "asin_candidates": [
+    "155738911X"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Applied Regression Analysis",
+   "title": "Applied Regression Analysis",
+   "cite": "Draper, Norman R., and Smith, Harry (1966). *Applied Regression Analysis*. John Wiley & Sons. (First edition; the statistics behind least squares fitting.)",
+   "guides": 1,
+   "asin": "0471029955",
+   "asin_candidates": [
+    "0471029955",
+    "0471170828",
+    "0471221708",
+    "0471029955"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "The Profit Magic of Stock Transaction Timing",
+   "title": "The Profit Magic of Stock Transaction Timing",
+   "cite": "Hurst, J. M. (1970). *The Profit Magic of Stock Transaction Timing*. Prentice-Hall.",
+   "guides": 1,
+   "asin": "0137260180",
+   "asin_candidates": [
+    "0137260180",
+    "0934380627"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "DeMark Indicators",
+   "title": "DeMark Indicators",
+   "cite": "Perl, Jason (2008). *DeMark Indicators*. Bloomberg Press.",
+   "guides": 1,
+   "asin": "1576603148",
+   "asin_candidates": [
+    "1576603148",
+    "1282684426",
+    "0470885351",
+    "047088410X",
+    "1118531566",
+    "0470883340"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "The Evaluation and Optimization of Trading Strategies",
+   "title": "The Evaluation and Optimization of Trading Strategies",
+   "cite": "Pardo, Robert (2008). *The Evaluation and Optimization of Trading Strategies*, 2nd edition. John Wiley & Sons.",
+   "guides": 1,
+   "asin": "0470128011",
+   "asin_candidates": [
+    "0470128011",
+    "0470262850"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Short Term Trading Strategies That Work",
+   "title": "Short Term Trading Strategies That Work",
+   "cite": "Connors, Larry and Alvarez, Cesar (2009). *Short Term Trading Strategies That Work*. TradingMarkets Publishing Group. (Includes exits after a fixed number of days in short-term systems.)",
+   "guides": 1,
+   "asin": "0981923909",
+   "asin_candidates": [
+    "0981923909"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Mastering the Trade",
+   "title": "Mastering the Trade",
+   "cite": "Carter, John (2005). *Mastering the Trade*. McGraw-Hill. (2nd edition 2012.)",
+   "guides": 1,
+   "asin": "0071775145",
+   "asin_candidates": [
+    "0071775145",
+    "0071459588"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "The Investor's Guide to Fidelity Funds",
+   "title": "The Investor's Guide to Fidelity Funds",
+   "cite": "Martin, Peter G. and McCann, Byron B. (1989). *The Investor's Guide to Fidelity Funds*. Wiley.",
+   "guides": 1,
+   "asin": "0471622583",
+   "asin_candidates": [
+    "0471622583"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Trade Like a Stock Market Wizard",
+   "title": "Trade Like a Stock Market Wizard",
+   "cite": "Minervini, Mark (2013). *Trade Like a Stock Market Wizard*. McGraw-Hill.",
+   "guides": 1,
+   "asin": "0071807225",
+   "asin_candidates": [
+    "0071807225"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Steidlmayer on Markets",
+   "title": "Steidlmayer on Markets: Trading with Market Profile",
+   "cite": "Steidlmayer, J. Peter, and Hawkins, Steven B. (2003). *Steidlmayer on Markets: Trading with Market Profile*, 2nd edition. Wiley.",
+   "guides": 1,
+   "asin": "0471215562",
+   "asin_candidates": [
+    "0471215562",
+    "128036274X",
+    "0470248076",
+    "0471420980",
+    "0471621153"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Investing with Volume Analysis",
+   "title": "Investing with Volume Analysis: Identify, Follow, and Profit from Trends",
+   "cite": "Dormeier, Buff (2011). *Investing with Volume Analysis: Identify, Follow, and Profit from Trends*. FT Press.",
+   "guides": 1,
+   "asin": "0137085508",
+   "asin_candidates": [
+    "0137085508",
+    "0137085508"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  },
+  {
+   "key": "Winning on Wall Street",
+   "title": "Winning on Wall Street",
+   "cite": "Zweig, Martin E. (1986). *Winning on Wall Street*. Warner Books.",
+   "guides": 1,
+   "asin": "0446512346",
+   "asin_candidates": [
+    "0446512346",
+    "0446670146",
+    "0446386847",
+    "0446672815",
+    "0446525332",
+    "0446561681"
+   ],
+   "verified": false,
+   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+  }
+ ]
+}

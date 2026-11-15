@@ -1,0 +1,2039 @@
+[
+ {
+  "title": "Technical Analysis of the Financial Markets",
+  "line": "Murphy, John J. (1999). *Technical Analysis of the Financial Markets*. New York Institute of Finance. (Background on volume and price interaction.)",
+  "used": [
+   "absorption",
+   "accumulation-distribution",
+   "adam-and-eve",
+   "advance-decline-line",
+   "adx",
+   "alma",
+   "anchored-vwap",
+   "andrews-pitchfork",
+   "apo",
+   "aroon-oscillator",
+   "ascending-triangle",
+   "atr",
+   "average-daily-range",
+   "bear-flag",
+   "bollinger-band-width",
+   "bollinger-bands",
+   "bollinger-squeeze",
+   "break-of-structure",
+   "breakaway-gap",
+   "breaker-block",
+   "breakout-retest",
+   "breakout-trading",
+   "bull-flag",
+   "cci",
+   "chaikin-money-flow",
+   "chaikin-oscillator",
+   "change-of-character",
+   "commitments-of-traders",
+   "common-gap",
+   "confluence",
+   "correlation-coefficient",
+   "cup-and-handle",
+   "currency-strength-meter",
+   "cypher-pattern",
+   "death-cross",
+   "dema",
+   "depth-of-market",
+   "descending-triangle",
+   "detrended-price-oscillator",
+   "disparity-index",
+   "displacement",
+   "divergence",
+   "dmi",
+   "donchian-channels",
+   "double-bottom",
+   "double-top",
+   "dow-theory",
+   "ease-of-movement",
+   "elders-force-index",
+   "elliott-wave",
+   "equal-highs-lows",
+   "equivolume",
+   "exhaustion-gap",
+   "exponential-moving-average",
+   "fair-value-gap",
+   "false-breakout",
+   "fear-and-greed-index",
+   "fibonacci-arcs",
+   "fibonacci-channel",
+   "fibonacci-confluence",
+   "fibonacci-extension",
+   "fibonacci-fan",
+   "fibonacci-projection",
+   "fibonacci-retracement",
+   "fibonacci-time-zones",
+   "force-index",
+   "frama",
+   "gann-square-of-nine",
+   "gann-theory",
+   "gap-fill",
+   "golden-cross",
+   "golden-ratio",
+   "guppy-multiple-moving-average",
+   "hidden-divergence",
+   "hindenburg-omen",
+   "historical-volatility",
+   "hull-moving-average",
+   "inside-bar",
+   "inverse-head-and-shoulders",
+   "island-reversal",
+   "kama",
+   "keltner-channels",
+   "key-levels",
+   "kill-zones",
+   "klinger-oscillator",
+   "know-sure-thing",
+   "line-chart",
+   "linear-regression-channel",
+   "liquidity-sweep",
+   "log-scale",
+   "lsma",
+   "macd-histogram",
+   "macd",
+   "market-cycles",
+   "market-profile",
+   "market-structure-shift",
+   "market-structure",
+   "mass-index",
+   "mcclellan-oscillator",
+   "mcclellan-summation-index",
+   "mcginley-dynamic",
+   "mean-reversion",
+   "measured-move",
+   "mitigation-block",
+   "momentum-indicator",
+   "money-flow-index",
+   "moving-average-crossover",
+   "moving-average-envelope",
+   "moving-average-exit",
+   "moving-average-ribbon",
+   "multiple-time-frame-analysis",
+   "murrey-math-lines",
+   "new-highs-new-lows",
+   "nyse-tick",
+   "ohlc-bar-chart",
+   "on-balance-volume",
+   "open-interest",
+   "optimal-trade-entry",
+   "order-block",
+   "outside-bar",
+   "overbought-oversold",
+   "parabolic-sar",
+   "pennant",
+   "percent-above-moving-average",
+   "percent-b",
+   "pin-bar",
+   "power-of-three",
+   "ppo",
+   "premium-discount",
+   "previous-day-high-low",
+   "price-action",
+   "price-volume-trend",
+   "pullback-trading",
+   "put-call-ratio",
+   "quasimodo-pattern",
+   "range-bars",
+   "range-trading",
+   "rate-of-change",
+   "rectangle-pattern",
+   "relative-strength-comparative",
+   "relative-volume",
+   "retail-sentiment",
+   "role-reversal",
+   "round-numbers",
+   "rounding-bottom",
+   "rsi-failure-swing",
+   "rsi",
+   "runaway-gap",
+   "schaff-trend-cycle",
+   "schiff-pitchfork",
+   "seasonality",
+   "session-open",
+   "shark-pattern",
+   "simple-moving-average",
+   "smart-money-concepts",
+   "smoothed-moving-average",
+   "speed-resistance-lines",
+   "standard-deviation",
+   "stochastic-oscillator",
+   "supertrend",
+   "supply-and-demand-zones",
+   "support-and-resistance",
+   "swing-highs-lows",
+   "symmetrical-triangle",
+   "t3-moving-average",
+   "tema",
+   "three-drives",
+   "tick-charts",
+   "tick-volume",
+   "time-frames",
+   "trend-channel",
+   "trend-exhaustion",
+   "trend-following",
+   "trend-intensity-index",
+   "trendline",
+   "triple-bottom",
+   "triple-top",
+   "trix",
+   "twiggs-money-flow",
+   "ultimate-oscillator",
+   "volume-climax",
+   "volume-oscillator",
+   "volume-spread-analysis",
+   "volume",
+   "vwap-bands",
+   "vwap",
+   "vwma",
+   "wavetrend-oscillator",
+   "weekly-monthly-open",
+   "weighted-moving-average",
+   "williams-accumulation-distribution",
+   "williams-r",
+   "zlema",
+   "zweig-breadth-thrust"
+  ],
+  "isbn10": [
+   "059333244X",
+   "0735200661",
+   "0735200653"
+  ],
+  "isbn13": [
+   "9780593332443",
+   "9780735200661",
+   "9780735200654"
+  ],
+  "ol_title": "Technical Analysis of the Financial Markets"
+ },
+ {
+  "title": "Technical Analysis of Stock Trends",
+  "line": "Edwards, Robert D. and Magee, John (1948, later editions). *Technical Analysis of Stock Trends*.",
+  "used": [
+   "adam-and-eve",
+   "ascending-triangle",
+   "bear-flag",
+   "break-of-structure",
+   "breakaway-gap",
+   "breaker-block",
+   "breakout-retest",
+   "breakout-trading",
+   "broadening-formation",
+   "bull-flag",
+   "bump-and-run",
+   "change-of-character",
+   "common-gap",
+   "confluence",
+   "descending-triangle",
+   "diamond-pattern",
+   "double-bottom",
+   "double-top",
+   "dow-theory",
+   "equal-highs-lows",
+   "exhaustion-gap",
+   "falling-wedge",
+   "false-breakout",
+   "gap-fill",
+   "head-and-shoulders",
+   "inverse-head-and-shoulders",
+   "island-reversal",
+   "key-levels",
+   "liquidity-sweep",
+   "market-structure-shift",
+   "market-structure",
+   "measured-move",
+   "pennant",
+   "premium-discount",
+   "price-action",
+   "price-gaps",
+   "pullback-trading",
+   "quasimodo-pattern",
+   "range-trading",
+   "rectangle-pattern",
+   "rising-wedge",
+   "role-reversal",
+   "rounding-bottom",
+   "rounding-top",
+   "runaway-gap",
+   "structure-stop",
+   "support-and-resistance",
+   "swing-highs-lows",
+   "symmetrical-triangle",
+   "trend-channel",
+   "trend-exhaustion",
+   "trendline",
+   "triple-bottom",
+   "triple-top",
+   "v-reversal",
+   "volume"
+  ],
+  "isbn10": [
+   "0910944008",
+   "0139043438",
+   "0910944040",
+   "0849337720",
+   "1420013149",
+   "1880408007"
+  ],
+  "isbn13": [
+   "9780814403730",
+   "9781574442922",
+   "9781880408001"
+  ],
+  "ol_title": "Technical analysis of stock trends"
+ },
+ {
+  "title": "Japanese Candlestick Charting Techniques",
+  "line": "Nison, Steve (1991). *Japanese Candlestick Charting Techniques*. New York Institute of Finance.",
+  "used": [
+   "abandoned-baby",
+   "advance-block",
+   "bearish-engulfing",
+   "bearish-harami",
+   "belt-hold",
+   "bullish-engulfing",
+   "bullish-harami",
+   "candlestick-chart",
+   "counterattack-lines",
+   "dark-cloud-cover",
+   "deliberation-pattern",
+   "doji",
+   "dragonfly-doji",
+   "evening-doji-star",
+   "evening-star",
+   "fakey-pattern",
+   "falling-three-methods",
+   "gap-three-methods",
+   "gravestone-doji",
+   "hammer",
+   "hanging-man",
+   "harami-cross",
+   "heikin-ashi",
+   "homing-pigeon",
+   "inverted-hammer",
+   "kicker-pattern",
+   "ladder-bottom",
+   "long-legged-doji",
+   "marubozu",
+   "mat-hold",
+   "morning-doji-star",
+   "morning-star",
+   "ohlc-bar-chart",
+   "on-neck-in-neck",
+   "outside-bar",
+   "piercing-line",
+   "price-gaps",
+   "rising-three-methods",
+   "separating-lines",
+   "shooting-star",
+   "spinning-top",
+   "stick-sandwich",
+   "tasuki-gap",
+   "three-black-crows",
+   "three-inside-up-down",
+   "three-line-strike",
+   "three-outside-up-down",
+   "three-white-soldiers",
+   "tweezer-bottoms",
+   "tweezer-tops"
+  ],
+  "isbn10": [
+   "957845712X",
+   "0735201811",
+   "0139316507"
+  ],
+  "isbn13": [
+   "9789578457126",
+   "9780139316500",
+   "9780735201811"
+  ],
+  "ol_title": "Japanese candlestick charting techniques"
+ },
+ {
+  "title": "Candlestick Charting Explained",
+  "line": "Morris, Gregory L. (2006). *Candlestick Charting Explained*, 3rd edition. McGraw-Hill.",
+  "used": [
+   "abandoned-baby",
+   "advance-block",
+   "bearish-engulfing",
+   "bearish-harami",
+   "belt-hold",
+   "bullish-engulfing",
+   "bullish-harami",
+   "candlestick-chart",
+   "counterattack-lines",
+   "dark-cloud-cover",
+   "deliberation-pattern",
+   "doji",
+   "dragonfly-doji",
+   "evening-doji-star",
+   "evening-star",
+   "falling-three-methods",
+   "gravestone-doji",
+   "hammer",
+   "hanging-man",
+   "harami-cross",
+   "homing-pigeon",
+   "inverted-hammer",
+   "kicker-pattern",
+   "ladder-bottom",
+   "long-legged-doji",
+   "marubozu",
+   "mat-hold",
+   "morning-doji-star",
+   "morning-star",
+   "on-neck-in-neck",
+   "piercing-line",
+   "rising-three-methods",
+   "separating-lines",
+   "shooting-star",
+   "spinning-top",
+   "stick-sandwich",
+   "tasuki-gap",
+   "three-black-crows",
+   "three-inside-up-down",
+   "three-line-strike",
+   "three-outside-up-down",
+   "three-white-soldiers",
+   "tweezer-bottoms",
+   "tweezer-tops"
+  ],
+  "isbn10": [
+   "1557388911",
+   "007146154X"
+  ],
+  "isbn13": [
+   "9781557388919",
+   "9780071461542"
+  ],
+  "ol_title": "Candlestick Charting Explained"
+ },
+ {
+  "title": "Technical Analysis: The Complete Resource for Financial Market Technicians",
+  "line": "Kirkpatrick, Charles D. and Dahlquist, Julie R. (2006). *Technical Analysis: The Complete Resource for Financial Market Technicians*. FT Press.",
+  "used": [
+   "accumulation-distribution",
+   "andrews-pitchfork",
+   "apo",
+   "atr",
+   "break-even-stop",
+   "camarilla-pivots",
+   "chaikin-money-flow",
+   "cumulative-volume-delta",
+   "death-cross",
+   "dema",
+   "elder-impulse-system",
+   "exponential-moving-average",
+   "fibonacci-extension",
+   "fibonacci-pivot-points",
+   "fibonacci-retracement",
+   "golden-cross",
+   "hull-moving-average",
+   "key-levels",
+   "macd-histogram",
+   "macd",
+   "moving-average-crossover",
+   "moving-average-envelope",
+   "moving-average-exit",
+   "moving-average-ribbon",
+   "open-interest",
+   "pivot-points",
+   "point-and-figure",
+   "ppo",
+   "previous-day-high-low",
+   "renko-chart",
+   "schaff-trend-cycle",
+   "schiff-pitchfork",
+   "simple-moving-average",
+   "speed-resistance-lines",
+   "supply-and-demand-zones",
+   "tema",
+   "time-frames",
+   "twiggs-money-flow",
+   "volume-delta",
+   "volume-weighted-macd",
+   "vwma",
+   "weighted-moving-average",
+   "woodie-pivots"
+  ],
+  "isbn10": [
+   "0137059442",
+   "0134137043"
+  ],
+  "isbn13": [
+   "9780137059447",
+   "9780134137049"
+  ],
+  "ol_title": "TECHNICAL ANALYSIS"
+ },
+ {
+  "title": "Encyclopedia of Candlestick Charts",
+  "line": "Bulkowski, Thomas N. (2008). *Encyclopedia of Candlestick Charts*. Wiley.",
+  "used": [
+   "abandoned-baby",
+   "advance-block",
+   "bearish-engulfing",
+   "bearish-harami",
+   "belt-hold",
+   "bullish-engulfing",
+   "bullish-harami",
+   "candlestick-chart",
+   "counterattack-lines",
+   "dark-cloud-cover",
+   "deliberation-pattern",
+   "doji",
+   "dragonfly-doji",
+   "evening-doji-star",
+   "evening-star",
+   "falling-three-methods",
+   "gravestone-doji",
+   "hammer",
+   "hanging-man",
+   "harami-cross",
+   "homing-pigeon",
+   "inverted-hammer",
+   "kicker-pattern",
+   "ladder-bottom",
+   "long-legged-doji",
+   "marubozu",
+   "mat-hold",
+   "morning-doji-star",
+   "morning-star",
+   "on-neck-in-neck",
+   "piercing-line",
+   "rising-three-methods",
+   "separating-lines",
+   "shooting-star",
+   "spinning-top",
+   "stick-sandwich",
+   "tasuki-gap",
+   "three-black-crows",
+   "three-inside-up-down",
+   "three-line-strike",
+   "three-outside-up-down",
+   "three-white-soldiers"
+  ],
+  "isbn10": [
+   "0470255846",
+   "1281237469",
+   "1118428692",
+   "1119202280",
+   "0470490160",
+   "0470182016"
+  ],
+  "isbn13": [
+   "9780470255841",
+   "9780470182017",
+   "9781118428696"
+  ],
+  "ol_title": "Encyclopedia of candlestick charts"
+ },
+ {
+  "title": "Encyclopedia of Chart Patterns",
+  "line": "Bulkowski, Thomas N. (2005). *Encyclopedia of Chart Patterns*, 2nd edition. Wiley.",
+  "used": [
+   "adam-and-eve",
+   "ascending-triangle",
+   "bear-flag",
+   "breakaway-gap",
+   "broadening-formation",
+   "bull-flag",
+   "bump-and-run",
+   "common-gap",
+   "cup-and-handle",
+   "cypher-pattern",
+   "descending-triangle",
+   "diamond-pattern",
+   "double-bottom",
+   "double-top",
+   "exhaustion-gap",
+   "falling-wedge",
+   "gap-fill",
+   "head-and-shoulders",
+   "inverse-cup-and-handle",
+   "inverse-head-and-shoulders",
+   "island-reversal",
+   "measured-move",
+   "pennant",
+   "price-gaps",
+   "rectangle-pattern",
+   "rising-wedge",
+   "rounding-bottom",
+   "rounding-top",
+   "runaway-gap",
+   "shark-pattern",
+   "symmetrical-triangle",
+   "three-drives",
+   "triple-bottom",
+   "triple-top",
+   "v-reversal",
+   "wolfe-waves"
+  ],
+  "isbn10": [
+   "0470239050",
+   "1119739691",
+   "1119739683",
+   "128027588X",
+   "1118045858",
+   "0471722251"
+  ],
+  "isbn13": [
+   "9780471668268",
+   "9781119739722",
+   "9780471295259"
+  ],
+  "ol_title": "Encyclopedia of Chart Patterns"
+ },
+ {
+  "title": "New Concepts in Technical Trading Systems",
+  "line": "Wilder, J. Welles Jr. (1978). *New Concepts in Technical Trading Systems*. Trend Research.",
+  "used": [
+   "adx",
+   "atr-stop",
+   "atr",
+   "average-daily-range",
+   "chandelier-exit",
+   "choppiness-index",
+   "connors-rsi",
+   "divergence",
+   "dmi",
+   "keltner-channels",
+   "mean-reversion",
+   "normalized-atr",
+   "overbought-oversold",
+   "parabolic-sar",
+   "rsi-failure-swing",
+   "rsi",
+   "smoothed-moving-average",
+   "starc-bands",
+   "stochastic-rsi",
+   "supertrend",
+   "trend-following",
+   "volatility-stop"
+  ],
+  "isbn10": [
+   "0894590278"
+  ],
+  "isbn13": [
+   "9780894590276"
+  ],
+  "ol_title": "New concepts in technical trading systems"
+ },
+ {
+  "title": "Technical Analysis from A to Z",
+  "line": "Achelis, Steven B. (2000). *Technical Analysis from A to Z*, 2nd edition. McGraw-Hill. (Aroon entry; the indicator was introduced by Tushar Chande in 1995.)",
+  "used": [
+   "aroon",
+   "bollinger-bands",
+   "chaikin-oscillator",
+   "ease-of-movement",
+   "klinger-oscillator",
+   "linear-regression-slope",
+   "macd",
+   "mass-index",
+   "negative-volume-index",
+   "positive-volume-index",
+   "price-volume-trend",
+   "trend-intensity-index",
+   "trix",
+   "vertical-horizontal-filter",
+   "weighted-moving-average"
+  ],
+  "isbn10": [
+   "0071363483",
+   "0071363483"
+  ],
+  "isbn13": [
+   "9780071363488",
+   "9780071363488"
+  ],
+  "ol_title": "Technical Analysis from A to Z"
+ },
+ {
+  "title": "The Encyclopedia of Technical Market Indicators",
+  "line": "Colby, Robert W. (2003). *The Encyclopedia of Technical Market Indicators*, 2nd edition. McGraw-Hill.",
+  "used": [
+   "accumulation-distribution",
+   "chaikin-money-flow",
+   "chaikin-volatility",
+   "demark-pivots",
+   "force-index",
+   "money-flow-index",
+   "normalized-atr",
+   "on-balance-volume",
+   "relative-volatility-index",
+   "starc-bands",
+   "twiggs-money-flow",
+   "volume-oscillator",
+   "volume-weighted-macd",
+   "williams-accumulation-distribution"
+  ],
+  "isbn10": [
+   "0070120579",
+   "0070120579"
+  ],
+  "isbn13": [
+   "9780070120570",
+   "9780070120570"
+  ],
+  "ol_title": "The Encyclopedia Of Technical Market Indicators"
+ },
+ {
+  "title": "Trading for a Living",
+  "line": "Elder, Alexander (1993). *Trading for a Living*. Wiley.",
+  "used": [
+   "break-even-stop",
+   "elder-impulse-system",
+   "elder-ray-index",
+   "elders-force-index",
+   "force-index",
+   "multiple-time-frame-analysis",
+   "position-sizing",
+   "profit-target",
+   "risk-reward-ratio",
+   "scaling-out",
+   "stop-loss",
+   "structure-stop",
+   "time-frames",
+   "trailing-stop"
+  ],
+  "isbn10": [
+   "1560159553",
+   "0471592242",
+   "1560150432",
+   "1118963687",
+   "1118443926",
+   "1322199159"
+  ],
+  "isbn13": [
+   "9780471592242",
+   "9781560150435",
+   "9781560159551"
+  ],
+  "ol_title": "Trading for a Living"
+ },
+ {
+  "title": "Trading Price Action Trends: Technical Analysis of Price Charts Bar by Bar for the Serious Trader",
+  "line": "Brooks, Al (2012). *Trading Price Action Trends: Technical Analysis of Price Charts Bar by Bar for the Serious Trader*. Wiley.",
+  "used": [
+   "bar-stop",
+   "break-of-structure",
+   "breakout-retest",
+   "false-breakout",
+   "inside-bar",
+   "liquidity-sweep",
+   "market-structure",
+   "pin-bar",
+   "price-action",
+   "pullback-trading",
+   "swing-highs-lows",
+   "three-pushes",
+   "two-legged-pullback"
+  ],
+  "isbn10": [
+   "1118166248",
+   "111816623X",
+   "1118166256",
+   "1283337509",
+   "1119202590",
+   "1394378106"
+  ],
+  "isbn13": [
+   "9781394378104",
+   "9781119202592",
+   "9781118166239"
+  ],
+  "ol_title": "Trading Price Action Trends"
+ },
+ {
+  "title": "Technical Analysis Explained",
+  "line": "Pring, Martin J. (2002). *Technical Analysis Explained*, 4th edition. McGraw-Hill. (Pring did much to popularise the Coppock Curve.)",
+  "used": [
+   "coppock-curve",
+   "divergence",
+   "fibonacci-arcs",
+   "fibonacci-channel",
+   "fibonacci-fan",
+   "fibonacci-time-zones",
+   "hidden-divergence",
+   "know-sure-thing",
+   "put-call-ratio",
+   "stochastic-oscillator",
+   "trend-channel",
+   "trendline"
+  ],
+  "isbn10": [
+   "0070508852",
+   "0071396128",
+   "0070508712",
+   "0070510423",
+   "0071381937",
+   "9339205103"
+  ],
+  "isbn13": [
+   "9780070508859",
+   "9780071396127",
+   "9780070508712"
+  ],
+  "ol_title": "Technical analysis explained"
+ },
+ {
+  "title": "Trading Systems and Methods",
+  "line": "Kaufman, Perry J. *Trading Systems and Methods*. Wiley.",
+  "used": [
+   "atr-stop",
+   "kama",
+   "linear-regression-channel",
+   "linear-regression",
+   "position-sizing",
+   "profit-target",
+   "risk-reward-ratio",
+   "stop-loss",
+   "trailing-stop",
+   "volatility-stop"
+  ],
+  "isbn10": [
+   "047126847X",
+   "1118222245",
+   "0471148792",
+   "1118043561",
+   "1118260929",
+   "1119605385"
+  ],
+  "isbn13": [
+   "9781118260920",
+   "9780471268475",
+   "9781119605386"
+  ],
+  "ol_title": "New Trading Systems and Methods"
+ },
+ {
+  "title": "Trade Your Way to Financial Freedom",
+  "line": "Tharp, Van K. (1998). *Trade Your Way to Financial Freedom*. McGraw-Hill.",
+  "used": [
+   "atr-stop",
+   "position-sizing",
+   "profit-target",
+   "risk-reward-ratio",
+   "scaling-out",
+   "stop-loss",
+   "structure-stop",
+   "trailing-stop",
+   "volatility-stop"
+  ],
+  "isbn10": [
+   "0071658130",
+   "8387014435",
+   "0070647623",
+   "007147871X",
+   "1592802362"
+  ],
+  "isbn13": [
+   "9788387014438",
+   "9780071658133",
+   "9780070647626"
+  ],
+  "ol_title": "Trade Your Way to Financial Freedom"
+ },
+ {
+  "title": "Mind Over Markets: Power Trading with Market Generated Information",
+  "line": "Dalton, James F., Jones, Eric T. and Dalton, Robert B. (2013). *Mind Over Markets: Power Trading with Market Generated Information*, updated edition. Wiley.",
+  "used": [
+   "auction-market-theory",
+   "footprint-chart",
+   "initial-balance",
+   "market-profile",
+   "point-of-control",
+   "value-area",
+   "volume-profile"
+  ],
+  "isbn10": [
+   "0934380538",
+   "1118531736",
+   "1118659767",
+   "1118659724",
+   "1118659783"
+  ],
+  "isbn13": [
+   "9780934380539",
+   "9781118659786",
+   "9781118659762"
+  ],
+  "ol_title": "Mind over markets"
+ },
+ {
+  "title": "Bollinger on Bollinger Bands",
+  "line": "Bollinger, John (2001). *Bollinger on Bollinger Bands*. McGraw-Hill.",
+  "used": [
+   "bollinger-band-width",
+   "bollinger-bands",
+   "bollinger-squeeze",
+   "mean-reversion",
+   "percent-b",
+   "standard-deviation",
+   "ttm-squeeze"
+  ],
+  "isbn10": [
+   "0071386734",
+   "0071373683",
+   "097261110X"
+  ],
+  "isbn13": [
+   "9780071373685",
+   "9780071386739",
+   "9780972611107"
+  ],
+  "ol_title": "Bollinger on Bollinger Bands"
+ },
+ {
+  "title": "Harmonic Trading, Volume One",
+  "line": "Carney, Scott M. (2010). *Harmonic Trading, Volume One*. Pearson FT Press. (Covers AB=CD within harmonic patterns.)",
+  "used": [
+   "abcd-pattern",
+   "bat-pattern",
+   "butterfly-pattern",
+   "crab-pattern",
+   "gartley-pattern",
+   "harmonic-patterns"
+  ],
+  "isbn10": [
+   "0137051506",
+   "0137051514",
+   "013138497X",
+   "0131384953"
+  ],
+  "isbn13": [
+   "9780137051519",
+   "9780137051502",
+   "9780131384972"
+  ],
+  "ol_title": "Harmonic trading"
+ },
+ {
+  "title": "Trading Chaos",
+  "line": "Williams, Bill (1995). *Trading Chaos*. Wiley.",
+  "used": [
+   "accelerator-oscillator",
+   "gator-oscillator",
+   "swing-highs-lows",
+   "williams-alligator",
+   "williams-fractals"
+  ],
+  "isbn10": [
+   "0471119296",
+   "0470586273",
+   "0470357568",
+   "1283916495",
+   "0471463086"
+  ],
+  "isbn13": [
+   "9780471119296",
+   "9781283916493",
+   "9780470357569"
+  ],
+  "ol_title": "Trading chaos"
+ },
+ {
+  "title": "Profits in the Stock Market",
+  "line": "Gartley, H. M. (1935). *Profits in the Stock Market*. Self-published; later reprinted by Lambert-Gann Publishing.",
+  "used": [
+   "bat-pattern",
+   "butterfly-pattern",
+   "crab-pattern",
+   "gartley-pattern",
+   "harmonic-patterns"
+  ],
+  "isbn10": [
+   "0939093073"
+  ],
+  "isbn13": [
+   "9780939093076"
+  ],
+  "ol_title": "Profits in the stock market"
+ },
+ {
+  "title": "Cybernetic Analysis for Stocks and Futures",
+  "line": "Ehlers, John F. (2004). *Cybernetic Analysis for Stocks and Futures*. Wiley.",
+  "used": [
+   "center-of-gravity",
+   "cyber-cycle",
+   "fisher-transform",
+   "inverse-fisher-transform",
+   "laguerre-rsi"
+  ],
+  "isbn10": [
+   "0471463078",
+   "0471654213",
+   "1118045726",
+   "0470308826",
+   "1280345667"
+  ],
+  "isbn13": [
+   "9780471463078",
+   "9780471654216",
+   "9781118045725"
+  ],
+  "ol_title": "Cybernetic Analysis for Stocks and Futures"
+ },
+ {
+  "title": "New Trading Dimensions",
+  "line": "Williams, Bill and Williams, Justine (1998). *New Trading Dimensions*. Wiley.",
+  "used": [
+   "accelerator-oscillator",
+   "gator-oscillator",
+   "williams-alligator",
+   "williams-fractals"
+  ],
+  "isbn10": [
+   "0471295418",
+   "0470254866"
+  ],
+  "isbn13": [
+   "9780471295419",
+   "9780470254868"
+  ],
+  "ol_title": "New trading dimensions"
+ },
+ {
+  "title": "Elliott Wave Principle: Key to Market Behavior",
+  "line": "Frost, A. J. and Prechter, Robert R. (1978). *Elliott Wave Principle: Key to Market Behavior*. New Classics Library.",
+  "used": [
+   "corrective-waves",
+   "elliott-wave",
+   "impulse-wave",
+   "two-legged-pullback"
+  ],
+  "isbn10": [
+   "1616041366",
+   "0932750435",
+   "0932750028",
+   "1616041374",
+   "0932750001",
+   "0932750052"
+  ],
+  "isbn13": [
+   "9781616041373",
+   "9781616041366",
+   "9780932750051"
+  ],
+  "ol_title": "Elliott wave principle"
+ },
+ {
+  "title": "Trades About to Happen",
+  "line": "Weis, David H. (2013). *Trades About to Happen*. Wiley. (The Wyckoff tradition that VSA grew from.)",
+  "used": [
+   "volume-spread-analysis",
+   "wyckoff-accumulation",
+   "wyckoff-distribution",
+   "wyckoff-method"
+  ],
+  "isbn10": [
+   "0470487801",
+   "1299533868",
+   "1118220315",
+   "1118656385",
+   "1118258703",
+   "111823362X"
+  ],
+  "isbn13": [
+   "9780470487808",
+   "9781118233627",
+   "9781299533868"
+  ],
+  "ol_title": "Trades about to Happen"
+ },
+ {
+  "title": "The Three Skills of Top Trading",
+  "line": "Pruden, Hank (2007). *The Three Skills of Top Trading*. Wiley.",
+  "used": [
+   "wyckoff-accumulation",
+   "wyckoff-distribution",
+   "wyckoff-method",
+   "wyckoff-spring-upthrust"
+  ],
+  "isbn10": [
+   "1119196825",
+   "1118044762",
+   "1280826959",
+   "1118046714",
+   "0470139293",
+   "0470050632"
+  ],
+  "isbn13": [
+   "9781119196822",
+   "9780470050637",
+   "9781280826955"
+  ],
+  "ol_title": "The Three Skills of Top Trading"
+ },
+ {
+  "title": "The New Technical Trader",
+  "line": "Chande, Tushar S., and Kroll, Stanley (1994). *The New Technical Trader*. John Wiley & Sons.",
+  "used": [
+   "aroon-oscillator",
+   "chande-momentum-oscillator",
+   "stochastic-rsi"
+  ],
+  "isbn10": [
+   "0471597805",
+   "0471597805"
+  ],
+  "isbn13": [
+   "9780471597803",
+   "9780471597803"
+  ],
+  "ol_title": "The new technical trader"
+ },
+ {
+  "title": "The Wave Principle",
+  "line": "Elliott, Ralph Nelson (1938). *The Wave Principle*.",
+  "used": [
+   "corrective-waves",
+   "elliott-wave",
+   "impulse-wave"
+  ],
+  "isbn10": [
+   "9993933805"
+  ],
+  "isbn13": [
+   "9789993933809"
+  ],
+  "ol_title": "The wave principle"
+ },
+ {
+  "title": "Fibonacci Trading",
+  "line": "Boroden, Carolyn (2008). *Fibonacci Trading*. McGraw-Hill. (Discusses clusters of Fibonacci levels.)",
+  "used": [
+   "fibonacci-confluence",
+   "fibonacci-projection",
+   "golden-ratio"
+  ],
+  "isbn10": [
+   "0071596739",
+   "1281240575",
+   "007149815X",
+   "007171622X"
+  ],
+  "isbn13": [
+   "9781281240576",
+   "9780071498159",
+   "9780071596732"
+  ],
+  "ol_title": "Fibonacci Trading"
+ },
+ {
+  "title": "Technical Analysis for the Trading Professional",
+  "line": "Brown, Constance (1999). *Technical Analysis for the Trading Professional*. McGraw-Hill. (RSI range rules and trend-continuation readings; the idea is also linked to Andrew Cardwell's RSI \"reversals\".)",
+  "used": [
+   "hidden-divergence",
+   "overbought-oversold",
+   "rsi"
+  ],
+  "isbn10": [
+   "0070120625",
+   "007175914X"
+  ],
+  "isbn13": [
+   "9780070120624",
+   "9780071759144"
+  ],
+  "ol_title": "Technical analysis for the trading professional"
+ },
+ {
+  "title": "Beyond Candlesticks: New Japanese Charting Techniques Revealed",
+  "line": "Nison, Steve (1994). *Beyond Candlesticks: New Japanese Charting Techniques Revealed*. John Wiley & Sons.",
+  "used": [
+   "kagi-chart",
+   "renko-chart",
+   "three-line-break"
+  ],
+  "isbn10": [
+   "0470490608",
+   "047100720X",
+   "3820303855"
+  ],
+  "isbn13": [
+   "9780471007203",
+   "9780470490600",
+   "9783820303858"
+  ],
+  "ol_title": "Beyond candlesticks"
+ },
+ {
+  "title": "Trading and Exchanges: Market Microstructure for Practitioners",
+  "line": "Harris, Larry (2003). *Trading and Exchanges: Market Microstructure for Practitioners*. Oxford University Press. (Background on limit orders, market orders and how liquidity is supplied.)",
+  "used": [
+   "absorption",
+   "depth-of-market"
+  ],
+  "isbn10": [
+   "0198090544",
+   "0195144708"
+  ],
+  "isbn13": [
+   "9780195144703",
+   "9780198090540"
+  ],
+  "ol_title": "Trading and Exchanges"
+ },
+ {
+  "title": "Trend Following",
+  "line": "Covel, Michael W. (2004). *Trend Following*. Financial Times Prentice Hall. (Describes Donchian-style breakout systems.)",
+  "used": [
+   "breakout-trading",
+   "trend-following"
+  ],
+  "isbn10": [
+   "0136137180",
+   "0131345508",
+   "013702018X",
+   "1119371902",
+   "0768670438",
+   "1119371910"
+  ],
+  "isbn13": [
+   "9780131345508",
+   "9780136137184",
+   "9780137020188"
+  ],
+  "ol_title": "Trend following"
+ },
+ {
+  "title": "Point and Figure Charting",
+  "line": "Dorsey, Thomas J. (1995). *Point and Figure Charting*. Wiley. (Covers point-and-figure methods and the Bullish Percent Index; several editions.)",
+  "used": [
+   "bullish-percent-index",
+   "point-and-figure"
+  ],
+  "isbn10": [
+   "1118044673",
+   "1118047648",
+   "1118799364",
+   "1118662342",
+   "1281002186",
+   "1299966020"
+  ],
+  "isbn13": [
+   "9781299966024",
+   "9781118662434",
+   "9781281002181"
+  ],
+  "ol_title": "Point and figure charting"
+ },
+ {
+  "title": "Come Into My Trading Room",
+  "line": "Elder, Alexander (2002). *Come Into My Trading Room*. Wiley. (Describes the Chandelier Exit and credits LeBeau.)",
+  "used": [
+   "chandelier-exit",
+   "elder-impulse-system"
+  ],
+  "isbn10": [
+   "0471225347",
+   "0471273821",
+   "0471225401",
+   "0470306327",
+   "1280340584"
+  ],
+  "isbn13": [
+   "9780471225409",
+   "9780471225348",
+   "9780471273820"
+  ],
+  "ol_title": "Come into my trading room"
+ },
+ {
+  "title": "How to Make Money in Stocks",
+  "line": "O'Neil, William J. (1988). *How to Make Money in Stocks*. McGraw-Hill.",
+  "used": [
+   "cup-and-handle",
+   "inverse-cup-and-handle"
+  ],
+  "isbn10": [
+   "0070480176",
+   "9579453373",
+   "0972446249",
+   "7500567537",
+   "007139480X",
+   "0471680532"
+  ],
+  "isbn13": [
+   "9780070480179",
+   "9780070480599",
+   "9780070478930"
+  ],
+  "ol_title": "How to Make Money in Stocks"
+ },
+ {
+  "title": "The New Science of Technical Analysis",
+  "line": "DeMark, Thomas R. (1994). *The New Science of Technical Analysis*. Wiley.",
+  "used": [
+   "demark-pivots",
+   "td-sequential"
+  ],
+  "isbn10": [
+   "0471035483"
+  ],
+  "isbn13": [
+   "9780471035480"
+  ],
+  "ol_title": "The new science of technical analysis"
+ },
+ {
+  "title": "The Complete TurtleTrader",
+  "line": "Covel, Michael W. (2007). *The Complete TurtleTrader*. HarperBusiness. (Turtle rules.)",
+  "used": [
+   "donchian-channels",
+   "turtle-trading"
+  ],
+  "isbn10": [
+   "0061539805",
+   "0061539783",
+   "0062657453",
+   "0062657445",
+   "0061539791",
+   "0061740616"
+  ],
+  "isbn13": [
+   "9780061539817",
+   "9780061740619",
+   "9780061539824"
+  ],
+  "ol_title": "The Complete TurtleTrader"
+ },
+ {
+  "title": "Way of the Turtle",
+  "line": "Faith, Curtis (2007). *Way of the Turtle*. McGraw-Hill.",
+  "used": [
+   "donchian-channels",
+   "turtle-trading"
+  ],
+  "isbn10": [
+   "1933309687",
+   "0071509461",
+   "007148664X"
+  ],
+  "isbn13": [
+   "9780071509466",
+   "9780071486644",
+   "9781933309682"
+  ],
+  "ol_title": "Way of the Turtle"
+ },
+ {
+  "title": "Volume Cycles in the Stock Market",
+  "line": "Arms, Richard W. Jr. (1994). *Volume Cycles in the Stock Market*. Equis International.",
+  "used": [
+   "equivolume",
+   "trin"
+  ],
+  "isbn10": [
+   "0870944053",
+   "1885439008"
+  ],
+  "isbn13": [
+   "9780870944055",
+   "9781885439000"
+  ],
+  "ol_title": "Volume cycles in the stock market"
+ },
+ {
+  "title": "Fibonacci Analysis",
+  "line": "Brown, Constance (2008). *Fibonacci Analysis*. Bloomberg Press.",
+  "used": [
+   "fibonacci-extension",
+   "fibonacci-retracement"
+  ],
+  "isbn10": [
+   "0470883243",
+   "0470885254",
+   "1118531582",
+   "1576602613",
+   "1282685279",
+   "0470883995"
+  ],
+  "isbn13": [
+   "9780470883242",
+   "9780470885253",
+   "9781118531587"
+  ],
+  "ol_title": "Fibonacci analysis"
+ },
+ {
+  "title": "Truth of the Stock Tape",
+  "line": "Gann, W. D. (1923). *Truth of the Stock Tape*. Financial Guardian Publishing.",
+  "used": [
+   "gann-fan",
+   "gann-theory"
+  ],
+  "isbn10": [
+   "093909312X",
+   "1419185284",
+   "1774642255",
+   "0464999669",
+   "0359046452",
+   "1773230700"
+  ],
+  "isbn13": [
+   "9781419185281",
+   "9780939093120",
+   "9780359046454"
+  ],
+  "ol_title": "Truth of the Stock Tape"
+ },
+ {
+  "title": "Options, Futures, and Other Derivatives",
+  "line": "Hull, John C. *Options, Futures, and Other Derivatives*. Pearson. (Standard textbook treatment of volatility estimation; use the latest edition.)",
+  "used": [
+   "historical-volatility",
+   "implied-volatility"
+  ],
+  "isbn10": [
+   "0135009944",
+   "1292410655",
+   "0132604604",
+   "8120322371",
+   "013447208X",
+   "0131977059"
+  ],
+  "isbn13": [
+   "9780130090560",
+   "9780130224446",
+   "9780135009949"
+  ],
+  "ol_title": "Options, Futures, and Other Derivatives"
+ },
+ {
+  "title": "Intermarket Analysis: Profiting from Global Market Relationships",
+  "line": "Murphy, John J. (2004). *Intermarket Analysis: Profiting from Global Market Relationships*. Wiley.",
+  "used": [
+   "intermarket-analysis",
+   "relative-rotation-graph"
+  ],
+  "isbn10": [
+   "0471524336",
+   "0470491302",
+   "1118045556",
+   "1118571606",
+   "0470242507",
+   "1118620364"
+  ],
+  "isbn13": [
+   "9780470491300",
+   "9780471524335",
+   "9781118045558"
+  ],
+  "ol_title": "Intermarket technical analysis"
+ },
+ {
+  "title": "Rocket Science for Traders: Digital Signal Processing Applications",
+  "line": "Ehlers, John F. (2001). *Rocket Science for Traders: Digital Signal Processing Applications*. Wiley. (Ehlers' main early book on applying signal processing to trading.)",
+  "used": [
+   "mama",
+   "zlema"
+  ],
+  "isbn10": [
+   "0471405671",
+   "0470314605"
+  ],
+  "isbn13": [
+   "9780471405672",
+   "9780470314609"
+  ],
+  "ol_title": "Rocket Science for Traders"
+ },
+ {
+  "title": "Markets and Market Logic",
+  "line": "Steidlmayer, J. Peter and Koy, Kevin (1986). *Markets and Market Logic*. Porcupine Press.",
+  "used": [
+   "market-profile",
+   "point-of-control"
+  ],
+  "isbn10": [
+   "0941275000"
+  ],
+  "isbn13": [
+   "9780941275002"
+  ],
+  "ol_title": "Markets and market logic"
+ },
+ {
+  "title": "Stock Market Logic",
+  "line": "Fosback, Norman G. (1976). *Stock Market Logic*. Institute for Econometric Research.",
+  "used": [
+   "negative-volume-index",
+   "positive-volume-index"
+  ],
+  "isbn10": [
+   "0917604490",
+   "0917604482",
+   "0793111862",
+   "8170944406",
+   "0793101484",
+   "0793101484"
+  ],
+  "isbn13": [
+   "9788170944409",
+   "9780917604485",
+   "9780793111862"
+  ],
+  "ol_title": "Stock market logic"
+ },
+ {
+  "title": "Day Trading with Short Term Price Patterns and Opening Range Breakout",
+  "line": "Crabel, Toby (1990). *Day Trading with Short Term Price Patterns and Opening Range Breakout*. Traders Press.",
+  "used": [
+   "nr7",
+   "opening-range-breakout"
+  ],
+  "isbn10": [
+   "0934380171"
+  ],
+  "isbn13": [
+   "9780934380171"
+  ],
+  "ol_title": "Day trading with short term price patterns and opening range breakout"
+ },
+ {
+  "title": "Granville's New Key to Stock Market Profits",
+  "line": "Granville, Joseph E. (1963). *Granville's New Key to Stock Market Profits*. Prentice-Hall.",
+  "used": [
+   "on-balance-volume",
+   "volume"
+  ],
+  "isbn10": [
+   "0133634086"
+  ],
+  "isbn13": [
+   "9780133634082"
+  ],
+  "ol_title": "Granville's new key to stock market profits"
+ },
+ {
+  "title": "A Complete Guide to Technical Trading Tactics",
+  "line": "Person, John L. (2004). *A Complete Guide to Technical Trading Tactics*. Wiley. (Covers floor-trader pivot points.)",
+  "used": [
+   "pivot-points",
+   "woodie-pivots"
+  ],
+  "isbn10": [
+   "0471659568",
+   "1280345837",
+   "0470360593",
+   "047158455X",
+   "111842901X"
+  ],
+  "isbn13": [
+   "9780470360590",
+   "9780471584551",
+   "9781118429013"
+  ],
+  "ol_title": "A Complete Guide to Technical Trading Tactics"
+ },
+ {
+  "title": "Momentum, Direction, and Divergence",
+  "line": "Blau, William (1995). *Momentum, Direction, and Divergence*. John Wiley & Sons.",
+  "used": [
+   "stochastic-momentum-index",
+   "true-strength-index"
+  ],
+  "isbn10": [
+   "0471027294",
+   "047030085X",
+   "0471027294"
+  ],
+  "isbn13": [
+   "9780471027294",
+   "9780470300855",
+   "9780471027294"
+  ],
+  "ol_title": "Momentum, direction, and divergence"
+ },
+ {
+  "title": "Fibonacci Ratios with Pattern Recognition",
+  "line": "Pesavento, Larry (1997). *Fibonacci Ratios with Pattern Recognition*. Traders Press.",
+  "used": [
+   "abcd-pattern"
+  ],
+  "isbn10": [
+   "0934380368"
+  ],
+  "isbn13": [
+   "9780934380362"
+  ],
+  "ol_title": "Fibonacci ratios with pattern recognition"
+ },
+ {
+  "title": "Technical Analysis Using Multiple Timeframes",
+  "line": "Shannon, Brian (2008). *Technical Analysis Using Multiple Timeframes*. LifeVest Publishing. Discusses volume-weighted levels anchored to chosen events.",
+  "used": [
+   "anchored-vwap"
+  ],
+  "isbn10": [
+   "1598795805"
+  ],
+  "isbn13": [
+   "9781598795806",
+   "9798986868059",
+   "9798986868042"
+  ],
+  "ol_title": "Technical analysis using multiple timeframes"
+ },
+ {
+  "title": "Markets in Profile: Profiting from the Auction Process",
+  "line": "Dalton, James F., Dalton, Robert B. and Jones, Eric T. (2007). *Markets in Profile: Profiting from the Auction Process*. Wiley.",
+  "used": [
+   "auction-market-theory"
+  ],
+  "isbn10": [
+   "1119196701",
+   "0470039094",
+   "0470651164",
+   "1118044649",
+   "0470121556"
+  ],
+  "isbn13": [
+   "9781119196709",
+   "9780470039090",
+   "9781118044643"
+  ],
+  "ol_title": "Markets in profile"
+ },
+ {
+  "title": "Investments",
+  "line": "Bodie, Zvi, Kane, Alex and Marcus, Alan J. *Investments*. McGraw-Hill. (Standard textbook treatment of beta and CAPM; several editions.)",
+  "used": [
+   "beta"
+  ],
+  "isbn10": [
+   "0256135592",
+   "0256164592",
+   "0072318597",
+   "0256271348",
+   "0256098158",
+   "0073405175"
+  ],
+  "isbn13": [
+   "9780256098150",
+   "9780073405179",
+   "9780256164596"
+  ],
+  "ol_title": "Essentials of investments"
+ },
+ {
+  "title": "The Commitments of Traders Bible",
+  "line": "Briese, Stephen (2008). *The Commitments of Traders Bible*. Wiley.",
+  "used": [
+   "commitments-of-traders"
+  ],
+  "isbn10": [
+   "1119201861",
+   "1281284920",
+   "0470178426",
+   "0470267917",
+   "0470178426"
+  ],
+  "isbn13": [
+   "9781119201861",
+   "9780470178423",
+   "9780470267912"
+  ],
+  "ol_title": "The Commitments of Traders Bible"
+ },
+ {
+  "title": "Proceedings of the Royal Society of London",
+  "line": "Pearson, Karl (1895). \"Notes on regression and inheritance in the case of two parents\". *Proceedings of the Royal Society of London*, 58.",
+  "used": [
+   "correlation-coefficient"
+  ],
+  "isbn10": [],
+  "isbn13": [],
+  "ol_title": null
+ },
+ {
+  "title": "The Stock Market Barometer",
+  "line": "Hamilton, William Peter (1922). *The Stock Market Barometer*. Harper and Brothers.",
+  "used": [
+   "dow-theory"
+  ],
+  "isbn10": [
+   "0471247383",
+   "0471247642",
+   "1558888063",
+   "1596050705",
+   "1602060061"
+  ],
+  "isbn13": [
+   "9780471247388",
+   "9780471247647",
+   "9781558888067"
+  ],
+  "ol_title": "The stock market barometer"
+ },
+ {
+  "title": "The Dow Theory",
+  "line": "Rhea, Robert (1932). *The Dow Theory*. Barron's.",
+  "used": [
+   "dow-theory"
+  ],
+  "isbn10": [
+   "1558888071",
+   "1638231273",
+   "0870341103",
+   "1794855939"
+  ],
+  "isbn13": [
+   "9780870341106",
+   "9781638231271",
+   "9781794855939"
+  ],
+  "ol_title": "The Dow theory"
+ },
+ {
+  "title": "Tunnel Thru the Air",
+  "line": "Gann, W. D. (1927). *Tunnel Thru the Air*. (A novel; the source of much of the later interpretation of Gann's ideas.)",
+  "used": [
+   "gann-square-of-nine"
+  ],
+  "isbn10": [
+   "9650060154",
+   "0766160572",
+   "9561002299",
+   "0939093057"
+  ],
+  "isbn13": [
+   "9789650060152",
+   "9789561002296",
+   "9780939093052"
+  ],
+  "ol_title": "The tunnel thru the air"
+ },
+ {
+  "title": "45 Years in Wall Street",
+  "line": "Gann, W. D. (1949). *45 Years in Wall Street*.",
+  "used": [
+   "gann-theory"
+  ],
+  "isbn10": [
+   "9659124198",
+   "1578987687"
+  ],
+  "isbn13": [
+   "9789659124190",
+   "9781578987689"
+  ],
+  "ol_title": "45 Years in Wall Street"
+ },
+ {
+  "title": "Technical Analysis and Stock Market Profits",
+  "line": "Schabacker, Richard W. (1932). *Technical Analysis and Stock Market Profits*.",
+  "used": [
+   "head-and-shoulders"
+  ],
+  "isbn10": [
+   "1897597568",
+   "0273630954",
+   "1281893536"
+  ],
+  "isbn13": [
+   "9781897597569",
+   "9781281893536",
+   "9780273630951"
+  ],
+  "ol_title": "Technical Analysis and Stock Market Profits"
+ },
+ {
+  "title": "Ichimoku Charts: An Introduction to Ichimoku Kinko Clouds",
+  "line": "Elliott, Nicole (2007). *Ichimoku Charts: An Introduction to Ichimoku Kinko Clouds*. Harriman House.",
+  "used": [
+   "ichimoku-cloud"
+  ],
+  "isbn10": [
+   "1281893382",
+   "085719108X",
+   "1897597843",
+   "0857196111"
+  ],
+  "isbn13": [
+   "9780857191083",
+   "9780857196118",
+   "9781897597842"
+  ],
+  "ol_title": "Ichimoku Charts"
+ },
+ {
+  "title": "Trading with Ichimoku Clouds",
+  "line": "Patel, Manesh (2010). *Trading with Ichimoku Clouds*. Wiley.",
+  "used": [
+   "ichimoku-cloud"
+  ],
+  "isbn10": [
+   "0470609931",
+   "0470634782",
+   "0470634774",
+   "1119200202",
+   "1282690914",
+   "0470634790"
+  ],
+  "isbn13": [
+   "9780470609934",
+   "9780470634776",
+   "9781119200208"
+  ],
+  "ol_title": "Trading with Ichimoku clouds"
+ },
+ {
+  "title": "Intermarket Technical Analysis: Trading Strategies for the Global Stock, Bond, Commodity, and Currency Markets",
+  "line": "Murphy, John J. (1991). *Intermarket Technical Analysis: Trading Strategies for the Global Stock, Bond, Commodity, and Currency Markets*. Wiley.",
+  "used": [
+   "intermarket-analysis"
+  ],
+  "isbn10": [
+   "0471524336",
+   "0470491302"
+  ],
+  "isbn13": [
+   "9780470491300",
+   "9780471524335"
+  ],
+  "ol_title": "Intermarket technical analysis"
+ },
+ {
+  "title": "Smarter Trading: Improving Performance in Changing Markets",
+  "line": "Kaufman, Perry J. (1995). *Smarter Trading: Improving Performance in Changing Markets*. McGraw-Hill.",
+  "used": [
+   "kama"
+  ],
+  "isbn10": [
+   "0070340021"
+  ],
+  "isbn13": [
+   "9780070340022"
+  ],
+  "ol_title": "Smarter trading"
+ },
+ {
+  "title": "Trading with the Odds: Using the Power of Statistics to Beat the Market",
+  "line": "Kase, Cynthia A. (1996). *Trading with the Odds: Using the Power of Statistics to Beat the Market*. Irwin Professional Publishing.",
+  "used": [
+   "kase-devstop"
+  ],
+  "isbn10": [
+   "155738911X"
+  ],
+  "isbn13": [
+   "9781557389114"
+  ],
+  "ol_title": "Trading with the odds"
+ },
+ {
+  "title": "Applied Regression Analysis",
+  "line": "Draper, Norman R., and Smith, Harry (1966). *Applied Regression Analysis*. John Wiley & Sons. (First edition; the statistics behind least squares fitting.)",
+  "used": [
+   "linear-regression-slope"
+  ],
+  "isbn10": [
+   "0471029955",
+   "0471170828",
+   "0471221708",
+   "0471029955"
+  ],
+  "isbn13": [
+   "9780471029953",
+   "9780471170822",
+   "9780471029953"
+  ],
+  "ol_title": "Applied regression analysis"
+ },
+ {
+  "title": "The Profit Magic of Stock Transaction Timing",
+  "line": "Hurst, J. M. (1970). *The Profit Magic of Stock Transaction Timing*. Prentice-Hall.",
+  "used": [
+   "market-cycles"
+  ],
+  "isbn10": [
+   "0137260180",
+   "0934380627"
+  ],
+  "isbn13": [
+   "9780137260188",
+   "9780934380621"
+  ],
+  "ol_title": "The profit magic of stock transaction timing"
+ },
+ {
+  "title": "Philosophical Transactions of the Royal Society of London A",
+  "line": "Pearson, Karl (1894). \"Contributions to the Mathematical Theory of Evolution\". *Philosophical Transactions of the Royal Society of London A*, 185. (Origin of the term \"standard deviation\".)",
+  "used": [
+   "standard-deviation"
+  ],
+  "isbn10": [],
+  "isbn13": [],
+  "ol_title": null
+ },
+ {
+  "title": "DeMark Indicators",
+  "line": "Perl, Jason (2008). *DeMark Indicators*. Bloomberg Press.",
+  "used": [
+   "td-sequential"
+  ],
+  "isbn10": [
+   "1576603148",
+   "1282684426",
+   "0470885351",
+   "047088410X",
+   "1118531566",
+   "0470883340"
+  ],
+  "isbn13": [
+   "9781118531563",
+   "9780470885352",
+   "9780470883341"
+  ],
+  "ol_title": "DeMark indicators"
+ },
+ {
+  "title": "The Evaluation and Optimization of Trading Strategies",
+  "line": "Pardo, Robert (2008). *The Evaluation and Optimization of Trading Strategies*, 2nd edition. John Wiley & Sons.",
+  "used": [
+   "time-stop"
+  ],
+  "isbn10": [
+   "0470128011",
+   "0470262850"
+  ],
+  "isbn13": [
+   "9780470128015",
+   "9780470262856"
+  ],
+  "ol_title": "The Evaluation and Optimization of Trading Strategies"
+ },
+ {
+  "title": "Short Term Trading Strategies That Work",
+  "line": "Connors, Larry and Alvarez, Cesar (2009). *Short Term Trading Strategies That Work*. TradingMarkets Publishing Group. (Includes exits after a fixed number of days in short-term systems.)",
+  "used": [
+   "time-stop"
+  ],
+  "isbn10": [
+   "0981923909"
+  ],
+  "isbn13": [
+   "9780981923901"
+  ],
+  "ol_title": "Short term trading strategies that work"
+ },
+ {
+  "title": "Mastering the Trade",
+  "line": "Carter, John (2005). *Mastering the Trade*. McGraw-Hill. (2nd edition 2012.)",
+  "used": [
+   "ttm-squeeze"
+  ],
+  "isbn10": [
+   "0071775145",
+   "0071459588"
+  ],
+  "isbn13": [
+   "9780071775144",
+   "9780071459587"
+  ],
+  "ol_title": "Mastering the trade"
+ },
+ {
+  "title": "The Investor's Guide to Fidelity Funds",
+  "line": "Martin, Peter G. and McCann, Byron B. (1989). *The Investor's Guide to Fidelity Funds*. Wiley.",
+  "used": [
+   "ulcer-index"
+  ],
+  "isbn10": [
+   "0471622583"
+  ],
+  "isbn13": [
+   "9780471622581"
+  ],
+  "ol_title": "The investor's guide to fidelity funds"
+ },
+ {
+  "title": "Cboe VIX White Paper",
+  "line": "Cboe Global Markets. *Cboe VIX White Paper* (the official description of the calculation).",
+  "used": [
+   "vix"
+  ],
+  "isbn10": [],
+  "isbn13": [],
+  "ol_title": null
+ },
+ {
+  "title": "Trade Like a Stock Market Wizard",
+  "line": "Minervini, Mark (2013). *Trade Like a Stock Market Wizard*. McGraw-Hill.",
+  "used": [
+   "volatility-contraction-pattern"
+  ],
+  "isbn10": [
+   "0071807225"
+  ],
+  "isbn13": [
+   "9780071807227"
+  ],
+  "ol_title": "Trade Like a Stock Market Wizard"
+ },
+ {
+  "title": "Steidlmayer on Markets: Trading with Market Profile",
+  "line": "Steidlmayer, J. Peter, and Hawkins, Steven B. (2003). *Steidlmayer on Markets: Trading with Market Profile*, 2nd edition. Wiley.",
+  "used": [
+   "volume-profile"
+  ],
+  "isbn10": [
+   "0471215562",
+   "128036274X",
+   "0470248076",
+   "0471420980",
+   "0471621153"
+  ],
+  "isbn13": [
+   "9780471215561",
+   "9780470248072",
+   "9780471420989"
+  ],
+  "ol_title": "Steidlmayer on markets"
+ },
+ {
+  "title": "Investing with Volume Analysis: Identify, Follow, and Profit from Trends",
+  "line": "Dormeier, Buff (2011). *Investing with Volume Analysis: Identify, Follow, and Profit from Trends*. FT Press.",
+  "used": [
+   "volume-weighted-macd"
+  ],
+  "isbn10": [
+   "0137085508",
+   "0137085508"
+  ],
+  "isbn13": [
+   "9780137085507",
+   "9780137085507"
+  ],
+  "ol_title": "Investing with volume analysis"
+ },
+ {
+  "title": "Winning on Wall Street",
+  "line": "Zweig, Martin E. (1986). *Winning on Wall Street*. Warner Books.",
+  "used": [
+   "zweig-breadth-thrust"
+  ],
+  "isbn10": [
+   "0446512346",
+   "0446670146",
+   "0446386847",
+   "0446672815",
+   "0446525332",
+   "0446561681"
+  ],
+  "isbn13": [
+   "9780446512343",
+   "9780446672818",
+   "9780446670142"
+  ],
+  "ol_title": "Martin Zweig's winning on Wall Street"
+ }
+]
