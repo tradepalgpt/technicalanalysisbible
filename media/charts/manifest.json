@@ -402,6 +402,36 @@
   "credit": "JPMorgan (JPM), daily, Mar 2023 to May 2023. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 2
  },
+ "breaker-block": {
+  "slug": "breaker-block",
+  "file": "breaker-block.svg",
+  "title": "Breaker block",
+  "caption": "A bullish order block that fails (a close below it and below a swing low), then price rallies back into the zone and is rejected. Found by our detector on JPMorgan (JPM), 5 July 2024 to 7 August 2024.",
+  "alt": "Breaker block. A bullish order block that fails (a close below it and below a swing low), then price rallies back into the zone and is rejected. Found by our detector on JPMorgan (JPM), 5 July 2024 to 7 August 2024.",
+  "symbol": "jpm",
+  "start": "2024-07-05",
+  "end": "2024-08-07",
+  "indicator": null,
+  "pattern": "breaker-block",
+  "params": {},
+  "credit": "JPMorgan (JPM), daily, Jun 2024 to Aug 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 1
+ },
+ "breakout-retest": {
+  "slug": "breakout-retest",
+  "file": "breakout-retest.svg",
+  "title": "Breakout and retest",
+  "caption": "A strong close above a tested range high, then a pullback to the old high that holds. Found by our detector on Amazon (AMZN), 22 June 2021 to 19 July 2021.",
+  "alt": "Breakout and retest. A strong close above a tested range high, then a pullback to the old high that holds. Found by our detector on Amazon (AMZN), 22 June 2021 to 19 July 2021.",
+  "symbol": "amzn",
+  "start": "2021-06-22",
+  "end": "2021-07-19",
+  "indicator": null,
+  "pattern": "breakout-retest",
+  "params": {},
+  "credit": "Amazon (AMZN), daily, May 2021 to Aug 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 8
+ },
  "broadening-formation": {
   "slug": "broadening-formation",
   "file": "broadening-formation.svg",
@@ -896,6 +926,21 @@
   },
   "credit": "S&P 500 ETF (SPY), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "displacement": {
+  "slug": "displacement",
+  "file": "displacement.svg",
+  "title": "Displacement",
+  "caption": "A run of large one-direction candles with small wicks that closes beyond the highest high of the previous 20 bars. Found by our detector on Bitcoin (BTC/USD), 16 August 2023 to 17 August 2023.",
+  "alt": "Displacement. A run of large one-direction candles with small wicks that closes beyond the highest high of the previous 20 bars. Found by our detector on Bitcoin (BTC/USD), 16 August 2023 to 17 August 2023.",
+  "symbol": "btcusd",
+  "start": "2023-08-16",
+  "end": "2023-08-17",
+  "indicator": null,
+  "pattern": "displacement",
+  "params": {},
+  "credit": "Bitcoin (BTC/USD), daily, Jul 2023 to Aug 2023. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 20
+ },
  "dmi": {
   "slug": "dmi",
   "file": "dmi.svg",
@@ -1110,6 +1155,21 @@
    "period": 20
   },
   "credit": "Bitcoin (BTC/USD), daily, Mar 2025 to Sep 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "fair-value-gap": {
+  "slug": "fair-value-gap",
+  "file": "fair-value-gap.svg",
+  "title": "Fair value gap",
+  "caption": "Three candles where the first candle's high sits below the third candle's low, leaving a gap between them. Found by our detector on Apple (AAPL), 10 June 2024 to 12 June 2024.",
+  "alt": "Fair value gap. Three candles where the first candle's high sits below the third candle's low, leaving a gap between them. Found by our detector on Apple (AAPL), 10 June 2024 to 12 June 2024.",
+  "symbol": "aapl",
+  "start": "2024-06-10",
+  "end": "2024-06-12",
+  "indicator": null,
+  "pattern": "fair-value-gap",
+  "params": {},
+  "credit": "Apple (AAPL), daily, May 2024 to Jul 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 64
  },
  "fakey-pattern": {
   "slug": "fakey-pattern",
@@ -1744,6 +1804,21 @@
   },
   "credit": "Gold futures, daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "liquidity-sweep": {
+  "slug": "liquidity-sweep",
+  "file": "liquidity-sweep.svg",
+  "title": "Liquidity sweep",
+  "caption": "Price spikes below an earlier swing low, then closes back above it; the idea is an illustration of the shape, not proof it works. Found by our detector on JPMorgan (JPM), 5 January 2024 to 12 January 2024.",
+  "alt": "Liquidity sweep. Price spikes below an earlier swing low, then closes back above it; the idea is an illustration of the shape, not proof it works. Found by our detector on JPMorgan (JPM), 5 January 2024 to 12 January 2024.",
+  "symbol": "jpm",
+  "start": "2024-01-05",
+  "end": "2024-01-12",
+  "indicator": null,
+  "pattern": "liquidity-sweep",
+  "params": {},
+  "credit": "JPMorgan (JPM), daily, Nov 2023 to Jan 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 98
+ },
  "long-legged-doji": {
   "slug": "long-legged-doji",
   "file": "long-legged-doji.svg",
@@ -1884,6 +1959,21 @@
    "k": 1.0
   },
   "credit": "Gold futures, daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "mitigation-block": {
+  "slug": "mitigation-block",
+  "file": "mitigation-block.svg",
+  "title": "Mitigation block",
+  "caption": "After a downtrend, a higher low and a close above the last swing high; the last down candle before the break is the zone. Found by our detector on Exxon Mobil (XOM), 19 August 2024 to 19 September 2024.",
+  "alt": "Mitigation block. After a downtrend, a higher low and a close above the last swing high; the last down candle before the break is the zone. Found by our detector on Exxon Mobil (XOM), 19 August 2024 to 19 September 2024.",
+  "symbol": "xom",
+  "start": "2024-08-19",
+  "end": "2024-09-19",
+  "indicator": null,
+  "pattern": "mitigation-block",
+  "params": {},
+  "credit": "Exxon Mobil (XOM), daily, Jul 2024 to Oct 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 1
  },
  "momentum-indicator": {
   "slug": "momentum-indicator",
@@ -2073,6 +2163,23 @@
   "pattern": "on-neck-in-neck",
   "params": {},
   "credit": "Nasdaq 100 ETF (QQQ), daily, Feb 2025 to Apr 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 3
+ },
+ "order-block": {
+  "slug": "order-block",
+  "file": "order-block.svg",
+  "title": "Order block",
+  "caption": "The last down candle before a strong move that closes above a swing high, with price later coming back to that zone. Found by our detector on JPMorgan (JPM), 8 April 2024 to 10 May 2024.",
+  "alt": "Order block. The last down candle before a strong move that closes above a swing high, with price later coming back to that zone. Found by our detector on JPMorgan (JPM), 8 April 2024 to 10 May 2024.",
+  "symbol": "jpm",
+  "start": "2024-04-08",
+  "end": "2024-05-10",
+  "indicator": null,
+  "pattern": "order-block",
+  "params": {
+   "require_retest": 1
+  },
+  "credit": "JPMorgan (JPM), daily, Mar 2024 to May 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 3
  },
  "outside-bar": {
@@ -2864,6 +2971,21 @@
   "credit": "Bitcoin (BTC/USD), daily, Aug 2021 to Sep 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 54
  },
+ "three-pushes": {
+  "slug": "three-pushes",
+  "file": "three-pushes.svg",
+  "title": "Three pushes",
+  "caption": "Three rising swing highs, the third gaining less than the second, then a close below the last pullback low. Found by our detector on Nasdaq 100 ETF (QQQ), 23 May 2024 to 24 July 2024.",
+  "alt": "Three pushes. Three rising swing highs, the third gaining less than the second, then a close below the last pullback low. Found by our detector on Nasdaq 100 ETF (QQQ), 23 May 2024 to 24 July 2024.",
+  "symbol": "qqq",
+  "start": "2024-05-23",
+  "end": "2024-07-24",
+  "indicator": null,
+  "pattern": "three-pushes",
+  "params": {},
+  "credit": "Nasdaq 100 ETF (QQQ), daily, Apr 2024 to Aug 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 1
+ },
  "three-white-soldiers": {
   "slug": "three-white-soldiers",
   "file": "three-white-soldiers.svg",
@@ -3019,6 +3141,21 @@
    "period": 21
   },
   "credit": "Bitcoin (BTC/USD), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "two-legged-pullback": {
+  "slug": "two-legged-pullback",
+  "file": "two-legged-pullback.svg",
+  "title": "Two-legged pullback",
+  "caption": "In an uptrend, a pullback in two legs (A down, B up, C down to about the same low) and then a bullish signal bar. Found by our detector on Gold futures, 15 August 2024 to 5 September 2024.",
+  "alt": "Two-legged pullback. In an uptrend, a pullback in two legs (A down, B up, C down to about the same low) and then a bullish signal bar. Found by our detector on Gold futures, 15 August 2024 to 5 September 2024.",
+  "symbol": "gold",
+  "start": "2024-08-15",
+  "end": "2024-09-05",
+  "indicator": null,
+  "pattern": "two-legged-pullback",
+  "params": {},
+  "credit": "Gold futures, daily, Jul 2024 to Sep 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 2
  },
  "ulcer-index": {
   "slug": "ulcer-index",
