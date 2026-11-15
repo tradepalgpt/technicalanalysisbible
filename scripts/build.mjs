@@ -109,6 +109,20 @@ function amazonLinks(html) {
   }
   return { html, used };
 }
+
+const CITED = fs.existsSync(path.join(ROOT, 'data', 'books-cited.json')) ? JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'books-cited.json'), 'utf8')) : [];
+const CITED_BY = Object.fromEntries(CITED.map((c) => [c.title, new Set(c.used)]));
+const amzUrl = (b) => `https://www.amazon.com/dp/${b.asin}?tag=${AMZ_TAG}`;
+const bookLi = (b) => `<li><a href="${amzUrl(b)}" rel="sponsored nofollow noopener" target="_blank"><em>${esc(b.title)}</em></a> <small>${esc((b.cite.match(/^[^(]+\(\d{4}\)/) || [b.cite.split('.')[0]])[0])}</small></li>`;
+function readingFor(slugs, n = 3) {
+  const set = new Set(slugs);
+  return AMZ_BOOKS.map((b) => [b, [...(CITED_BY[b.title] || [])].filter((s) => set.has(s)).length]).filter(([, k]) => k > 0)
+    .sort((a, b) => b[1] - a[1]).slice(0, n).map(([b]) => b);
+}
+function readingBox(slugs) {
+  const bs = readingFor(slugs);
+  return bs.length ? `<section class="reading"><h2>Further reading</h2><ul>${bs.map(bookLi).join('')}</ul>${AMZ_NOTE}</section>` : '';
+}
 const cmpTitle = (s) => cmpPub[s]?.data.title || s;
 const glTerm = (s) => glPub[s]?.data.term || s;
 
@@ -221,7 +235,7 @@ function hub({ p, title, h1, intro, list, crumbs }) {
   ];
   const paras = intro.split(/\n\n+/).map((t, i) => `<p${i ? '' : ' class="lead"'}>${esc(t)}</p>`).join('');
   const desc = intro.split(/\n\n+/)[0].length > 158 ? intro.split(/\n\n+/)[0].slice(0, 155).replace(/\s\S*$/, '') + '…' : intro.split(/\n\n+/)[0];
-  const body = `${crumbsHtml(crumbs)}<h1>${esc(h1)}</h1>${paras}<p class="count">${list.length} guides.</p>${itemList(list)}`;
+  const body = `${crumbsHtml(crumbs)}<h1>${esc(h1)}</h1>${paras}<p class="count">${list.length} guides.</p>${itemList(list)}${readingBox(list.map((i) => i.slug))}`;
   page(p, layout({ title, desc, path: p, body, jsonld, noindex: live < 3 }), { index: live >= 3 });
 }
 
@@ -296,6 +310,14 @@ page('/', layout({ title: `${SITE.brand}: every technical indicator and trading 
 <h2>Browse by type</h2><ul class="cards">${cat.types.map((t) => `<li><a href="/type/${t.slug}/"><b>${esc(t.name)}</b></a></li>`).join('')}</ul>
 <h2>A to Z</h2>${azNav}
 <h2>Guides so far</h2><ul class="list">${latest.map((d) => `<li>${link(d.slug, d.name)}</li>`).join('')}</ul>` }));
+
+// Reading list (only books checked on Amazon)
+if (AMZ_BOOKS.length) {
+  const byUse = [...AMZ_BOOKS].sort((a, b) => (CITED_BY[b.title]?.size || 0) - (CITED_BY[a.title]?.size || 0));
+  page('/reading/', layout({ title: `Best technical analysis books | ${SITE.brand}`, desc: 'The technical analysis books our guides cite most often, from classic references to specialist titles.', path: '/reading/',
+    jsonld: [crumbsLd([['Home', '/'], ['Reading list', '/reading/']])],
+    body: `${crumbsHtml([['Home', '/'], ['Reading list', '/reading/']])}<article class="prose"><h1>Technical analysis reading list</h1><p class="lead">The books our guides cite most, in order of how many guides rely on them. We list them for their content; links go to Amazon.</p><ol class="list">${byUse.map((b) => bookLi(b).replace('</small></li>', ` · cited in ${CITED_BY[b.title]?.size || 0} guides</small></li>`)).join('')}</ol>${AMZ_NOTE}</article>` }));
+}
 
 // 404
 write('404.html', layout({ title: `Page not found | ${SITE.brand}`, desc: 'Page not found.', path: '/404/', noindex: true, body: `<h1>Page not found</h1><p>Try the <a href="/a-z/">A to Z index</a>.</p>` }));
