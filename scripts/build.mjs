@@ -29,7 +29,17 @@ function page(urlPath, html, { index = true } = {}) {
 }
 const abs = (p) => SITE.url + p;
 const link = (slug, text) => pub[slug] ? `<a href="/${slug}/">${esc(text ?? bySlug[slug]?.name ?? slug)}</a>` : `<span class="soon" title="Coming soon">${esc(text ?? bySlug[slug]?.name ?? slug)}</span>`;
-const adSlot = (size, cls = '') => `<div class="partner-ad ${cls}" data-ad-size="${size}" data-ad-config="${esc(JSON.stringify(adCfg))}"></div>`;
+// Ad slots are server-rendered with one of our own project cards (works with JavaScript off and when ads
+// are blocked or not allowed); partner-ad.js swaps in the IC Markets ad only when it may show.
+const HOUSE = JSON.parse(fs.readFileSync(path.join(ROOT, 'shared', 'ads', 'house-cards.json'), 'utf8'));
+let houseN = 0;
+function houseCard() {
+  const c = HOUSE.cards[houseN++ % HOUSE.cards.length];
+  return `<div class="partner-ad__box"><span class="partner-ad__label">${esc(HOUSE.label)}</span>`
+    + `<a class="partner-ad__link" href="${esc(c.url)}" target="_blank" rel="noopener"><strong>${esc(c.title)}</strong>`
+    + `<span class="partner-ad__body">${esc(c.body)}</span><span class="partner-ad__cta">${esc(c.cta)} →</span></a></div>`;
+}
+const adSlot = (size, cls = '') => `<div class="partner-ad house-card ${cls}" data-ad-size="${size}" data-ad-config="${esc(JSON.stringify(adCfg))}">${houseCard()}</div>`;
 const ld = (o) => `<script type="application/ld+json">${JSON.stringify(o).replace(/</g, '\\u003c')}</script>`;
 const crumbsLd = (list) => ({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: list.map(([n, u], i) => ({ '@type': 'ListItem', position: i + 1, name: n, item: abs(u) })) });
 const crumbsHtml = (list) => `<nav class="crumbs" aria-label="Breadcrumb">${list.map(([n, u], i) => i === list.length - 1 ? `<span>${esc(n)}</span>` : `<a href="${u}">${esc(n)}</a>`).join(' <span aria-hidden="true">›</span> ')}</nav>`;

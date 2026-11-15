@@ -28,6 +28,8 @@
   }
 
   function render(slot, cfg) {
+    slot.textContent = ''; // replace the server-rendered house card
+    slot.classList.remove('house-card');
     var size = slot.getAttribute('data-ad-size') || 'text';
     var box = el('div', 'partner-ad__box');
     box.appendChild(el('span', 'partner-ad__label', 'Advertisement'));

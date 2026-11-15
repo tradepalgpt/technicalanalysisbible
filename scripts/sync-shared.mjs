@@ -5,7 +5,7 @@ import { ROOT } from './lib.mjs';
 
 const SRC = process.env.SHARED_ASSETS || 'C:/shared-assets';
 const DEST = path.join(ROOT, 'shared');
-const FILES = ['ads/ic-markets.json', 'ads/partner-ad.js', 'legal/risk-warning.md', 'legal/advertising-disclosure.md', 'legal/privacy.md', 'legal/terms.md', 'styles/tokens.css'];
+const FILES = ['ads/ic-markets.json', 'ads/house-cards.json', 'ads/partner-ad.js', 'legal/risk-warning.md', 'legal/advertising-disclosure.md', 'legal/privacy.md', 'legal/terms.md', 'styles/tokens.css'];
 const verify = process.argv.includes('--verify');
 
 let drift = 0;

@@ -1,0 +1,28 @@
+{
+  "_note": "Our own projects, shown in ad slots by default (server-rendered, works with JavaScript off). The IC Markets ad replaces them only when it is allowed to show. Not adverts: no tracking, plain links.",
+  "label": "Our projects",
+  "cards": [
+    {
+      "id": "tft",
+      "title": "Things for Traders",
+      "body": "Free tracked signals with full, honest track records.",
+      "cta": "See the signals",
+      "url": "https://thingsfortraders.com"
+    },
+    {
+      "id": "holeyprofit",
+      "title": "HoleyProfit newsletter",
+      "body": "Long-form market analysis on Substack.",
+      "cta": "Read the newsletter",
+      "url": "https://holeyprofitnewsletter.substack.com"
+    },
+    {
+      "id": "community",
+      "title": "Trader community",
+      "body": "Talk set-ups and signals with other traders on Discord.",
+      "cta": "Join the community",
+      "url": "https://thingsfortraders.com",
+      "_invite_note": "No public Discord invite exists yet; link to TFT. Swap in a real invite URL when one is published. Never invent one."
+    }
+  ]
+}
