@@ -338,6 +338,21 @@
   },
   "credit": "Bitcoin (BTC/USD), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "breakaway-gap": {
+  "slug": "breakaway-gap",
+  "file": "breakaway-gap.svg",
+  "title": "Breakaway gap out of a range",
+  "caption": "A gap that leaves a sideways range on high volume, with the next closes staying beyond the old range top. Found by our detector on JPMorgan (JPM), 16 March 2023 to 19 April 2023.",
+  "alt": "Breakaway gap out of a range. A gap that leaves a sideways range on high volume, with the next closes staying beyond the old range top. Found by our detector on JPMorgan (JPM), 16 March 2023 to 19 April 2023.",
+  "symbol": "jpm",
+  "start": "2023-03-16",
+  "end": "2023-04-19",
+  "indicator": null,
+  "pattern": "breakaway-gap",
+  "params": {},
+  "credit": "JPMorgan (JPM), daily, Mar 2023 to May 2023. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 2
+ },
  "broadening-formation": {
   "slug": "broadening-formation",
   "file": "broadening-formation.svg",
@@ -551,6 +566,21 @@
   },
   "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "common-gap": {
+  "slug": "common-gap",
+  "file": "common-gap.svg",
+  "title": "Common gap inside a range",
+  "caption": "A gap that appears inside a sideways range, on ordinary volume, without leaving the range. Found by our detector on Nasdaq 100 ETF (QQQ), 24 January 2024 to 27 February 2024.",
+  "alt": "Common gap inside a range. A gap that appears inside a sideways range, on ordinary volume, without leaving the range. Found by our detector on Nasdaq 100 ETF (QQQ), 24 January 2024 to 27 February 2024.",
+  "symbol": "qqq",
+  "start": "2024-01-24",
+  "end": "2024-02-27",
+  "indicator": null,
+  "pattern": "common-gap",
+  "params": {},
+  "credit": "Nasdaq 100 ETF (QQQ), daily, Jan 2024 to Mar 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 2
+ },
  "connors-rsi": {
   "slug": "connors-rsi",
   "file": "connors-rsi.svg",
@@ -599,6 +629,21 @@
   "params": {},
   "credit": "S&P 500 ETF (SPY), daily, Feb 2025 to Apr 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 1
+ },
+ "cup-and-handle": {
+  "slug": "cup-and-handle",
+  "file": "cup-and-handle.svg",
+  "title": "Cup and handle with breakout level",
+  "caption": "A rounded dip from a high (the cup), a small pullback below the right rim (the handle) and a close above the handle high. Found by our detector on Nasdaq 100 ETF (QQQ), 10 July 2024 to 6 November 2024.",
+  "alt": "Cup and handle with breakout level. A rounded dip from a high (the cup), a small pullback below the right rim (the handle) and a close above the handle high. Found by our detector on Nasdaq 100 ETF (QQQ), 10 July 2024 to 6 November 2024.",
+  "symbol": "qqq",
+  "start": "2024-07-10",
+  "end": "2024-11-06",
+  "indicator": null,
+  "pattern": "cup-and-handle",
+  "params": {},
+  "credit": "Nasdaq 100 ETF (QQQ), daily, May 2024 to Dec 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 2
  },
  "cyber-cycle": {
   "slug": "cyber-cycle",
@@ -1062,6 +1107,21 @@
   },
   "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "gap-fill": {
+  "slug": "gap-fill",
+  "file": "gap-fill.svg",
+  "title": "Gap fill in a range",
+  "caption": "A small gap inside a range that price later trades back through, covering the empty space. Found by our detector on Russell 2000 ETF (IWM), 1 April 2024 to 4 April 2024.",
+  "alt": "Gap fill in a range. A small gap inside a range that price later trades back through, covering the empty space. Found by our detector on Russell 2000 ETF (IWM), 1 April 2024 to 4 April 2024.",
+  "symbol": "iwm",
+  "start": "2024-04-01",
+  "end": "2024-04-04",
+  "indicator": null,
+  "pattern": "gap-fill",
+  "params": {},
+  "credit": "Russell 2000 ETF (IWM), daily, Mar 2024 to Apr 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 2
+ },
  "gap-three-methods": {
   "slug": "gap-three-methods",
   "file": "gap-three-methods.svg",
@@ -1266,6 +1326,21 @@
   },
   "credit": "Gold futures, daily, Feb 2024 to Nov 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "inverse-cup-and-handle": {
+  "slug": "inverse-cup-and-handle",
+  "file": "inverse-cup-and-handle.svg",
+  "title": "Inverse cup and handle",
+  "caption": "A rounded dome, a small rally from its right side (the handle) and a close below the handle low. Found by our detector on Bitcoin (BTC/USD), 10 May 2024 to 4 July 2024.",
+  "alt": "Inverse cup and handle. A rounded dome, a small rally from its right side (the handle) and a close below the handle low. Found by our detector on Bitcoin (BTC/USD), 10 May 2024 to 4 July 2024.",
+  "symbol": "btcusd",
+  "start": "2024-05-10",
+  "end": "2024-07-04",
+  "indicator": null,
+  "pattern": "inverse-cup-and-handle",
+  "params": {},
+  "credit": "Bitcoin (BTC/USD), daily, Apr 2024 to Jul 2024. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 1
+ },
  "inverse-fisher-transform": {
   "slug": "inverse-fisher-transform",
   "file": "inverse-fisher-transform.svg",
@@ -1311,6 +1386,21 @@
   "params": {},
   "credit": "EUR/USD, daily, Oct 2021 to Dec 2021. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 19
+ },
+ "island-reversal": {
+  "slug": "island-reversal",
+  "file": "island-reversal.svg",
+  "title": "Island reversal after a gap",
+  "caption": "A gap in the trend's direction, a short island of bars, then a gap the other way that leaves the island isolated. Found by our detector on Nvidia (NVDA), 21 January 2025 to 27 January 2025.",
+  "alt": "Island reversal after a gap. A gap in the trend's direction, a short island of bars, then a gap the other way that leaves the island isolated. Found by our detector on Nvidia (NVDA), 21 January 2025 to 27 January 2025.",
+  "symbol": "nvda",
+  "start": "2025-01-21",
+  "end": "2025-01-27",
+  "indicator": null,
+  "pattern": "island-reversal",
+  "params": {},
+  "credit": "Nvidia (NVDA), daily, Dec 2024 to Feb 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 3
  },
  "kama": {
   "slug": "kama",
@@ -1904,6 +1994,21 @@
   },
   "credit": "EUR/USD, daily, Aug 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
  },
+ "price-gaps": {
+  "slug": "price-gaps",
+  "file": "price-gaps.svg",
+  "title": "Price gap with marked edges",
+  "caption": "A gap: the new bar's low sits above the previous bar's high, leaving empty space with a top and a bottom edge. Found by our detector on Nvidia (NVDA), 24 May 2023 to 31 May 2023.",
+  "alt": "Price gap with marked edges. A gap: the new bar's low sits above the previous bar's high, leaving empty space with a top and a bottom edge. Found by our detector on Nvidia (NVDA), 24 May 2023 to 31 May 2023.",
+  "symbol": "nvda",
+  "start": "2023-05-24",
+  "end": "2023-05-31",
+  "indicator": null,
+  "pattern": "price-gaps",
+  "params": {},
+  "credit": "Nvidia (NVDA), daily, Apr 2023 to Jun 2023. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 4
+ },
  "price-volume-trend": {
   "slug": "price-volume-trend",
   "file": "price-volume-trend.svg",
@@ -1918,6 +2023,21 @@
    "ma_period": 20
   },
   "credit": "Apple (AAPL), daily, Mar 2024 to Dec 2024. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "quasimodo-pattern": {
+  "slug": "quasimodo-pattern",
+  "file": "quasimodo-pattern.svg",
+  "title": "Quasimodo pattern",
+  "caption": "A higher low, a head above the left shoulder, then a close below that higher low (the break of structure) with the left-shoulder level marked as the entry zone. Found by our detector on Tesla (TSLA), 9 August 2023 to 29 August 2023.",
+  "alt": "Quasimodo pattern. A higher low, a head above the left shoulder, then a close below that higher low (the break of structure) with the left-shoulder level marked as the entry zone. Found by our detector on Tesla (TSLA), 9 August 2023 to 29 August 2023.",
+  "symbol": "tsla",
+  "start": "2023-08-09",
+  "end": "2023-08-29",
+  "indicator": null,
+  "pattern": "quasimodo-pattern",
+  "params": {},
+  "credit": "Tesla (TSLA), daily, Jul 2023 to Oct 2023. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 6
  },
  "rainbow-oscillator": {
   "slug": "rainbow-oscillator",
@@ -2105,6 +2225,21 @@
    "lower": 30
   },
   "credit": "S&P 500 ETF (SPY), daily, Jan 2025 to Aug 2025. Calculated with Technical Analysis Bible's own indicator code."
+ },
+ "runaway-gap": {
+  "slug": "runaway-gap",
+  "file": "runaway-gap.svg",
+  "title": "Runaway gap in a trend",
+  "caption": "A gap in the direction of an established trend that is not filled in the following bars. Found by our detector on Microsoft (MSFT), 7 April 2025 to 8 May 2025.",
+  "alt": "Runaway gap in a trend. A gap in the direction of an established trend that is not filled in the following bars. Found by our detector on Microsoft (MSFT), 7 April 2025 to 8 May 2025.",
+  "symbol": "msft",
+  "start": "2025-04-07",
+  "end": "2025-05-08",
+  "indicator": null,
+  "pattern": "runaway-gap",
+  "params": {},
+  "credit": "Microsoft (MSFT), daily, Mar 2025 to May 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
+  "occurrences": 4
  },
  "schaff-trend-cycle": {
   "slug": "schaff-trend-cycle",
