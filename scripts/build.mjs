@@ -82,6 +82,7 @@ function rewriteLinks(html) {
 const CHART_DIR = path.join(ROOT, 'media', 'charts');
 const CHARTS = fs.existsSync(path.join(CHART_DIR, 'manifest.json')) ? JSON.parse(fs.readFileSync(path.join(CHART_DIR, 'manifest.json'), 'utf8')) : {};
 for (const [slug, c] of Object.entries(CHARTS)) {
+  if (!fs.existsSync(path.join(CHART_DIR, c.file))) { console.warn(`chart missing, skipped: ${c.file}`); delete CHARTS[slug]; continue; }
   const head = fs.readFileSync(path.join(CHART_DIR, c.file), 'utf8').slice(0, 600);
   const w = parseFloat(head.match(/width="([\d.]+)pt"/)?.[1] || 720), h = parseFloat(head.match(/height="([\d.]+)pt"/)?.[1] || 400);
   c.w = 1000; c.h = Math.round(1000 * h / w);

@@ -681,23 +681,6 @@
   "credit": "S&P 500 ETF (SPY), daily, Feb 2025 to Apr 2025. Example found automatically by Technical Analysis Bible's own pattern detector.",
   "occurrences": 1
  },
- "crab-pattern": {
-  "slug": "crab-pattern",
-  "file": "crab-pattern.svg",
-  "title": "Crab with D zone and stop",
-  "caption": "A Crab: D completes near 1.618 of XA, well beyond X, with the stop just beyond D. Found by our detector on Nasdaq 100 ETF (QQQ), 28 January 2022 to 24 February 2022.",
-  "alt": "Crab with D zone and stop. A Crab: D completes near 1.618 of XA, well beyond X, with the stop just beyond D. Found by our detector on Nasdaq 100 ETF (QQQ), 28 January 2022 to 24 February 2022.",
-  "symbol": "qqq",
-  "start": "2022-01-28",
-  "end": "2022-02-24",
-  "indicator": null,
-  "pattern": "crab-pattern",
-  "params": {
-   "swing_pct": 0.02
-  },
-  "credit": "Nasdaq 100 ETF (QQQ), daily, Jan 2022 to Mar 2022. Example found automatically by Technical Analysis Bible's own pattern detector.",
-  "occurrences": 1
- },
  "cup-and-handle": {
   "slug": "cup-and-handle",
   "file": "cup-and-handle.svg",
