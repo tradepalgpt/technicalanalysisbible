@@ -7,21 +7,21 @@
    "title": "Technical Analysis of the Financial Markets",
    "cite": "Murphy, John J. (1999). *Technical Analysis of the Financial Markets*. New York Institute of Finance. (Background on volume and price interaction.)",
    "guides": 194,
-   "asin": "059333244X",
+   "asin": "0735200661",
    "asin_candidates": [
     "059333244X",
     "0735200661",
     "0735200653"
    ],
-   "verified": false,
-   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+   "verified": true,
+   "note": "Confirmed by Dean 15 Nov 2026"
   },
   {
    "key": "Technical Analysis of Stock Trends",
    "title": "Technical Analysis of Stock Trends",
    "cite": "Edwards, Robert D. and Magee, John (1948, later editions). *Technical Analysis of Stock Trends*.",
    "guides": 56,
-   "asin": "0910944008",
+   "asin": "1607962233",
    "asin_candidates": [
     "0910944008",
     "0139043438",
@@ -30,35 +30,35 @@
     "1420013149",
     "1880408007"
    ],
-   "verified": false,
-   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+   "verified": true,
+   "note": "Confirmed by Dean 15 Nov 2026"
   },
   {
    "key": "Japanese Candlestick Charting Techniques",
    "title": "Japanese Candlestick Charting Techniques",
    "cite": "Nison, Steve (1991). *Japanese Candlestick Charting Techniques*. New York Institute of Finance.",
    "guides": 50,
-   "asin": "957845712X",
+   "asin": "0735201811",
    "asin_candidates": [
     "957845712X",
     "0735201811",
     "0139316507"
    ],
-   "verified": false,
-   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+   "verified": true,
+   "note": "Confirmed by Dean 15 Nov 2026"
   },
   {
    "key": "Candlestick Charting Explained",
    "title": "Candlestick Charting Explained",
    "cite": "Morris, Gregory L. (2006). *Candlestick Charting Explained*, 3rd edition. McGraw-Hill.",
    "guides": 44,
-   "asin": "1557388911",
+   "asin": "007146154X",
    "asin_candidates": [
     "1557388911",
     "007146154X"
    ],
-   "verified": false,
-   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+   "verified": true,
+   "note": "Confirmed by Dean 15 Nov 2026"
   },
   {
    "key": "Technical Analysis",
@@ -70,15 +70,15 @@
     "0137059442",
     "0134137043"
    ],
-   "verified": false,
-   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+   "verified": true,
+   "note": "Confirmed by Dean 15 Nov 2026"
   },
   {
    "key": "Encyclopedia of Candlestick Charts",
    "title": "Encyclopedia of Candlestick Charts",
    "cite": "Bulkowski, Thomas N. (2008). *Encyclopedia of Candlestick Charts*. Wiley.",
    "guides": 42,
-   "asin": "0470255846",
+   "asin": "0470182016",
    "asin_candidates": [
     "0470255846",
     "1281237469",
@@ -87,15 +87,15 @@
     "0470490160",
     "0470182016"
    ],
-   "verified": false,
-   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+   "verified": true,
+   "note": "Confirmed by Dean 15 Nov 2026"
   },
   {
    "key": "Encyclopedia of Chart Patterns",
    "title": "Encyclopedia of Chart Patterns",
    "cite": "Bulkowski, Thomas N. (2005). *Encyclopedia of Chart Patterns*, 2nd edition. Wiley.",
    "guides": 36,
-   "asin": "0470239050",
+   "asin": "0471668265",
    "asin_candidates": [
     "0470239050",
     "1119739691",
@@ -104,8 +104,8 @@
     "1118045858",
     "0471722251"
    ],
-   "verified": false,
-   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+   "verified": true,
+   "note": "Confirmed by Dean 15 Nov 2026"
   },
   {
    "key": "New Concepts in Technical Trading Systems",
@@ -116,34 +116,34 @@
    "asin_candidates": [
     "0894590278"
    ],
-   "verified": false,
-   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+   "verified": true,
+   "note": "Confirmed by Dean 15 Nov 2026"
   },
   {
    "key": "Technical Analysis from A to Z",
    "title": "Technical Analysis from A to Z",
    "cite": "Achelis, Steven B. (2000). *Technical Analysis from A to Z*, 2nd edition. McGraw-Hill. (Aroon entry; the indicator was introduced by Tushar Chande in 1995.)",
    "guides": 15,
-   "asin": "0071363483",
+   "asin": "0071826297",
    "asin_candidates": [
     "0071363483",
     "0071363483"
    ],
-   "verified": false,
-   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+   "verified": true,
+   "note": "Confirmed by Dean 15 Nov 2026"
   },
   {
    "key": "The Encyclopedia of Technical Market Indicators",
    "title": "The Encyclopedia of Technical Market Indicators",
    "cite": "Colby, Robert W. (2003). *The Encyclopedia of Technical Market Indicators*, 2nd edition. McGraw-Hill.",
    "guides": 14,
-   "asin": "0070120579",
+   "asin": "1556230494",
    "asin_candidates": [
     "0070120579",
     "0070120579"
    ],
-   "verified": false,
-   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+   "verified": true,
+   "note": "Confirmed by Dean 15 Nov 2026"
   },
   {
    "key": "Trading for a Living",
@@ -167,7 +167,7 @@
    "title": "Trading Price Action Trends: Technical Analysis of Price Charts Bar by Bar for the Serious Trader",
    "cite": "Brooks, Al (2012). *Trading Price Action Trends: Technical Analysis of Price Charts Bar by Bar for the Serious Trader*. Wiley.",
    "guides": 13,
-   "asin": "1118166248",
+   "asin": "1118066510",
    "asin_candidates": [
     "1118166248",
     "111816623X",
@@ -176,15 +176,15 @@
     "1119202590",
     "1394378106"
    ],
-   "verified": false,
-   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+   "verified": true,
+   "note": "Confirmed by Dean 15 Nov 2026"
   },
   {
    "key": "Technical Analysis Explained",
    "title": "Technical Analysis Explained",
    "cite": "Pring, Martin J. (2002). *Technical Analysis Explained*, 4th edition. McGraw-Hill. (Pring did much to popularise the Coppock Curve.)",
    "guides": 12,
-   "asin": "0070508852",
+   "asin": "0071825177",
    "asin_candidates": [
     "0070508852",
     "0071396128",
@@ -193,15 +193,15 @@
     "0071381937",
     "9339205103"
    ],
-   "verified": false,
-   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+   "verified": true,
+   "note": "Confirmed by Dean 15 Nov 2026"
   },
   {
    "key": "Trading Systems and Methods",
    "title": "Trading Systems and Methods",
    "cite": "Kaufman, Perry J. *Trading Systems and Methods*. Wiley.",
    "guides": 10,
-   "asin": "047126847X",
+   "asin": "1119605350",
    "asin_candidates": [
     "047126847X",
     "1118222245",
@@ -210,15 +210,15 @@
     "1118260929",
     "1119605385"
    ],
-   "verified": false,
-   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+   "verified": true,
+   "note": "Confirmed by Dean 15 Nov 2026"
   },
   {
    "key": "Trade Your Way to Financial Freedom",
    "title": "Trade Your Way to Financial Freedom",
    "cite": "Tharp, Van K. (1998). *Trade Your Way to Financial Freedom*. McGraw-Hill.",
    "guides": 9,
-   "asin": "0071658130",
+   "asin": "007147871X",
    "asin_candidates": [
     "0071658130",
     "8387014435",
@@ -226,15 +226,15 @@
     "007147871X",
     "1592802362"
    ],
-   "verified": false,
-   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+   "verified": true,
+   "note": "Confirmed by Dean 15 Nov 2026"
   },
   {
    "key": "Mind Over Markets",
    "title": "Mind Over Markets: Power Trading with Market Generated Information",
    "cite": "Dalton, James F., Jones, Eric T. and Dalton, Robert B. (2013). *Mind Over Markets: Power Trading with Market Generated Information*, updated edition. Wiley.",
    "guides": 7,
-   "asin": "0934380538",
+   "asin": "1118531736",
    "asin_candidates": [
     "0934380538",
     "1118531736",
@@ -242,22 +242,22 @@
     "1118659724",
     "1118659783"
    ],
-   "verified": false,
-   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+   "verified": true,
+   "note": "Confirmed by Dean 15 Nov 2026"
   },
   {
    "key": "Bollinger on Bollinger Bands",
    "title": "Bollinger on Bollinger Bands",
    "cite": "Bollinger, John (2001). *Bollinger on Bollinger Bands*. McGraw-Hill.",
    "guides": 7,
-   "asin": "0071386734",
+   "asin": "0071373683",
    "asin_candidates": [
     "0071386734",
     "0071373683",
     "097261110X"
    ],
-   "verified": false,
-   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+   "verified": true,
+   "note": "Confirmed by Dean 15 Nov 2026"
   },
   {
    "key": "Harmonic Trading, Volume One",
@@ -271,15 +271,15 @@
     "013138497X",
     "0131384953"
    ],
-   "verified": false,
-   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+   "verified": true,
+   "note": "Confirmed by Dean 15 Nov 2026"
   },
   {
    "key": "Trading Chaos",
    "title": "Trading Chaos",
    "cite": "Williams, Bill (1995). *Trading Chaos*. Wiley.",
    "guides": 5,
-   "asin": "0471119296",
+   "asin": "0471463086",
    "asin_candidates": [
     "0471119296",
     "0470586273",
@@ -287,8 +287,8 @@
     "1283916495",
     "0471463086"
    ],
-   "verified": false,
-   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+   "verified": true,
+   "note": "Confirmed by Dean 15 Nov 2026"
   },
   {
    "key": "Profits in the Stock Market",
@@ -299,8 +299,8 @@
    "asin_candidates": [
     "0939093073"
    ],
-   "verified": false,
-   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+   "verified": true,
+   "note": "Confirmed by Dean 15 Nov 2026"
   },
   {
    "key": "Cybernetic Analysis for Stocks and Futures",
@@ -315,8 +315,8 @@
     "0470308826",
     "1280345667"
    ],
-   "verified": false,
-   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+   "verified": true,
+   "note": "Confirmed by Dean 15 Nov 2026"
   },
   {
    "key": "New Trading Dimensions",
@@ -336,7 +336,7 @@
    "title": "Elliott Wave Principle: Key to Market Behavior",
    "cite": "Frost, A. J. and Prechter, Robert R. (1978). *Elliott Wave Principle: Key to Market Behavior*. New Classics Library.",
    "guides": 4,
-   "asin": "1616041366",
+   "asin": "1616040815",
    "asin_candidates": [
     "1616041366",
     "0932750435",
@@ -345,8 +345,8 @@
     "0932750001",
     "0932750052"
    ],
-   "verified": false,
-   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+   "verified": true,
+   "note": "Confirmed by Dean 15 Nov 2026"
   },
   {
    "key": "Trades About to Happen",
@@ -362,8 +362,8 @@
     "1118258703",
     "111823362X"
    ],
-   "verified": false,
-   "note": "Set asin to the edition you confirm on Amazon (SiteStripe), then verified: true."
+   "verified": true,
+   "note": "Confirmed by Dean 15 Nov 2026"
   },
   {
    "key": "The Three Skills of Top Trading",
