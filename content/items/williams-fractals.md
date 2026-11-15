@@ -14,7 +14,8 @@ related: [market-structure, structure-stop, break-of-structure, equal-highs-lows
 compare: []
 glossary: [swing-high, swing-low, breakout, lookback-period]
 wave: 2
-reviewed: 14 November 2026
+improved: 15 November 2026, backtesting note from our look-ahead test
+reviewed: 15 November 2026
 ---
 
 A Williams fractal is a simple five-bar price pattern that marks a local high or low. An up fractal is a bar with a higher high than the two bars on each side. A down fractal is a bar with a lower low than the two bars on each side. Traders use them to place stops and spot breakout levels.
@@ -103,6 +104,10 @@ Some platforms let you change the number of bars from 2 to a larger number on ea
 - Ignoring the delay, which makes the marker look more precise on a historical chart than it is live.
 - Using stops that are too tight, right at the fractal, where normal noise can reach them.
 - Comparing results across platforms without checking how each treats ties.
+
+## Backtesting note
+
+A fractal is drawn on its middle bar, but you can only know it exists two bars later, once the bars on the right have closed. Many backtests forget this and act on the fractal at the middle bar, which uses two bars of future prices and makes results look better than anything you could have traded. Our look-ahead test catches this; our backtesting engine moves each fractal to the bar where it is confirmed. Do the same in your own testing: act no earlier than two bars after the fractal's bar.
 
 ## Pairs well with
 

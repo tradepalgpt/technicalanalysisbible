@@ -14,7 +14,8 @@ related: [exponential-moving-average, moving-average-crossover, parabolic-sar, s
 compare: [ichimoku-vs-moving-averages]
 glossary: [trend, lagging-indicator, crossover, confluence, whipsaw]
 wave: 1
-reviewed: 14 November 2026
+improved: 15 November 2026, backtesting note from our look-ahead test
+reviewed: 15 November 2026
 ---
 
 The Ichimoku Cloud is a trend indicator made of five lines that show trend direction, momentum and support and resistance on one chart. The shaded area between two of the lines, the cloud (Kumo), is the key feature. Price above the cloud is read as an uptrend, below it as a downtrend, and inside it as indecision.
@@ -99,6 +100,10 @@ Changing settings changes which levels many other traders are watching. Most pla
 - Trading every signal as equal. A TK cross far from the cloud on the wrong side is weak.
 - Using all five parts at once as a checklist that never gives a signal, or ignoring most of them. Decide which parts your rules use.
 - Placing stops inside the cloud where noise is high, without a plan for what invalidates the idea.
+
+## Backtesting note
+
+The lagging span (Chikou) is today's close drawn 26 bars in the past. On a chart that is fine. In a backtest or a trading script it is a trap: if a rule reads the lagging span at an old bar, it is quietly using a price from 26 bars later. Our own look-ahead test (which scrambles all prices after a chosen bar and checks that nothing before it changes) flags the lagging span for exactly this reason. Use it to read a chart, not as a signal input, unless your code compares it only with prices from 26 bars earlier.
 
 ## Pairs well with
 
