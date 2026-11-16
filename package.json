@@ -8,7 +8,8 @@
     "check": "node scripts/check.mjs",
     "sync-charts": "node scripts/sync-charts.mjs",
     "build": "node scripts/import-master.mjs && node scripts/check.mjs && node scripts/build.mjs",
-    "serve": "node scripts/serve.mjs"
+    "serve": "node scripts/serve.mjs",
+    "schedule": "node scripts/schedule.mjs"
   },
   "dependencies": {
     "marked": "12.0.2"
