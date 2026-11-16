@@ -2,6 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { marked } from 'marked';
+import { loadPosts, longDate } from './posts.mjs';
 import { ROOT, SITE, STATES, PURPOSES, STATE_BY_SLUG, PURPOSE_BY_SLUG, loadCatalogue, loadItems, loadDir, parseFrontMatter, readJSON, esc } from './lib.mjs';
 
 const DIST = path.join(ROOT, 'dist');
@@ -14,6 +15,14 @@ const pub = Object.fromEntries(items.map((i) => [i.data.slug, i]));
 const adCfg = readJSON(path.join(ROOT, 'shared', 'ads', 'ic-markets.json'));
 const adJs = fs.readFileSync(path.join(ROOT, 'shared', 'ads', 'partner-ad.js'), 'utf8');
 const BUILD_DATE = new Date().toISOString().slice(0, 10);
+// Scheduled posts: only those whose publish date has passed are built (scripts/posts.mjs).
+const POSTS = loadPosts();
+const livePillar = Object.fromEntries(POSTS.livePillars.map((p) => [p.data.slug, p]));
+const liveAnswer = Object.fromEntries(POSTS.liveAnswers.map((a) => [a.data.slug, a]));
+const answersByGuide = {};   // guide slug -> live answers that link to it ("Questions traders ask" box)
+for (const a of POSTS.liveAnswers) for (const g of [].concat(a.data.guides || [])) (answersByGuide[g] ||= []).push(a);
+const pillarsByGuide = {};
+for (const p of POSTS.livePillars) for (const g of [].concat(p.data.cluster || [])) (pillarsByGuide[g] ||= []).push(p);
 const sitemap = [];
 
 const RISK_NOTE = 'Educational only, not advice. Indicators describe past prices and do not predict the future. Trading leveraged products such as CFDs carries a high risk of losing money rapidly; most retail CFD accounts lose money.';
@@ -61,7 +70,7 @@ ${jsonld.map(ld).join('\n')}
 </head>
 <body>
 <header class="top"><div class="wrap"><a class="brand" href="/">Technical Analysis <b>Bible</b></a>
-<nav class="mainnav"><a href="/a-z/">A–Z</a><a href="/market/">By market</a><a href="/use/">By use</a><a href="/type/">By type</a><a href="/compare/">Compare</a><a href="/glossary/">Glossary</a></nav></div></header>
+<nav class="mainnav"><a href="/a-z/">A–Z</a><a href="/market/">By market</a><a href="/use/">By use</a><a href="/type/">By type</a><a href="/compare/">Compare</a>${POSTS.liveAnswers.length ? '<a href="/answers/">Answers</a>' : ''}<a href="/glossary/">Glossary</a></nav></div></header>
 <div class="wrap ${sidebar ? 'withside' : ''}">
 <main id="main">${body}</main>
 ${sidebar ? `<aside class="side">${adSlot('300x600', 'sticky')}</aside>` : ''}
@@ -170,6 +179,8 @@ for (const { data: d, body } of items) {
   const relatedHtml = `<section class="related"><h2>Related</h2><ul>${related.map((s) => `<li>${link(s)}</li>`).join('')}</ul>`
     + (cmpLinks.length ? `<h3>Compare</h3><ul>${cmpLinks.map((s) => `<li><a href="/compare/${s}/">${esc(cmpTitle(s))}</a></li>`).join('')}</ul>` : '')
     + (glLinks.length ? `<h3>Key terms</h3><p>${glLinks.map((s) => `<a class="chip" href="/glossary/${s}/">${esc(glTerm(s))}</a>`).join(' ')}</p>` : '')
+    + (pillarsByGuide[d.slug] ? `<h3>Complete guide</h3><ul>${pillarsByGuide[d.slug].map((x) => `<li><a href="/guide/${x.data.slug}/">${esc(x.data.title)}</a></li>`).join('')}</ul>` : '')
+    + (answersByGuide[d.slug] ? `<h3>Questions traders ask</h3><ul>${answersByGuide[d.slug].map((x) => `<li><a href="/answers/${x.data.slug}/">${esc(x.data.title)}</a></li>`).join('')}</ul>` : '')
     + `</section>`;
   const faq = parseFaq(body);
   const crumbs = [['Home', '/'], [typeName[primaryType], `/type/${primaryType}/`], [d.name, p]];
@@ -307,6 +318,64 @@ for (const [slug, file] of staticPages) {
     body: `${crumbsHtml([['Home', '/'], [data.title, p]])}<article class="prose"><h1>${esc(data.title)}</h1>${marked.parse(body)}<p class="reviewed">Last updated: ${esc(data.reviewed || '')}</p></article>`, jsonld: [crumbsLd([['Home', '/'], [data.title, p]])] }));
 }
 
+// ---------- pillars (/guide/) and answer posts (/answers/), live ones only ----------
+function postLinks(html) {
+  return rewriteLinks(html)
+    .replace(/<a href="\/answers\/([a-z0-9-]+)\/">([\s\S]*?)<\/a>/g, (m, s, t) => liveAnswer[s] ? m : t)     // not out yet: plain text
+    .replace(/<a href="\/guide\/([a-z0-9-]+)\/">([\s\S]*?)<\/a>/g, (m, s, t) => livePillar[s] ? m : t)
+    .replace(/<table>/g, '<div class="tablewrap"><table>').replace(/<\/table>/g, '</table></div>');
+}
+const articleLd = (d, p, type = 'Article') => ({ '@context': 'https://schema.org', '@type': type, headline: d.title, description: d.description, url: abs(p),
+  datePublished: d.publish, dateModified: d.updated || d.publish, inLanguage: 'en-GB',
+  author: { '@type': 'Organization', name: SITE.brand, url: SITE.url }, publisher: { '@type': 'Organization', name: SITE.brand, url: SITE.url } });
+const dates = (d) => `<p class="reviewed">Published ${esc(longDate(d.publish))}${d.updated ? ` · Updated ${esc(longDate(d.updated))}` : ''} · Last reviewed: ${esc(d.reviewed)}</p>`;
+
+for (const { data: d, body } of POSTS.livePillars) {
+  const p = `/guide/${d.slug}/`;
+  let html = postLinks(marked.parse(body));
+  const heads = [...body.matchAll(/^## (.+)$/gm)].map((m) => m[1].trim());
+  const ids = heads.map((h) => h.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''));
+  let k = 0;
+  html = html.replace(/<h2>/g, () => `<h2 id="${ids[k++]}">`);
+  const toc = `<nav class="toc" aria-label="Contents"><h2>Contents</h2><ol>${heads.map((h, i) => `<li><a href="#${ids[i]}">${esc(h)}</a></li>`).join('')}</ol></nav>`;
+  let ads = 0;
+  html = html.replace(/<h2 id="[^"]*">/g, (m) => (++ads % 4 === 0 ? adSlot('text') + m : m));
+  const chart = d.chart && CHARTS[d.chart];
+  if (chart) html = figureHtml(chart) + html;
+  const answers = POSTS.liveAnswers.filter((a) => a.data.pillar === d.slug);
+  const crumbs = [['Home', '/'], ['Complete guides', '/guide/'], [d.title, p]];
+  const more = `<section class="related"><h2>Guides in this topic</h2><ul>${[].concat(d.cluster).map((s) => `<li>${link(s)}</li>`).join('')}</ul>`
+    + (answers.length ? `<h3>Questions traders ask</h3><ul>${answers.map((a) => `<li><a href="/answers/${a.data.slug}/">${esc(a.data.title)}</a></li>`).join('')}</ul>` : '') + `</section>`;
+  page(p, layout({ title: `${d.title} | ${SITE.brand}`, desc: d.description, path: p, sidebar: true,
+    jsonld: [articleLd(d, p), crumbsLd(crumbs)],
+    body: `${crumbsHtml(crumbs)}<article class="item pillar"><h1>${esc(d.title)}</h1>${toc}${html}${more}${dates(d)}</article>` }));
+}
+if (POSTS.livePillars.length) page('/guide/', layout({ title: `Complete guides | ${SITE.brand}`, desc: 'Long-form guides that tie each family of indicators and patterns together, with our own charts and data.', path: '/guide/',
+  jsonld: [crumbsLd([['Home', '/'], ['Complete guides', '/guide/']])],
+  body: `${crumbsHtml([['Home', '/'], ['Complete guides', '/guide/']])}<h1>Complete guides</h1><p class="lead">One long guide per big topic: how the pieces fit, how to choose between them, worked examples and our own data.</p><ul class="list">${POSTS.livePillars.map((x) => `<li><a href="/guide/${x.data.slug}/">${esc(x.data.title)}</a></li>`).join('')}</ul>` }));
+
+for (const { data: d, body } of POSTS.liveAnswers) {
+  const p = `/answers/${d.slug}/`;
+  let html = postLinks(marked.parse(body));
+  html = html.replace(/(<h2[^>]*>)/, (m) => adSlot('text') + m);
+  const chart = d.chart && CHARTS[d.chart];
+  if (chart) html = html.replace(/(<h2[^>]*>)/, (m) => figureHtml(chart) + m);
+  const quick = body.split(/\n## /)[0].trim().replace(/\s+/g, ' ').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/[*_]/g, '');
+  const pil = livePillar[d.pillar];
+  const sibs = [].concat(d.siblings || []).filter((s) => liveAnswer[s]);
+  const crumbs = [['Home', '/'], ['Answers', '/answers/'], [d.title, p]];
+  const more = `<section class="related"><h2>Read next</h2><ul>${pil ? `<li><a href="/guide/${pil.data.slug}/">${esc(pil.data.title)}</a></li>` : ''}${[].concat(d.guides).map((s) => `<li>${link(s)}</li>`).join('')}${sibs.map((s) => `<li><a href="/answers/${s}/">${esc(liveAnswer[s].data.title)}</a></li>`).join('')}</ul></section>`;
+  page(p, layout({ title: `${d.title} | ${SITE.brand}`, desc: d.description, path: p, sidebar: true,
+    jsonld: [articleLd(d, p), { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [{ '@type': 'Question', name: d.title, acceptedAnswer: { '@type': 'Answer', text: quick } }] }, crumbsLd(crumbs)],
+    body: `${crumbsHtml(crumbs)}<article class="item answer"><h1>${esc(d.title)}</h1>${html}${more}${dates(d)}</article>` }));
+}
+if (POSTS.liveAnswers.length) {
+  const groups = [...new Set(POSTS.liveAnswers.map((a) => a.data.pillar))];
+  page('/answers/', layout({ title: `Trading questions answered | ${SITE.brand}`, desc: 'Short, direct answers to the questions traders ask about indicators, patterns and methods, with our own charts and data.', path: '/answers/',
+    jsonld: [crumbsLd([['Home', '/'], ['Answers', '/answers/']])],
+    body: `${crumbsHtml([['Home', '/'], ['Answers', '/answers/']])}<h1>Questions answered</h1><p class="lead">One question per page, answered in the first two sentences.</p>${groups.map((g) => `<h2>${esc(livePillar[g]?.data.title || g)}</h2><ul class="list">${POSTS.liveAnswers.filter((a) => a.data.pillar === g).reverse().map((a) => `<li><a href="/answers/${a.data.slug}/">${esc(a.data.title)}</a> <small>${esc(longDate(a.data.publish))}</small></li>`).join('')}</ul>`).join('')}` }));
+}
+
 // Home
 const homeLd = [
   { '@context': 'https://schema.org', '@type': 'WebSite', name: SITE.brand, url: SITE.url, inLanguage: 'en-GB' },
@@ -319,6 +388,8 @@ page('/', layout({ title: `${SITE.brand}: every technical indicator and trading 
 <h2>Browse by use</h2><ul class="cards">${Object.values(PURPOSES).map(([s, n]) => `<li><a href="/use/${s}/"><b>${n}</b></a></li>`).join('')}</ul>
 <h2>Browse by type</h2><ul class="cards">${cat.types.map((t) => `<li><a href="/type/${t.slug}/"><b>${esc(t.name)}</b></a></li>`).join('')}</ul>
 <h2>A to Z</h2>${azNav}
+${POSTS.livePillars.length ? `<h2>Complete guides</h2><ul class="list">${POSTS.livePillars.map((x) => `<li><a href="/guide/${x.data.slug}/">${esc(x.data.title)}</a></li>`).join('')}</ul>` : ''}
+${POSTS.liveAnswers.length ? `<h2>Latest answers</h2><ul class="list">${POSTS.liveAnswers.slice(-6).reverse().map((a) => `<li><a href="/answers/${a.data.slug}/">${esc(a.data.title)}</a></li>`).join('')}</ul><p><a href="/answers/">All answers</a></p>` : ''}
 <h2>Guides so far</h2><ul class="list">${latest.map((d) => `<li>${link(d.slug, d.name)}</li>`).join('')}</ul>` }));
 
 // Reading list (only books checked on Amazon)
@@ -340,5 +411,5 @@ if (fs.existsSync(CHART_DIR)) fs.cpSync(CHART_DIR, path.join(DIST, 'charts'), { 
 fs.copyFileSync(path.join(ROOT, 'src', '_headers'), path.join(DIST, '_headers'));
 write('robots.txt', `User-agent: *\nAllow: /\nDisallow: /search/\nDisallow: /*?*\n\n# AI search tools are welcome to read and quote this site.\nUser-agent: GPTBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: Google-Extended\nAllow: /\n\nSitemap: ${abs('/sitemap.xml')}\n`);
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemap.map((u) => `<url><loc>${abs(u)}</loc><lastmod>${BUILD_DATE}</lastmod></url>`).join('\n')}\n</urlset>\n`);
-write('llms.txt', `# ${SITE.brand}\n\n> A free, plain-English reference to technical indicators, chart patterns, candlesticks and trading methods. Every guide uses the same sections: quick answer, at a glance, what it is, formula, how to read it, best market states, settings, common mistakes, pairs well with, related, sources, FAQ.\n\n## Browse\n- [A to Z](${abs('/a-z/')})\n- [By market state](${abs('/market/')})\n- [By use](${abs('/use/')})\n- [By type](${abs('/type/')})\n\n## Guides\n${latest.map((d) => `- [${d.name}](${abs(`/${d.slug}/`)})`).join('\n')}\n\n## Notes\n- Educational only, not financial advice. See ${abs('/risk-warning/')}\n`);
+write('llms.txt', `# ${SITE.brand}\n\n> A free, plain-English reference to technical indicators, chart patterns, candlesticks and trading methods. Every guide uses the same sections: quick answer, at a glance, what it is, formula, how to read it, best market states, settings, common mistakes, pairs well with, related, sources, FAQ.\n\n## Browse\n- [A to Z](${abs('/a-z/')})\n- [By market state](${abs('/market/')})\n- [By use](${abs('/use/')})\n- [By type](${abs('/type/')})\n\n${POSTS.livePillars.length ? `## Complete guides\n${POSTS.livePillars.map((x) => `- [${x.data.title}](${abs(`/guide/${x.data.slug}/`)})`).join('\n')}\n\n` : ''}${POSTS.liveAnswers.length ? `## Answers\n${POSTS.liveAnswers.map((x) => `- [${x.data.title}](${abs(`/answers/${x.data.slug}/`)})`).join('\n')}\n\n` : ''}## Guides\n${latest.map((d) => `- [${d.name}](${abs(`/${d.slug}/`)})`).join('\n')}\n\n## Notes\n- Educational only, not financial advice. See ${abs('/risk-warning/')}\n`);
 console.log(`build: ${sitemap.length} indexable pages, ${items.length} guides -> dist/`);

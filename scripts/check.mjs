@@ -1,6 +1,7 @@
 // Pre-build quality gate. Errors stop the build; warnings are printed.
 import { execFileSync } from 'node:child_process';
 import path from 'node:path';
+import { loadPosts, VALUE_ITEMS, PILLAR_MIN_WORDS, ANSWER_WORDS, ANSWERS_PER_WEEK_MAX, TODAY, isDate, isoWeek } from './posts.mjs';
 import { ROOT, loadCatalogue, loadItems, loadDir, COMPARE_SECTIONS, GLOSSARY_SECTIONS, REQUIRED_SECTIONS, BANNED_PHRASES, STATE_BY_SLUG, PURPOSE_BY_SLUG } from './lib.mjs';
 
 const cat = loadCatalogue();
@@ -107,6 +108,69 @@ for (const { file: f, data: d, body } of loadDir('glossary')) {
   const qw = body.split(/\n## /)[0].trim().split(/\s+/).filter(Boolean).length;
   if (qw < 10 || qw > 45) E(f, `definition is ${qw} words (want 10-45)`);
   common(f, d, body, GLOSSARY_SECTIONS, 120, 450);
+}
+
+// ---------- pillars and answer posts (scheduled; checked whether or not their date has passed) ----------
+{
+  const { pillars, answers } = loadPosts();
+  const pillarSlugs = Object.fromEntries(pillars.map((p) => [p.data.slug, p]));
+  const answerSlugs = new Set(answers.map((a) => a.data.slug));
+  const queries = new Map();
+  const value = (f, d, body) => {
+    const v = [].concat(d.value || []);
+    for (const x of v) if (!VALUE_ITEMS.includes(x)) E(f, `unknown value item "${x}" (use ${VALUE_ITEMS.join(', ')})`);
+    if (v.length < 2) E(f, `needs at least two value items (${VALUE_ITEMS.join(', ')}); has ${v.length}`);
+    if (v.includes('data') && !/\]\(\/methods\/\)/.test(body)) E(f, 'value "data" needs a link to /methods/');
+    if (v.includes('table') && !/^\|.+\|\s*$/m.test(body)) E(f, 'value "table" but no table in the body');
+    if (v.includes('chart') && !d.chart) E(f, 'value "chart" needs front matter chart: <chart slug>');
+  };
+  const shared = (f, d, body, kind) => {
+    for (const k of ['slug', 'title', 'description', 'publish', 'reviewed', 'query']) if (!d[k]) E(f, `missing front matter "${k}"`);
+    if (d.slug && f !== `${d.slug}.md`) E(f, `file name must be ${d.slug}.md`);
+    if (d.publish && !isDate(d.publish)) E(f, 'publish must be YYYY-MM-DD');
+    if (!/^\d{1,2} [A-Z][a-z]+ \d{4}$/.test(String(d.reviewed || ''))) E(f, 'reviewed must be like "14 November 2026"');
+    if (d.description && (d.description.length < 70 || d.description.length > 160)) E(f, `description is ${d.description.length} characters (want 70-160)`);
+    if (d.query) { const q = d.query.toLowerCase(); if (queries.has(q)) E(f, `target query "${d.query}" already used by ${queries.get(q)} (one page per query)`); queries.set(q, `${kind} ${d.slug}`); }
+    if (bySlug[d.slug]) E(f, `slug "${d.slug}" clashes with a guide`);
+    const low = body.toLowerCase();
+    for (const b of BANNED_PHRASES) if (low.includes(b.toLowerCase())) E(f, `banned phrase "${b}"`);
+    for (const b of ['proven', 'profitable', 'win rate of', 'guarantee']) if (low.includes(b)) E(f, `claim word "${b}" not allowed (publishing rules)`);
+    if (/Educational only, not advice/i.test(body)) E(f, 'remove the risk note: it is added automatically');
+    for (const m of body.matchAll(/\]\(\/([a-z0-9-]+)\/\)/g)) if (!bySlug[m[1]] && !['methods', 'answers'].includes(m[1])) E(f, `link to /${m[1]}/ is not a guide`);
+    for (const m of body.matchAll(/\]\(\/answers\/([a-z0-9-]+)\/\)/g)) if (!answerSlugs.has(m[1])) E(f, `link to answer ${m[1]} that does not exist`);
+    for (const m of body.matchAll(/\]\(\/guide\/([a-z0-9-]+)\/\)/g)) if (!pillarSlugs[m[1]]) E(f, `link to pillar ${m[1]} that does not exist`);
+    value(f, d, body);
+    return body.split(/\s+/).filter(Boolean).length;
+  };
+  for (const { file: f, data: d, body } of pillars) {
+    const words = shared(f, d, body, 'pillar');
+    if (words < PILLAR_MIN_WORDS) E(f, `${words} words (pillar min ${PILLAR_MIN_WORDS})`);
+    const cluster = [].concat(d.cluster || []);
+    if (cluster.length < 5) E(f, 'cluster needs at least 5 guide slugs');
+    for (const s of cluster) if (!published.has(s)) E(f, `cluster "${s}" is not a written guide`);
+    if ((body.match(/^## /gm) || []).length < 6) E(f, 'pillar needs at least 6 sections');
+  }
+  const perWeek = {};
+  for (const { file: f, data: d, body } of answers) {
+    const words = shared(f, d, body, 'answer');
+    if (words < ANSWER_WORDS[0]) E(f, `${words} words (answer min ${ANSWER_WORDS[0]})`);
+    if (words > ANSWER_WORDS[1] + 300) E(f, `${words} words (answer max about ${ANSWER_WORDS[1]})`);
+    if (!/\?$/.test(String(d.title || '').trim())) W(f, 'title is usually the question, ending in "?"');
+    const quick = body.split(/\n## /)[0].trim().split(/\s+/).filter(Boolean).length;
+    if (quick < 20 || quick > 70) E(f, `opening answer is ${quick} words (want 20-70: answer in the first two sentences)`);
+    const p = pillarSlugs[d.pillar];
+    if (!p) E(f, `pillar "${d.pillar}" does not exist`);
+    else if (d.publish && p.data.publish > d.publish) E(f, `publishes ${d.publish}, before its pillar (${p.data.publish})`);
+    const g = [].concat(d.guides || []);
+    if (g.length < 2 || g.length > 4) E(f, `guides should list 2-4 guide slugs (has ${g.length})`);
+    for (const s of g) if (!published.has(s)) E(f, `guide "${s}" is not written`);
+    for (const s of g) if (!body.includes(`](/${s}/)`)) E(f, `body does not link to guide /${s}/`);
+    for (const s of [].concat(d.siblings || [])) if (!answerSlugs.has(s)) E(f, `sibling answer "${s}" does not exist`);
+    if (isDate(d.publish)) { const w = isoWeek(d.publish); perWeek[w] = (perWeek[w] || 0) + 1; }
+  }
+  for (const [w, n] of Object.entries(perWeek)) if (n > ANSWERS_PER_WEEK_MAX) E('schedule', `${n} answers in ${w} (max ${ANSWERS_PER_WEEK_MAX}: keep the drip steady)`);
+  const future = answers.filter((a) => isDate(a.data.publish) && a.data.publish > TODAY).map((a) => a.data.publish).sort();
+  console.log(`posts: ${pillars.length} pillars, ${answers.length} answers (${future.length} scheduled${future.length ? `, last ${future.at(-1)}` : ''})`);
 }
 
 for (const w of warns) console.warn('warn  ' + w);
