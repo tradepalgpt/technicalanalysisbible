@@ -47,7 +47,7 @@ The second row surprises many people. A long upper wick after a fall is read as 
 We tested the two named patterns built on a long upper wick, using daily bars for 10 US stocks and funds (SPY, QQQ, IWM, Apple, Microsoft, Nvidia, Tesla, Amazon, JPMorgan, Exxon) over the tuning period, January 2021 to October 2025, with a stop one average daily range from the signal close, a 2R target, a 20-day limit, and random entries as the comparison.
 
 - **Shooting star (sell after a rise):** 111 trades, edge over random entry +0.07R per trade (95% range -0.16 to +0.30). **No evidence of an edge.**
-- **Inverted hammer (buy after a fall):** 96 trades, edge +0.38R per trade (95% range +0.01 to +0.75). **Exploratory, not a tested result.** On 39 further markets over the same tuning period it gave 420 trades and an edge of +0.20R. A follow-up test is under way.
+- **Inverted hammer (buy after a fall):** 96 trades, edge +0.38R per trade (95% range +0.01 to +0.75). **Exploratory, not a tested result.** On 39 further markets over the same tuning period it gave 420 trades and an edge of +0.20R. A test on held-back data is being reviewed.
 - **Gravestone doji:** 18 trades, too few to report.
 
 ([How we test](/methods/).)
