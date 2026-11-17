@@ -71,7 +71,8 @@ export function videoHtml(v) {
   const cap = `<figcaption>${esc(v.title)} <span class="credit">Video, ${esc(durText(v.duration))}. Education only, not advice.</span></figcaption>`;
   if (v.provider === 'file') {
     const track = v.captions ? `<track kind="captions" src="${esc(v.captions)}" srclang="en" label="English" default>` : '';
-    return `<figure class="video"><video controls preload="none" playsinline width="1280" height="720"${v.poster ? ` poster="${esc(v.poster)}"` : ''}>`
+    // Captions from another host (R2) only load with CORS, so the player asks for it.
+    return `<figure class="video"><video controls preload="none" playsinline width="1280" height="720"${v.captions ? ' crossorigin="anonymous"' : ''}${v.poster ? ` poster="${esc(v.poster)}"` : ''}>`
       + `<source src="${esc(v.src)}" type="video/mp4">${track}</video>${cap}</figure>`;
   }
   const watch = `https://www.youtube.com/watch?v=${v.id}`;
