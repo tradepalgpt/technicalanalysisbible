@@ -53,6 +53,12 @@ const ld = (o) => `<script type="application/ld+json">${JSON.stringify(o).replac
 const crumbsLd = (list) => ({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: list.map(([n, u], i) => ({ '@type': 'ListItem', position: i + 1, name: n, item: abs(u) })) });
 const crumbsHtml = (list) => `<nav class="crumbs" aria-label="Breadcrumb">${list.map(([n, u], i) => i === list.length - 1 ? `<span>${esc(n)}</span>` : `<a href="${u}">${esc(n)}</a>`).join(' <span aria-hidden="true">›</span> ')}</nav>`;
 
+const NAV = () => [
+  ...(POSTS.livePillars.length ? [['/guide/', 'Guides']] : []),
+  ['/a-z/', 'A–Z'], ['/market/', 'By market'], ['/use/', 'By use'], ['/type/', 'By type'], ['/compare/', 'Compare'],
+  ...(POSTS.liveAnswers.length ? [['/answers/', 'Answers']] : []),
+  ['/glossary/', 'Glossary'],
+];
 function layout({ title, desc, path: p, body, jsonld = [], noindex = false, sidebar = false }) {
   return `<!doctype html>
 <html lang="en-GB">
@@ -69,8 +75,9 @@ ${noindex ? '<meta name="robots" content="noindex, follow">' : ''}
 ${jsonld.map(ld).join('\n')}
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap"><a class="brand" href="/">Technical Analysis <b>Bible</b></a>
-<nav class="mainnav"><a href="/a-z/">A–Z</a><a href="/market/">By market</a><a href="/use/">By use</a><a href="/type/">By type</a><a href="/compare/">Compare</a>${POSTS.liveAnswers.length ? '<a href="/answers/">Answers</a>' : ''}<a href="/glossary/">Glossary</a></nav></div></header>
+<nav class="mainnav" aria-label="Main">${NAV().map(([href, label]) => `<a href="${href}"${p === href || (p.startsWith(href) && href !== '/') ? ' aria-current="page"' : ''}>${label}</a>`).join('')}</nav></div></header>
 <div class="wrap ${sidebar ? 'withside' : ''}">
 <main id="main">${body}</main>
 ${sidebar ? `<aside class="side">${adSlot('300x600', 'sticky')}</aside>` : ''}
@@ -78,7 +85,7 @@ ${sidebar ? `<aside class="side">${adSlot('300x600', 'sticky')}</aside>` : ''}
 <footer class="foot"><div class="wrap">
 <p class="risk"><strong>Risk warning:</strong> ${RISK_NOTE} <a href="/risk-warning/">Read the full risk warning</a>.</p>
 <p>${SITE.brand} is free and supported by advertising. Some links are affiliate links: we may earn a commission at no cost to you. As an Amazon Associate we earn from qualifying purchases. <a href="/advertising-disclosure/">How we make money</a>.</p>
-<nav><a href="/about/">About</a> · <a href="/how-we-write/">How we write</a> · <a href="/risk-warning/">Risk warning</a> · <a href="/advertising-disclosure/">Advertising</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></nav>
+<nav>${AMZ_BOOKS.length ? '<a href="/reading/">Reading list</a> · ' : ''}<a href="/methods/">Methods</a> · <a href="/about/">About</a> · <a href="/how-we-write/">How we write</a> · <a href="/risk-warning/">Risk warning</a> · <a href="/advertising-disclosure/">Advertising</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></nav>
 <p class="small">© ${new Date().getFullYear()} ${SITE.brand}</p>
 </div></footer>
 <script>${adJs}</script>
@@ -401,7 +408,7 @@ if (AMZ_BOOKS.length) {
 }
 
 // 404
-write('404.html', layout({ title: `Page not found | ${SITE.brand}`, desc: 'Page not found.', path: '/404/', noindex: true, body: `<h1>Page not found</h1><p>Try the <a href="/a-z/">A to Z index</a>.</p>` }));
+write('404.html', layout({ title: `Page not found | ${SITE.brand}`, desc: 'Page not found.', path: '/404/', noindex: true, body: `<h1>Page not found</h1><p>That page does not exist, or it has not been published yet. Try one of these:</p><ul class="list"><li><a href="/a-z/">A to Z index</a></li><li><a href="/market/">Browse by market</a></li><li><a href="/use/">Browse by use</a></li><li><a href="/type/">Browse by type</a></li><li><a href="/glossary/">Glossary</a></li></ul>` }));
 
 // Assets, robots, sitemap, llms.txt, headers
 fs.mkdirSync(path.join(DIST, 'assets'), { recursive: true });

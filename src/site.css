@@ -10,8 +10,17 @@ main{max-width:var(--measure);min-width:0;padding:8px 0 48px}
 .top .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;padding-top:12px;padding-bottom:12px}
 .brand{font-family:var(--font-serif);font-size:1.25rem;color:var(--text);text-decoration:none}
 .brand b{color:var(--accent)}
-.mainnav a{margin-left:16px;text-decoration:none;color:var(--muted);font-size:.95rem}
-.mainnav a:first-child{margin-left:0}
+.mainnav a{display:inline-block;padding:8px 8px;text-decoration:none;color:var(--muted);font-size:.95rem}
+.mainnav a[aria-current="page"]{color:var(--text);text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--accent)}
+@media(max-width:719px){
+  .top .wrap{display:block}
+  .brand{display:block;padding:4px 0}
+  .mainnav{display:flex;overflow-x:auto;white-space:nowrap;scrollbar-width:none;margin:0 -16px;padding:0 6px}
+  .mainnav::-webkit-scrollbar{display:none}
+  .mainnav a{padding:12px 10px}
+}
+.skip{position:absolute;left:8px;top:-60px;z-index:10;padding:10px 14px;background:var(--surface);border:1px solid var(--accent);border-radius:4px;color:var(--text)}
+.skip:focus{top:8px}
 h1,h2,h3{font-family:var(--font-serif);line-height:1.25}
 h1{font-size:2rem;margin:.6em 0 .4em}
 h2{font-size:1.4rem;margin:1.8em 0 .5em;padding-top:.4em;border-top:1px solid var(--line)}
