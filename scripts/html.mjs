@@ -36,3 +36,65 @@ export function insertBeforeFirstBlock(html, fragment) {
   const m = /<h2[\s>]|<div class="partner-ad|<figure/.exec(html);
   return m ? html.slice(0, m.index) + fragment + html.slice(m.index) : html + fragment;
 }
+
+// ---------- automatic glossary links (to-do #488) ----------
+// Plain-English words that are glossary terms but would link far too often in running text.
+export const GLOSSARY_NO_AUTOLINK = new Set(['range', 'trend', 'volume', 'gap', 'spread', 'leverage', 'liquidity', 'momentum', 'volatility', 'support', 'resistance', 'breakout', 'pullback', 'candle', 'timeframe', 'signal', 'stop',
+  'close', 'mean', 'session', 'noise', 'channel', 'auction', 'delta', 'tick', 'envelope', 'distribution', 'extension', 'projection', 'confirmation', 'reversal', 'rejection', 'imbalance', 'regression', 'smoothing', 'convergence', 'crossover', 'consolidation', 'indecision', 'retest', 'squeeze']);
+const SKIP_TAGS = new Set(['a', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'code', 'pre', 'th', 'figcaption', 'script', 'style', 'nav', 'button', 'label', 'summary']);
+const TEXT_TAGS = new Set(['p', 'li', 'td', 'dd']);
+const reEsc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+// Links the first mention of each glossary term in body text: whole words, case-insensitive,
+// optional plural "s", longest term first, at most `max` per page, never the page itself.
+// Only text inside <p>, <li>, <td>, <dd> that is not inside a skipped element is touched,
+// and the first paragraph (the quick answer) is left alone. Text is never changed: stripping
+// the added <a class="gl"> tags gives back the input exactly.
+export function linkGlossary(html, terms, { self = null, max = 6, skipFirstParagraph = true } = {}) {
+  const list = terms.filter((t) => t.slug !== self && t.term.length >= 4 && !GLOSSARY_NO_AUTOLINK.has(t.term.toLowerCase()))
+    .sort((a, b) => b.term.length - a.term.length);
+  if (!list.length || max <= 0) return html;
+  const re = new RegExp(`(?<![A-Za-z0-9-])(${list.map((t) => reEsc(t.term)).join('|')})s?(?![A-Za-z0-9-])`, 'gi');
+  const bySlugLower = new Map(list.map((t) => [t.term.toLowerCase(), t.slug]));
+  const done = new Set();
+  let added = 0;
+  const stack = [];
+  let skip = 0;
+  let paragraphs = 0;
+  let inFirstP = false;
+  const parts = html.split(/(<[^>]+>)/);
+  for (let i = 0; i < parts.length; i++) {
+    const part = parts[i];
+    if (!part) continue;
+    if (part[0] === '<') {
+      const m = /^<(\/)?([a-zA-Z0-9]+)([^>]*)>$/.exec(part);
+      if (!m || part.startsWith('<!')) continue;
+      const [, close, rawName, attrs] = m;
+      const name = rawName.toLowerCase();
+      if (/\/$/.test(attrs) || ['br', 'img', 'hr', 'input', 'meta', 'link', 'source', 'track', 'wbr'].includes(name)) continue;
+      const special = SKIP_TAGS.has(name) || /class="[^"]*\b(soon|toc|partner-ad|house-card|chip)\b/.test(attrs) || /type="application\/ld\+json"/.test(attrs);
+      if (!close) {
+        stack.push({ name, special });
+        if (special) skip++;
+        if (name === 'p' && stack.length === 1) { paragraphs++; inFirstP = paragraphs === 1 && skipFirstParagraph; }
+      } else {
+        for (let k = stack.length - 1; k >= 0; k--) {
+          if (stack[k].name !== name) continue;
+          for (const e of stack.splice(k)) if (e.special) skip--;
+          break;
+        }
+        if (name === 'p') inFirstP = false;
+      }
+      continue;
+    }
+    if (skip || inFirstP || added >= max || !stack.some((e) => TEXT_TAGS.has(e.name))) continue;
+    parts[i] = part.replace(re, (whole, term) => {
+      const slug = bySlugLower.get(term.toLowerCase());
+      if (added >= max || done.has(slug)) return whole;
+      done.add(slug);
+      added++;
+      return `<a class="gl" href="/glossary/${slug}/">${whole}</a>`;
+    });
+  }
+  return parts.join('');
+}

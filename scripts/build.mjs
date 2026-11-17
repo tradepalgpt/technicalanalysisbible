@@ -4,7 +4,7 @@ import path from 'node:path';
 import { marked } from 'marked';
 import { loadPosts, longDate } from './posts.mjs';
 import { ROOT, SITE, STATES, PURPOSES, STATE_BY_SLUG, PURPOSE_BY_SLUG, loadCatalogue, loadItems, loadDir, parseFrontMatter, readJSON, esc } from './lib.mjs';
-import { addHeadingIds, tocHtml, insertBeforeFirstBlock } from './html.mjs';
+import { addHeadingIds, tocHtml, insertBeforeFirstBlock, linkGlossary } from './html.mjs';
 import { loadVideos, mediaHtml, videoLd, VIDEO_JS } from './video.mjs';
 
 const DIST = path.join(ROOT, 'dist');
@@ -102,6 +102,9 @@ const compares = loadDir('compare');
 const glossary = loadDir('glossary');
 const cmpPub = Object.fromEntries(compares.map((c) => [c.data.slug, c]));
 const glPub = Object.fromEntries(glossary.map((g) => [g.data.slug, g]));
+// First mention of each glossary term in body text links to its definition (scripts/html.mjs).
+const GL_TERMS = glossary.map((g) => ({ slug: g.data.slug, term: g.data.term }));
+const gl = (html, opts) => linkGlossary(html, GL_TERMS, opts);
 
 function rewriteLinks(html) {
   return html
@@ -178,7 +181,7 @@ for (const { data: d, body } of items) {
   const primaryType = c.types[0];
   const p = `/${d.slug}/`;
   const quick = body.split(/\n## /)[0].trim().replace(/\s+/g, ' ');
-  const hid = addHeadingIds(rewriteLinks(marked.parse(body)), { reserved: ['related'] });
+  const hid = addHeadingIds(gl(rewriteLinks(marked.parse(body))), { reserved: ['related'] });
   let html = hid.html;
   // Ads: one text unit before the formula/drawing section, one before "Pairs well with".
   let n = 0;
@@ -224,7 +227,7 @@ for (const { data: d, body } of items) {
 for (const { data: d, body } of compares) {
   const p = `/compare/${d.slug}/`;
   const quick = body.split(/\n## /)[0].trim().replace(/\s+/g, ' ');
-  const hid = addHeadingIds(rewriteLinks(marked.parse(body)), { reserved: ['related'] });
+  const hid = addHeadingIds(gl(rewriteLinks(marked.parse(body))), { reserved: ['related'] });
   let html = hid.html.replace(/<table>/g, '<div class="tablewrap"><table>').replace(/<\/table>/g, '</table></div>');
   html = html.replace(/<h2[^>]*>Using both/, (m) => adSlot('text') + m);
   const faq = parseFaq(body);
@@ -248,7 +251,7 @@ if (compares.length) page('/compare/', layout({ title: `Indicator comparisons | 
 for (const { data: d, body } of glossary) {
   const p = `/glossary/${d.slug}/`;
   const def = body.split(/\n## /)[0].trim().replace(/\s+/g, ' ');
-  const html = rewriteLinks(marked.parse(body));
+  const html = gl(rewriteLinks(marked.parse(body)), { self: d.slug, max: 3 });
   const rel = [].concat(d.related || []);
   const crumbs = [['Home', '/'], ['Glossary', '/glossary/'], [d.term, p]];
   const jsonld = [
@@ -358,7 +361,7 @@ const dates = (d) => `<p class="reviewed">Published ${esc(longDate(d.publish))}$
 
 for (const { data: d, body } of POSTS.livePillars) {
   const p = `/guide/${d.slug}/`;
-  let html = postLinks(marked.parse(body));
+  let html = gl(postLinks(marked.parse(body)));
   const hid = addHeadingIds(html, { reserved: ['related'] });
   html = hid.html;
   const toc = tocHtml([...hid.heads, { id: 'related', text: 'Guides in this topic' }]);
@@ -380,7 +383,7 @@ if (POSTS.livePillars.length) page('/guide/', layout({ title: `Complete guides |
 
 for (const { data: d, body } of POSTS.liveAnswers) {
   const p = `/answers/${d.slug}/`;
-  const hid = addHeadingIds(postLinks(marked.parse(body)), { reserved: ['related'] });
+  const hid = addHeadingIds(gl(postLinks(marked.parse(body))), { reserved: ['related'] });
   let html = hid.html;
   html = html.replace(/(<h2[^>]*>)/, (m) => adSlot('text') + m);
   const chart = d.chart && CHARTS[d.chart];
