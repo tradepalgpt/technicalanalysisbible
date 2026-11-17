@@ -7,8 +7,118 @@
       "file": "videos/rsi/tabible-rsi.mp4",
       "captions": "videos/rsi/tabible-rsi.vtt",
       "title": "RSI: how it works",
-      "description": "The relative strength index explained on real prices: how it is calculated and how traders read it.",
+      "description": "The relative strength index explained on real prices: what it is and how traders read it, by the textbook rules.",
       "duration": "PT1M19S",
+      "uploaded": "2026-11-18",
+      "live": false
+    },
+    "/macd/": {
+      "provider": "file",
+      "file": "videos/macd/tabible-macd.mp4",
+      "captions": "videos/macd/tabible-macd.vtt",
+      "title": "MACD: how it works",
+      "description": "The MACD indicator explained on real prices: what it is and how traders read it, by the textbook rules.",
+      "duration": "PT1M27S",
+      "uploaded": "2026-11-18",
+      "live": false
+    },
+    "/simple-moving-average/": {
+      "provider": "file",
+      "file": "videos/simple-moving-average/tabible-simple-moving-average.mp4",
+      "captions": "videos/simple-moving-average/tabible-simple-moving-average.vtt",
+      "title": "Simple moving average: how it works",
+      "description": "The simple moving average explained on real prices: what it is and how traders read it, by the textbook rules.",
+      "duration": "PT1M26S",
+      "uploaded": "2026-11-18",
+      "live": false
+    },
+    "/support-and-resistance/": {
+      "provider": "file",
+      "file": "videos/support-and-resistance/tabible-support-and-resistance.mp4",
+      "captions": "videos/support-and-resistance/tabible-support-and-resistance.vtt",
+      "title": "Support and resistance: how it works",
+      "description": "Support and resistance levels explained on real prices: what it is and how traders read it, by the textbook rules.",
+      "duration": "PT1M13S",
+      "uploaded": "2026-11-18",
+      "live": false
+    },
+    "/fibonacci-retracement/": {
+      "provider": "file",
+      "file": "videos/fibonacci-retracement/tabible-fibonacci-retracement.mp4",
+      "captions": "videos/fibonacci-retracement/tabible-fibonacci-retracement.vtt",
+      "title": "Fibonacci retracement: how it works",
+      "description": "Fibonacci retracement levels explained on real prices: what it is and how traders read it, by the textbook rules.",
+      "duration": "PT1M22S",
+      "uploaded": "2026-11-18",
+      "live": false
+    },
+    "/bollinger-bands/": {
+      "provider": "file",
+      "file": "videos/bollinger-bands/tabible-bollinger-bands.mp4",
+      "captions": "videos/bollinger-bands/tabible-bollinger-bands.vtt",
+      "title": "Bollinger Bands: how it works",
+      "description": "Bollinger Bands explained on real prices: what it is and how traders read it, by the textbook rules.",
+      "duration": "PT1M25S",
+      "uploaded": "2026-11-18",
+      "live": false
+    },
+    "/doji/": {
+      "provider": "file",
+      "file": "videos/doji/tabible-doji.mp4",
+      "captions": "videos/doji/tabible-doji.vtt",
+      "title": "Doji: how it works",
+      "description": "The doji candlestick explained on real prices: what it is and how traders read it, by the textbook rules.",
+      "duration": "PT1M15S",
+      "uploaded": "2026-11-18",
+      "live": false
+    },
+    "/head-and-shoulders/": {
+      "provider": "file",
+      "file": "videos/head-and-shoulders/tabible-head-and-shoulders.mp4",
+      "captions": "videos/head-and-shoulders/tabible-head-and-shoulders.vtt",
+      "title": "Head and shoulders: how it works",
+      "description": "The head and shoulders pattern explained on real prices: what it is and how traders read it, by the textbook rules.",
+      "duration": "PT1M20S",
+      "uploaded": "2026-11-18",
+      "live": false
+    },
+    "/double-top/": {
+      "provider": "file",
+      "file": "videos/double-top/tabible-double-top.mp4",
+      "captions": "videos/double-top/tabible-double-top.vtt",
+      "title": "Double top: how it works",
+      "description": "The double top pattern explained on real prices: what it is and how traders read it, by the textbook rules.",
+      "duration": "PT1M23S",
+      "uploaded": "2026-11-18",
+      "live": false
+    },
+    "/stochastic-oscillator/": {
+      "provider": "file",
+      "file": "videos/stochastic-oscillator/tabible-stochastic-oscillator.mp4",
+      "captions": "videos/stochastic-oscillator/tabible-stochastic-oscillator.vtt",
+      "title": "Stochastic oscillator: how it works",
+      "description": "The stochastic oscillator explained on real prices: what it is and how traders read it, by the textbook rules.",
+      "duration": "PT1M28S",
+      "uploaded": "2026-11-18",
+      "live": false
+    },
+    "/atr/": {
+      "provider": "file",
+      "file": "videos/atr/tabible-atr.mp4",
+      "captions": "videos/atr/tabible-atr.vtt",
+      "title": "ATR: how it works",
+      "description": "The average true range explained on real prices: what it is and how traders read it, by the textbook rules.",
+      "duration": "PT1M21S",
+      "uploaded": "2026-11-18",
+      "live": false
+    },
+    "/golden-cross/": {
+      "provider": "file",
+      "file": "videos/golden-cross/tabible-golden-cross.mp4",
+      "captions": "videos/golden-cross/tabible-golden-cross.vtt",
+      "title": "Golden cross: how it works",
+      "description": "The golden cross explained on real prices: what it is and how traders read it, by the textbook rules.",
+      "duration": "PT1M28S",
       "uploaded": "2026-11-18",
       "live": false
     }
