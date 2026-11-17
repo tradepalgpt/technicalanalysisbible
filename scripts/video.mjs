@@ -20,7 +20,10 @@ export function loadVideos(root) {
   const raw = JSON.parse(fs.readFileSync(file, 'utf8'));
   const videos = {};
   const errors = [];
-  for (const [p, v] of Object.entries(raw.videos || {})) {
+  const base = raw.media_base || '';
+  if (base && !/^https:\/\/[^\s"'<>]+\/$/.test(base)) errors.push(`media_base must be an https address ending in /`);
+  for (const [p, v0] of Object.entries(raw.videos || {})) {
+    const v = resolveMedia(v0, base);
     const err = checkVideo(p, v);
     if (err === null) continue; // not ready yet
     if (err) { errors.push(`${p}: ${err}`); continue; }
@@ -29,16 +32,27 @@ export function loadVideos(root) {
   return { videos, errors };
 }
 
+// The file host (Cloudflare R2, Dean 17 November 2026) is set once as media_base;
+// entries name only their files ("rsi/tabible-rsi.mp4"). A full https link still works.
+export function resolveMedia(v, base) {
+  if (!v || typeof v !== 'object' || v.provider !== 'file') return v;
+  const abs = (x) => (x && !/^https?:\/\//.test(x) && base ? base + x.replace(/^\/+/, '') : x);
+  return { ...v, src: v.src || abs(v.file), poster: abs(v.poster), captions: abs(v.captions) };
+}
+
 // null = not ready (shows nothing); '' = ok; otherwise the problem.
+// "live": false keeps a filled-in entry hidden (e.g. until the file is uploaded).
 export function checkVideo(p, v) {
   if (!/^\/([a-z0-9-]+\/)+$/.test(p)) return 'page path must look like /rsi/ or /guide/fibonacci-guide/';
   if (!v || typeof v !== 'object') return 'entry must be an object';
+  if (v.live === false) return null;
   const ready = (v.provider === 'youtube' && v.id) || (v.provider === 'file' && v.src);
   if (!ready) return null;
   if (v.provider === 'youtube' && !YT_ID.test(v.id)) return 'YouTube id must be 11 characters';
   if (v.provider === 'file') {
     if (!HTTPS.test(v.src) || !/\.mp4$/i.test(new URL(v.src).pathname)) return 'src must be an https link to an .mp4';
-    if (/technicalanalysisbible\.com/i.test(new URL(v.src).hostname)) return 'video files must not be served from the site itself (server disk)';
+    // The site's own host is the Hetzner server (disk 80% full). A media. subdomain on R2 is fine.
+    if (/^(www\.)?technicalanalysisbible\.com$/i.test(new URL(v.src).hostname)) return 'video files must not be served from the site itself (server disk)';
     for (const k of ['poster', 'captions']) if (v[k] && !HTTPS.test(v[k])) return `${k} must be an https link`;
   }
   if (!v.title || v.title.length > 100) return 'title is required (at most 100 characters)';

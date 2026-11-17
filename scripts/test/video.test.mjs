@@ -66,8 +66,28 @@ test('text is escaped', () => {
   assert.doesNotMatch(videoHtml({ ...yt, title: '<b>x</b>' }), /<b>/);
 });
 
-test('the shipped data file has no ready videos yet (pages unchanged until Dean picks hosting)', () => {
+test('the shipped data file shows no video until an upload is confirmed (entries stay live:false)', () => {
   const { videos, errors } = loadVideos(path.resolve(import.meta.dirname, '..', '..'));
   assert.deepEqual(errors, []);
   assert.deepEqual(videos, {});
+});
+
+test('R2: media_base + file names make full links; live:false keeps an entry hidden', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'tab-video-'));
+  fs.mkdirSync(path.join(root, 'data'));
+  const entry = { provider: 'file', file: 'videos/rsi/tabible-rsi.mp4', captions: 'videos/rsi/tabible-rsi.vtt', title: 'RSI', description: 'd', duration: 'PT1M19S', uploaded: '2026-11-18' };
+  const write = (o) => fs.writeFileSync(path.join(root, 'data', 'videos.json'), JSON.stringify(o));
+  write({ media_base: 'https://media.technicalanalysisbible.com/', videos: { '/rsi/': entry, '/macd/': { ...entry, live: false } } });
+  const { videos, errors } = loadVideos(root);
+  assert.deepEqual(errors, []);
+  assert.deepEqual(Object.keys(videos), ['/rsi/']);
+  assert.equal(videos['/rsi/'].src, 'https://media.technicalanalysisbible.com/videos/rsi/tabible-rsi.mp4');
+  assert.equal(videos['/rsi/'].captions, 'https://media.technicalanalysisbible.com/videos/rsi/tabible-rsi.vtt');
+  write({ media_base: 'http://x/', videos: {} });
+  assert.match(loadVideos(root).errors[0], /media_base/);
+});
+
+test('the site host itself is refused, a media subdomain is allowed', () => {
+  assert.match(checkVideo('/rsi/', { ...file, src: 'https://www.technicalanalysisbible.com/v/rsi.mp4' }), /server disk/);
+  assert.equal(checkVideo('/rsi/', { ...file, src: 'https://media.technicalanalysisbible.com/v/rsi.mp4' }), '');
 });

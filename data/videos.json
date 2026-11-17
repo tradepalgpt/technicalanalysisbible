@@ -1,4 +1,16 @@
 {
-  "_about": "One video per page, keyed by page path. A page shows nothing until its entry has a YouTube id (provider youtube) or an https .mp4 link on a file host (provider file). Never host the files on the site's own server. Fields: provider, id or src, poster (optional https image), captions (optional https .vtt, file provider), title, description, duration (PT1M20S), uploaded (YYYY-MM-DD), placement (beside = video above the chart, the default; replace = video instead of the chart). Video files are made by the TFT studio (template ta_explainer). Checked by scripts/video.mjs at build time.",
-  "videos": {}
+  "_about": "One video per page, keyed by page path. Hosting: Cloudflare R2 (Dean, 17 November 2026), set once in media_base; entries name only their files. A page shows nothing until its entry is ready AND not marked \"live\": false. Turn an entry on by deleting its \"live\": false line after the file is uploaded to R2. Never host the files on the site's own server. Fields: provider (file or youtube), file (path inside the bucket) or src (full https link), id (YouTube), poster, captions (.vtt), title, description, duration (PT1M20S), uploaded (YYYY-MM-DD), placement (beside = video above the chart, the default; replace = instead of the chart), live. Video files are made by the TFT studio (template ta_explainer). Checked by scripts/video.mjs at build time.",
+  "media_base": "https://media.technicalanalysisbible.com/",
+  "videos": {
+    "/rsi/": {
+      "provider": "file",
+      "file": "videos/rsi/tabible-rsi.mp4",
+      "captions": "videos/rsi/tabible-rsi.vtt",
+      "title": "RSI: how it works",
+      "description": "The relative strength index explained on real prices: how it is calculated and how traders read it.",
+      "duration": "PT1M19S",
+      "uploaded": "2026-11-18",
+      "live": false
+    }
+  }
 }
