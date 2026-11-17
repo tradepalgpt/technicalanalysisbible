@@ -4,6 +4,7 @@ import path from 'node:path';
 import { marked } from 'marked';
 import { loadPosts, longDate } from './posts.mjs';
 import { ROOT, SITE, STATES, PURPOSES, STATE_BY_SLUG, PURPOSE_BY_SLUG, loadCatalogue, loadItems, loadDir, parseFrontMatter, readJSON, esc } from './lib.mjs';
+import { addHeadingIds, tocHtml, insertBeforeFirstBlock } from './html.mjs';
 
 const DIST = path.join(ROOT, 'dist');
 fs.rmSync(DIST, { recursive: true, force: true });
@@ -160,13 +161,20 @@ function parseFaq(body) {
   return out;
 }
 
+// "On this page" jump row: inserted after the quick answer, before the first ad/figure/heading. Skipped under 4 headings.
+function jumpRow(html, heads) {
+  const all = [...heads, { id: 'related', text: 'Related' }];
+  return all.length < 4 ? html : insertBeforeFirstBlock(html, tocHtml(all, { inline: true }));
+}
+
 // ---------- item pages ----------
 for (const { data: d, body } of items) {
   const c = bySlug[d.slug];
   const primaryType = c.types[0];
   const p = `/${d.slug}/`;
   const quick = body.split(/\n## /)[0].trim().replace(/\s+/g, ' ');
-  let html = rewriteLinks(marked.parse(body));
+  const hid = addHeadingIds(rewriteLinks(marked.parse(body)), { reserved: ['related'] });
+  let html = hid.html;
   // Ads: one text unit before the formula/drawing section, one before "Pairs well with".
   let n = 0;
   html = html.replace(/<h2[^>]*>(Formula|How it is|How it works)/, (m) => (n++ ? m : adSlot('text') + m));
@@ -183,7 +191,7 @@ for (const { data: d, body } of items) {
   const cmpLinks = [].concat(d.compare || []).filter((s) => cmpPub[s]);
   for (const c of compares) if ((c.data.a === d.slug || c.data.b === d.slug) && !cmpLinks.includes(c.data.slug)) cmpLinks.push(c.data.slug);
   const glLinks = [].concat(d.glossary || []).filter((s) => glPub[s]);
-  const relatedHtml = `<section class="related"><h2>Related</h2><ul>${related.map((s) => `<li>${link(s)}</li>`).join('')}</ul>`
+  const relatedHtml = `<section class="related"><h2 id="related">Related</h2><ul>${related.map((s) => `<li>${link(s)}</li>`).join('')}</ul>`
     + (cmpLinks.length ? `<h3>Compare</h3><ul>${cmpLinks.map((s) => `<li><a href="/compare/${s}/">${esc(cmpTitle(s))}</a></li>`).join('')}</ul>` : '')
     + (glLinks.length ? `<h3>Key terms</h3><p>${glLinks.map((s) => `<a class="chip" href="/glossary/${s}/">${esc(glTerm(s))}</a>`).join(' ')}</p>` : '')
     + (pillarsByGuide[d.slug] ? `<h3>Complete guide</h3><ul>${pillarsByGuide[d.slug].map((x) => `<li><a href="/guide/${x.data.slug}/">${esc(x.data.title)}</a></li>`).join('')}</ul>` : '')
@@ -200,6 +208,7 @@ for (const { data: d, body } of items) {
     { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
     crumbsLd(crumbs),
   ];
+  html = jumpRow(html, hid.heads);
   const bodyHtml = `${crumbsHtml(crumbs)}<article class="item"><h1>${esc(d.name)}</h1>${tags}${html}${relatedHtml}
 <p class="reviewed">Last reviewed: ${esc(d.reviewed)}</p></article>`;
   page(p, layout({ title, desc: quick.slice(0, 155).replace(/\s\S*$/, '') + '…', path: p, body: bodyHtml, jsonld, sidebar: true }));
@@ -209,11 +218,12 @@ for (const { data: d, body } of items) {
 for (const { data: d, body } of compares) {
   const p = `/compare/${d.slug}/`;
   const quick = body.split(/\n## /)[0].trim().replace(/\s+/g, ' ');
-  let html = rewriteLinks(marked.parse(body)).replace(/<table>/g, '<div class="tablewrap"><table>').replace(/<\/table>/g, '</table></div>');
+  const hid = addHeadingIds(rewriteLinks(marked.parse(body)), { reserved: ['related'] });
+  let html = hid.html.replace(/<table>/g, '<div class="tablewrap"><table>').replace(/<\/table>/g, '</table></div>');
   html = html.replace(/<h2[^>]*>Using both/, (m) => adSlot('text') + m);
   const faq = parseFaq(body);
   const crumbs = [['Home', '/'], ['Compare', '/compare/'], [d.title, p]];
-  const guides = `<section class="related"><h2>Full guides</h2><ul><li>${link(d.a)}</li><li>${link(d.b)}</li></ul></section>`;
+  const guides = `<section class="related"><h2 id="related">Full guides</h2><ul><li>${link(d.a)}</li><li>${link(d.b)}</li></ul></section>`;
   const jsonld = [
     { '@context': 'https://schema.org', '@type': 'TechArticle', headline: d.title, description: quick, url: abs(p), dateModified: BUILD_DATE, inLanguage: 'en-GB',
       author: { '@type': 'Organization', name: SITE.brand, url: SITE.url }, publisher: { '@type': 'Organization', name: SITE.brand, url: SITE.url },
@@ -222,7 +232,7 @@ for (const { data: d, body } of compares) {
     crumbsLd(crumbs),
   ];
   page(p, layout({ title: `${d.title}: differences and when to use each | ${SITE.brand}`, desc: quick.slice(0, 155).replace(/\s\S*$/, '') + '…', path: p, jsonld, sidebar: true,
-    body: `${crumbsHtml(crumbs)}<article class="item"><h1>${esc(d.title)}</h1>${html}${guides}<p class="reviewed">Last reviewed: ${esc(d.reviewed)}</p></article>` }));
+    body: `${crumbsHtml(crumbs)}<article class="item"><h1>${esc(d.title)}</h1>${jumpRow(html, hid.heads)}${guides}<p class="reviewed">Last reviewed: ${esc(d.reviewed)}</p></article>` }));
 }
 if (compares.length) page('/compare/', layout({ title: `Indicator comparisons | ${SITE.brand}`, desc: 'Side-by-side comparisons of popular technical indicators and patterns: how they differ and when to use each.', path: '/compare/',
   jsonld: [crumbsLd([['Home', '/'], ['Compare', '/compare/']])],
@@ -340,18 +350,16 @@ const dates = (d) => `<p class="reviewed">Published ${esc(longDate(d.publish))}$
 for (const { data: d, body } of POSTS.livePillars) {
   const p = `/guide/${d.slug}/`;
   let html = postLinks(marked.parse(body));
-  const heads = [...body.matchAll(/^## (.+)$/gm)].map((m) => m[1].trim());
-  const ids = heads.map((h) => h.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''));
-  let k = 0;
-  html = html.replace(/<h2>/g, () => `<h2 id="${ids[k++]}">`);
-  const toc = `<nav class="toc" aria-label="Contents"><h2>Contents</h2><ol>${heads.map((h, i) => `<li><a href="#${ids[i]}">${esc(h)}</a></li>`).join('')}</ol></nav>`;
+  const hid = addHeadingIds(html, { reserved: ['related'] });
+  html = hid.html;
+  const toc = tocHtml([...hid.heads, { id: 'related', text: 'Guides in this topic' }]);
   let ads = 0;
   html = html.replace(/<h2 id="[^"]*">/g, (m) => (++ads % 4 === 0 ? adSlot('text') + m : m));
   const chart = d.chart && CHARTS[d.chart];
   if (chart) html = figureHtml(chart) + html;
   const answers = POSTS.liveAnswers.filter((a) => a.data.pillar === d.slug);
   const crumbs = [['Home', '/'], ['Complete guides', '/guide/'], [d.title, p]];
-  const more = `<section class="related"><h2>Guides in this topic</h2><ul>${[].concat(d.cluster).map((s) => `<li>${link(s)}</li>`).join('')}</ul>`
+  const more = `<section class="related"><h2 id="related">Guides in this topic</h2><ul>${[].concat(d.cluster).map((s) => `<li>${link(s)}</li>`).join('')}</ul>`
     + (answers.length ? `<h3>Questions traders ask</h3><ul>${answers.map((a) => `<li><a href="/answers/${a.data.slug}/">${esc(a.data.title)}</a></li>`).join('')}</ul>` : '') + `</section>`;
   page(p, layout({ title: `${d.title} | ${SITE.brand}`, desc: d.description, path: p, sidebar: true,
     jsonld: [articleLd(d, p), crumbsLd(crumbs)],
@@ -363,15 +371,17 @@ if (POSTS.livePillars.length) page('/guide/', layout({ title: `Complete guides |
 
 for (const { data: d, body } of POSTS.liveAnswers) {
   const p = `/answers/${d.slug}/`;
-  let html = postLinks(marked.parse(body));
+  const hid = addHeadingIds(postLinks(marked.parse(body)), { reserved: ['related'] });
+  let html = hid.html;
   html = html.replace(/(<h2[^>]*>)/, (m) => adSlot('text') + m);
   const chart = d.chart && CHARTS[d.chart];
   if (chart) html = html.replace(/(<h2[^>]*>)/, (m) => figureHtml(chart) + m);
+  html = jumpRow(html, hid.heads);
   const quick = body.split(/\n## /)[0].trim().replace(/\s+/g, ' ').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/[*_]/g, '');
   const pil = livePillar[d.pillar];
   const sibs = [].concat(d.siblings || []).filter((s) => liveAnswer[s]);
   const crumbs = [['Home', '/'], ['Answers', '/answers/'], [d.title, p]];
-  const more = `<section class="related"><h2>Read next</h2><ul>${pil ? `<li><a href="/guide/${pil.data.slug}/">${esc(pil.data.title)}</a></li>` : ''}${[].concat(d.guides).map((s) => `<li>${link(s)}</li>`).join('')}${sibs.map((s) => `<li><a href="/answers/${s}/">${esc(liveAnswer[s].data.title)}</a></li>`).join('')}</ul></section>`;
+  const more = `<section class="related"><h2 id="related">Read next</h2><ul>${pil ? `<li><a href="/guide/${pil.data.slug}/">${esc(pil.data.title)}</a></li>` : ''}${[].concat(d.guides).map((s) => `<li>${link(s)}</li>`).join('')}${sibs.map((s) => `<li><a href="/answers/${s}/">${esc(liveAnswer[s].data.title)}</a></li>`).join('')}</ul></section>`;
   page(p, layout({ title: `${d.title} | ${SITE.brand}`, desc: d.description, path: p, sidebar: true,
     jsonld: [articleLd(d, p), { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [{ '@type': 'Question', name: d.title, acceptedAnswer: { '@type': 'Answer', text: quick } }] }, crumbsLd(crumbs)],
     body: `${crumbsHtml(crumbs)}<article class="item answer"><h1>${esc(d.title)}</h1>${html}${more}${dates(d)}</article>` }));
