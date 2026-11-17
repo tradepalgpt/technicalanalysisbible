@@ -107,3 +107,9 @@ a.gl:hover{color:var(--accent)}
 /* Search page */
 .search label{display:block;font-weight:600;margin-bottom:6px}
 .search input{width:100%;min-height:44px;padding:8px 12px;font:inherit;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
+/* Home: guides grouped by type */
+details.group{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);margin:8px 0}
+details.group>summary{min-height:44px;display:flex;align-items:center;gap:8px;padding:0 14px;cursor:pointer;font-weight:600}
+details.group>summary small{color:var(--muted);font-weight:400}
+details.group>ul{margin:0;padding:4px 14px 12px 32px}
+.cards small{display:block;color:var(--muted);font-size:.85rem}

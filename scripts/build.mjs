@@ -414,13 +414,14 @@ const homeLd = [
 const latest = items.map((i) => i.data);
 page('/', layout({ title: `${SITE.brand}: every technical indicator and trading method explained`, desc: 'A free, plain-English reference to every technical indicator, chart pattern, candlestick and trading method: what it is, the formula, how to read it and when it works.', path: '/', jsonld: homeLd,
   body: `<section class="hero"><h1>Every technical indicator and trading method, explained</h1><p class="lead">A free reference to ${cat.items.length} indicators, chart patterns, candlesticks and methods. Every guide answers the same questions in the same place: what it is, the formula, how to read it, when it works and the mistakes to avoid.</p></section>
-<h2>Browse by market</h2><ul class="cards">${Object.values(STATES).map(([s, n]) => `<li><a href="/market/${s}/"><b>${n}</b></a></li>`).join('')}</ul>
-<h2>Browse by use</h2><ul class="cards">${Object.values(PURPOSES).map(([s, n]) => `<li><a href="/use/${s}/"><b>${n}</b></a></li>`).join('')}</ul>
-<h2>Browse by type</h2><ul class="cards">${cat.types.map((t) => `<li><a href="/type/${t.slug}/"><b>${esc(t.name)}</b></a></li>`).join('')}</ul>
-<h2>A to Z</h2>${azNav}
+<form class="search" role="search" action="/search/"><label for="q">Search the guides</label><input id="q" name="q" type="search" placeholder="For example RSI or head and shoulders"></form>
 ${POSTS.livePillars.length ? `<h2>Complete guides</h2><ul class="list">${POSTS.livePillars.map((x) => `<li><a href="/guide/${x.data.slug}/">${esc(x.data.title)}</a></li>`).join('')}</ul>` : ''}
 ${POSTS.liveAnswers.length ? `<h2>Latest answers</h2><ul class="list">${POSTS.liveAnswers.slice(-6).reverse().map((a) => `<li><a href="/answers/${a.data.slug}/">${esc(a.data.title)}</a></li>`).join('')}</ul><p><a href="/answers/">All answers</a></p>` : ''}
-<h2>Guides so far</h2><ul class="list">${latest.map((d) => `<li>${link(d.slug, d.name)}</li>`).join('')}</ul>` }));
+<h2>Browse by market</h2><ul class="cards">${Object.values(STATES).map(([s, n]) => `<li><a href="/market/${s}/"><b>${n}</b> <small>${cat.items.filter((i) => i.states.includes(s)).length} guides</small></a></li>`).join('')}</ul>
+<h2>Browse by use</h2><ul class="cards">${Object.values(PURPOSES).map(([s, n]) => `<li><a href="/use/${s}/"><b>${n}</b> <small>${cat.items.filter((i) => i.purposes.includes(s)).length} guides</small></a></li>`).join('')}</ul>
+<h2>Browse by type</h2><ul class="cards">${cat.types.map((t) => `<li><a href="/type/${t.slug}/"><b>${esc(t.name)}</b> <small>${cat.items.filter((i) => i.types.includes(t.slug)).length} guides</small></a></li>`).join('')}</ul>
+<h2>A to Z</h2>${azNav}
+<h2>All guides by type</h2>${cat.types.map((t) => { const g = latest.filter((d) => bySlug[d.slug]?.types.includes(t.slug)); return g.length ? `<details class="group"><summary>${esc(t.name)} <small>${g.length}</small></summary><ul class="list">${g.map((d) => `<li>${link(d.slug, d.name)}</li>`).join('')}</ul></details>` : ''; }).join('')}` }));
 
 // Reading list (only books checked on Amazon)
 if (AMZ_BOOKS.length) {
