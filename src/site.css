@@ -113,3 +113,6 @@ details.group>summary{min-height:44px;display:flex;align-items:center;gap:8px;pa
 details.group>summary small{color:var(--muted);font-weight:400}
 details.group>ul{margin:0;padding:4px 14px 12px 32px}
 .cards small{display:block;color:var(--muted);font-size:.85rem}
+/* Previous / next answer in the same topic */
+.pager{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:12px}
+.pager a{min-height:44px;display:inline-flex;align-items:center}

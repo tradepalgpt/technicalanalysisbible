@@ -233,7 +233,15 @@ for (const { data: d, body } of compares) {
   html = html.replace(/<h2[^>]*>Using both/, (m) => adSlot('text') + m);
   const faq = parseFaq(body);
   const crumbs = [['Home', '/'], ['Compare', '/compare/'], [d.title, p]];
-  const guides = `<section class="related"><h2 id="related">Full guides</h2><ul><li>${link(d.a)}</li><li>${link(d.b)}</li></ul></section>`;
+  const sides = [d.a, d.b];
+  const moreCmp = compares.filter((c) => c.data.slug !== d.slug && cmpPub[c.data.slug] && (sides.includes(c.data.a) || sides.includes(c.data.b))).slice(0, 6);
+  const cmpPillars = POSTS.livePillars.filter((x) => [].concat(x.data.cluster || []).some((g) => sides.includes(g)));
+  const cmpAnswers = POSTS.liveAnswers.filter((x) => [].concat(x.data.guides || []).some((g) => sides.includes(g))).slice(0, 5);
+  const guides = `<section class="related"><h2 id="related">Full guides</h2><ul><li>${link(d.a)}</li><li>${link(d.b)}</li></ul>`
+    + (moreCmp.length ? `<h3>More comparisons</h3><ul>${moreCmp.map((c) => `<li><a href="/compare/${c.data.slug}/">${esc(c.data.title)}</a></li>`).join('')}</ul>` : '')
+    + (cmpPillars.length ? `<h3>Complete guide</h3><ul>${cmpPillars.map((x) => `<li><a href="/guide/${x.data.slug}/">${esc(x.data.title)}</a></li>`).join('')}</ul>` : '')
+    + (cmpAnswers.length ? `<h3>Questions traders ask</h3><ul>${cmpAnswers.map((x) => `<li><a href="/answers/${x.data.slug}/">${esc(x.data.title)}</a></li>`).join('')}</ul>` : '')
+    + `</section>`;
   const jsonld = [
     { '@context': 'https://schema.org', '@type': 'TechArticle', headline: d.title, description: quick, url: abs(p), dateModified: BUILD_DATE, inLanguage: 'en-GB',
       author: { '@type': 'Organization', name: SITE.brand, url: SITE.url }, publisher: { '@type': 'Organization', name: SITE.brand, url: SITE.url },
@@ -254,13 +262,17 @@ for (const { data: d, body } of glossary) {
   const def = body.split(/\n## /)[0].trim().replace(/\s+/g, ' ');
   const html = gl(rewriteLinks(marked.parse(body)), { self: d.slug, max: 3 });
   const rel = [].concat(d.related || []);
+  const relSet = new Set(rel);
+  const relTerms = glossary.filter((g) => g.data.slug !== d.slug).map((g) => [g, [].concat(g.data.related || []).filter((x) => relSet.has(x)).length])
+    .filter(([, n]) => n >= 2).sort((x, y) => y[1] - x[1] || x[0].data.term.localeCompare(y[0].data.term)).slice(0, 6).map(([g]) => g);
+  const relCmp = compares.filter((c) => cmpPub[c.data.slug] && relSet.has(c.data.a) && relSet.has(c.data.b)).slice(0, 6);
   const crumbs = [['Home', '/'], ['Glossary', '/glossary/'], [d.term, p]];
   const jsonld = [
     { '@context': 'https://schema.org', '@type': 'DefinedTerm', name: d.term, description: def, url: abs(p), inDefinedTermSet: { '@type': 'DefinedTermSet', name: `${SITE.brand} glossary`, url: abs('/glossary/') } },
     crumbsLd(crumbs),
   ];
   page(p, layout({ title: `${d.term}: meaning in trading | ${SITE.brand}`, desc: def.slice(0, 155).replace(/\s\S*$/, '') + '…', path: p, jsonld,
-    body: `${crumbsHtml(crumbs)}<article class="item"><h1>${esc(d.term)}</h1>${html}${rel.length ? `<section class="related"><h2>Guides that use this term</h2><ul>${rel.map((s) => `<li>${link(s)}</li>`).join('')}</ul></section>` : ''}<p class="reviewed">Last reviewed: ${esc(d.reviewed)}</p></article>` }));
+    body: `${crumbsHtml(crumbs)}<article class="item"><h1>${esc(d.term)}</h1>${html}${rel.length || relTerms.length || relCmp.length ? `<section class="related">${rel.length ? `<h2>Guides that use this term</h2><ul>${rel.map((s) => `<li>${link(s)}</li>`).join('')}</ul>` : ''}${relTerms.length ? `<h3>Related terms</h3><p>${relTerms.map((g) => `<a class="chip" href="/glossary/${g.data.slug}/">${esc(g.data.term)}</a>`).join(' ')}</p>` : ''}${relCmp.length ? `<h3>Compare</h3><ul>${relCmp.map((c) => `<li><a href="/compare/${c.data.slug}/">${esc(c.data.title)}</a></li>`).join('')}</ul>` : ''}</section>` : ''}<p class="reviewed">Last reviewed: ${esc(d.reviewed)}</p></article>` }));
 }
 if (glossary.length) {
   const sorted = [...glossary].sort((a, b) => a.data.term.localeCompare(b.data.term));
@@ -393,8 +405,12 @@ for (const { data: d, body } of POSTS.liveAnswers) {
   const quick = body.split(/\n## /)[0].trim().replace(/\s+/g, ' ').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/[*_]/g, '');
   const pil = livePillar[d.pillar];
   const sibs = [].concat(d.siblings || []).filter((s) => liveAnswer[s]);
-  const crumbs = [['Home', '/'], ['Answers', '/answers/'], [d.title, p]];
-  const more = `<section class="related"><h2 id="related">Read next</h2><ul>${pil ? `<li><a href="/guide/${pil.data.slug}/">${esc(pil.data.title)}</a></li>` : ''}${[].concat(d.guides).map((s) => `<li>${link(s)}</li>`).join('')}${sibs.map((s) => `<li><a href="/answers/${s}/">${esc(liveAnswer[s].data.title)}</a></li>`).join('')}</ul></section>`;
+  const crumbs = pil ? [['Home', '/'], ['Complete guides', '/guide/'], [pil.data.title, `/guide/${pil.data.slug}/`], [d.title, p]] : [['Home', '/'], ['Answers', '/answers/'], [d.title, p]];
+  const inPillar = d.pillar ? POSTS.liveAnswers.filter((a) => a.data.pillar === d.pillar) : [];
+  const at = inPillar.findIndex((a) => a.data.slug === d.slug);
+  const prev = at > 0 ? inPillar[at - 1] : null, next = at >= 0 && at < inPillar.length - 1 ? inPillar[at + 1] : null;
+  const pager = prev || next ? `<nav class="pager" aria-label="More in this topic">${prev ? `<a rel="prev" href="/answers/${prev.data.slug}/">Previous: ${esc(prev.data.title)}</a>` : '<span></span>'}${next ? `<a rel="next" href="/answers/${next.data.slug}/">Next: ${esc(next.data.title)}</a>` : ''}</nav>` : '';
+  const more = `<section class="related"><h2 id="related">Read next</h2><ul>${pil ? `<li><a href="/guide/${pil.data.slug}/">${esc(pil.data.title)}</a></li>` : ''}${[].concat(d.guides).map((s) => `<li>${link(s)}</li>`).join('')}${sibs.map((s) => `<li><a href="/answers/${s}/">${esc(liveAnswer[s].data.title)}</a></li>`).join('')}</ul>${pager}</section>`;
   page(p, layout({ title: `${d.title} | ${SITE.brand}`, desc: d.description, path: p, sidebar: true,
     jsonld: [articleLd(d, p), { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [{ '@type': 'Question', name: d.title, acceptedAnswer: { '@type': 'Answer', text: quick } }] }, crumbsLd(crumbs), ...(VIDEOS[p] ? [videoLd(VIDEOS[p], abs(p))] : [])],
     body: `${crumbsHtml(crumbs)}<article class="item answer"><h1>${esc(d.title)}</h1>${html}${more}${dates(d)}</article>` }));
