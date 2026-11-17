@@ -270,7 +270,7 @@ function itemList(list) {
   const sorted = [...list].sort((a, b) => (pub[b.slug] ? 1 : 0) - (pub[a.slug] ? 1 : 0) || a.wave - b.wave || a.name.localeCompare(b.name));
   return `<ul class="list">${sorted.map((i) => `<li>${link(i.slug, i.name)} <small>${i.states.map((s) => STATE_BY_SLUG[s]).join(', ')}</small></li>`).join('')}</ul>`;
 }
-function hub({ p, title, h1, intro, list, crumbs }) {
+function hub({ p, title, h1, intro, list, crumbs, extra = '' }) {
   const live = list.filter((i) => pub[i.slug]).length;
   const jsonld = [
     { '@context': 'https://schema.org', '@type': 'CollectionPage', name: h1, url: abs(p), description: intro,
@@ -279,7 +279,7 @@ function hub({ p, title, h1, intro, list, crumbs }) {
   ];
   const paras = intro.split(/\n\n+/).map((t, i) => `<p${i ? '' : ' class="lead"'}>${esc(t)}</p>`).join('');
   const desc = intro.split(/\n\n+/)[0].length > 158 ? intro.split(/\n\n+/)[0].slice(0, 155).replace(/\s\S*$/, '') + '…' : intro.split(/\n\n+/)[0];
-  const body = `${crumbsHtml(crumbs)}<h1>${esc(h1)}</h1>${paras}<p class="count">${list.length} guides.</p>${itemList(list)}${readingBox(list.map((i) => i.slug))}`;
+  const body = `${crumbsHtml(crumbs)}<h1>${esc(h1)}</h1>${paras}${extra}<p class="count">${list.length} guides.</p>${itemList(list)}${readingBox(list.map((i) => i.slug))}`;
   page(p, layout({ title, desc, path: p, body, jsonld, noindex: live < 3 }), { index: live >= 3 });
 }
 
@@ -290,7 +290,10 @@ for (const t of cat.types) {
 }
 for (const [, [s, nm]] of Object.entries(STATES)) {
   const list = cat.items.filter((i) => i.states.includes(s));
-  hub({ p: `/market/${s}/`, title: `Best indicators and methods for ${nm.toLowerCase()} | ${SITE.brand}`, h1: `Best for ${nm.toLowerCase()}`, intro: HUB_INTROS.market?.[s] || `Indicators, patterns and methods that work best in ${nm.toLowerCase()}.`, list, crumbs: [['Home', '/'], ['By market', '/market/'], [nm, `/market/${s}/`]] });
+  // Narrower pages (market state x use) get a link from their market hub, so none is an orphan.
+  const crossUses = Object.values(PURPOSES).filter(([u]) => list.filter((i) => i.purposes.includes(u) && pub[i.slug]).length >= 3);
+  const extra = crossUses.length ? `<p class="tags"><span>Narrow it down:</span> ${crossUses.map(([u, un]) => `<a class="chip" href="/market/${s}/${u}/">${esc(un)}</a>`).join(' ')}</p>` : '';
+  hub({ p: `/market/${s}/`, title: `Best indicators and methods for ${nm.toLowerCase()} | ${SITE.brand}`, h1: `Best for ${nm.toLowerCase()}`, intro: HUB_INTROS.market?.[s] || `Indicators, patterns and methods that work best in ${nm.toLowerCase()}.`, list, crumbs: [['Home', '/'], ['By market', '/market/'], [nm, `/market/${s}/`]], extra });
   for (const [, [u, un]] of Object.entries(PURPOSES)) {
     const cross = list.filter((i) => i.purposes.includes(u));
     if (cross.filter((i) => pub[i.slug]).length < 3) continue;
