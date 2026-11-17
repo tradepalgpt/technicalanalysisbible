@@ -15,11 +15,11 @@ test('every typed word must match the title or aka', () => {
   assert.deepEqual(tabRank(rows, 'zzz'), []);
 });
 
-test('titles that start with the word come first, then word starts, then the rest', () => {
-  const r = tabRank(rows, 'rsi').map((x) => x[1]);
-  assert.equal(r.length, 3);
-  assert.equal(r[r.length - 1], '/rsi/'); // only matches inside the title / by aka
-  assert.ok(r.indexOf('/connors-rsi/') < r.indexOf('/rsi/'));
+test('the main guide for a short name comes first; words match from their start only', () => {
+  const r = tabRank([...rows, ['Mean Reversion', '/mean-reversion/', 'guide', 'reversion to the mean']], 'rsi').map((x) => x[1]);
+  assert.equal(r[0], '/rsi/');
+  assert.ok(!r.includes('/mean-reversion/'));
+  assert.ok(r.indexOf('/connors-rsi/') > 0);
 });
 
 test('at most 30 results', () => {
