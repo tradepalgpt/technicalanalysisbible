@@ -5,6 +5,7 @@ import { marked } from 'marked';
 import { loadPosts, longDate } from './posts.mjs';
 import { ROOT, SITE, STATES, PURPOSES, STATE_BY_SLUG, PURPOSE_BY_SLUG, loadCatalogue, loadItems, loadDir, parseFrontMatter, readJSON, esc } from './lib.mjs';
 import { addHeadingIds, tocHtml, insertBeforeFirstBlock } from './html.mjs';
+import { loadVideos, mediaHtml, videoLd, VIDEO_JS } from './video.mjs';
 
 const DIST = path.join(ROOT, 'dist');
 fs.rmSync(DIST, { recursive: true, force: true });
@@ -18,6 +19,9 @@ const adJs = fs.readFileSync(path.join(ROOT, 'shared', 'ads', 'partner-ad.js'), 
 const BUILD_DATE = new Date().toISOString().slice(0, 10);
 // Scheduled posts: only those whose publish date has passed are built (scripts/posts.mjs).
 const POSTS = loadPosts();
+// Videos (data/videos.json): nothing shows until an entry has a YouTube id or a file URL.
+const { videos: VIDEOS, errors: videoErrors } = loadVideos(ROOT);
+if (videoErrors.length) { console.error(`data/videos.json problems:\n  ${videoErrors.join('\n  ')}`); process.exit(1); }
 const livePillar = Object.fromEntries(POSTS.livePillars.map((p) => [p.data.slug, p]));
 const liveAnswer = Object.fromEntries(POSTS.liveAnswers.map((a) => [a.data.slug, a]));
 const answersByGuide = {};   // guide slug -> live answers that link to it ("Questions traders ask" box)
@@ -89,7 +93,8 @@ ${sidebar ? `<aside class="side">${adSlot('300x600', 'sticky')}</aside>` : ''}
 <nav>${AMZ_BOOKS.length ? '<a href="/reading/">Reading list</a> · ' : ''}<a href="/methods/">Methods</a> · <a href="/about/">About</a> · <a href="/how-we-write/">How we write</a> · <a href="/risk-warning/">Risk warning</a> · <a href="/advertising-disclosure/">Advertising</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></nav>
 <p class="small">© ${new Date().getFullYear()} ${SITE.brand}</p>
 </div></footer>
-<script>${adJs}</script>
+<script>${adJs}</script>${body.includes('data-yt=') ? `
+<script>${VIDEO_JS}</script>` : ''}
 </body></html>`;
 }
 
@@ -184,7 +189,7 @@ for (const { data: d, body } of items) {
   html = amz.html;
   if (amz.used) html = html.replace(/(<h2[^>]*>FAQ)/, AMZ_NOTE + '$1');
   const chart = CHARTS[d.slug];
-  if (chart) html = html.replace(/<h2[^>]*>What (is|are)/, (m) => figureHtml(chart) + m);
+  if (chart || VIDEOS[p]) html = html.replace(/<h2[^>]*>What (is|are)/, (m) => mediaHtml(VIDEOS[p], chart && figureHtml(chart)) + m);
 
   const related = [...new Set([].concat(d.related || []))];
   const tags = `<p class="tags"><span>Best in:</span> ${[].concat(d.states).map((s) => `<a class="chip" href="/market/${s}/">${esc(STATE_BY_SLUG[s])}</a>`).join(' ')} <span>Used for:</span> ${[].concat(d.purposes).map((s) => `<a class="chip" href="/use/${s}/">${esc(PURPOSE_BY_SLUG[s])}</a>`).join(' ')}</p>`;
@@ -207,6 +212,7 @@ for (const { data: d, body } of items) {
       ...(chart ? { image: { '@type': 'ImageObject', url: abs(`/charts/${chart.file}`), caption: chart.caption, width: chart.w, height: chart.h } } : {}) },
     { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
     crumbsLd(crumbs),
+    ...(VIDEOS[p] ? [videoLd(VIDEOS[p], abs(p))] : []),
   ];
   html = jumpRow(html, hid.heads);
   const bodyHtml = `${crumbsHtml(crumbs)}<article class="item"><h1>${esc(d.name)}</h1>${tags}${html}${relatedHtml}
@@ -356,13 +362,13 @@ for (const { data: d, body } of POSTS.livePillars) {
   let ads = 0;
   html = html.replace(/<h2 id="[^"]*">/g, (m) => (++ads % 4 === 0 ? adSlot('text') + m : m));
   const chart = d.chart && CHARTS[d.chart];
-  if (chart) html = figureHtml(chart) + html;
+  if (chart || VIDEOS[p]) html = mediaHtml(VIDEOS[p], chart && figureHtml(chart)) + html;
   const answers = POSTS.liveAnswers.filter((a) => a.data.pillar === d.slug);
   const crumbs = [['Home', '/'], ['Complete guides', '/guide/'], [d.title, p]];
   const more = `<section class="related"><h2 id="related">Guides in this topic</h2><ul>${[].concat(d.cluster).map((s) => `<li>${link(s)}</li>`).join('')}</ul>`
     + (answers.length ? `<h3>Questions traders ask</h3><ul>${answers.map((a) => `<li><a href="/answers/${a.data.slug}/">${esc(a.data.title)}</a></li>`).join('')}</ul>` : '') + `</section>`;
   page(p, layout({ title: `${d.title} | ${SITE.brand}`, desc: d.description, path: p, sidebar: true,
-    jsonld: [articleLd(d, p), crumbsLd(crumbs)],
+    jsonld: [articleLd(d, p), crumbsLd(crumbs), ...(VIDEOS[p] ? [videoLd(VIDEOS[p], abs(p))] : [])],
     body: `${crumbsHtml(crumbs)}<article class="item pillar"><h1>${esc(d.title)}</h1>${toc}${html}${more}${dates(d)}</article>` }));
 }
 if (POSTS.livePillars.length) page('/guide/', layout({ title: `Complete guides | ${SITE.brand}`, desc: 'Long-form guides that tie each family of indicators and patterns together, with our own charts and data.', path: '/guide/',
@@ -375,7 +381,7 @@ for (const { data: d, body } of POSTS.liveAnswers) {
   let html = hid.html;
   html = html.replace(/(<h2[^>]*>)/, (m) => adSlot('text') + m);
   const chart = d.chart && CHARTS[d.chart];
-  if (chart) html = html.replace(/(<h2[^>]*>)/, (m) => figureHtml(chart) + m);
+  if (chart || VIDEOS[p]) html = html.replace(/(<h2[^>]*>)/, (m) => mediaHtml(VIDEOS[p], chart && figureHtml(chart)) + m);
   html = jumpRow(html, hid.heads);
   const quick = body.split(/\n## /)[0].trim().replace(/\s+/g, ' ').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/[*_]/g, '');
   const pil = livePillar[d.pillar];
@@ -383,7 +389,7 @@ for (const { data: d, body } of POSTS.liveAnswers) {
   const crumbs = [['Home', '/'], ['Answers', '/answers/'], [d.title, p]];
   const more = `<section class="related"><h2 id="related">Read next</h2><ul>${pil ? `<li><a href="/guide/${pil.data.slug}/">${esc(pil.data.title)}</a></li>` : ''}${[].concat(d.guides).map((s) => `<li>${link(s)}</li>`).join('')}${sibs.map((s) => `<li><a href="/answers/${s}/">${esc(liveAnswer[s].data.title)}</a></li>`).join('')}</ul></section>`;
   page(p, layout({ title: `${d.title} | ${SITE.brand}`, desc: d.description, path: p, sidebar: true,
-    jsonld: [articleLd(d, p), { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [{ '@type': 'Question', name: d.title, acceptedAnswer: { '@type': 'Answer', text: quick } }] }, crumbsLd(crumbs)],
+    jsonld: [articleLd(d, p), { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [{ '@type': 'Question', name: d.title, acceptedAnswer: { '@type': 'Answer', text: quick } }] }, crumbsLd(crumbs), ...(VIDEOS[p] ? [videoLd(VIDEOS[p], abs(p))] : [])],
     body: `${crumbsHtml(crumbs)}<article class="item answer"><h1>${esc(d.title)}</h1>${html}${more}${dates(d)}</article>` }));
 }
 if (POSTS.liveAnswers.length) {

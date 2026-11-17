@@ -1,0 +1,4 @@
+{
+  "_about": "One video per page, keyed by page path. A page shows nothing until its entry has a YouTube id (provider youtube) or an https .mp4 link on a file host (provider file). Never host the files on the site's own server. Fields: provider, id or src, poster (optional https image), captions (optional https .vtt, file provider), title, description, duration (PT1M20S), uploaded (YYYY-MM-DD), placement (beside = video above the chart, the default; replace = video instead of the chart). Video files are made by the TFT studio (template ta_explainer). Checked by scripts/video.mjs at build time.",
+  "videos": {}
+}
