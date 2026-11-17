@@ -104,3 +104,6 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 /* Automatic glossary links: read as definitions, not navigation */
 a.gl{color:inherit;text-decoration:underline dotted;text-underline-offset:3px}
 a.gl:hover{color:var(--accent)}
+/* Search page */
+.search label{display:block;font-weight:600;margin-bottom:6px}
+.search input{width:100%;min-height:44px;padding:8px 12px;font:inherit;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}

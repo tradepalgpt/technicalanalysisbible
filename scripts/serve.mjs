@@ -5,7 +5,7 @@ import path from 'node:path';
 import { ROOT } from './lib.mjs';
 
 const DIST = path.join(ROOT, 'dist');
-const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.svg': 'image/svg+xml', '.xml': 'application/xml', '.txt': 'text/plain; charset=utf-8' };
+const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.svg': 'image/svg+xml', '.xml': 'application/xml', '.txt': 'text/plain; charset=utf-8', '.js': 'text/javascript', '.json': 'application/json' };
 const port = Number(process.env.PORT || 4321);
 http.createServer((req, res) => {
   if (req.url.startsWith('/cdn-cgi/trace')) { res.end('loc=XX\n'); return; } // pretend non-UK so ads show locally

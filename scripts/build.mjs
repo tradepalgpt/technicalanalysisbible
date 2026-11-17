@@ -63,6 +63,7 @@ const NAV = () => [
   ['/a-z/', 'A–Z'], ['/market/', 'By market'], ['/use/', 'By use'], ['/type/', 'By type'], ['/compare/', 'Compare'],
   ...(POSTS.liveAnswers.length ? [['/answers/', 'Answers']] : []),
   ['/glossary/', 'Glossary'],
+  ['/search/', 'Search'],
 ];
 function layout({ title, desc, path: p, body, jsonld = [], noindex = false, sidebar = false }) {
   return `<!doctype html>
@@ -436,6 +437,20 @@ write('404.html', layout({ title: `Page not found | ${SITE.brand}`, desc: 'Page 
 fs.mkdirSync(path.join(DIST, 'assets'), { recursive: true });
 fs.writeFileSync(path.join(DIST, 'assets', 'site.css'), fs.readFileSync(path.join(ROOT, 'shared', 'styles', 'tokens.css'), 'utf8') + '\n' + fs.readFileSync(path.join(ROOT, 'src', 'site.css'), 'utf8'));
 fs.copyFileSync(path.join(ROOT, 'src', 'favicon.svg'), path.join(DIST, 'favicon.svg'));
+// ---------- search (to-do #488): live pages only, never scheduled posts ----------
+{
+  const rows = [
+    ...items.map(({ data: d }) => [d.name, `/${d.slug}/`, 'guide', [].concat(d.aka || []).join(' ')]),
+    ...glossary.map(({ data: d }) => [d.term, `/glossary/${d.slug}/`, 'term', '']),
+    ...compares.map(({ data: d }) => [d.title, `/compare/${d.slug}/`, 'comparison', '']),
+    ...POSTS.livePillars.map(({ data: d }) => [d.title, `/guide/${d.slug}/`, 'complete guide', '']),
+    ...POSTS.liveAnswers.map(({ data: d }) => [d.title, `/answers/${d.slug}/`, 'answer', '']),
+  ];
+  fs.writeFileSync(path.join(DIST, 'assets', 'search.json'), JSON.stringify(rows));
+  fs.copyFileSync(path.join(ROOT, 'src', 'search.js'), path.join(DIST, 'assets', 'search.js'));
+  page('/search/', layout({ title: `Search | ${SITE.brand}`, desc: 'Search every guide, term, comparison and answer.', path: '/search/', noindex: true,
+    body: `${crumbsHtml([['Home', '/'], ['Search', '/search/']])}<h1>Search</h1><form class="search" role="search" action="/search/" onsubmit="return false"><label for="q">Search guides, terms and answers</label><input id="q" name="q" type="search" autocomplete="off" placeholder="For example RSI or head and shoulders"></form><p id="search-note" class="count" aria-live="polite"></p><ul id="results" class="list"></ul><noscript><p>Search needs JavaScript. Use the <a href="/a-z/">A to Z</a> or the <a href="/glossary/">glossary</a>.</p></noscript><script src="/assets/search.js" defer></script>` }), { index: false });
+}
 if (fs.existsSync(CHART_DIR)) fs.cpSync(CHART_DIR, path.join(DIST, 'charts'), { recursive: true, filter: (f) => !f.endsWith('manifest.json') });
 fs.copyFileSync(path.join(ROOT, 'src', '_headers'), path.join(DIST, '_headers'));
 write('robots.txt', `User-agent: *\nAllow: /\nDisallow: /search/\nDisallow: /*?*\n\n# AI search tools are welcome to read and quote this site.\nUser-agent: GPTBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: Google-Extended\nAllow: /\n\nSitemap: ${abs('/sitemap.xml')}\n`);
